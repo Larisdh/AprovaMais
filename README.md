@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./1.png" alt="Logo Aprova Enem Nota 1000" width="200" style="border-radius: 100px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <img src="file:///C:/Users/Aluno%202%20DEV/Downloads/Logo%20para%20empresa%20de%20ar%20condicionado.png" alt="Logo Aprova Enem Nota 1000" width="200" style="border-radius: 100px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 </p>
 
 # 🎯 Projeto **Aprova Mais**
