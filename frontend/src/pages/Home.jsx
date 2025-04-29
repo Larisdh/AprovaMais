@@ -4,46 +4,159 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex flex-col"
-      style={{ backgroundImage: "url('/imagem-fundo-enem.jpg')" }}
+      style={{
+        backgroundColor: "#d5f3ff",
+        fontFamily: "Sans-serif",
+        width: "100vw", // Garante que ocupa 100% da largura da tela
+        height: "100vh", // Garante que ocupa 100% da altura da tela
+        display: "flex",
+        flexDirection: "column",
+        position: "relative",
+        overflow: "hidden",
+        
+      }}
     >
-      {/* Top Bar */}
-      <header className="bg-[#0D6E9C] text-white px-6 py-4 flex justify-between items-center shadow-md">
-        <div className="text-2xl font-extrabold tracking-wide"></div>
-        <img src="/aprovamais.png"  className="h-10" />
-      </header>
-
-      {/* Main Content */}
-      <main className="flex-grow flex flex-col justify-center items-center text-center px-6 py-10 gap-8">
-        <h2 className="text-[#0D6E9C] text-lg font-semibold tracking-wide uppercase">
-          "A cada quiz, um passo mais perto da aprovação"
-        </h2>
-
-        <h1 className="text-4xl md:text-5xl font-bold text-[#002B50] leading-snug max-w-3xl">
-          Seja bem-vindo ao seu novo aliado na preparação para o vestibular!
+      {/* Cabeçalho */}
+      <div
+        style={{
+          backgroundColor: "#0a518e",
+          color: "white",
+          padding: "1.25rem 1.5rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center", 
+          borderBottomLeftRadius: "1rem",
+          borderBottomRightRadius: "1rem",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          textAlign: "center",
+          position: "relative",
+          zIndex: 10,
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "2.5rem",
+            fontWeight: "800",
+            letterSpacing: "0.1em",
+          }}
+        >
+          BEM-VINDOS!
         </h1>
-
-        <p className="text-[#03436C] text-lg max-w-2xl font-medium">
-          Revise os principais conteúdos com nossos quizzes interativos. Teste seus conhecimentos,
-          descubra onde melhorar e prepare-se para as provas.
-          <br />
-          <span className="font-bold text-[#002B50]">
-            Comece agora e torne seu estudo mais inteligente e divertido!
-          </span>
-        </p>
-
-        <Link to="/quiz">
-          <button className="bg-[#0073B1] hover:bg-[#005f91] transition text-white font-bold text-lg px-6 py-3 rounded-full shadow-lg mt-4">
-            QUERO INICIAR!!
-          </button>
-        </Link>
-
-        {/* Ilustração (opcional, caso queira adicionar como na imagem) */}
         <img
-          src="/carinhaaprovando.png"
-          alt="Ilustração Estudante Aprovado"
-          className="max-w-sm w-full mt-6"
+          src="/Logo.png"
+          alt="Logo Aprova"
+          style={{
+            height: "6rem",
+            position: "absolute",
+            top: "50%",
+            right: "1.5rem",
+            transform: "translateY(-50%)",
+          }}
         />
+      </div>
+
+      {/* Subtítulo faixa azul clara */}
+      <div
+        style={{
+          backgroundColor: "#a7cceb",
+          color: "white",
+          textAlign: "center",
+          padding: "0.75rem 0",
+          fontSize: "1.25rem",
+          fontWeight: "600",
+          borderRadius: "0.5rem",
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+          margin: "1rem 1rem",
+        }}
+      >
+        "A CADA QUIZ, UM PASSO MAIS PERTO DA APROVAÇÃO"
+      </div>
+
+      {/* Conteúdo principal */}
+      <main
+        style={{
+          flexGrow: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "2.5rem",
+          padding: "2.5rem 1.5rem",
+          textAlign: "center",
+          zIndex: 5,
+        }}
+      >
+        {/* Ilustração */}
+        <img
+          src="/HomeAprova.png"
+          alt="Estudante comemorando"
+          style={{
+            width: "30rem",
+          }}
+        />
+
+        {/* Texto descritivo */}
+        <div
+          style={{
+            maxWidth: "40rem",
+            color: "#003b6f",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "1.25rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
+            Seja bem-vindo ao seu novo aliado na preparação para o vestibular!
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              marginBottom: "1rem",
+            }}
+          >
+            Revise os principais conteúdos com nossos quizzes interativos.
+            Teste seus conhecimentos, descubra onde melhorar e prepare-se para
+            as provas.
+          </p>
+          <p
+            style={{
+              fontSize: "1.125rem",
+              fontWeight: "700",
+            }}
+          >
+            Comece agora e torne seu estudo mais inteligente e divertido!
+          </p>
+
+          {/* Botão */}
+          <Link to="/quiz">
+            <button
+              style={{
+                backgroundColor: "#0a518e",
+                color: "white",
+                fontWeight: "700",
+                fontSize: "1rem",
+                padding: "0.75rem 2rem",
+                borderRadius: "0.75rem",
+                marginTop: "1.5rem",
+                transition: "background-color 0.2s",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onMouseOver={(e) =>
+                (e.target.style.backgroundColor = "#083a6b")
+              }
+              onMouseOut={(e) =>
+                (e.target.style.backgroundColor = "#0a518e")
+              }
+            >
+              QUERO INICIAR!!
+            </button>
+          </Link>
+        </div>
       </main>
     </div>
   );
