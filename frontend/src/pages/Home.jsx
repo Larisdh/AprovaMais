@@ -131,7 +131,9 @@ export default function Home() {
           </p>
 
           {/* Botão */}
-          <Link to="/quiz">
+          <Link to="/quiz"> {/* Link para a página de login */}
+            {/* Botão de início */}
+
             <button
               style={{
                 backgroundColor: "#0a518e",
