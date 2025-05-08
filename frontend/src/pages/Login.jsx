@@ -1,112 +1,73 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../firebaseConfig";
+import { useNavigate } from "react-router-dom";
+import "../App.css"; // Importando o CSS do App.js
 
-export default function Login() {
-  const [form, setForm] = useState({ nome: "", email: "", telefone: "" });
+function Login() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState("");
 
-  function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e) {
+  // 3.1 — Login com e-mail/senha
+  const handleLoginEmailSenha = async (e) => {
     e.preventDefault();
-    alert(`Bem-vindo, ${form.nome}!`); // Corrigido para usar crases e interpolação
-  }
 
-  const styles = {
-    body: {
-      minHeight: "100vh",
-      width: "100vw",
-      backgroundImage: "url('/imagem-fundo-enem.jpg')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-    },
-    header: {
-      backgroundColor: "#0a518e",
-      width: "100%",
-      padding: "1rem 2rem",
-      color: "white",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    title: {
-      fontStyle: "italic",
-      fontSize: "1.2rem",
-      textDecoration: "underline",
-    },
-    logo: {
-      height: "3rem",
-    },
-    loginBox: {
-      backgroundColor: "#e6f7ff",
-      borderRadius: "2rem",
-      padding: "2rem",
-      marginTop: "4rem",
-      width: "90%",
-      maxWidth: "400px",
-      display: "flex",
-      flexDirection: "column",
-      gap: "1.5rem",
-    },
-    input: {
-      padding: "1rem",
-      borderRadius: "2rem",
-      border: "none",
-      backgroundColor: "#7ec8e3",
-      color: "white",
-      fontWeight: "bold",
-      fontSize: "1rem",
-    },
-    button: {
-      backgroundColor: "#0a518e",
-      color: "white",
-      border: "none",
-      padding: "1rem",
-      borderRadius: "2rem",
-      fontWeight: "bold",
-      cursor: "pointer",
-    },
+    try {
+      await signInWithEmailAndPassword(auth, email, senha);
+
+      navigate("/home"); // redireciona ao sucesso
+    } catch {
+      setErro("Usuário ou senha inválidos.");
+    }
+  };
+
+  // 3.2 — Login com Google
+
+  const handleLoginGoogle = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+
+      navigate("/home");
+    } catch {
+      setErro("Erro ao fazer login com Google.");
+    }
   };
 
   return (
-    <div style={styles.body}>
-      <header style={styles.header}>
-        <div style={styles.title}>Login</div>
-        <img src="/Logo.png" alt="Logo" style={styles.logo} />
-      </header>
+    <div className="login-container">
+      <h1>Login</h1>
 
-      <form style={styles.loginBox} onSubmit={handleSubmit}>
+      <form onSubmit={handleLoginEmailSenha} className="login-form">
         <input
-          style={styles.input}
-          type="text"
-          name="nome"
-          placeholder="NOME"
-          value={form.nome}
-          onChange={handleChange}
-        />
-        <input
-          style={styles.input}
           type="email"
-          name="email"
-          placeholder="E-MAIL"
-          value={form.email}
-          onChange={handleChange}
+          placeholder="E-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
+
         <input
-          style={styles.input}
-          type="tel"
-          name="telefone"
-          placeholder="TELEFONE"
-          value={form.telefone}
-          onChange={handleChange}
+          type="password"
+          placeholder="Senha"
+          value={senha}
+          onChange={(e) => setSenha(e.target.value)}
+          required
         />
-        <button type="submit" style={styles.button}>
-          ENTRAR
-        </button>
+
+        {erro && <p className="erro">{erro}</p>}
+
+        <button type="submit">Entrar com E-mail</button>
       </form>
+
+      <div className="divisor">ou</div>
+
+      <button onClick={handleLoginGoogle} className="google-button">
+        Entrar com Google
+      </button>
     </div>
   );
 }
+
+export default Login;
