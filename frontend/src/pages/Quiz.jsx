@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-const perguntas = [
-  {
-    pergunta:
-      "Em uma cidade, os impostos que incidem sobre o consumo de energia elétrica residencial são de 30% sobre o custo do consumo mensal. O valor total da conta a ser paga no mês é o valor cobrado pelo consumo acrescido dos impostos. Considerando x o valor total da conta mensal de uma determinada residência e y o valor dos impostos, qual é a expressão algébrica que relaciona x e y?",
-    alternativas: [
-      "y = 0,3x / 1,3",
-      "y = 0,3x",
-      "y = x / 1,3",
-      "y = 1,3x / 0,3",
-      "y = 0,7x",
-    ],
-    correta: 1,
-  },
-];
+// const perguntas = [
+//   {
+//     pergunta:
+//       "Em uma cidade, os impostos que incidem sobre o consumo de energia elétrica residencial são de 30% sobre o custo do consumo mensal. O valor total da conta a ser paga no mês é o valor cobrado pelo consumo acrescido dos impostos. Considerando x o valor total da conta mensal de uma determinada residência e y o valor dos impostos, qual é a expressão algébrica que relaciona x e y?",
+//     alternativas: [
+//       "y = 0,3x / 1,3",
+//       "y = 0,3x",
+//       "y = x / 1,3",
+//       "y = 1,3x / 0,3",
+//       "y = 0,7x",
+//     ],
+//     correta: 1,
+//   },
+// ];
 
 export default function Quiz() {
   const navigate = useNavigate();
