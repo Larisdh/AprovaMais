@@ -54,7 +54,8 @@ function Login() {
       textDecoration: "underline",
     },
     logo: {
-      height: "3rem",
+      height: "4rem",
+      width: "7rem",
     },
     loginBox: {
       backgroundColor: "#e6f7ff",
