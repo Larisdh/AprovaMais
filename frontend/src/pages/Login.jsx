@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebaseConfig";
 import { useNavigate, Link } from "react-router-dom";
-import "./Login.css"; // Importa o arquivo CSS
+import "./css/Login.css"; // Adjust the path if the file exists in the correct location
 
 function Login() {
   const navigate = useNavigate();

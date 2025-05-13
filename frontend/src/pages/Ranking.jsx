@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
-import "./Ranking.css"; // Importa o arquivo CSS
+import "./css/Ranking.css"; // Adjust the path if the file exists in the correct location
 
 function Ranking() {
   const [user] = useAuthState(auth);

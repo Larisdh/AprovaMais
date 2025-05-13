@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Home.css"; // Importa o arquivo CSS
+import "./css/Home.css"; // Adjust the path if the file exists in the correct location
 
 export default function Home() {
   return (
