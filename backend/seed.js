@@ -16,9 +16,7 @@ const perguntas = [
       2: "3,16",
       3: "3,18"
     },
-    correta: 1,
-    categoria: "Matemática",
-    dificuldade: "Fácil"
+    correta: 1, 
   },
   {
     pergunta: "Em um triângulo retângulo, qual é a relação entre os lados segundo o Teorema de Pitágoras?",
@@ -29,8 +27,6 @@ const perguntas = [
       3: "a + b + c = 180°"
     },
     correta: 1,
-    categoria: "Matemática",
-    dificuldade: "Fácil"
   },
   {
     pergunta: "Qual é a fórmula para calcular a área de um círculo?",
@@ -41,8 +37,6 @@ const perguntas = [
       3: "A = 2πr²"
     },
     correta: 2,
-    categoria: "Matemática",
-    dificuldade: "Fácil"
   },
   {
     pergunta: "Se log₁₀(x) = 2, então x é igual a:",
@@ -53,8 +47,6 @@ const perguntas = [
       3: "1000"
     },
     correta: 1,
-    categoria: "Matemática",
-    dificuldade: "Médio"
   },
 ];
 
