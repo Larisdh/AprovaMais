@@ -8,19 +8,54 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const perguntas = [
-  [
-    {
-      "pergunta": "Qual é a capital do Brasil?",
-      "opcoes": {
-        0: "Brasília",
-        1: "São Paulo",
-        2: "Rio de Janeiro",
-        3: "Salvador"
-      },
-      "correta": 0,
-      "categoria": "Geografia"
-    }
-  ],  
+  {
+    pergunta: "Qual é o valor de π (pi) arredondado para duas casas decimais?",
+    opcoes: {
+      0: "3,12",
+      1: "3,14",
+      2: "3,16",
+      3: "3,18"
+    },
+    correta: 1,
+    categoria: "Matemática",
+    dificuldade: "Fácil"
+  },
+  {
+    pergunta: "Em um triângulo retângulo, qual é a relação entre os lados segundo o Teorema de Pitágoras?",
+    opcoes: {
+      0: "a² = b² + c²",
+      1: "a² + b² = c²",
+      2: "a × b = c²",
+      3: "a + b + c = 180°"
+    },
+    correta: 1,
+    categoria: "Matemática",
+    dificuldade: "Fácil"
+  },
+  {
+    pergunta: "Qual é a fórmula para calcular a área de um círculo?",
+    opcoes: {
+      0: "A = 2πr",
+      1: "A = πr",
+      2: "A = πr²",
+      3: "A = 2πr²"
+    },
+    correta: 2,
+    categoria: "Matemática",
+    dificuldade: "Fácil"
+  },
+  {
+    pergunta: "Se log₁₀(x) = 2, então x é igual a:",
+    opcoes: {
+      0: "20",
+      1: "100",
+      2: "200",
+      3: "1000"
+    },
+    correta: 1,
+    categoria: "Matemática",
+    dificuldade: "Médio"
+  },
 ];
 
 // Função para inserir

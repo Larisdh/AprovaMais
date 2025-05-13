@@ -24,9 +24,9 @@ app.get("/api/perguntas", async (req, res) => {
       return {
         id: doc.id,
         pergunta: data.pergunta,
-        alternativas: data.alternativas,
+        alternativas: Object.values(data.opcoes), // <- correção aqui
         correta: data.correta,
-        materia: data.materia || "Geral" // Adicionando campo matéria com valor padrão
+        materia: data.materia || "Geral"
       };
     });
     res.json(perguntas);
