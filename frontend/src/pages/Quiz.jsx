@@ -209,11 +209,6 @@ export default function Quiz() {
           <Link to="/perfil" style={{ color: "white", textDecoration: "none" }}>
             Perfil
           </Link>
-          <input
-            type="text"
-            placeholder="Buscar..."
-            style={styles.search}
-          />
           <img src="/Logo.png" alt="Logo ENEM" style={styles.logo} />
         </nav>
       </header>

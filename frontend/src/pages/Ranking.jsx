@@ -77,7 +77,6 @@ function Ranking() {
         <nav className="ranking-nav">
           <Link to="/home" className="ranking-link">Página Inicial</Link>
           <Link to="/quiz" className="ranking-link">Quiz</Link>
-          <input type="text" placeholder="Buscar..." className="ranking-search" />
           <img src="/Logo.png" alt="Logo Aprova" className="ranking-logo" />
         </nav>
       </header>
