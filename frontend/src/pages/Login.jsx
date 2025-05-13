@@ -34,11 +34,6 @@ import "./css/Login.css"; // Importa o arquivo CSS
       <header className="login-header">
         <span className="login-title">Login</span>
         <nav className="login-nav">
-          <input
-            type="text"
-            placeholder="Buscar..."
-            className="login-search"
-          />
           <img src="/Logo.png" alt="Logo" className="login-logo" />
         </nav>
       </header>
