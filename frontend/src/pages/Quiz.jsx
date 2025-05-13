@@ -34,6 +34,7 @@ export default function Quiz() {
         setErro("Erro ao carregar perguntas. Por favor, tente novamente mais tarde.");
       } finally {
         setCarregando(false);
+        console.log("Busca de perguntas concluída."); // Adicione este log
       }
     };
 
@@ -235,25 +236,25 @@ export default function Quiz() {
               <div style={styles.optionsContainer}>
                 {perguntas[indice]?.alternativas.map((alt, i) => (
                   <button
-                    key={i}
-                    onClick={() => responder(i)}
-                    disabled={respostaSelecionada !== null}
-                    style={{
-                      ...styles.optionButton,
-                      ...(respostaSelecionada === null
-                        ? {}
-                        : i === perguntas[indice].correta
-                        ? { backgroundColor: "#4CAF50", color: "white" }
-                        : i === respostaSelecionada
-                        ? { backgroundColor: "#F44336", color: "white" }
-                        : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }),
-                    }}
-                  >
-                    <span style={{ fontWeight: "bold" }}>
-                      {String.fromCharCode(65 + i)}){" "}
-                    </span>
-                    {alt}
-                  </button>
+                  key={i}
+                  onClick={() => responder(i)}
+                  disabled={respostaSelecionada !== null}
+                  style={{
+                    ...styles.optionButton,
+                    ...(respostaSelecionada === null
+                      ? {}
+                      : i === perguntas[indice].correta
+                      ? { backgroundColor: "#4CAF50", color: "white" } // Resposta correta (sempre verde)
+                      : i === respostaSelecionada
+                      ? { backgroundColor: "#F44336", color: "white" } // Resposta errada do usuário
+                      : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }), // Outras opções
+                  }}
+                >
+                  <span style={{ fontWeight: "bold" }}>
+                    {String.fromCharCode(65 + i)}){" "}
+                  </span>
+                  {alt}
+                </button>
                 ))}
               </div>
 
@@ -263,7 +264,7 @@ export default function Quiz() {
                   onClick={() => alert("Resposta salva!")}
                   style={styles.saveButton}
                 >
-                  SALVAR RESPOSTA
+                  Salvar Resposta
                 </button>
                 <button
                   onClick={() => navigate("/ranking")}
