@@ -2,6 +2,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebaseConfig";
 import { useNavigate, Link } from "react-router-dom";
+import "./Login.css"; // Importa o arquivo CSS
 
 function Login() {
   const navigate = useNavigate();
@@ -28,118 +29,28 @@ function Login() {
     }
   };
 
-  const styles = {
-    body: {
-      minHeight: "100vh", // Altura mínima igual à altura da tela
-      width: "100vw", // Largura total da tela
-      backgroundImage: "url('https://jwnews.com.br/wp-content/uploads/2024/08/enem1.jpg')",
-      backgroundSize: "cover", // Faz a imagem cobrir toda a área
-      backgroundPosition: "center", // Centraliza a imagem
-      
-      
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      fontFamily: "Sans-serif",
-    },
-    header: {
-      backgroundColor: "#0a518e",
-      width: "95.7%",
-      padding: "1rem 2rem",
-      color: "white",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      borderBottomLeftRadius: "1rem",
-      borderBottomRightRadius: "1rem",
-      boxShadow: "0 4px 6px rgba(227, 203, 203, 0.1)",
-    },
-    title: {
-      fontSize: "2rem",
-      fontWeight: "bold",
-      textAlign: "center",
-      borderBottom: "2px solid white",
-      display: "inline-block",
-    },
-    nav: {
-      display: "flex",
-      alignItems: "center",
-      gap: "2rem",
-      fontSize: "1rem",
-    },
-    logo: {
-      height: "5rem",
-    },
-    loginBox: {
-      backgroundColor: "#e6f7ff",
-      borderRadius: "2rem",
-      padding: "2rem",
-      marginTop: "4rem",
-      width: "90%",
-      maxWidth: "400px",
-      display: "flex",
-      flexDirection: "column",
-      gap: "1.5rem",
-    },
-    input: {
-      padding: "1rem",
-      borderRadius: "2rem",
-      border: "none",
-      backgroundColor: "#7ec8e3",
-      color: "white",
-      fontWeight: "bold",
-      fontSize: "1rem",
-    },
-    button: {
-      backgroundColor: "#0a518e",
-      color: "white",
-      border: "none",
-      padding: "1rem",
-      borderRadius: "2rem",
-      fontWeight: "bold",
-      cursor: "pointer",
-    },
-    divisor: {
-      textAlign: "center",
-      fontWeight: "bold",
-    },
-    erro: {
-      color: "red",
-      fontWeight: "bold",
-      textAlign: "center",
-    },
-  };
-
   return (
-    <div style={styles.body}>
-      <header style={styles.header}>
-        <span style={styles.title}>Login</span>
-        <nav style={styles.nav}>
-          
+    <div className="login-body">
+      <header className="login-header">
+        <span className="login-title">Login</span>
+        <nav className="login-nav">
           <input
             type="text"
             placeholder="Buscar..."
-            style={{
-              padding: "0.5rem",
-              borderRadius: "0.5rem",
-              border: "1px solid #ccc",
-              fontSize: "1rem",
-              backgroundColor: "white",
-              color: "#333",
-            }}
+            className="login-search"
           />
-          <img src="/Logo.png" alt="Logo" style={styles.logo} />
+          <img src="/Logo.png" alt="Logo" className="login-logo" />
         </nav>
       </header>
 
-      <form onSubmit={handleLoginEmailSenha} style={styles.loginBox}>
+      <form onSubmit={handleLoginEmailSenha} className="login-box">
         <input
           type="email"
           placeholder="E-MAIL"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          style={styles.input}
+          className="login-input"
         />
         <input
           type="password"
@@ -147,19 +58,19 @@ function Login() {
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
           required
-          style={styles.input}
+          className="login-input"
         />
 
-        {erro && <p style={styles.erro}>{erro}</p>}
+        {erro && <p className="login-error">{erro}</p>}
 
-        <button type="submit" style={styles.button}>
+        <button type="submit" className="login-button">
           Entrar com E-mail
         </button>
       </form>
 
-      <div style={{ ...styles.loginBox, alignItems: "center", padding: "1rem" }}>
-        <div style={styles.divisor}>ou</div>
-        <button onClick={handleLoginGoogle} style={styles.button}>
+      <div className="login-box login-google">
+        <div className="login-divisor">ou</div>
+        <button onClick={handleLoginGoogle} className="login-button">
           Entrar com Google
         </button>
       </div>
