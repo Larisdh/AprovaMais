@@ -112,10 +112,10 @@ export default function Quiz() {
   const styles = {
     body: {
       minHeight: "100vh",
-      width: "100vw",
+      width: "100%",
       backgroundColor: "#B9DCF3",
       backgroundImage: "url('/imagem-fundo-enem.jpg')",
-      backgroundSize: "cover",
+      backgroundSize: "cover",  
       backgroundPosition: "center",
       display: "flex",
       flexDirection: "column",
@@ -168,9 +168,9 @@ export default function Quiz() {
     questionContainer: {
       backgroundColor: "white",
       color: "#0D6E9C",
-      width: "100%",
+      width: "75%",
       maxWidth: "40rem",
-      padding: "1.5rem",
+      margin: "1.5rem",
       borderRadius: "1.5rem",
       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     },

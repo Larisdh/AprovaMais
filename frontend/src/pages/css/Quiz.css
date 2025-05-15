@@ -117,8 +117,11 @@ body {
   color: #0D6E9C;
   width: 100%;
   max-width: 40rem;
+<<<<<<< HEAD
   padding: 2rem;
   /* Mais espaçamento */
+=======
+>>>>>>> 77312df (container do quiz arrumado)
   border-radius: 1.5rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   /* Sombra mais moderna */
@@ -246,15 +249,30 @@ body {
 
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
+  .quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .quiz-header {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+<<<<<<< HEAD
   }
 
   .quiz-title {
     font-size: 1.8rem;
     /* Fonte maior */
+=======
+    text-align: center;
+  }
+
+  .quiz-title {
+    font-size: 1.5rem;
+>>>>>>> 77312df (container do quiz arrumado)
   }
 
   .quiz-logo {
@@ -274,6 +292,7 @@ body {
 
   .quiz-main {
     padding: 1rem;
+<<<<<<< HEAD
   }
 
   .quiz-question-container {
@@ -283,11 +302,40 @@ body {
 
   .quiz-question-text {
     font-size: 1rem;
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-question-container {
+    padding: 1rem;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .quiz-question-text {
+    font-size: 0.9rem;
+  }
+
+  .quiz-options-container {
+    align-items: center;
+>>>>>>> 77312df (container do quiz arrumado)
   }
 
   .quiz-option-button {
     font-size: 0.9rem;
     padding: 0.75rem;
+<<<<<<< HEAD
+=======
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .quiz-save-button-container {
+    justify-content: center;
+>>>>>>> 77312df (container do quiz arrumado)
   }
 
   .quiz-save-button {
