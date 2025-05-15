@@ -1,6 +1,8 @@
 .home-container {
   background-color: #d5f3ff;
-  font-family: Sans-serif;
+  /* Mantido */
+  font-family: 'Roboto', Sans-serif;
+  /* Fonte mais moderna */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -11,43 +13,55 @@
 
 .home-header {
   background-color: #0a518e;
+  /* Mantido */
   color: white;
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem 2rem;
+  /* Mais espaçamento */
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 1.5rem;
+  /* Bordas mais arredondadas */
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  /* Sombra mais moderna */
   text-align: center;
   position: relative;
   z-index: 10;
 }
 
 .home-header h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-size: 2.8rem;
+  /* Fonte maior */
+  font-weight: 900;
+  /* Peso mais forte */
+  letter-spacing: 0.08em;
+  /* Menor espaçamento */
 }
 
 .home-logo {
-  height: 6rem;
+  height: 5rem;
+  /* Tamanho ajustado */
   position: absolute;
   top: 50%;
-  right: 1.5rem;
+  right: 2rem;
   transform: translateY(-50%);
 }
 
 .home-subtitle {
   background-color: #a7cceb;
+  /* Mantido */
   color: white;
   text-align: center;
-  padding: 0.75rem 0;
-  font-size: 1.25rem;
+  padding: 1rem;
+  /* Mais espaçamento */
+  font-size: 1.3rem;
   font-weight: 600;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1rem 1rem;
+  border-radius: 1rem;
+  /* Bordas mais arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra mais moderna */
+  margin: 1.5rem 2rem;
 }
 
 .home-main {
@@ -55,93 +69,127 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  padding: 2.5rem 1.5rem;
+  gap: 3rem;
+  /* Maior espaçamento */
+  padding: 3rem 2rem;
   text-align: center;
   z-index: 5;
 }
 
 .home-image {
-  width: 30rem;
+  width: 28rem;
+  /* Tamanho ajustado */
+  border-radius: 1rem;
+  /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para destaque */
 }
 
 .home-description {
-  max-width: 40rem;
+  max-width: 38rem;
   color: #003b6f;
+  /* Mantido */
   text-align: center;
 }
 
 .home-description h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  /* Fonte maior */
+  font-weight: 800;
+  /* Peso mais forte */
+  margin-bottom: 1.5rem;
 }
 
 .home-description p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  /* Fonte maior */
   margin-bottom: 1rem;
+  line-height: 1.6;
+  /* Melhor espaçamento entre linhas */
 }
 
 .home-description p:last-child {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .home-button {
-  background-color: #0a518e;
+  background-color: #1d72b8;
+  /* Azul mais vibrante */
   color: white;
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.75rem 2rem;
-  border-radius: 0.75rem;
-  margin-top: 1.5rem;
-  transition: background-color 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  /* Fonte maior */
+  padding: 1rem 2.5rem;
+  /* Mais espaçamento */
+  border-radius: 1.5rem;
+  /* Bordas mais arredondadas */
+  margin-top: 2rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  /* Transições suaves */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra mais leve */
   border: none;
   cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #155d8b;
+  /* Azul mais escuro no hover */
+  transform: translateY(-3px);
+  /* Efeito de elevação */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Sombra mais intensa no hover */
+}
+
+.home-button:active {
+  transform: translateY(0);
+  /* Remove elevação ao clicar */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  /* Sombra reduzida ao clicar */
 }
 
 /* Media query para dispositivos móveis */
 @media (max-width: 600px) {
   .home-header h1 {
-      font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .home-logo {
-      height: 4rem;
-      right: 1rem;
+    height: 4rem;
+    right: 1rem;
   }
 
   .home-subtitle {
-      font-size: 1rem;
-      padding: 0.5rem 0;
-      margin: 0.5rem 1rem;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    margin: 1rem;
   }
 
   .home-main {
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 1.5rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
   }
 
   .home-image {
-      width: 20rem;
+    width: 22rem;
   }
 
   .home-description {
-      max-width: 90%;
+    max-width: 90%;
   }
 
   .home-description h2 {
-      font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .home-description p {
-      font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .home-button {
-      font-size: 0.9rem;
-      padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
   }
 }
