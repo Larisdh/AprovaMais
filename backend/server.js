@@ -30,9 +30,11 @@ app.get("/api/perguntas", async (req, res) => {
       return {
         id: doc.id,
         pergunta: data.pergunta,
-        alternativas: Object.values(data.opcoes), // <- correção aqui
+        textos: data.textos || [], // Adicionar os textos
+        alternativas: Object.values(data.opcoes),
         correta: data.correta,
-        materia: data.materia || "Geral"
+        materia: data.materia || "",
+        explicacao: data.explicacao || ""
       };
     });
     res.json(perguntas);
@@ -41,6 +43,7 @@ app.get("/api/perguntas", async (req, res) => {
     res.status(500).json({ error: "Erro ao buscar perguntas" });
   }
 });
+
 
 // Rota para salvar resultado de um quiz
 app.post("/api/resultados", async (req, res) => {

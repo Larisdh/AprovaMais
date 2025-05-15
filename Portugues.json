@@ -1,0 +1,303 @@
+[
+  {
+    "pergunta": "Assinale a alternativa que apresenta uma comparação:",
+    "opcoes": {
+      "0": "Ele é forte como um touro.",
+      "1": "Ele é um touro.",
+      "2": "Ele tem uma força de touro.",
+      "3": "Ele se comporta como um touro."
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A comparação é uma figura de linguagem que estabelece uma relação de semelhança entre dois elementos, usando palavras como 'como' ou 'tal qual'."
+  },
+  {
+    "pergunta": "Em qual alternativa há uma metonímia?",
+    "opcoes": {
+      "0": "Ele tem um coração de pedra.",
+      "1": "Ela comprou um quadro de Picasso.",
+      "2": "A casa caiu.",
+      "3": "Ele é um leão na luta."
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A metonímia é uma figura de linguagem que substitui uma palavra por outra com a qual tem uma relação de proximidade ou contiguidade. 'Comprar um quadro de Picasso' é um exemplo, pois se refere à obra de Picasso."
+  },
+  {
+    "pergunta": "Qual das alternativas a seguir apresenta uma antítese?",
+    "opcoes": {
+      "0": "Ele é forte e fraco ao mesmo tempo.",
+      "1": "Ele é forte como um touro.",
+      "2": "Ele tem o espírito de um leão.",
+      "3": "Ele é de ferro."
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A antítese é a figura de linguagem que consiste na aproximação de palavras ou ideias de significados opostos. No caso, 'forte e fraco ao mesmo tempo' representa oposição entre conceitos."
+  },
+  {
+    "pergunta": "Em qual alternativa há um exemplo de onomatopeia?",
+    "opcoes": {
+      "0": "O relógio fez tic-tac.",
+      "1": "A chuva caía suavemente.",
+      "2": "O vento assobiava no telhado.",
+      "3": "Ele gritou com todas as suas forças."
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de objetos. 'Tic-tac' imita o som de um relógio."
+  },
+  {
+    "pergunta": "Qual a figura de linguagem presente na frase: 'Ele é um verdadeiro anjo'?",
+    "opcoes": {
+      "0": "Metáfora",
+      "1": "Metonímia",
+      "2": "Antítese",
+      "3": "Ironia"
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A metáfora é uma figura de linguagem que consiste na substituição de uma palavra por outra, com a qual possui uma relação de semelhança. 'Ver verdadeiro anjo' é uma metáfora que compara a bondade de uma pessoa com a imagem de um anjo."
+  },
+    {
+    "pergunta": "Qual das alternativas abaixo apresenta uma perífrase (antonomásia)?",
+    "opcoes": {
+      "0": "Saia já para fora!",
+      "1": "Foi salvo pelo melhor amigo do homem.",
+      "2": "‘É o pau, é a pedra, é o fim do caminho.’",
+      "3": "Escreveu, não leu; o pau comeu.",
+      "4": "Não aguentava mais aquele buá-buá nos meus ouvidos."
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A perífrase (ou antonomásia) é uma figura de linguagem que substitui um nome comum por uma expressão mais detalhada ou pelo nome de algo relacionado. No caso, 'melhor amigo do homem' é uma perífrase para o cão."
+  },
+  {
+    "pergunta": "Em ‘Urgh, que nojo!’, qual figura de linguagem está presente?",
+    "opcoes": {
+      "0": "Ironia",
+      "1": "Onomatopeia",
+      "2": "Metáfora",
+      "3": "Hipérbole"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de ações. ‘Urgh’ imita um som de repulsa ou nojo."
+  },
+  {
+    "pergunta": "A frase ‘Estou morrendo de fome’ é um exemplo de:",
+    "opcoes": {
+      "0": "Eufemismo",
+      "1": "Hipérbole",
+      "2": "Metonímia",
+      "3": "Antítese"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A hipérbole é uma figura de linguagem que exagera a realidade. No caso, ‘morrendo de fome’ exagera o estado de fome da pessoa."
+  },
+  {
+    "pergunta": "‘Ela é uma flor’ é um exemplo de:",
+    "opcoes": {
+      "0": "Metáfora",
+      "1": "Comparação",
+      "2": "Ironia",
+      "3": "Catacrese"
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A metáfora é uma figura de linguagem que faz uma comparação implícita entre dois elementos. ‘Ela é uma flor’ sugere que a pessoa é delicada e bonita sem usar a palavra ‘como’."
+  },
+  {
+    "pergunta": "Em ‘Tem seis bocas para alimentar em casa’, temos:",
+    "opcoes": {
+      "0": "Catacrese",
+      "1": "Metonímia",
+      "2": "Prosopopeia",
+      "3": "Hipérbole"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A metonímia é uma figura de linguagem em que uma palavra é substituída por outra que tem uma relação de proximidade ou contiguidade. ‘Seis bocas’ substitui as pessoas que devem ser alimentadas."
+  },
+    {
+    "pergunta": "A função da linguagem predominante em um texto publicitário é:",
+    "opcoes": {
+      "0": "Referencial",
+      "1": "Conativa (apelativa)",
+      "2": "Fática",
+      "3": "Emotiva"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A função conativa (ou apelativa) é caracterizada pela intenção de influenciar o receptor. Em textos publicitários, o objetivo é convencer o público a consumir um produto ou serviço."
+  },
+  {
+    "pergunta": "Quando o texto enfatiza as emoções do emissor, temos a função:",
+    "opcoes": {
+      "0": "Referencial",
+      "1": "Emotiva",
+      "2": "Fática",
+      "3": "Metalinguística"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A função emotiva se destaca quando o emissor expressa seus sentimentos ou emoções. Ela se foca no emissor da mensagem."
+  },
+  {
+    "pergunta": "A função metalinguística está presente quando:",
+    "opcoes": {
+      "0": "O código é explicado pelo próprio código.",
+      "1": "O canal é enfatizado.",
+      "2": "O receptor é o foco.",
+      "3": "O contexto é o mais importante."
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A função metalinguística ocorre quando o código utilizado (linguagem) é explicado ou esclarecido dentro do próprio texto."
+  },
+  {
+    "pergunta": "Em uma conversa telefônica, quando alguém diz ‘Está me ouvindo?’, predomina a função:",
+    "opcoes": {
+      "0": "Fática",
+      "1": "Referencial",
+      "2": "Emotiva",
+      "3": "Poética"
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "A função fática é voltada para o estabelecimento, manutenção e verificação da comunicação, como no caso de checar se o canal de comunicação está funcionando."
+  },
+  {
+    "pergunta": "Em um poema, a função da linguagem mais evidente costuma ser:",
+    "opcoes": {
+      "0": "Poética",
+      "1": "Referencial",
+      "2": "Fática",
+      "3": "Conativa"
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "Em textos poéticos, a função da linguagem mais evidente é a poética, que foca na forma e estética da mensagem, buscando a beleza e o impacto artístico."
+  },
+    {
+    "pergunta": "O artigo de opinião é um gênero textual que tem como principal objetivo:",
+    "opcoes": {
+      "0": "Informar",
+      "1": "Convencer",
+      "2": "Narrar",
+      "3": "Descrever"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "O artigo de opinião visa principalmente convencer o leitor sobre um ponto de vista ou opinião, sendo um texto argumentativo que expressa a opinião do autor sobre determinado tema."
+  },
+  {
+    "pergunta": "Assinale a alternativa correta sobre gêneros textuais:",
+    "opcoes": {
+      "0": "São estruturas fixas e imutáveis.",
+      "1": "São limitados a cinco tipos.",
+      "2": "São incontáveis e variam conforme o contexto comunicacional.",
+      "3": "Não variam com as mudanças sociais."
+    },
+    "correta": 2,
+    "materia": "Língua Portuguesa",
+    "explicacao": "Os gêneros textuais são adaptáveis ao contexto e à comunicação, variando conforme as necessidades de expressão social e as mudanças culturais."
+  },
+  {
+    "pergunta": "Uma das estratégias argumentativas mais comuns em textos dissertativos é:",
+    "opcoes": {
+      "0": "Narrar fatos fictícios",
+      "1": "Apresentar exemplos concretos",
+      "2": "Descrever cenários",
+      "3": "Usar rimas"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "Em textos dissertativos, é comum o uso de exemplos concretos para sustentar argumentos, tornando a argumentação mais persuasiva e sólida."
+  },
+  {
+    "pergunta": "Quando o autor utiliza uma citação direta para reforçar seu ponto de vista, ele está empregando:",
+    "opcoes": {
+      "0": "Argumento de autoridade",
+      "1": "Argumento de causa e consequência",
+      "2": "Argumento por exemplificação",
+      "3": "Argumento por analogia"
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "O argumento de autoridade ocorre quando o autor cita uma pessoa ou fonte considerada referência sobre o tema, reforçando a credibilidade de seu ponto de vista."
+  },
+  {
+    "pergunta": "Em um texto argumentativo, a apresentação de dados estatísticos corresponde a qual estratégia?",
+    "opcoes": {
+      "0": "Apelo à emoção",
+      "1": "Argumento de autoridade",
+      "2": "Argumento lógico",
+      "3": "Argumento de exemplificação"
+    },
+    "correta": 2,
+    "materia": "Língua Portuguesa",
+    "explicacao": "O uso de dados estatísticos em um texto argumentativo é uma estratégia lógica, pois fundamenta o argumento em evidências objetivas e racionais."
+  },
+    {
+    "pergunta": "O Quinhentismo é um movimento literário que corresponde:",
+    "opcoes": {
+      "0": "Ao século XVI, início da colonização do Brasil.",
+      "1": "Ao século XVII, barroco.",
+      "2": "Ao século XVIII, arcadismo.",
+      "3": "Ao século XIX, romantismo."
+    },
+    "correta": 0,
+    "materia": "Língua Portuguesa",
+    "explicacao": "O Quinhentismo corresponde ao século XVI, quando o Brasil foi descoberto e iniciado o processo de colonização por parte de Portugal."
+  },
+  {
+    "pergunta": "Uma característica marcante dos textos do Quinhentismo é:",
+    "opcoes": {
+      "0": "Forte subjetividade",
+      "1": "Descrição objetiva da natureza e dos indígenas",
+      "2": "Uso de linguagem rebuscada",
+      "3": "Temática urbana"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "Os textos do Quinhentismo têm uma característica predominante de descrever a natureza e os indígenas de forma objetiva, com o intuito de relatar o desconhecido para os europeus."
+  },
+  {
+    "pergunta": "O principal objetivo dos textos informativos do Quinhentismo era:",
+    "opcoes": {
+      "0": "Criticar a sociedade europeia",
+      "1": "Relatar e descrever a terra e os habitantes do Brasil para a Coroa portuguesa",
+      "2": "Expressar sentimentos pessoais",
+      "3": "Narrar lendas indígenas"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "Os textos do Quinhentismo, como cartas e relatos, tinham o objetivo principal de informar a Coroa portuguesa sobre as terras recém-descobertas, seus recursos naturais e os habitantes locais."
+  },
+  {
+    "pergunta": "O autor da 'Carta de Pero Vaz de Caminha' pertence ao período:",
+    "opcoes": {
+      "0": "Barroco",
+      "1": "Quinhentismo",
+      "2": "Romantismo",
+      "3": "Modernismo"
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "Pero Vaz de Caminha foi o autor da famosa 'Carta de Pero Vaz de Caminha', escrita em 1500, durante o período do Quinhentismo."
+  },
+  {
+    "pergunta": "Sobre o Quinhentismo, é correto afirmar:",
+    "opcoes": {
+      "0": "É um movimento exclusivamente poético.",
+      "1": "Tem textos de caráter informativo e jesuítico.",
+      "2": "Surgiu no século XIX.",
+      "3": "Seus textos não abordam a catequese."
+    },
+    "correta": 1,
+    "materia": "Língua Portuguesa",
+    "explicacao": "O Quinhentismo é marcado por textos de caráter informativo (relatos e cartas) e jesuítico, pois os missionários tinham grande presença na época, promovendo a catequese dos indígenas."
+  }
+]
