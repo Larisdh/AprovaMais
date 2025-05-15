@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig"; // Importando auth para identificar o usuário
+import { saveScore } from "../services/quizService"; // Importando o serviço
 import "./css/Quiz.css"; // Adjust the path if the file exists in the correct location
 
 export default function Quiz() {
@@ -11,6 +12,8 @@ export default function Quiz() {
   const [acertos, setAcertos] = useState(0);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(null);
+  const [quizFinalizado, setQuizFinalizado] = useState(false);
+  const [resultadoFinal, setResultadoFinal] = useState(null);
 
   // Buscar perguntas da API ao carregar o componente
   useEffect(() => {
@@ -35,12 +38,50 @@ export default function Quiz() {
         setErro("Erro ao carregar perguntas. Por favor, tente novamente mais tarde.");
       } finally {
         setCarregando(false);
-        console.log("Busca de perguntas concluída."); // Adicione este log
+        console.log("Busca de perguntas concluída.");
       }
     };
 
     buscarPerguntas();
   }, []);
+
+  // Efeito para salvar o resultado quando o quiz é finalizado
+  useEffect(() => {
+    const salvarResultado = async () => {
+      if (quizFinalizado && resultadoFinal !== null) {
+        try {
+          const user = auth.currentUser;
+          if (user) {
+            const nome = user.displayName || user.email;
+            // Salvar pontuação no novo endpoint
+            await saveScore(nome, resultadoFinal);
+            
+            // Salvar resultado detalhado no endpoint existente
+            await fetch("http://localhost:3000/api/resultados", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                userId: user.uid,
+                acertos: resultadoFinal,
+                total: perguntas.length,
+                materia: "Geral" // ou a matéria específica se houver
+              }),
+            });
+            
+            console.log("Resultado salvo com sucesso!");
+          } else {
+            console.error("Usuário não autenticado");
+          }
+        } catch (error) {
+          console.error("Erro ao salvar resultado:", error);
+        }
+      }
+    };
+
+    salvarResultado();
+  }, [quizFinalizado, resultadoFinal, perguntas.length]);
 
   // Função para responder pergunta
   function responder(indiceAlternativa) {
@@ -59,12 +100,11 @@ export default function Quiz() {
         setIndice(indice + 1);
         setRespostaSelecionada(null);
       } else {
-        // Salva o resultado no Firestore (implementar em versão futura)
-        const resultadoFinal = acertos + (indiceAlternativa === perguntaAtual.correta ? 1 : 0);
-        alert(`Você acertou ${resultadoFinal} de ${perguntas.length} perguntas!`);
-        
-        // Aqui poderia ser implementado o envio do resultado para o backend
-        // salvarResultado(resultadoFinal);
+        // Quiz finalizado
+        const pontuacaoFinal = acertos + (indiceAlternativa === perguntaAtual.correta ? 1 : 0);
+        setResultadoFinal(pontuacaoFinal);
+        setQuizFinalizado(true);
+        alert(`Você acertou ${pontuacaoFinal} de ${perguntas.length} perguntas!`);
       }
     }, 1000);
   }
@@ -194,6 +234,27 @@ export default function Quiz() {
       textAlign: "center",
       fontSize: "1rem",
       padding: "2rem",
+    },
+    resultContainer: {
+      textAlign: "center",
+      padding: "2rem",
+    },
+    resultTitle: {
+      fontSize: "1.5rem",
+      fontWeight: "bold",
+      marginBottom: "1rem",
+      color: "#0D6E9C",
+    },
+    resultScore: {
+      fontSize: "2rem",
+      fontWeight: "bold",
+      marginBottom: "1.5rem",
+      color: "#0D6E9C",
+    },
+    resultButtons: {
+      display: "flex",
+      justifyContent: "center",
+      gap: "1rem",
     }
   };
 
@@ -206,8 +267,8 @@ export default function Quiz() {
           <Link to="/home" style={{ color: "white", textDecoration: "none" }}>
             Página Inicial
           </Link>
-          <Link to="/perfil" style={{ color: "white", textDecoration: "none" }}>
-            Perfil
+          <Link to="/ranking" style={{ color: "white", textDecoration: "none" }}>
+            Ranking
           </Link>
           <img src="/Logo.png" alt="Logo ENEM" style={styles.logo} />
         </nav>
@@ -222,6 +283,31 @@ export default function Quiz() {
             </div>
           ) : erro ? (
             <div style={styles.errorMessage}>{erro}</div>
+          ) : quizFinalizado ? (
+            <div style={styles.resultContainer}>
+              <h2 style={styles.resultTitle}>Quiz Finalizado</h2>
+              <div style={styles.resultScore}>Você acertou {resultadoFinal} de {perguntas.length} perguntas!</div>
+              <div style={styles.resultButtons}>
+                <button 
+                  onClick={() => navigate("/ranking")} 
+                  style={styles.saveButton}
+                >
+                  Ver Ranking
+                </button>
+                <button 
+                  onClick={() => {
+                    setQuizFinalizado(false);
+                    setIndice(0);
+                    setAcertos(0);
+                    setRespostaSelecionada(null);
+                    setResultadoFinal(null);
+                  }} 
+                  style={{...styles.saveButton, backgroundColor: "#4CAF50"}}
+                >
+                  Jogar Novamente
+                </button>
+              </div>
+            </div>
           ) : perguntas.length === 0 ? (
             <div style={styles.errorMessage}>Nenhuma pergunta disponível</div>
           ) : (
@@ -232,26 +318,31 @@ export default function Quiz() {
               <div style={styles.optionsContainer}>
                 {perguntas[indice]?.alternativas.map((alt, i) => (
                   <button
-  key={i}
-  onClick={() => responder(i)}
-  disabled={respostaSelecionada !== null}
-  style={{
-    ...styles.optionButton,
-    ...(respostaSelecionada === null
-      ? {}
-      : i === perguntas[indice].correta
-      ? { backgroundColor: "#4CAF50", color: "white" } // Resposta correta (sempre verde)
-      : i === respostaSelecionada
-      ? { backgroundColor: "#F44336", color: "white" } // Resposta errada do usuário
-      : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }), // Outras opções
-  }}
->
-  <span style={{ fontWeight: "bold" }}>
-    {String.fromCharCode(65 + i)}){" "}
-  </span>
-  {alt}
-</button>
+                    key={i}
+                    onClick={() => responder(i)}
+                    disabled={respostaSelecionada !== null}
+                    style={{
+                      ...styles.optionButton,
+                      ...(respostaSelecionada === null
+                        ? {}
+                        : i === perguntas[indice].correta
+                        ? { backgroundColor: "#4CAF50", color: "white" } // Resposta correta (sempre verde)
+                        : i === respostaSelecionada
+                        ? { backgroundColor: "#F44336", color: "white" } // Resposta errada do usuário
+                        : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }), // Outras opções
+                    }}
+                  >
+                    <span style={{ fontWeight: "bold" }}>
+                      {String.fromCharCode(65 + i)}){" "}
+                    </span>
+                    {alt}
+                  </button>
                 ))}
+              </div>
+
+              {/* Indicador de progresso */}
+              <div style={{ marginTop: "1rem", textAlign: "center" }}>
+                Pergunta {indice + 1} de {perguntas.length}
               </div>
 
               {/* Botões de ação */}
@@ -260,7 +351,7 @@ export default function Quiz() {
                   onClick={() => navigate("/ranking")}
                   style={styles.saveButton}
                 >
-                  Ver Classificação
+                  Ver Ranking
                 </button>
               </div>
             </>

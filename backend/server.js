@@ -15,6 +15,12 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+// Importar rotas
+const scoresRouter = require("./routes/scores");
+
+// Aplicar rotas
+app.use("/api/scores", scoresRouter);
+
 // Rota para obter perguntas
 app.get("/api/perguntas", async (req, res) => {
   try {
