@@ -1,30 +1,30 @@
+/* Geral */
 .home-container {
   background-color: #d5f3ff;
-  /* Mantido */
+  /* Fundo geral */
   font-family: 'Roboto', Sans-serif;
-  /* Fonte mais moderna */
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  /* Garante que o contêiner ocupe toda a altura da tela */
 }
 
+/* Cabeçalho */
 .home-header {
   background-color: #0a518e;
-  /* Mantido */
   color: white;
   padding: 1.5rem 2rem;
-  /* Mais espaçamento */
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom-left-radius: 1.5rem;
-  /* Bordas mais arredondadas */
   border-bottom-right-radius: 1.5rem;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  /* Sombra mais moderna */
   text-align: center;
   position: relative;
   z-index: 10;
@@ -32,80 +32,89 @@
 
 .home-header h1 {
   font-size: 2.8rem;
-  /* Fonte maior */
   font-weight: 900;
-  /* Peso mais forte */
   letter-spacing: 0.08em;
-  /* Menor espaçamento */
 }
 
 .home-logo {
   height: 5rem;
-  /* Tamanho ajustado */
   position: absolute;
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
 }
 
+/* Subtítulo */
 .home-subtitle {
-  background-color: #a7cceb;
-  /* Mantido */
-  color: white;
+  background-color: #e8f6f9;
+  color: #0a518e;
   text-align: center;
-  padding: 1rem;
-  /* Mais espaçamento */
-  font-size: 1.3rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   border-radius: 1rem;
-  /* Bordas mais arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra mais moderna */
-  margin: 1.5rem 2rem;
+  margin: 1rem 1.5rem;
 }
 
+/* Conteúdo principal */
 .home-main {
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  /* Maior espaçamento */
-  padding: 3rem 2rem;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem 1rem;
   text-align: center;
   z-index: 5;
 }
 
-.home-image {
-  width: 28rem;
-  /* Tamanho ajustado */
-  border-radius: 1rem;
-  /* Adiciona bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra para destaque */
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
 }
 
+/* Imagem */
+.home-image {
+  width: 30rem;
+  flex: 1;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 38%;
+  height: auto;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+/* Descrição */
 .home-description {
-  max-width: 38rem;
-  color: #003b6f;
-  /* Mantido */
+  max-width: 50rem;
+  color: #083a6b;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 0.5rem; /* Espaçamento entre os elementos */
+  margin-top: 5rem; /* Aumenta o espaço acima para centralizar melhor */
+  margin-bottom: 2rem; /* Adiciona espaço abaixo */
 }
 
 .home-description h2 {
-  font-size: 1.5rem;
-  /* Fonte maior */
+  font-size: 1.4rem;
   font-weight: 800;
-  /* Peso mais forte */
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .home-description p {
-  font-size: 1.1rem;
-  /* Fonte maior */
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  /* Melhor espaçamento entre linhas */
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
 
 .home-description p:last-child {
@@ -113,40 +122,131 @@
   font-weight: 800;
 }
 
+/* Botão */
 .home-button {
-  background-color: #1d72b8;
-  /* Azul mais vibrante */
+  background-color: #0a518e;
   color: white;
   font-weight: 700;
   font-size: 1.1rem;
-  /* Fonte maior */
   padding: 1rem 2.5rem;
-  /* Mais espaçamento */
   border-radius: 1.5rem;
-  /* Bordas mais arredondadas */
-  margin-top: 2rem;
+  margin-top: 1rem;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-  /* Transições suaves */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra mais leve */
   border: none;
   cursor: pointer;
 }
 
 .home-button:hover {
-  background-color: #155d8b;
-  /* Azul mais escuro no hover */
+  background-color: #083a6b;
   transform: translateY(-3px);
-  /* Efeito de elevação */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  /* Sombra mais intensa no hover */
 }
 
 .home-button:active {
   transform: translateY(0);
-  /* Remove elevação ao clicar */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-  /* Sombra reduzida ao clicar */
+}
+
+/* Barra lateral */
+.home-aside {
+  flex: 1;
+  background-color: #0a518e; /* Fundo azul escuro */
+  color: white; /* Texto branco */
+  padding: 1.5rem; /* Aumenta o espaçamento interno */
+  border-radius: 1rem; /* Bordas arredondadas maiores */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  max-width: 25rem;
+  text-align: left;
+  border: 1px solid #f0f8ff; /* Borda azul claro */
+}
+
+.home-aside h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f0f8ff; /* Azul claro */
+  text-align: center; /* Centraliza o título */
+  font-weight: bold;
+}
+
+.home-aside ul {
+  list-style: none;
+  padding: 0;
+  display: grid; /* Usa grid para organizar os itens */
+  grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
+  gap: 0.5rem; /* Espaçamento entre os itens */
+}
+
+.home-aside li {
+  margin-bottom: 0;
+}
+
+.home-aside button {
+  background-color: #f0f8ff; /* Fundo azul claro */
+  color: #0a518e; /* Texto azul escuro */
+  border: none;
+  padding: 0.75rem 1rem; /* Botões maiores */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-align: center; /* Centraliza o texto nos botões */
+}
+
+.home-aside button:hover {
+  background-color: #d5f3ff; /* Azul mais claro no hover */
+  color: #083a6b; /* Azul mais escuro no texto */
+  transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/* Seletor de perguntas */
+.question-selector {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 1.5rem; /* Igual ao título da home-aside */
+  font-weight: bold; /* Negrito para combinar com o estilo */
+  color: #f0f8ff; /* Azul claro, igual ao texto da home-aside */
+}
+
+.question-selector h4 {
+  font-size: 1.5rem; /* Igual ao título da home-aside */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 0.5rem;
+  color: #f0f8ff; /* Azul claro */
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.question-buttons {
+  display: flex; /* Alinha os botões em uma linha */
+  gap: 0.5rem; /* Espaçamento entre os botões */
+  justify-content: space-between; /* Distribui os botões uniformemente */
+  flex-wrap: nowrap; /* Impede que os botões quebrem linha */
+  overflow-x: auto; /* Adiciona scroll horizontal caso necessário */
+}
+
+.question-buttons button {
+  background-color: #f0f8ff; /* Fundo azul claro */
+  color: #0a518e; /* Texto azul escuro */
+  border: 1px solid #0a518e; /* Borda azul escuro */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Impede que o texto dos botões quebre */
+}
+
+.question-buttons button:hover {
+  background-color: #d5f3ff; /* Fundo mais claro no hover */
+  color: #083a6b; /* Texto azul mais escuro */
+}
+
+.question-buttons button.active {
+  background-color: #0a518e; /* Fundo azul escuro para o botão ativo */
+  color: white; /* Texto branco */
+  border: 1px solid #083a6b; /* Borda azul mais escuro */
 }
 
 /* Media query para dispositivos móveis */
@@ -160,6 +260,11 @@
     right: 1rem;
   }
 
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .home-subtitle {
     font-size: 1.1rem;
     padding: 0.75rem;
@@ -168,12 +273,16 @@
 
   .home-main {
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .home-image {
     width: 22rem;
+  }
+
+  .home-aside {
+    max-width: 100%;
   }
 
   .home-description {
