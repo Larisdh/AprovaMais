@@ -246,6 +246,13 @@ body {
 
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
+  .quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .quiz-header {
     flex-direction: column;
     align-items: center;
@@ -283,11 +290,35 @@ body {
 
   .quiz-question-text {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quiz-question-container {
+    padding: 1rem;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .quiz-question-text {
+    font-size: 0.9rem;
+  }
+
+  .quiz-options-container {
+    align-items: center;
   }
 
   .quiz-option-button {
     font-size: 0.9rem;
     padding: 0.75rem;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .quiz-save-button-container {
+    justify-content: center;
   }
 
   .quiz-save-button {
