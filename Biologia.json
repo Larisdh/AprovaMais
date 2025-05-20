@@ -9,7 +9,7 @@
             "4": "Habitat e ecossistema"
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Habitat é o local onde a espécie vive, enquanto nicho ecológico é o papel que ela desempenha nesse ambiente."
     },
     {
@@ -22,7 +22,7 @@
             "4": "Uma população"
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Cada espécie forma uma população distinta, portanto são três populações convivendo no mesmo ambiente."
     },
     {
@@ -34,7 +34,7 @@
             "3": "População, comunidade e biosfera"
         },
         "correta": 3,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "As definições correspondem, respectivamente, a população, comunidade e biosfera."
     },
     {
@@ -47,7 +47,7 @@
             "4": "Pela interação dos fatores abióticos e bióticos"
         },
         "correta": 4,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Ecossistemas são definidos pela interação entre os componentes vivos (bióticos) e não vivos (abióticos)."
     },
     {
@@ -60,7 +60,7 @@
             "4": "A onça é consumidor terciário e representa o terceiro nível trófico."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Na cadeia, capim (produtor), preá (consumidor primário), lobo guará (consumidor secundário) e onça (consumidor terciário)."
     },
     {
@@ -73,7 +73,7 @@
             "4": "Ecossistema"
         },
         "correta": 3,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Nicho ecológico refere-se ao conjunto de atividades e funções que a espécie desempenha no ecossistema, incluindo alimentação, reprodução e interações com outras espécies."
     },
     {
@@ -86,7 +86,7 @@
             "4": "Peixes e golfinhos"
         },
         "correta": 3,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "O segundo nível trófico é ocupado pelos consumidores primários, que se alimentam dos produtores (como as algas). Crustáceos e peixes se alimentam dessas algas e, portanto, estão nesse nível."
     },
     {
@@ -98,7 +98,7 @@
             "3": "II, III e IV"
         },
         "correta": 3,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Populações em crescimento têm muitos indivíduos jovens; as estacionárias possuem equilíbrio etário; populações em declínio têm muitos indivíduos velhos. Assim, II, III e IV estão corretas."
     },
     {
@@ -110,7 +110,7 @@
             "3": "Aumentando a taxa de respiração celular"
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Alterações na fotossíntese e quimiossíntese reduzem a produção de energia, resultando em menor geração de ATP, essencial para o metabolismo celular."
     },
     {
@@ -122,7 +122,7 @@
             "3": "Ambos são sinônimos"
         },
         "correta": 2,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Habitat é o local onde uma espécie vive, enquanto o nicho ecológico corresponde ao papel que ela desempenha nesse ambiente."
     },
     {
@@ -135,7 +135,7 @@
             "4": "Mapeamento genético"
         },
         "correta": 4,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "O mapeamento genético permite identificar genes ligados a doenças hereditárias, ajudando a evitar cruzamentos consanguíneos indesejados."
     },
     {
@@ -147,7 +147,7 @@
             "3": "Reduzir a produção de alimentos"
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "O uso dos resíduos da suinocultura como fonte de biocombustível é uma alternativa sustentável que contribui para a diversificação energética."
     },
     {
@@ -160,7 +160,7 @@
             "4": "Fabricação de aldosterona"
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "A função principal do rim é filtrar o sangue e remover resíduos nitrogenados como a ureia, o que o rim biônico visa replicar."
     },
     {
@@ -173,7 +173,7 @@
             "4": "Hibridização"
         },
         "correta": 2,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Transgenia é a inserção de genes de um organismo em outro, como no caso da introdução do gene da peroxidase em leveduras."
     },
     {
@@ -185,7 +185,7 @@
             "3": "A biotecnologia não utiliza organismos vivos"
         },
         "correta": 2,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "A biotecnologia tem aplicações amplas, desde o desenvolvimento de medicamentos até a biorremediação ambiental e produção agrícola."
     },
     {
@@ -197,7 +197,7 @@
             "3": "São organismos que não possuem DNA."
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Organismos transgênicos recebem genes de outras espécies em seu genoma por técnicas de engenharia genética, expressando características que não possuíam naturalmente."
     },
     {
@@ -209,7 +209,7 @@
             "3": "Clonagem não utiliza células-tronco."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "A clonagem é um processo de reprodução assexuada que gera cópias geneticamente idênticas de um organismo original."
     },
     {
@@ -221,7 +221,7 @@
             "3": "Utiliza-se vírus para produção de insulina."
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Bactérias transgênicas com genes humanos são usadas para produzir insulina em larga escala, substituindo métodos anteriores baseados em animais."
     },
     {
@@ -233,7 +233,7 @@
             "3": "Plantas transgênicas não apresentam vantagens econômicas."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Plantas transgênicas são geneticamente modificadas para resistir a pragas e herbicidas, aumentando a produtividade e reduzindo perdas agrícolas."
     },
     {
@@ -245,7 +245,7 @@
             "3": "Antibióticos são produzidos apenas por síntese química."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Microrganismos, como fungos e bactérias, são amplamente utilizados na biotecnologia para produção industrial de antibióticos, como a penicilina."
     },
     {
@@ -257,7 +257,7 @@
             "3": "É uma técnica exclusiva de plantas."
         },
         "correta": 0,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "A terapia gênica introduz genes funcionais em células de um organismo para corrigir mutações causadoras de doenças genéticas."
     },
     {
@@ -269,7 +269,7 @@
             "3": "Plasmídeos são exclusivos de vírus."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Plasmídeos são pequenas moléculas de DNA circular usadas como vetores para inserir genes de interesse em organismos-alvo."
     },
     {
@@ -281,7 +281,7 @@
             "3": "Não há produção de biocombustíveis no Brasil."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "A produção de biocombustíveis envolve microrganismos como leveduras na fermentação de biomassa para gerar etanol."
     },
     {
@@ -293,7 +293,7 @@
             "3": "É exclusiva da área médica."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "A biotecnologia ambiental emprega microrganismos para a biorremediação, tratando resíduos e poluentes de forma sustentável."
     },
     {
@@ -305,7 +305,7 @@
             "3": "Vacinas recombinantes não são seguras."
         },
         "correta": 1,
-        "materia": "Biologia",
+        "materia": "biologia",
         "explicacao": "Vacinas recombinantes usam genes de patógenos inseridos em outros organismos para produzir antígenos seguros e eficazes."
     }
 ]

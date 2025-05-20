@@ -9,233 +9,305 @@ const db = admin.firestore();
 
 const perguntas = [
   {
-    "texto": {
-      "id": "texto_1",
-      "titulo": "No Man Is an Island",
-      "autor": "John Donne",
-      "conteudo": "No man is an island, entire of itself; every man is a piece of the continent, a part of the main. If a clod be washed away by the sea, Europe is the less, as well as if a promontory were, as well as if a manor of thy friend’s or of thine own were; any man’s death diminishes me, because I am involved in mankind, and therefore never send to know for whom the bell tolls; it tolls for thee."
-    },
-    "pergunta": "No poema 'No man is an island', a expressão ressalta o(a):",
+    "pergunta": "Assinale a alternativa que apresenta uma comparação:",
     "opcoes": {
-      "0": "medo da morte.",
-      "1": "ideia de conexão.",
-      "2": "conceito de solidão.",
-      "3": "risco de devastação.",
-      "4": "necessidade de empatia."
+      "0": "Ele é forte como um touro.",
+      "1": "Ele é um touro.",
+      "2": "Ele tem uma força de touro.",
+      "3": "Ele se comporta como um touro."
+    },
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A comparação é uma figura de linguagem que estabelece uma relação de semelhança entre dois elementos, usando palavras como 'como' ou 'tal qual'."
+  },
+  {
+    "pergunta": "Em qual alternativa há uma metonímia?",
+    "opcoes": {
+      "0": "Ele tem um coração de pedra.",
+      "1": "Ela comprou um quadro de Picasso.",
+      "2": "A casa caiu.",
+      "3": "Ele é um leão na luta."
     },
     "correta": 1,
-    "materia": "Língua Inglesa",
-    "explicacao": "A expressão 'No man is an island' ressalta a ideia de que nenhum ser humano é totalmente independente ou isolado, pois todos fazem parte de uma coletividade. O poema enfatiza a interconexão entre os indivíduos e como a perda de um afeta a todos."
+    "materia": "portugues",
+    "explicacao": "A metonímia é uma figura de linguagem que substitui uma palavra por outra com a qual tem uma relação de proximidade ou contiguidade. 'Comprar um quadro de Picasso' é um exemplo, pois se refere à obra de Picasso."
   },
   {
-    "texto": {
-      "id": "texto_2",
-      "conteudo": "Don’t write in English, they said,\nEnglish is not your mother tongue…\n…The language I speak\nBecomes mine, its distortions, its queerness\nAll mine, mine alone, it is half English, half\nIndian, funny perhaps, but it is honest,\nIt is as human as I am human…\n…It voices my joys, my longings my\nHopes…"
-    },
-    "pergunta": "No poema de Kamala Das, a autora demonstra:",
+    "pergunta": "Qual das alternativas a seguir apresenta uma antítese?",
     "opcoes": {
-      "0": "uso humorístico do inglês.",
-      "1": "consciência de sua identidade linguística.",
-      "2": "crítica ao inglês britânico.",
-      "3": "desejo de abandonar o inglês.",
-      "4": "preferência pelo hindi."
+      "0": "Ele é forte e fraco ao mesmo tempo.",
+      "1": "Ele é forte como um touro.",
+      "2": "Ele tem o espírito de um leão.",
+      "3": "Ele é de ferro."
+    },
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A antítese é a figura de linguagem que consiste na aproximação de palavras ou ideias de significados opostos. No caso, 'forte e fraco ao mesmo tempo' representa oposição entre conceitos."
+  },
+  {
+    "pergunta": "Em qual alternativa há um exemplo de onomatopeia?",
+    "opcoes": {
+      "0": "O relógio fez tic-tac.",
+      "1": "A chuva caía suavemente.",
+      "2": "O vento assobiava no telhado.",
+      "3": "Ele gritou com todas as suas forças."
+    },
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de objetos. 'Tic-tac' imita o som de um relógio."
+  },
+  {
+    "pergunta": "Qual a figura de linguagem presente na frase: 'Ele é um verdadeiro anjo'?",
+    "opcoes": {
+      "0": "Metáfora",
+      "1": "Metonímia",
+      "2": "Antítese",
+      "3": "Ironia"
+    },
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A metáfora é uma figura de linguagem que consiste na substituição de uma palavra por outra, com a qual possui uma relação de semelhança. 'Ver verdadeiro anjo' é uma metáfora que compara a bondade de uma pessoa com a imagem de um anjo."
+  },
+    {
+    "pergunta": "Qual das alternativas abaixo apresenta uma perífrase (antonomásia)?",
+    "opcoes": {
+      "0": "Saia já para fora!",
+      "1": "Foi salvo pelo melhor amigo do homem.",
+      "2": "‘É o pau, é a pedra, é o fim do caminho.’",
+      "3": "Escreveu, não leu; o pau comeu.",
+      "4": "Não aguentava mais aquele buá-buá nos meus ouvidos."
     },
     "correta": 1,
-    "materia": "Língua Inglesa",
-    "explicacao": "A autora expressa que, embora o inglês não seja sua língua materna, ela o torna seu, com todas as suas peculiaridades e mistura com o indiano. Isso demonstra consciência de sua identidade linguística."
+    "materia": "portugues",
+    "explicacao": "A perífrase (ou antonomásia) é uma figura de linguagem que substitui um nome comum por uma expressão mais detalhada ou pelo nome de algo relacionado. No caso, 'melhor amigo do homem' é uma perífrase para o cão."
   },
   {
-    "texto": {
-      "id": "texto_3",
-      "conteudo": "British Government to Recruit Teens as Next Generation of Spies\nIn the 50 years since the first James Bond movie created a lasting impression of a British secret agent, a completely different character is about to emerge.\nBritain’s intelligence agencies are to recruit their next generation of cyber spies by harnessing the talents of the “Xbox generation”.\nIn an expansion of a pilot program, Foreign Secretary William Hague announced Thursday that up to 100 18-year-olds will be given the chance to train for a career in Britain’s secret services. The move to recruit school-leavers marks a break with the past, when agencies mainly drew their staff from among university graduates.\n“Young people are the key to our country’s future success, just as they were during the War”, Hague said. “Today we are not at war, but I see evidence every day of deliberate, organized attacks against intellectual property and government networks in the United Kingdom.”\nThe new recruitment program, called the Single Intelligence Account apprenticeship scheme will enable students with suitable qualifications in science, technology or engineering, to spend two years learning about communications, security and engineering through formal education, technical training and work placements."
-    },
-    "pergunta": "Sobre o texto, o objetivo principal da notícia é:",
+    "pergunta": "Em ‘Urgh, que nojo!’, qual figura de linguagem está presente?",
     "opcoes": {
-      "0": "anunciar uma nova série de TV.",
-      "1": "divulgar uma campanha de recrutamento.",
-      "2": "criticar o governo britânico.",
-      "3": "relatar um escândalo de espionagem.",
-      "4": "informar sobre um programa estudantil."
+      "0": "Ironia",
+      "1": "Onomatopeia",
+      "2": "Metáfora",
+      "3": "Hipérbole"
     },
     "correta": 1,
-    "materia": "Língua Inglesa",
-    "explicacao": "O texto divulga uma campanha real de recrutamento de jovens para o serviço secreto britânico, com foco em jovens com formação técnica em ciência, tecnologia ou engenharia."
+    "materia": "portugues",
+    "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de ações. ‘Urgh’ imita um som de repulsa ou nojo."
   },
   {
-    "texto": {
-      "id": "texto_4",
-      "conteudo": "Um estudante olha para o colega segurando um livro impresso e pergunta: \"Can you turn this thing on?\""
-    },
-    "pergunta": "No cartum, o estudante faz uma pergunta usando “turn this thing on” por:",
+    "pergunta": "A frase ‘Estou morrendo de fome’ é um exemplo de:",
     "opcoes": {
-      "0": "suspeitar que o colega está com seu material por engano.",
-      "1": "duvidar que o colega possa se tornar um bom aluno.",
-      "2": "desconfiar que o livro levado é de outra matéria.",
-      "3": "entender como desligada a postura do colega.",
-      "4": "desconhecer como usar um livro impresso."
+      "0": "Eufemismo",
+      "1": "Hipérbole",
+      "2": "Metonímia",
+      "3": "Antítese"
     },
-    "correta": "4",
-    "explicacao": "O estudante usa um termo típico de aparelhos eletrônicos para um livro impresso, mostrando desconhecimento do uso do livro físico."
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A hipérbole é uma figura de linguagem que exagera a realidade. No caso, ‘morrendo de fome’ exagera o estado de fome da pessoa."
   },
   {
-    "texto": {
-      "id": "texto_5",
-      "conteudo": "Instagram is made up of all photos and videos. There is the home page that showcases the posts from people you follow, an explore tab which offers posts from accounts all over the world, and your own page, with a notification tab to show who likes and comments on your posts."
-    },
-    "pergunta": "A função do texto é:",
+    "pergunta": "‘Ela é uma flor’ é um exemplo de:",
     "opcoes": {
-      "0": "ensinar como criar uma conta.",
-      "1": "descrever funcionalidades da rede social.",
-      "2": "apresentar riscos do uso excessivo.",
-      "3": "comparar com outras redes sociais.",
-      "4": "relatar experiências negativas."
+      "0": "Metáfora",
+      "1": "Comparação",
+      "2": "Ironia",
+      "3": "Catacrese"
     },
-    "correta": "1",
-    "explicacao": "O texto explica as funções básicas do Instagram, como feed, explore e notificações."
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A metáfora é uma figura de linguagem que faz uma comparação implícita entre dois elementos. ‘Ela é uma flor’ sugere que a pessoa é delicada e bonita sem usar a palavra ‘como’."
   },
   {
-    "texto": {
-      "id": "texto_6",
-      "conteudo": "Last Monday was a really awful day. I woke up late, missed the bus, and forgot my homework at home. Then, I spilled coffee on my shirt and lost my wallet."
-    },
-    "pergunta": "O narrador utiliza o texto para:",
+    "pergunta": "Em ‘Tem seis bocas para alimentar em casa’, temos:",
     "opcoes": {
-      "0": "justificar sua ausência na escola.",
-      "1": "relatar um dia de problemas.",
-      "2": "lamentar a perda da aula.",
-      "3": "reclamar do atraso do ônibus.",
-      "4": "contar uma história engraçada."
+      "0": "Catacrese",
+      "1": "Metonímia",
+      "2": "Prosopopeia",
+      "3": "Hipérbole"
     },
-    "correta": "1",
-    "explicacao": "O texto descreve sucessivos problemas, caracterizando um dia ruim."
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A metonímia é uma figura de linguagem em que uma palavra é substituída por outra que tem uma relação de proximidade ou contiguidade. ‘Seis bocas’ substitui as pessoas que devem ser alimentadas."
+  },
+    {
+    "pergunta": "A função da linguagem predominante em um texto publicitário é:",
+    "opcoes": {
+      "0": "Referencial",
+      "1": "Conativa (apelativa)",
+      "2": "Fática",
+      "3": "Emotiva"
+    },
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A função conativa (ou apelativa) é caracterizada pela intenção de influenciar o receptor. Em textos publicitários, o objetivo é convencer o público a consumir um produto ou serviço."
   },
   {
-    "texto": {
-      "id": "texto_7",
-      "conteudo": "Know what you’re putting in your body. Read the labels before you buy food products."
-    },
-    "pergunta": "O objetivo do texto é:",
+    "pergunta": "Quando o texto enfatiza as emoções do emissor, temos a função:",
     "opcoes": {
-      "0": "incentivar a leitura de rótulos alimentares.",
-      "1": "promover uma marca de alimentos.",
-      "2": "ensinar a cozinhar.",
-      "3": "criticar a indústria alimentícia.",
-      "4": "sugerir dietas restritivas."
+      "0": "Referencial",
+      "1": "Emotiva",
+      "2": "Fática",
+      "3": "Metalinguística"
     },
-    "correta": "0",
-    "explicacao": "O texto orienta o leitor a ler rótulos para saber o que consome."
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A função emotiva se destaca quando o emissor expressa seus sentimentos ou emoções. Ela se foca no emissor da mensagem."
   },
   {
-    "texto": {
-      "id": "texto_8",
-      "conteudo": "Depois de 27 selfies, eu percebi que a beleza da alma é mais importante."
-    },
-    "pergunta": "O recurso expressivo utilizado é:",
+    "pergunta": "A função metalinguística está presente quando:",
     "opcoes": {
-      "0": "hipérbole.",
-      "1": "pleonasmo.",
-      "2": "ambiguidade.",
-      "3": "paradoxo.",
-      "4": "eufemismo."
+      "0": "O código é explicado pelo próprio código.",
+      "1": "O canal é enfatizado.",
+      "2": "O receptor é o foco.",
+      "3": "O contexto é o mais importante."
     },
-    "gabarito": "0",
-    "explicacao": "O exagero na quantidade de selfies caracteriza a hipérbole, gerando humor e crítica."
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A função metalinguística ocorre quando o código utilizado (linguagem) é explicado ou esclarecido dentro do próprio texto."
   },
   {
-    "texto": {
-      "id": "texto_9",
-      "conteudo": "Learning idioms is essential if you want to master the English language."
-    },
-    "pergunta": "O que significa “idioms”?",
+    "pergunta": "Em uma conversa telefônica, quando alguém diz ‘Está me ouvindo?’, predomina a função:",
     "opcoes": {
-      "a": "ideias",
-      "b": "expressões idiomáticas",
-      "c": "palavras difíceis",
-      "d": "frases longas",
-      "e": "textos antigos"
+      "0": "Fática",
+      "1": "Referencial",
+      "2": "Emotiva",
+      "3": "Poética"
     },
-    "gabarito": "b",
-    "explicacao": "“Idioms” são expressões idiomáticas, importantes para fluência."
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A função fática é voltada para o estabelecimento, manutenção e verificação da comunicação, como no caso de checar se o canal de comunicação está funcionando."
   },
   {
-    "texto": {
-      "id": "texto_10",
-      "conteudo": "I’m starving! I didn’t have time to have lunch today, so I just ate a snack."
-    },
-    "pergunta": "A palavra “starving” significa:",
+    "pergunta": "Em um poema, a função da linguagem mais evidente costuma ser:",
     "opcoes": {
-      "0": "cansado",
-      "1": "doente",
-      "2": "faminto",
-      "3": "atrasado",
-      "4": "animado"
+      "0": "Poética",
+      "1": "Referencial",
+      "2": "Fática",
+      "3": "Conativa"
     },
-    "gabarito": "2",
-    "explicacao": "“Starving” indica estar com muita fome."
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "Em textos poéticos, a função da linguagem mais evidente é a poética, que foca na forma e estética da mensagem, buscando a beleza e o impacto artístico."
+  },
+    {
+    "pergunta": "O artigo de opinião é um gênero textual que tem como principal objetivo:",
+    "opcoes": {
+      "0": "Informar",
+      "1": "Convencer",
+      "2": "Narrar",
+      "3": "Descrever"
+    },
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O artigo de opinião visa principalmente convencer o leitor sobre um ponto de vista ou opinião, sendo um texto argumentativo que expressa a opinião do autor sobre determinado tema."
   },
   {
-    "texto": {
-      "id": "texto_11",
-      "conteudo": "She works at a fabric factory."
-    },
-    "pergunta": "“Fabric factory” significa:",
+    "pergunta": "Assinale a alternativa correta sobre gêneros textuais:",
     "opcoes": {
-      "0": "fábrica de tecidos.",
-      "1": "fábrica de móveis.",
-      "2": "fábrica de brinquedos.",
-      "3": "fábrica de plásticos.",
-      "4": "fábrica de roupas."
+      "0": "São estruturas fixas e imutáveis.",
+      "1": "São limitados a cinco tipos.",
+      "2": "São incontáveis e variam conforme o contexto comunicacional.",
+      "3": "Não variam com as mudanças sociais."
     },
-    "gabarito": "0",
-    "explicacao": "“Fabric” é tecido; logo, “fabric factory” é fábrica de tecidos."
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "Os gêneros textuais são adaptáveis ao contexto e à comunicação, variando conforme as necessidades de expressão social e as mudanças culturais."
   },
   {
-    "texto": {
-      "id": "texto_12",
-      "conteudo": "I’m going to visit my relatives this weekend."
-    },
-    "pergunta": "“Relatives” significa:",
+    "pergunta": "Uma das estratégias argumentativas mais comuns em textos dissertativos é:",
     "opcoes": {
-      "0": "amigos",
-      "1": "vizinhos",
-      "2": "parentes",
-      "3": "colegas",
-      "4": "conhecidos"
+      "0": "Narrar fatos fictícios",
+      "1": "Apresentar exemplos concretos",
+      "2": "Descrever cenários",
+      "3": "Usar rimas"
     },
-    "gabarito": "2",
-    "explicacao": "“Relatives” são parentes."
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Em textos dissertativos, é comum o uso de exemplos concretos para sustentar argumentos, tornando a argumentação mais persuasiva e sólida."
   },
   {
-    "texto": {
-      "id": "texto_13",
-      "conteudo": "We must fight against prejudice in society."
-    },
-    "pergunta": "Prejudice significa:",
+    "pergunta": "Quando o autor utiliza uma citação direta para reforçar seu ponto de vista, ele está empregando:",
     "opcoes": {
-      "0": "orgulho",
-      "1": "preconceito",
-      "2": "respeito",
-      "3": "inveja",
-      "4": "simpatia"
+      "0": "Argumento de autoridade",
+      "1": "Argumento de causa e consequência",
+      "2": "Argumento por exemplificação",
+      "3": "Argumento por analogia"
     },
-    "correta": "1",
-    "explicacao": "\"Prejudice\" é preconceito."
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "O argumento de autoridade ocorre quando o autor cita uma pessoa ou fonte considerada referência sobre o tema, reforçando a credibilidade de seu ponto de vista."
   },
   {
-    "texto": {
-      "id": "texto_14",
-      "conteudo": "The child pretended to be a superhero."
-    },
-    "pergunta": "“Pretend” significa:",
+    "pergunta": "Em um texto argumentativo, a apresentação de dados estatísticos corresponde a qual estratégia?",
     "opcoes": {
-      "0": "pretender",
-      "1": "fingir",
-      "2": "tentar",
-      "3": "desejar",
-      "4": "permitir"
+      "0": "Apelo à emoção",
+      "1": "Argumento de autoridade",
+      "2": "Argumento lógico",
+      "3": "Argumento de exemplificação"
     },
-    "gabarito": "1",
-    "explicacao": "“Pretend” é um falso cognato, significando “fingir”."
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "O uso de dados estatísticos em um texto argumentativo é uma estratégia lógica, pois fundamenta o argumento em evidências objetivas e racionais."
+  },
+    {
+    "pergunta": "O Quinhentismo é um movimento literário que corresponde:",
+    "opcoes": {
+      "0": "Ao século XVI, início da colonização do Brasil.",
+      "1": "Ao século XVII, barroco.",
+      "2": "Ao século XVIII, arcadismo.",
+      "3": "Ao século XIX, romantismo."
+    },
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "O Quinhentismo corresponde ao século XVI, quando o Brasil foi descoberto e iniciado o processo de colonização por parte de Portugal."
+  },
+  {
+    "pergunta": "Uma característica marcante dos textos do Quinhentismo é:",
+    "opcoes": {
+      "0": "Forte subjetividade",
+      "1": "Descrição objetiva da natureza e dos indígenas",
+      "2": "Uso de linguagem rebuscada",
+      "3": "Temática urbana"
+    },
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Os textos do Quinhentismo têm uma característica predominante de descrever a natureza e os indígenas de forma objetiva, com o intuito de relatar o desconhecido para os europeus."
+  },
+  {
+    "pergunta": "O principal objetivo dos textos informativos do Quinhentismo era:",
+    "opcoes": {
+      "0": "Criticar a sociedade europeia",
+      "1": "Relatar e descrever a terra e os habitantes do Brasil para a Coroa portuguesa",
+      "2": "Expressar sentimentos pessoais",
+      "3": "Narrar lendas indígenas"
+    },
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Os textos do Quinhentismo, como cartas e relatos, tinham o objetivo principal de informar a Coroa portuguesa sobre as terras recém-descobertas, seus recursos naturais e os habitantes locais."
+  },
+  {
+    "pergunta": "O autor da 'Carta de Pero Vaz de Caminha' pertence ao período:",
+    "opcoes": {
+      "0": "Barroco",
+      "1": "Quinhentismo",
+      "2": "Romantismo",
+      "3": "Modernismo"
+    },
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Pero Vaz de Caminha foi o autor da famosa 'Carta de Pero Vaz de Caminha', escrita em 1500, durante o período do Quinhentismo."
+  },
+  {
+    "pergunta": "Sobre o Quinhentismo, é correto afirmar:",
+    "opcoes": {
+      "0": "É um movimento exclusivamente poético.",
+      "1": "Tem textos de caráter informativo e jesuítico.",
+      "2": "Surgiu no século XIX.",
+      "3": "Seus textos não abordam a catequese."
+    },
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O Quinhentismo é marcado por textos de caráter informativo (relatos e cartas) e jesuítico, pois os missionários tinham grande presença na época, promovendo a catequese dos indígenas."
   }
 ];
 
