@@ -21,13 +21,14 @@ export default function Quiz() {
       try {
         setCarregando(true);
         const response = await fetch("http://localhost:3000/api/perguntas");
-        
+
         if (!response.ok) {
           throw new Error("Falha ao buscar perguntas");
         }
-        
+
         const data = await response.json();
-        
+        console.log("Perguntas carregadas:", data); // <-- Debug
+
         if (data.length === 0) {
           setErro("Nenhuma pergunta encontrada");
         } else {
@@ -55,7 +56,7 @@ export default function Quiz() {
             const nome = user.displayName || user.email;
             // Salvar pontuação no novo endpoint
             await saveScore(nome, resultadoFinal);
-            
+
             // Salvar resultado detalhado no endpoint existente
             await fetch("http://localhost:3000/api/resultados", {
               method: "POST",
@@ -66,10 +67,10 @@ export default function Quiz() {
                 userId: user.uid,
                 acertos: resultadoFinal,
                 total: perguntas.length,
-                materia: "Geral" // ou a matéria específica se houver
+                materia: "" // ou a matéria específica se houver
               }),
             });
-            
+
             console.log("Resultado salvo com sucesso!");
           } else {
             console.error("Usuário não autenticado");
@@ -86,14 +87,14 @@ export default function Quiz() {
   // Função para responder pergunta
   function responder(indiceAlternativa) {
     if (!perguntas.length || respostaSelecionada !== null) return;
-    
+
     const perguntaAtual = perguntas[indice];
     setRespostaSelecionada(indiceAlternativa);
-    
+
     if (indiceAlternativa === perguntaAtual.correta) {
       setAcertos(acertos + 1);
     }
-    
+
     setTimeout(() => {
       if (indice + 1 < perguntas.length) {
         // Vai para próxima pergunta
@@ -288,21 +289,21 @@ export default function Quiz() {
               <h2 style={styles.resultTitle}>Quiz Finalizado</h2>
               <div style={styles.resultScore}>Você acertou {resultadoFinal} de {perguntas.length} perguntas!</div>
               <div style={styles.resultButtons}>
-                <button 
-                  onClick={() => navigate("/ranking")} 
+                <button
+                  onClick={() => navigate("/ranking")}
                   style={styles.saveButton}
                 >
                   Ver Ranking
                 </button>
-                <button 
+                <button
                   onClick={() => {
                     setQuizFinalizado(false);
                     setIndice(0);
                     setAcertos(0);
                     setRespostaSelecionada(null);
                     setResultadoFinal(null);
-                  }} 
-                  style={{...styles.saveButton, backgroundColor: "#4CAF50"}}
+                  }}
+                  style={{ ...styles.saveButton, backgroundColor: "#4CAF50" }}
                 >
                   Jogar Novamente
                 </button>
@@ -312,7 +313,18 @@ export default function Quiz() {
             <div style={styles.errorMessage}>Nenhuma pergunta disponível</div>
           ) : (
             <>
-              <p style={styles.questionText}>{perguntas[indice]?.pergunta}</p>
+              <div style={styles.questionText}>
+                <p>{perguntas[indice]?.pergunta}</p>
+                {perguntas[indice]?.textos?.length > 0 && (
+                  <div style={{ marginTop: "1rem" }}>
+                    {perguntas[indice].textos.map((texto, index) => (
+                      <p key={index} style={{ fontStyle: "italic", fontSize: "0.9rem" }}>
+                        {texto}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Alternativas */}
               <div style={styles.optionsContainer}>
@@ -326,10 +338,10 @@ export default function Quiz() {
                       ...(respostaSelecionada === null
                         ? {}
                         : i === perguntas[indice].correta
-                        ? { backgroundColor: "#4CAF50", color: "white" } // Resposta correta (sempre verde)
-                        : i === respostaSelecionada
-                        ? { backgroundColor: "#F44336", color: "white" } // Resposta errada do usuário
-                        : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }), // Outras opções
+                          ? { backgroundColor: "#4CAF50", color: "white" } // Resposta correta (sempre verde)
+                          : i === respostaSelecionada
+                            ? { backgroundColor: "#F44336", color: "white" } // Resposta errada do usuário
+                            : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }), // Outras opções
                     }}
                   >
                     <span style={{ fontWeight: "bold" }}>

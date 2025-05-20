@@ -1,0 +1,155 @@
+/* Estilo do cabeçalho */
+.perfil-header {
+    background-color: #0a518e;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perfil-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .perfil-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .perfil-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .perfil-logo {
+    height: 5rem;
+  }
+  
+  /* Estilo do container principal */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #c7e7f3;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  
+  /* Estilo do botão "Remover imagem" */
+  .remover-foto-btn {
+    padding: 0.5rem 1rem;
+    background-color: #71bcd7; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+  }
+  
+  .remover-foto-btn:hover {
+    background-color: #365d80; /* Vermelho mais escuro ao passar o mouse */
+  }
+  
+  /* Estilo do botão "Mudar imagem" */
+  .mudar-foto-btn {
+    padding: 0.5rem 1rem;
+    background-color: #0a518e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .mudar-foto-btn:hover {
+    background-color: #063a66;
+  }
+  
+  /* Estilo do wrapper da imagem do perfil */
+  .profile-pic-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo da imagem do perfil */
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #0a518e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo das informações do perfil */
+  .profile-info {
+    background-color: #e6f5fd;
+    padding: 2rem;
+    border-radius: 1rem;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #0a518e;
+  }
+  
+  .profile-info input,
+  .profile-info textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
+    resize: vertical; /* Permite redimensionar o textarea verticalmente */
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do botão "Salvar" */
+  .save-button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #0a518e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #063a66;
+  }
+  
+  /* Estilo dos links no cabeçalho */
+  .link {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: bold;
+  }

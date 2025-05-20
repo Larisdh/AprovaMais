@@ -1,0 +1,311 @@
+[
+    {
+        "pergunta": "(UFPE) Ao dizer onde uma espécie pode ser encontrada e o que faz no lugar onde vive, estamos informando respectivamente:",
+        "opcoes": {
+            "0": "Nicho ecológico e habitat",
+            "1": "Habitat e nicho ecológico",
+            "2": "Habitat e biótopo",
+            "3": "Nicho ecológico e ecossistema",
+            "4": "Habitat e ecossistema"
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "Habitat é o local onde a espécie vive, enquanto nicho ecológico é o papel que ela desempenha nesse ambiente."
+    },
+    {
+        "pergunta": "(PUC) Em uma floresta ocorrem três espécies de árvores, igualmente bem-sucedidas e numerosas. Essas árvores constituem:",
+        "opcoes": {
+            "0": "Três populações",
+            "1": "Um ecossistema",
+            "2": "Duas comunidades",
+            "3": "Três comunidades",
+            "4": "Uma população"
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "Cada espécie forma uma população distinta, portanto são três populações convivendo no mesmo ambiente."
+    },
+    {
+        "pergunta": "Considere as seguintes definições:\nI. Conjunto de todos os indivíduos de uma mesma espécie, vivendo em uma mesma área em um mesmo intervalo de tempo;\nII. Conjunto de todas as populações que ocorrem em uma determinada área;\nIII. Conjunto de todos os ecossistemas terrestres.\nAssinale a opção correta:",
+        "opcoes": {
+            "0": "População, comunidade e bioma",
+            "1": "Raça, biocenose e biosfera",
+            "2": "Tribo, ecossistema e biocenose",
+            "3": "População, comunidade e biosfera"
+        },
+        "correta": 3,
+        "materia": "Biologia",
+        "explicacao": "As definições correspondem, respectivamente, a população, comunidade e biosfera."
+    },
+    {
+        "pergunta": "(CESGRANRIO) Um ecossistema tanto terrestre como aquático se define:",
+        "opcoes": {
+            "0": "Exclusivamente por todas as associações de seres vivos",
+            "1": "Pelos fatores ambientais, especialmente climáticos",
+            "2": "Pela interação de todos os seres vivos",
+            "3": "Pela interação dos fatores físicos e químicos",
+            "4": "Pela interação dos fatores abióticos e bióticos"
+        },
+        "correta": 4,
+        "materia": "Biologia",
+        "explicacao": "Ecossistemas são definidos pela interação entre os componentes vivos (bióticos) e não vivos (abióticos)."
+    },
+    {
+        "pergunta": "(FATEC) Observe a cadeia alimentar: Capim → preá → lobo guará → onça. Podemos dizer que:",
+        "opcoes": {
+            "0": "O preá é o consumidor primário e, portanto, representa o primeiro nível trófico.",
+            "1": "O lobo guará e a onça ocupam o terceiro e o quarto níveis tróficos, respectivamente.",
+            "2": "O lobo guará é consumidor terciário e representa o segundo nível trófico.",
+            "3": "O capim é o produtor e representa o segundo nível trófico.",
+            "4": "A onça é consumidor terciário e representa o terceiro nível trófico."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "Na cadeia, capim (produtor), preá (consumidor primário), lobo guará (consumidor secundário) e onça (consumidor terciário)."
+    },
+    {
+        "pergunta": "(ENEM) Cada espécie de ser vivo apresenta um modo de vida único e peculiar no ambiente em que vive, com atividades como tipo de alimento, reprodução, moradia, hábitos, inimigos naturais e estratégias de sobrevivência. Este conjunto de atividades denomina-se:",
+        "opcoes": {
+            "0": "Comunidade",
+            "1": "População",
+            "2": "Habitat",
+            "3": "Nicho ecológico",
+            "4": "Ecossistema"
+        },
+        "correta": 3,
+        "materia": "Biologia",
+        "explicacao": "Nicho ecológico refere-se ao conjunto de atividades e funções que a espécie desempenha no ecossistema, incluindo alimentação, reprodução e interações com outras espécies."
+    },
+    {
+        "pergunta": "O estudo da comunidade biótica do ecossistema marinho de uma determinada faixa litorânea revelou uma teia alimentar. Pode-se afirmar que ocupam o segundo nível trófico nessa teia alimentar:",
+        "opcoes": {
+            "0": "Algas marinhas e crustáceos",
+            "1": "Golfinhos e moluscos",
+            "2": "Moluscos e gaivotas",
+            "3": "Crustáceos e peixes",
+            "4": "Peixes e golfinhos"
+        },
+        "correta": 3,
+        "materia": "Biologia",
+        "explicacao": "O segundo nível trófico é ocupado pelos consumidores primários, que se alimentam dos produtores (como as algas). Crustáceos e peixes se alimentam dessas algas e, portanto, estão nesse nível."
+    },
+    {
+        "pergunta": "Considere as seguintes afirmativas sobre a dinâmica de populações:\nI. Uma população em crescimento rápido frequentemente possui grande proporção de indivíduos velhos.\nII. Uma população estacionária possui distribuição uniforme das classes de idade.\nIII. Uma população em declínio frequentemente possui uma grande proporção de indivíduos velhos.\nIV. Uma população em crescimento rápido frequentemente possui uma grande proporção de indivíduos jovens.\nV. Uma população em declínio frequentemente possui uma grande proporção de indivíduos jovens.\nAssinale a alternativa correta:",
+        "opcoes": {
+            "0": "II, III e IV",
+            "1": "I, II e V",
+            "2": "II, III e V",
+            "3": "II, III e IV"
+        },
+        "correta": 3,
+        "materia": "Biologia",
+        "explicacao": "Populações em crescimento têm muitos indivíduos jovens; as estacionárias possuem equilíbrio etário; populações em declínio têm muitos indivíduos velhos. Assim, II, III e IV estão corretas."
+    },
+    {
+        "pergunta": "As mudanças climáticas impactam os ecossistemas do Brasil, afetando a fotossíntese em plantas e quimiossíntese dos microrganismos. Como essas alterações podem afetar o metabolismo energético em relação aos componentes celulares?",
+        "opcoes": {
+            "0": "Reduzindo a produção de ATP",
+            "1": "Aumentando a produção de proteínas",
+            "2": "Diminuindo a síntese de DNA",
+            "3": "Aumentando a taxa de respiração celular"
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "Alterações na fotossíntese e quimiossíntese reduzem a produção de energia, resultando em menor geração de ATP, essencial para o metabolismo celular."
+    },
+    {
+        "pergunta": "Sobre a relação entre habitat e nicho ecológico, é correto afirmar:",
+        "opcoes": {
+            "0": "Habitat é o papel funcional da espécie no ecossistema",
+            "1": "Nicho ecológico é o local físico onde a espécie vive",
+            "2": "Habitat refere-se ao local físico e nicho ecológico ao papel funcional",
+            "3": "Ambos são sinônimos"
+        },
+        "correta": 2,
+        "materia": "Biologia",
+        "explicacao": "Habitat é o local onde uma espécie vive, enquanto o nicho ecológico corresponde ao papel que ela desempenha nesse ambiente."
+    },
+    {
+        "pergunta": "(ENEM - 2021) Os búfalos são deixados no campo sem controle reprodutivo, o que favorece a consanguinidade e o surgimento de enfermidades. Qual procedimento biotecnológico prévio é recomendado nessa situação?",
+        "opcoes": {
+            "0": "Transgenia",
+            "1": "Terapia gênica",
+            "2": "Vacina de DNA",
+            "3": "Clonagem terapêutica",
+            "4": "Mapeamento genético"
+        },
+        "correta": 4,
+        "materia": "Biologia",
+        "explicacao": "O mapeamento genético permite identificar genes ligados a doenças hereditárias, ajudando a evitar cruzamentos consanguíneos indesejados."
+    },
+    {
+        "pergunta": "(ENEM - 2021) Com o aumento da população de suínos no Brasil, é necessário reduzir o potencial poluidor dos resíduos. A utilização desses resíduos para obtenção de combustíveis permite:",
+        "opcoes": {
+            "0": "Diversificar a matriz energética nacional",
+            "1": "Aumentar a poluição dos recursos hídricos",
+            "2": "Diminuir a produção de energia",
+            "3": "Reduzir a produção de alimentos"
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "O uso dos resíduos da suinocultura como fonte de biocombustível é uma alternativa sustentável que contribui para a diversificação energética."
+    },
+    {
+        "pergunta": "(ENEM - 2019) O projeto 'The Kidney Project' visa desenvolver um rim biônico que execute funções biológicas do órgão. Esse dispositivo promoverá diretamente a:",
+        "opcoes": {
+            "0": "Remoção de ureia",
+            "1": "Excreção de lipídios",
+            "2": "Síntese de vasopressina",
+            "3": "Transformação de amônia",
+            "4": "Fabricação de aldosterona"
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "A função principal do rim é filtrar o sangue e remover resíduos nitrogenados como a ureia, o que o rim biônico visa replicar."
+    },
+    {
+        "pergunta": "(ENEM - 2018) Companhias de jeans estão substituindo o cloro por peróxidos, degradados por peroxidases. Genes dessas enzimas foram inseridos em leveduras para produção. Essa técnica é um exemplo de:",
+        "opcoes": {
+            "0": "Seleção artificial",
+            "1": "Mutação induzida",
+            "2": "Transgenia",
+            "3": "Clonagem",
+            "4": "Hibridização"
+        },
+        "correta": 2,
+        "materia": "Biologia",
+        "explicacao": "Transgenia é a inserção de genes de um organismo em outro, como no caso da introdução do gene da peroxidase em leveduras."
+    },
+    {
+        "pergunta": "Sobre as aplicações da biotecnologia, marque a alternativa correta:",
+        "opcoes": {
+            "0": "A biotecnologia só é aplicada na medicina",
+            "1": "A biotecnologia é utilizada apenas na produção de alimentos",
+            "2": "A biotecnologia pode ser aplicada na saúde, agricultura, indústria e meio ambiente",
+            "3": "A biotecnologia não utiliza organismos vivos"
+        },
+        "correta": 2,
+        "materia": "Biologia",
+        "explicacao": "A biotecnologia tem aplicações amplas, desde o desenvolvimento de medicamentos até a biorremediação ambiental e produção agrícola."
+    },
+    {
+        "pergunta": "Assinale a alternativa correta sobre organismos transgênicos:",
+        "opcoes": {
+            "0": "São organismos que tiveram genes de outra espécie inseridos em seu genoma.",
+            "1": "São organismos que sofreram mutações naturais.",
+            "2": "São organismos idênticos aos seus progenitores.",
+            "3": "São organismos que não possuem DNA."
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "Organismos transgênicos recebem genes de outras espécies em seu genoma por técnicas de engenharia genética, expressando características que não possuíam naturalmente."
+    },
+    {
+        "pergunta": "Sobre as técnicas de clonagem, é correto afirmar:",
+        "opcoes": {
+            "0": "Clonagem é a produção de organismos geneticamente diferentes.",
+            "1": "Clonagem é a produção de organismos geneticamente idênticos ao organismo original.",
+            "2": "Clonagem só ocorre em plantas.",
+            "3": "Clonagem não utiliza células-tronco."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "A clonagem é um processo de reprodução assexuada que gera cópias geneticamente idênticas de um organismo original."
+    },
+    {
+        "pergunta": "Sobre a produção de insulina por meio da engenharia genética, marque a alternativa correta:",
+        "opcoes": {
+            "0": "Utiliza-se bactérias geneticamente modificadas para produzir insulina humana.",
+            "1": "Utiliza-se apenas células vegetais.",
+            "2": "Não é possível produzir insulina por engenharia genética.",
+            "3": "Utiliza-se vírus para produção de insulina."
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "Bactérias transgênicas com genes humanos são usadas para produzir insulina em larga escala, substituindo métodos anteriores baseados em animais."
+    },
+    {
+        "pergunta": "Sobre o uso de biotecnologia na agricultura, é correto afirmar:",
+        "opcoes": {
+            "0": "Não existem plantas transgênicas.",
+            "1": "Plantas transgênicas são resistentes a pragas e herbicidas.",
+            "2": "Plantas transgênicas não são cultivadas no Brasil.",
+            "3": "Plantas transgênicas não apresentam vantagens econômicas."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "Plantas transgênicas são geneticamente modificadas para resistir a pragas e herbicidas, aumentando a produtividade e reduzindo perdas agrícolas."
+    },
+    {
+        "pergunta": "Sobre a utilização de microrganismos na produção de antibióticos, marque a alternativa correta:",
+        "opcoes": {
+            "0": "A biotecnologia não utiliza microrganismos.",
+            "1": "Microrganismos são utilizados para produção de antibióticos em larga escala.",
+            "2": "Apenas plantas produzem antibióticos.",
+            "3": "Antibióticos são produzidos apenas por síntese química."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "Microrganismos, como fungos e bactérias, são amplamente utilizados na biotecnologia para produção industrial de antibióticos, como a penicilina."
+    },
+    {
+        "pergunta": "Sobre a terapia gênica, é correto afirmar:",
+        "opcoes": {
+            "0": "Consiste na introdução de genes normais em células para corrigir defeitos genéticos.",
+            "1": "Não utiliza vetores virais.",
+            "2": "Não é utilizada em seres humanos.",
+            "3": "É uma técnica exclusiva de plantas."
+        },
+        "correta": 0,
+        "materia": "Biologia",
+        "explicacao": "A terapia gênica introduz genes funcionais em células de um organismo para corrigir mutações causadoras de doenças genéticas."
+    },
+    {
+        "pergunta": "Sobre o uso de plasmídeos na engenharia genética, marque a alternativa correta:",
+        "opcoes": {
+            "0": "Plasmídeos são fragmentos de RNA.",
+            "1": "Plasmídeos são utilizados como vetores na transferência de genes.",
+            "2": "Plasmídeos não são utilizados em biotecnologia.",
+            "3": "Plasmídeos são exclusivos de vírus."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "Plasmídeos são pequenas moléculas de DNA circular usadas como vetores para inserir genes de interesse em organismos-alvo."
+    },
+    {
+        "pergunta": "Sobre a produção de biocombustíveis, é correto afirmar:",
+        "opcoes": {
+            "0": "Não utiliza organismos vivos.",
+            "1": "Utiliza microrganismos para fermentar matéria orgânica e produzir álcool.",
+            "2": "Biocombustíveis são produzidos apenas por processos físicos.",
+            "3": "Não há produção de biocombustíveis no Brasil."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "A produção de biocombustíveis envolve microrganismos como leveduras na fermentação de biomassa para gerar etanol."
+    },
+    {
+        "pergunta": "Sobre a biotecnologia ambiental, marque a alternativa correta:",
+        "opcoes": {
+            "0": "Não contribui para o tratamento de resíduos.",
+            "1": "Utiliza microrganismos para degradar poluentes.",
+            "2": "Não tem aplicação prática.",
+            "3": "É exclusiva da área médica."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "A biotecnologia ambiental emprega microrganismos para a biorremediação, tratando resíduos e poluentes de forma sustentável."
+    },
+    {
+        "pergunta": "Sobre a produção de vacinas por engenharia genética, é correto afirmar:",
+        "opcoes": {
+            "0": "Não existem vacinas produzidas por engenharia genética.",
+            "1": "Vacinas recombinantes são produzidas utilizando genes de patógenos.",
+            "2": "Vacinas só podem ser produzidas por métodos tradicionais.",
+            "3": "Vacinas recombinantes não são seguras."
+        },
+        "correta": 1,
+        "materia": "Biologia",
+        "explicacao": "Vacinas recombinantes usam genes de patógenos inseridos em outros organismos para produzir antígenos seguros e eficazes."
+    }
+]
