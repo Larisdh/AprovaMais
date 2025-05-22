@@ -47,11 +47,31 @@ body {
 .quiz-nav a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease-in-out; /* Transição suave */
+  /* Remove o sublinhado dos links */
+  transition: color 0.3s ease-in-out;
+  /* Adiciona uma transição suave */
 }
 
 .quiz-nav a:hover {
-  color: #405ceaee; /* Azul claro ao passar o mouse */
+  color: #d5f3ff;
+  /* Cor mais clara no hover para contraste */
+}
+
+.quiz-logo {
+  height: 5rem;
+}
+
+.quiz-search {
+  padding: 0.75rem;
+  /* Mais espaçamento */
+  border-radius: 0.75rem;
+  /* Bordas mais arredondadas */
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
 }
 
 .quiz-title {
