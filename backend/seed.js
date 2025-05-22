@@ -257,7 +257,7 @@ const perguntas = [
       "3": "Elevada mecanização das atividades."
     },
     "correta": 3,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A agricultura de jardinagem, típica de áreas densamente povoadas da Ásia, caracteriza-se pelo uso intensivo de mão de obra e técnicas manuais, com baixa mecanização."
   },
   {
@@ -269,7 +269,7 @@ const perguntas = [
       "3": "Criação de grandes latifúndios voltados para a pecuária extensiva."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A reforma agrária busca alterar a estrutura fundiária, democratizando o acesso à terra e promovendo o desenvolvimento social e econômico no meio rural."
   },
   {
@@ -281,7 +281,7 @@ const perguntas = [
       "3": "Agricultura de subsistência."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O agribusiness engloba toda a cadeia produtiva do agronegócio, desde a produção agrícola em larga escala até a industrialização e comercialização, com forte orientação para o mercado."
   },
   {
@@ -293,7 +293,7 @@ const perguntas = [
       "3": "Planícies aluviais com alta fertilidade natural."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A agricultura itinerante é adaptada a áreas de floresta tropical, onde a fertilidade do solo é rapidamente esgotada, exigindo o deslocamento periódico das áreas de cultivo."
   },
   {
@@ -305,7 +305,7 @@ const perguntas = [
       "3": "Extrativismo vegetal."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A indústria têxtil pertence ao setor secundário, que transforma matérias-primas em produtos manufaturados. O setor primário é voltado para a extração e produção de recursos naturais."
   },
   {
@@ -317,7 +317,7 @@ const perguntas = [
       "3": "Neutraliza a poluição atmosférica."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O efeito estufa retém parte da radiação solar refletida pela Terra, mantendo a temperatura média global em níveis adequados para a existência da vida."
   },
   {
@@ -329,7 +329,7 @@ const perguntas = [
       "3": "Implementação de programas de reflorestamento."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A queima de combustíveis fósseis libera grandes quantidades de gases de efeito estufa na atmosfera, intensificando o fenômeno natural e levando ao aumento da temperatura global."
   },
   {
@@ -341,7 +341,7 @@ const perguntas = [
       "3": "O aumento da poluição sonora nas grandes cidades."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A camada de ozônio filtra grande parte da radiação ultravioleta (UV) emitida pelo Sol. Sua destruição aumenta a exposição aos raios UV, que são prejudiciais à saúde humana e ao meio ambiente."
   },
   {
@@ -353,7 +353,7 @@ const perguntas = [
       "3": "Diminuição da ocorrência de inundações."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O desmatamento causa a perda de habitat para diversas espécies, contribuindo para a extinção, e libera o carbono armazenado nas árvores na forma de dióxido de carbono, um importante gás de efeito estufa."
   },
   {
@@ -365,7 +365,7 @@ const perguntas = [
       "3": "Interromper o desenvolvimento econômico para garantir a preservação total do meio ambiente."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O desenvolvimento sustentável propõe um modelo de desenvolvimento que atenda às necessidades do presente sem comprometer a capacidade das futuras gerações de atenderem às suas próprias necessidades."
   },
    {
@@ -377,7 +377,7 @@ const perguntas = [
       "3": "Maior interdependência econômica entre as nações."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "As empresas multinacionais desempenham um papel central na economia globalizada, atuando em diversos países e integrando cadeias produtivas em escala mundial."
   },
   {
@@ -389,7 +389,7 @@ const perguntas = [
       "3": "A proteção da indústria nacional através de barreiras tarifárias."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O neoliberalismo é uma doutrina econômica que enfatiza a liberdade de mercado, a mínima intervenção estatal e a abertura econômica como motores do crescimento."
   },
   {
@@ -401,7 +401,7 @@ const perguntas = [
       "3": "Acordo de Livre Comércio da América do Norte (NAFTA/USMCA)."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A OPEP é uma organização de países produtores de petróleo com o objetivo de coordenar políticas de produção e preços, não sendo um bloco econômico regional com foco na integração comercial abrangente."
   },
   {
@@ -413,7 +413,7 @@ const perguntas = [
       "3": "A criação de sindicatos internacionais para defender os direitos dos trabalhadores."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A DIT reflete a especialização produtiva de diferentes nações, onde alguns países se concentram na produção de matérias-primas, outros na industrialização e outros em serviços, dentro do sistema econômico global."
   },
   {
@@ -425,7 +425,7 @@ const perguntas = [
       "3": "Nível de urbanização."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O PIB per capita mede a riqueza média por habitante e o IDH considera fatores como expectativa de vida, educação e renda, oferecendo uma visão mais abrangente do desenvolvimento."
   },
    {
@@ -437,7 +437,7 @@ const perguntas = [
       "3": "A diminuição da importância dos bancos e instituições financeiras."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A globalização financeira facilitou a movimentação de capitais, investimentos e transações financeiras entre diferentes países, integrando os mercados financeiros em nível global."
   },
   {
@@ -449,7 +449,7 @@ const perguntas = [
       "3": "A maior facilidade de acesso a informações e diferentes formas de expressão cultural."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A globalização cultural pode, em alguns casos, levar à homogeneização cultural e ao enfraquecimento de línguas e tradições locais, embora também possa promover o intercâmbio cultural."
   },
   {
@@ -461,7 +461,7 @@ const perguntas = [
       "3": "Promover a integração econômica com outros países através de acordos comerciais."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O protecionismo visa proteger a produção nacional, tornando os produtos importados mais caros ou limitando sua entrada no mercado interno."
   },
   {
@@ -473,7 +473,7 @@ const perguntas = [
       "3": "Organização das Nações Unidas (ONU)."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O FMI atua na cooperação monetária internacional, oferecendo assistência financeira e aconselhamento a países com dificuldades econômicas, buscando a estabilidade do sistema financeiro global."
   },
   {
@@ -485,7 +485,7 @@ const perguntas = [
       "3": "A produção artesanal e local de bens de consumo."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "As cadeias globais de valor são uma característica da economia globalizada, onde diferentes partes do processo produtivo são realizadas em locais estratégicos ao redor do mundo."
   },
   {
@@ -497,7 +497,7 @@ const perguntas = [
       "3": "Intensificação de fenômenos climáticos extremos como furacões e tornados."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O aumento da temperatura global acelera o derretimento do gelo polar e das geleiras, contribuindo para a elevação do nível do mar e ameaçando áreas costeiras."
   },
   {
@@ -509,7 +509,7 @@ const perguntas = [
       "3": "Predomínio de arrendatários e parceria agrícola."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A agricultura familiar é um modelo de produção que se baseia no trabalho da família, geralmente em pequenas e médias propriedades, com diversidade de culturas e foco no abastecimento do mercado interno."
   },
   {
@@ -521,7 +521,7 @@ const perguntas = [
       "3": "Declaração do Rio sobre Meio Ambiente e Desenvolvimento."
     },
     "correta": 0,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "O Protocolo de Kyoto e o Acordo de Paris são importantes instrumentos internacionais que estabelecem metas e compromissos para a redução das emissões de gases responsáveis pelo aquecimento global."
   },
   {
@@ -533,7 +533,7 @@ const perguntas = [
       "3": "Depender da ajuda alimentar internacional em situações de crise."
     },
     "correta": 2,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "A soberania alimentar defende o controle dos sistemas alimentares pelas comunidades locais, garantindo o direito à alimentação adequada e a autonomia na produção."
   },
   {
@@ -545,7 +545,7 @@ const perguntas = [
       "3": "O fortalecimento das políticas protecionistas em nível global."
     },
     "correta": 1,
-    "materia": "Geografia",
+    "materia": "geografia",
     "explicacao": "Os avanços tecnológicos nas áreas de comunicação (internet, telefonia) e transporte (contêineres, aviões) facilitaram a integração dos mercados, a circulação de bens, serviços e informações em escala global."
   },
     {
@@ -557,7 +557,7 @@ const perguntas = [
       "3": "A força resultante é proporcional à velocidade do carro."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Pela Primeira Lei de Newton (Lei da Inércia), um corpo em movimento retilíneo uniforme permanece nesse estado se a força resultante sobre ele for nula."
   },
   {
@@ -569,7 +569,7 @@ const perguntas = [
       "3": "A energia potencial gravitacional."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A única força atuando sobre o objeto é a força gravitacional, que produz uma aceleração constante para baixo (a aceleração da gravidade)."
   },
   {
@@ -581,7 +581,7 @@ const perguntas = [
       "3": "Quilowatt-hora (kWh)."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Watt (W) é a unidade de potência, que é a taxa de transferência ou conversão de energia por unidade de tempo (W = J/s)."
   },
   {
@@ -593,7 +593,7 @@ const perguntas = [
       "3": "Depende da forma dos corpos."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Na ausência de resistência do ar, a aceleração de queda livre é a mesma para todos os objetos, independentemente de suas massas (Galileu Galilei)."
   },
   {
@@ -605,7 +605,7 @@ const perguntas = [
       "3": "O trabalho depende da velocidade do bloco."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A força de atrito sempre se opõe ao movimento, portanto, o ângulo entre a força e o deslocamento é de 180°, e o trabalho realizado (W = F.d.cosθ) é negativo (cos 180° = -1)."
   },
    {
@@ -617,7 +617,7 @@ const perguntas = [
       "3": "Positrão."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "O elétron é uma partícula fundamental com carga elétrica elementar negativa."
   },
   {
@@ -629,7 +629,7 @@ const perguntas = [
       "3": "Carga elétrica, campo elétrico e potencial elétrico."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A Lei de Ohm estabelece que a tensão (V) através de um condutor é diretamente proporcional à corrente (I) que passa por ele, sendo a constante de proporcionalidade a resistência (R): V = R.I."
   },
   {
@@ -641,7 +641,7 @@ const perguntas = [
       "3": "Gerador elétrico."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Um motor elétrico utiliza a interação entre campos magnéticos e correntes elétricas para produzir movimento mecânico."
   },
   {
@@ -653,7 +653,7 @@ const perguntas = [
       "3": "Três resistores em paralelo."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Em uma associação em paralelo, a resistência equivalente é sempre menor que a menor resistência individual. Adicionar mais resistores em paralelo diminui ainda mais a resistência equivalente."
   },
   {
@@ -665,7 +665,7 @@ const perguntas = [
       "3": "Watt (W)."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Watt (W) é a unidade de potência elétrica, que representa a taxa na qual a energia elétrica é convertida em outra forma de energia."
   },
   {
@@ -677,7 +677,7 @@ const perguntas = [
       "3": "Radiação."
     },
     "correta": 0,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A condução requer um meio material para a transferência de calor através da colisão de partículas. No vácuo, não há partículas para conduzir o calor."
   },
   {
@@ -689,7 +689,7 @@ const perguntas = [
       "3": "Ao estado físico do corpo (sólido, líquido ou gasoso)."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A temperatura é uma medida da energia cinética média das moléculas ou átomos em um sistema. Quanto maior a energia cinética média, maior a temperatura."
   },
   {
@@ -701,11 +701,11 @@ const perguntas = [
       "3": "Nenhuma das anteriores."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Na escala Celsius, os pontos são 0°C e 100°C. Na Fahrenheit, 32°F e 212°F. Na Kelvin, 273,15 K e 373,15 K. Nenhuma delas tem os mesmos valores."
   },
   {
-    "pergunta": "Qual das seguintes transformações físicas libera calor para o ambiente?",
+    "pergunta": "Qual das seguintes transformações fisicas libera calor para o ambiente?",
     "opcoes": {
       "0": "Fusão.",
       "1": "Vaporização.",
@@ -713,7 +713,7 @@ const perguntas = [
       "3": "Condensação."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A condensação é a passagem do estado gasoso para o líquido, um processo exotérmico que libera energia térmica para o ambiente."
   },
   {
@@ -725,7 +725,7 @@ const perguntas = [
       "3": "A taxa de transferência de calor entre o corpo e o ambiente."
     },
     "correta": 0,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Capacidade térmica (C) é a razão entre a quantidade de calor (Q) fornecida a um corpo e a variação de temperatura (ΔT) resultante: C = Q/ΔT."
   },
    {
@@ -737,7 +737,7 @@ const perguntas = [
       "3": "F/(4m)"
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Pela Segunda Lei de Newton (F = ma), se F é constante e m dobra, a aceleração (a = F/m) se reduz pela metade."
   },
   {
@@ -749,7 +749,7 @@ const perguntas = [
       "3": "Energia hidrelétrica."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "O petróleo é um combustível fóssil, cuja formação leva milhões de anos, sendo considerado um recurso não renovável em escala humana."
   },
   {
@@ -761,11 +761,11 @@ const perguntas = [
       "3": "Termoeletricidade."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A indução eletromagnética, descoberta por Faraday, é o princípio de funcionamento dos geradores elétricos, onde a variação do fluxo magnético através de um circuito induz uma corrente elétrica."
   },
   {
-    "pergunta": "Qual das seguintes grandezas físicas é escalar?",
+    "pergunta": "Qual das seguintes grandezas fisicas é escalar?",
     "opcoes": {
       "0": "Velocidade.",
       "1": "Força.",
@@ -773,7 +773,7 @@ const perguntas = [
       "3": "Temperatura."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Uma grandeza escalar é aquela que possui apenas magnitude (valor numérico) e unidade, como a temperatura. Velocidade, força e aceleração são grandezas vetoriais, pois possuem magnitude, direção e sentido."
   },
   {
@@ -785,7 +785,7 @@ const perguntas = [
       "3": "Capacidade térmica."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "O equilíbrio térmico ocorre quando dois ou mais corpos em contato atingem a mesma temperatura, não havendo mais troca líquida de calor entre eles (Lei Zero da Termodinâmica)."
   },
   {
@@ -797,7 +797,7 @@ const perguntas = [
       "3": "Um carro freando em uma ladeira."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A energia potencial gravitacional (Ep = mgh) é diretamente proporcional à altura (h) do objeto em relação a um referencial. Ao ser lançado para cima, a altura da bola aumenta."
   },
   {
@@ -809,7 +809,7 @@ const perguntas = [
       "3": "Plástico."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "Metais como o cobre possuem elétrons livres que podem se mover facilmente, permitindo a passagem da corrente elétrica."
   },
   {
@@ -821,7 +821,7 @@ const perguntas = [
       "3": "Conservação da carga elétrica."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A primeira lei da termodinâmica estabelece que a variação da energia interna de um sistema é igual à diferença entre o calor adicionado ao sistema e o trabalho realizado pelo sistema (ΔU = Q - W), expressando a conservação da energia."
   },
   {
@@ -833,7 +833,7 @@ const perguntas = [
       "3": "Dilatação térmica."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A radiação térmica é a transferência de calor através de ondas eletromagnéticas, que podem se propagar no vácuo."
   },
   {
@@ -845,7 +845,7 @@ const perguntas = [
       "3": "A velocidade."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "fisica",
     "explicacao": "A velocidade do pêndulo varia continuamente durante a oscilação, sendo máxima no ponto mais baixo e nula nos pontos de maior afastamento. O período, a frequência e a energia mecânica total (na ausência de atrito) permanecem constantes para pequenas amplitudes."
   },
     {
@@ -857,7 +857,7 @@ const perguntas = [
       "3": "Desenvolver habilidades intelectuais superiores."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Aristóteles desenvolveu a teoria da virtude como uma mediana entre o excesso e a falta. A coragem, por exemplo, é o justo meio entre a covardia e a temeridade."
   },
   {
@@ -869,11 +869,11 @@ const perguntas = [
       "3": "Friedrich Nietzsche"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Sócrates é famoso por seu método de questionamento, a dialética, que buscava a verdade através do diálogo e da contraposição de ideias."
   },
   {
-    "pergunta": "A ética utilitarista, amplamente discutida na Filosofia Contemporânea, defende que uma ação é considerada moralmente correta se:",
+    "pergunta": "A ética utilitarista, amplamente discutida na filosofia Contemporânea, defende que uma ação é considerada moralmente correta se:",
     "opcoes": {
       "0": "For baseada em princípios universais e imutáveis.",
       "1": "Promover a maior felicidade para o maior número de pessoas.",
@@ -881,7 +881,7 @@ const perguntas = [
       "3": "For motivada por boas intenções, independentemente de suas consequências."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O utilitarismo, defendido por filósofos como John Stuart Mill, avalia a moralidade de uma ação por suas consequências, visando o bem-estar coletivo."
   },
   {
@@ -893,7 +893,7 @@ const perguntas = [
       "3": "Simone de Beauvoir"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "John Rawls, em sua obra 'Uma Teoria da Justiça', propõe princípios para uma sociedade justa, incluindo a distribuição equitativa de recursos e oportunidades."
   },
   {
@@ -905,7 +905,7 @@ const perguntas = [
       "3": "Seguir rigorosamente os preceitos religiosos."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "As filosofias helenísticas, como o estoicismo e o epicurismo, enfatizavam a busca pela paz interior e pela ausência de perturbações como o caminho para a felicidade."
   },
   {
@@ -917,7 +917,7 @@ const perguntas = [
       "3": "Epicuro"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Aristóteles acreditava que a natureza do ser humano se realiza na vida em comunidade e na participação na pólis (cidade-estado)."
   },
   {
@@ -929,7 +929,7 @@ const perguntas = [
       "3": "A determinação da história sobre a consciência humana."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Filósofos existencialistas como Sartre e Beauvoir colocam a experiência individual, a liberdade de escolha e a responsabilidade como centrais para a compreensão da existência."
   },
   {
@@ -941,7 +941,7 @@ const perguntas = [
       "3": "Se for motivada por sentimentos nobres e altruístas."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O imperativo categórico kantiano exige que ajamos de tal maneira que a máxima de nossa ação possa se tornar uma lei universal."
   },
   {
@@ -953,7 +953,7 @@ const perguntas = [
       "3": "Sofismo"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Os estoicos valorizavam a autodisciplina, a razão e a aceitação do destino como meios para alcançar a tranquilidade interior."
   },
   {
@@ -965,7 +965,7 @@ const perguntas = [
       "3": "Da busca pela paz interior através da negação dos desejos."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Nietzsche questionava os valores morais estabelecidos e propunha uma filosofia da afirmação da vida, da força e da individualidade."
   },
    {
@@ -977,7 +977,7 @@ const perguntas = [
       "3": "A inevitabilidade da luta de classes na história."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Teóricos como Hobbes, Locke e Rousseau utilizaram a ideia de um contrato social para fundamentar a legitimidade do governo e os direitos e deveres dos indivíduos na sociedade."
   },
   {
@@ -989,7 +989,7 @@ const perguntas = [
       "3": "Protágoras"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Parmênides defendia a ideia de que o ser é uno, imutável e eterno, em contraste com a visão do fluxo constante de Heráclito."
   },
   {
@@ -1001,7 +1001,7 @@ const perguntas = [
       "3": "Jacques Derrida"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Michel Foucault investigou como o poder se manifesta em diversas instituições e como ele molda o conhecimento e as práticas sociais."
   },
   {
@@ -1013,7 +1013,7 @@ const perguntas = [
       "3": "Revelada apenas através da fé e da experiência religiosa."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Os sofistas eram conhecidos por seu relativismo, argumentando que a verdade e a moralidade eram construções sociais e dependiam do ponto de vista."
   },
   {
@@ -1025,7 +1025,7 @@ const perguntas = [
       "3": "Fenomenologia"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O pós-estruturalismo, com autores como Lyotard e Derrida, questiona as estruturas fixas de significado e enfatiza a contingência e a diversidade."
   },
   {
@@ -1037,7 +1037,7 @@ const perguntas = [
       "3": "A moralidade de uma ação reside nos sentimentos e intenções do agente."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "A formulação do imperativo categórico kantiano é a base da ética deontológica, focada no dever e na universalidade das máximas."
   },
   {
@@ -1049,7 +1049,7 @@ const perguntas = [
       "3": "Anaxágoras"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Na alegoria da caverna, Platão descreve prisioneiros que confundem sombras com a realidade, simbolizando a nossa percepção do mundo sensível em contraste com o mundo inteligível das Ideias."
   },
   {
@@ -1061,7 +1061,7 @@ const perguntas = [
       "3": "O impacto ambiental da produção de dispositivos eletrônicos."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "A autonomia das máquinas e a possibilidade de superinteligência levantam questões éticas complexas sobre controle, responsabilidade e o futuro da relação entre humanos e IA."
   },
   {
@@ -1073,7 +1073,7 @@ const perguntas = [
       "3": "A valorização da experiência sensorial como fonte principal de conhecimento."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O ceticismo antigo defendia a impossibilidade de alcançar a certeza e propunha a suspensão do juízo (epoché) como forma de alcançar a ataraxia."
   },
   {
@@ -1085,7 +1085,7 @@ const perguntas = [
       "3": "Martha Nussbaum"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Simone de Beauvoir, em sua obra 'O Segundo Sexo', realizou uma análise profunda da opressão feminina e influenciou o desenvolvimento do pensamento feminista."
   },
    {
@@ -1097,7 +1097,7 @@ const perguntas = [
       "3": "A subordinação do indivíduo ao Estado."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Locke é um dos principais teóricos do liberalismo político e defendia a divisão do poder em legislativo, executivo e judiciário para evitar a tirania."
   },
   {
@@ -1109,7 +1109,7 @@ const perguntas = [
       "3": "Anaxímenes"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Tales de Mileto é considerado o primeiro filósofo e acreditava que a água era a substância primordial da qual tudo se originava."
   },
   {
@@ -1121,7 +1121,7 @@ const perguntas = [
       "3": "O papel da mídia na formação da opinião pública."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "A bioética lida com as implicações éticas das ciências da vida e da saúde, abrangendo temas como aborto, eutanásia, pesquisa com células-tronco, entre outros."
   },
   {
@@ -1129,11 +1129,11 @@ const perguntas = [
     "opcoes": {
       "0": "A busca incessante por prazeres intensos.",
       "1": "A prática da virtude e do dever.",
-      "2": "A ausência de dor física (aponia) e de perturbação da alma (ataraxia).",
+      "2": "A ausência de dor fisica (aponia) e de perturbação da alma (ataraxia).",
       "3": "A contemplação da perfeição do cosmos."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O epicurismo valorizava os prazeres simples e a tranquilidade como o caminho para a felicidade, evitando os excessos e as fontes de sofrimento."
   },
   {
@@ -1145,11 +1145,11 @@ const perguntas = [
       "3": "Paul Ricoeur"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Marshall Rosenberg criou a Comunicação Não Violenta (CNV), um processo de comunicação que enfatiza a empatia, a honestidade e a busca por atender às necessidades de todas as partes envolvidas em um conflito."
   },
     {
-    "pergunta": "Qual das seguintes alternativas representa uma mudança física?",
+    "pergunta": "Qual das seguintes alternativas representa uma mudança fisica?",
     "opcoes": {
       "0": "Queima de um pedaço de madeira.",
       "1": "Fermentação do açúcar para produzir álcool.",
@@ -1157,7 +1157,7 @@ const perguntas = [
       "3": "Enferrujamento de um prego de ferro."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A dissolução do sal em água altera apenas o estado físico da substância (sólido para solução), sem formar novas substâncias."
   },
   {
@@ -1169,7 +1169,7 @@ const perguntas = [
       "3": "Álcool hidratado."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Uma mistura heterogênea apresenta fases distintas visíveis, como a água e o óleo que não se misturam."
   },
   {
@@ -1181,7 +1181,7 @@ const perguntas = [
       "3": "Número de elétrons (em um íon)."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "O número atômico (Z) é igual ao número de prótons no núcleo de um átomo, sendo o que identifica um elemento químico."
   },
   {
@@ -1193,7 +1193,7 @@ const perguntas = [
       "3": "Ligação entre dois átomos de oxigênio (O₂)."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A ligação iônica ocorre entre átomos com grande diferença de eletronegatividade, como um metal (sódio) e um não metal (cloro), com transferência de elétrons."
   },
   {
@@ -1205,7 +1205,7 @@ const perguntas = [
       "3": "CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(g)"
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Uma reação de síntese é aquela em que duas ou mais substâncias reagem para formar um único produto."
   },
    {
@@ -1217,7 +1217,7 @@ const perguntas = [
       "3": "Estado físico dos produtos."
     },
     "correta": 3,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "O estado físico dos produtos não influencia a velocidade com que os reagentes se transformam em produtos."
   },
   {
@@ -1229,7 +1229,7 @@ const perguntas = [
       "3": "Igual a zero."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Soluções ácidas possuem um excesso de íons H⁺ em relação aos íons OH⁻, resultando em um pH menor que 7."
   },
   {
@@ -1241,7 +1241,7 @@ const perguntas = [
       "3": "Argônio (Ar)."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "O nitrogênio representa aproximadamente 78% da composição do ar atmosférico seco."
   },
   {
@@ -1253,7 +1253,7 @@ const perguntas = [
       "3": "C₂H₄"
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A fórmula molecular do benzeno é C₆H₆, representando um anel hexagonal de átomos de carbono com um hidrogênio ligado a cada um."
   },
   {
@@ -1265,7 +1265,7 @@ const perguntas = [
       "3": "Ácido carboxílico."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Um álcool possui o grupo hidroxila (-OH) ligado a um carbono que não faz parte de um anel aromático ou de uma ligação dupla carbono-oxigênio."
   },
   {
@@ -1277,7 +1277,7 @@ const perguntas = [
       "3": "A pressão de vapor é constante para todos os líquidos na mesma temperatura."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "O aumento da temperatura fornece mais energia cinética às moléculas do líquido, facilitando sua passagem para a fase gasosa e, consequentemente, aumentando a pressão de vapor."
   },
   {
@@ -1289,7 +1289,7 @@ const perguntas = [
       "3": "A relação entre o número de mols e o volume a pressão e temperatura constantes."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A Lei de Boyle estabelece que, para uma quantidade fixa de gás a temperatura constante, a pressão é inversamente proporcional ao volume (P₁V₁ = P₂V₂)."
   },
   {
@@ -1301,7 +1301,7 @@ const perguntas = [
       "3": "Polietileno (plástico)."
     },
     "correta": 3,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "O polietileno é um plástico produzido industrialmente a partir da polimerização do etileno, sendo um polímero sintético."
   },
   {
@@ -1313,7 +1313,7 @@ const perguntas = [
       "3": "Evaporação."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A destilação explora as diferentes volatilidades dos líquidos, permitindo a separação através do aquecimento e condensação seletiva dos vapores."
   },
   {
@@ -1325,7 +1325,7 @@ const perguntas = [
       "3": "Metano (CH₄)."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Hidrocarbonetos insaturados possuem ligações duplas ou triplas entre os átomos de carbono. O etileno (C₂H₄) contém uma ligação dupla carbono-carbono."
   },
    {
@@ -1337,7 +1337,7 @@ const perguntas = [
       "3": "Aquela que doa prótons."
     },
     "correta": 1,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Um oxidante é uma espécie química que causa a oxidação de outra espécie ao receber elétrons, diminuindo seu próprio número de oxidação."
   },
   {
@@ -1349,7 +1349,7 @@ const perguntas = [
       "3": "ppm"
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A concentração molar (M) é definida como o número de mols do soluto dissolvidos por litro de solução (mol/L)."
   },
   {
@@ -1361,7 +1361,7 @@ const perguntas = [
       "3": "Adição de um catalisador."
     },
     "correta": 1,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Em uma reação exotérmica, o calor é um 'produto'. Diminuir a temperatura desloca o equilíbrio no sentido de liberar mais calor, ou seja, para a direita."
   },
   {
@@ -1373,7 +1373,7 @@ const perguntas = [
       "3": "Ácido carboxílico."
     },
     "correta": 3,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "O grupo carboxila (-COOH) é característico dos ácidos carboxílicos."
   },
   {
@@ -1385,7 +1385,7 @@ const perguntas = [
       "3": "Oxidação de um álcool primário para formar um aldeído."
     },
     "correta": 1,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Uma reação de adição envolve a quebra de uma ligação pi (em duplas ou triplas ligações) e a adição de átomos aos carbonos envolvidos."
   },
   {
@@ -1397,7 +1397,7 @@ const perguntas = [
       "3": "A variação de energia interna a volume constante."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A entalpia (H) é uma função de estado termodinâmica, e a variação de entalpia (ΔH) em uma reação química a pressão constante é igual ao calor absorvido ou liberado pelo sistema."
   },
   {
@@ -1409,7 +1409,7 @@ const perguntas = [
       "3": "Cloreto de sódio (NaCl)."
     },
     "correta": 3,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "Um eletrólito forte se dissocia completamente em íons quando dissolvido em água, tornando a solução altamente condutora de eletricidade. O NaCl é um sal solúvel que se dissocia em Na⁺ e Cl⁻."
   },
   {
@@ -1421,7 +1421,7 @@ const perguntas = [
       "3": "Butanol."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A cadeia principal possui três átomos de carbono (prop-) e o grupo funcional álcool (-ol) está ligado ao primeiro carbono (implícito), resultando em propan-1-ol, comumente chamado de propanol."
   },
   {
@@ -1433,7 +1433,7 @@ const perguntas = [
       "3": "Fermentação."
     },
     "correta": 1,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A saponificação é a reação de hidrólise de ésteres de ácidos graxos (presentes em óleos e gorduras) com uma base forte (como NaOH ou KOH) para produzir sabão (sal de ácido graxo) e glicerol."
   },
   {
@@ -1445,7 +1445,7 @@ const perguntas = [
       "3": "A massa total dos reagentes é igual à massa total dos produtos em uma reação química."
     },
     "correta": 2,
-    "materia": "Química",
+    "materia": "quimica",
     "explicacao": "A Lei de Hess afirma que a variação de entalpia de uma reação é constante, independentemente de ser realizada em uma única etapa ou em várias etapas."
   },
     {
@@ -1457,19 +1457,19 @@ const perguntas = [
       "3": "Maior competitividade entre trabalhadores de diferentes países."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A globalização, em geral, enfraqueceu o poder dos sindicatos em nível nacional e global, devido à descentralização da produção e à maior mobilidade do capital."
   },
   {
     "pergunta": "O conceito de 'alienação' no trabalho, proposto por Karl Marx, refere-se principalmente à:",
     "opcoes": {
       "0": "Falta de reconhecimento social do trabalhador.",
-      "1": "Exaustão física e mental causada pelo excesso de trabalho.",
+      "1": "Exaustão fisica e mental causada pelo excesso de trabalho.",
       "2": "Separação do trabalhador do produto do seu trabalho, do processo de produção, de seus colegas e de sua própria potencialidade humana.",
       "3": "Baixa remuneração e más condições de trabalho."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A alienação, para Marx, é a perda de autonomia e controle do trabalhador sobre o seu trabalho e seus resultados, levando a um sentimento de estranhamento e desumanização."
   },
   {
@@ -1481,7 +1481,7 @@ const perguntas = [
       "3": "Produção baseada no conhecimento e na inovação tecnológica."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "O fordismo é caracterizado pela produção em larga escala de bens padronizados, utilizando a linha de montagem para aumentar a eficiência e reduzir custos."
   },
   {
@@ -1493,7 +1493,7 @@ const perguntas = [
       "3": "A organização dos trabalhadores em sindicatos e associações de classe."
     },
     "correta": 0,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A divisão social do trabalho é a forma como as diferentes atividades produtivas são distribuídas entre os membros de uma sociedade, gerando interdependência e especialização."
   },
   {
@@ -1505,7 +1505,7 @@ const perguntas = [
       "3": "Fortalecimento da legislação trabalhista e da fiscalização."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A precarização se manifesta através da informalidade, da terceirização excessiva, dos contratos temporários e da perda de direitos trabalhistas, tornando o trabalho mais vulnerável."
   },
   {
@@ -1517,7 +1517,7 @@ const perguntas = [
       "3": "A cultura influencia a forma como as pessoas pensam, agem e interagem."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura é dinâmica e está em constante transformação, influenciada por diversos fatores como contato entre grupos, avanços tecnológicos e mudanças sociais."
   },
   {
@@ -1529,7 +1529,7 @@ const perguntas = [
       "3": "Criação de espaços para a livre expressão cultural e artística."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A indústria cultural, segundo Adorno e Horkheimer, transforma a cultura em mercadoria, padronizando produtos culturais e influenciando o pensamento e o comportamento das massas."
   },
   {
@@ -1541,7 +1541,7 @@ const perguntas = [
       "3": "Uma manifestação folclórica local transmitida oralmente."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Filmes de grande sucesso, com ampla divulgação e distribuição, são típicos produtos da indústria cultural, visando o consumo em massa."
   },
   {
@@ -1553,7 +1553,7 @@ const perguntas = [
       "3": "Sua capacidade de alienar e manipular o público, enfraquecendo o pensamento crítico."
     },
     "correta": 3,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Os críticos da indústria cultural argumentam que ela simplifica e padroniza os produtos culturais, limitando a capacidade das pessoas de refletir criticamente sobre a realidade."
   },
   {
@@ -1565,7 +1565,7 @@ const perguntas = [
       "3": "A coexistência pacífica de diversas culturas em uma mesma sociedade."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A hegemonia cultural ocorre quando a visão de mundo da classe dominante se torna a visão de mundo 'natural' e aceita pela maioria, mesmo que não sirva aos seus próprios interesses."
   },
   {
@@ -1577,7 +1577,7 @@ const perguntas = [
       "3": "O fortalecimento das tradições locais e a valorização das manifestações culturais populares."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Os meios de comunicação de massa permitiram a disseminação de informações e produtos culturais para um grande número de pessoas simultaneamente, moldando a cultura de massas."
   },
   {
@@ -1589,7 +1589,7 @@ const perguntas = [
       "3": "Uma diminuição da influência da mídia tradicional."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A internet e as redes sociais democratizaram parcialmente a produção e o consumo de informação, permitindo que os usuários se tornem também produtores de conteúdo e interajam de forma mais direta."
   },
   {
@@ -1601,7 +1601,7 @@ const perguntas = [
       "3": "As relações sociais são baseadas principalmente na comunicação face a face."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Na sociedade da informação, o acesso, o processamento e a disseminação da informação são cruciais para o desenvolvimento econômico e social."
   },
   {
@@ -1613,7 +1613,7 @@ const perguntas = [
       "3": "O excesso de conteúdo educativo e a falta de opções de lazer."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A ampla disseminação de produtos culturais padronizados pode levar à perda de identidades culturais específicas e à uniformização de gostos e valores."
   },
   {
@@ -1625,7 +1625,7 @@ const perguntas = [
       "3": "A diminuição do impacto das redes sociais na formação da opinião pública."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A velocidade e a falta de filtros nas mídias digitais facilitam a propagação de informações falsas, com potenciais impactos na opinião pública e nos processos democráticos."
   },
   {
@@ -1637,7 +1637,7 @@ const perguntas = [
       "3": "Trabalho em equipe e multifuncionalidade dos trabalhadores."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "O toyotismo se diferencia do fordismo justamente por priorizar a flexibilidade e a produção sob demanda, em contraposição à produção em massa e aos grandes estoques."
   },
   {
@@ -1649,7 +1649,7 @@ const perguntas = [
       "3": "Apoiar artistas independentes e produções alternativas."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A indústria do entretenimento visa principalmente o divertimento e o consumo, muitas vezes com menor preocupação com o conteúdo crítico ou a profundidade cultural."
   },
   {
@@ -1661,7 +1661,7 @@ const perguntas = [
       "3": "Uma separação clara entre produtores e consumidores de conteúdo."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura participativa é marcada pela descentralização da produção de conteúdo e pelo engajamento ativo dos usuários nas plataformas digitais."
   },
   {
@@ -1673,7 +1673,7 @@ const perguntas = [
       "3": "O uso intensivo de estratégias de marketing e publicidade."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura de massas tende a homogeneizar gostos e valores, o que pode ir de encontro à valorização das particularidades culturais de cada local."
   },
   {
@@ -1685,7 +1685,7 @@ const perguntas = [
       "3": "Produzir conteúdo para as diversas plataformas digitais."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A alfabetização midiática capacita os indivíduos a compreenderem a complexidade dos meios de comunicação e a avaliarem criticamente as informações que recebem."
   },
   {
@@ -1697,7 +1697,7 @@ const perguntas = [
       "3": "Diminuição da desigualdade salarial entre diferentes profissões."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A 'uberização' caracteriza-se pela intermediação digital entre trabalhadores e consumidores, muitas vezes com relações de trabalho flexíveis e sem os mesmos direitos do emprego tradicional."
   },
   {
@@ -1709,7 +1709,7 @@ const perguntas = [
       "3": "Tentativa de alcançar o maior público possível."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A indústria cultural tende a evitar a experimentação radical que possa não ser facilmente assimilada pelo grande público, priorizando fórmulas de sucesso e produtos de fácil consumo."
   },
   {
@@ -1721,7 +1721,7 @@ const perguntas = [
       "3": "Um ambiente online seguro e livre de notícias falsas."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A bolha de filtro pode limitar a exposição a diferentes perspectivas, reforçando vieses e dificultando o debate plural."
   },
   {
@@ -1733,7 +1733,7 @@ const perguntas = [
       "3": "A dificuldade de comunicação entre trabalhadores remotos."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A automação de tarefas e a crescente capacidade da inteligência artificial levantam preocupações sobre a substituição de trabalhadores humanos em diversas áreas."
   },
   {
@@ -1745,7 +1745,7 @@ const perguntas = [
       "3": "Uma resistência homogênea das culturas locais aos produtos da mídia de massa."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura de massas, através de seus produtos e narrativas, oferece referências e modelos que podem influenciar a forma como os indivíduos e grupos constroem suas identidades."
   },
     {
@@ -1757,7 +1757,7 @@ const perguntas = [
       "3": "Urgencia y movimiento."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "As imagens do sol se pondo, os tons quentes do céu e o silêncio quebrado por um canto distante evocam uma atmosfera de calma e serenidade.."
   },
   {
@@ -1769,7 +1769,7 @@ const perguntas = [
       "3": "Desinteresado."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": " 'Hábil' se refere a alguém que tem destreza e capacidade para realizar uma tarefa, portanto 'experiente' é um sinônimo adequado."
   },
   {
@@ -1781,7 +1781,7 @@ const perguntas = [
       "3": "Dar instrucciones sobre cómo actuar."
     },
     "correcta": 1,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "Uma manchete de notícia tem como objetivo principal comunicar um fato de interesse público de maneira concisa."
   },
   {
@@ -1793,7 +1793,7 @@ const perguntas = [
       "3": "Contraste u oposición."
     },
     "correta": 3,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "A conjunção 'aunque' (embora) é utilizada para expressar uma dificuldade ou um obstáculo que não impede a realização da ação principal, introduzindo uma ideia de contraste."
   },
   {
@@ -1805,7 +1805,7 @@ const perguntas = [
       "3": "Describir un paisaje prehistórico."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "A situação absurda de um dinossauro saindo para comprar tabaco e demorando um milhão de anos sugere uma intenção humorística e a utilização da ironia."
   },
    {
@@ -1817,7 +1817,7 @@ const perguntas = [
       "3": "Indiferencia total."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "Amargura descreve um sentimento profundo de desgosto, pena ou ressentimento, geralmente causado por uma decepção."
   },
   {
@@ -1829,7 +1829,7 @@ const perguntas = [
       "3": "Símil."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "Atribui-se uma ação humana ('beijar') a um elemento da natureza ('as ondas', o que caracteriza a figura de linguagem personificação."
   },
   {
@@ -1841,7 +1841,7 @@ const perguntas = [
       "3": "Entusiasmado."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "'Otimista' se refere a uma pessoa que tende a ver o lado bom das coisas, enquanto 'pessimista' é o contrário, esperando resultados negativos."
   },
   {
@@ -1853,7 +1853,7 @@ const perguntas = [
       "3": "Expresar los sentimientos de los pasajeros."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O uso da forma verbal 'se ruega' (roga-se) indica um pedido formal ou uma instrução dirigida a um público específico, com o objetivo de dar indicações."
   },
   {
@@ -1865,7 +1865,7 @@ const perguntas = [
       "3": "Que es de color claro."
     },
     "correta": 1,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "'Caudaloso' descreve um rio com uma grande quantidade de água que flui com força, indicando um volume e correnteza significativos."
   },
    {
@@ -1877,7 +1877,7 @@ const perguntas = [
       "3": "Una orden para el futuro."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O uso do condicional composto ('habría aprobado' - teria aprovado) e o pretérito mais-que-perfeito do subjuntivo ('hubiera estudiado' - tivesse estudado) indica uma situação hipotética que não ocorreu no passado,expressando uma condição irreal."
   },
   {
@@ -1889,7 +1889,7 @@ const perguntas = [
       "3": "Benévolo."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "'Generoso' se refere a alguém que compartilha o que tem, enquanto 'tacaño' (mesquinho) é alguém que não gosta de dar ou compartilhar."
   },
   {
@@ -1901,7 +1901,7 @@ const perguntas = [
       "3": "La falta de recursos naturales."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O texto expressa uma preocupação principal com as consequências negativas da perda de florestas, mencionando o perigo para a biodiversidade e a contribuição para a mudança climática."
   },
   {
@@ -1913,7 +1913,7 @@ const perguntas = [
       "3": "Que fue realizada de mala gana."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "'Efusivamente' significa com grande entusiasmo e demonstração de sentimento, indicando que o público aplaudiu com muita emoção e intensidade."
   },
   {
@@ -1925,7 +1925,7 @@ const perguntas = [
       "3": "Es una película completamente decepcionante."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O crítico reconhece o potencial do roteiro (';ambicioso guion') mas aponta falhas significativas ('adolece de un ritmo irregular y actuaciones poco convincentes'), indicando uma opinião mista com críticas importantes."
   },
    {
@@ -1937,7 +1937,7 @@ const perguntas = [
       "3": "Narrar."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "'Persuadir' e ';convencer' se referem à ação de influenciar alguém para que acredite ou faça algo."
   },
   {
@@ -1949,7 +1949,7 @@ const perguntas = [
       "3": "Promocionar la venta del dispositivo."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O texto utiliza verbos no imperativo ('pulse', 'manténgalo' - pressione, mantenha) e fornece passos específicos para realizar uma ação, caracterizando um texto com função de dar instruções."
   },
   {
@@ -1961,7 +1961,7 @@ const perguntas = [
       "3": "Una sensación de profunda alegría."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "Um 'escalofrío' (calafrio) é uma sensação repentina de frio acompanhada frequentemente de temor ou nervosismo, geralmente causada por medo ou excitação."
   },
   {
@@ -1973,7 +1973,7 @@ const perguntas = [
       "3": "Humor y ligereza."
     },
     "correta": 1,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O silêncio da casa e a ideia de um segredo não revelado ('como esperando un secreto que nunca sería revelado') geram uma atmosfera de mistério e melancolia."
   },
   {
@@ -1985,7 +1985,7 @@ const perguntas = [
       "3": "Torpe."
     },
     "correta": 2,
-    "materia": "Español",
+    "materia": "espanhol",
     "explicacao": "'Astuto' refere a alguém que utiliza a inteligência e a habilidade para conseguir seus propósitos, frequentemente de maneira sutil ou enganosa."
   },
    {
@@ -1997,7 +1997,7 @@ const perguntas = [
       "3": "Dar instrucciones sobre cómo llegar a la tienda."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O uso da exclamação ('¡Gran liquidación!') e a menção de um grande desconto (50%) têm como objetivo persuadir o público a comprar os produtos."
   },
   {
@@ -2009,7 +2009,7 @@ const perguntas = [
       "3": "Dificultad para articular las palabras."
     },
     "correta": 1,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "';Elocuencia' se refere à grande habilidade de falar com fluidez, persuasão e graça, mostrando domínio da palavra."
   },
   {
@@ -2021,7 +2021,7 @@ const perguntas = [
       "3": "Instructivo."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "O autor expressa uma opinião ('Es imperativo que los gobiernos tomen medidas urgentes...') e busca influenciar a do leitor sobre a necessidade de tomar ações contra o cambio climático, caracterizando um texto argumentativo."
   },
   {
@@ -2033,7 +2033,7 @@ const perguntas = [
       "3": "Osado."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "'Valiente' (valente) se refere a alguém que mostra coragem, enquanto 'cobarde' (covarde) é alguém que tem falta de valor."
   },
   {
@@ -2045,7 +2045,7 @@ const perguntas = [
       "3": "Solicitar información al cliente."
     },
     "correta": 2,
-    "materia": "Espanhol",
+    "materia": "espanhol",
     "explicacao": "A mensagem tem como objetivo principal fornecer informações ao cliente sobre o estado do seu pedido (enviado e prazo de entrega)."
   },
   {
