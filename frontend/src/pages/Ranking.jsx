@@ -22,7 +22,9 @@ function Ranking() {
         setRanking(rankingData);
       } catch (error) {
         console.error("❌ Erro ao buscar ranking:", error);
-        setErro("Erro ao carregar dados. Por favor, tente novamente mais tarde.");
+        setErro(
+          "Erro ao carregar dados. Por favor, tente novamente mais tarde."
+        );
       } finally {
         setCarregando(false);
       }
@@ -44,9 +46,7 @@ function Ranking() {
               <span className="ranking-number">{index + 1}</span>
               {aluno.user || "Usuário Anônimo"}
             </span>
-            <span className="score-value">
-              {aluno.pontos} pontos
-            </span>
+            <span className="score-value">{aluno.pontos} pontos</span>
           </div>
         </div>
       ))
@@ -60,8 +60,30 @@ function Ranking() {
       <header className="ranking-header">
         <span className="ranking-title">Ranking</span>
         <nav className="ranking-nav">
-          <Link to="/home" className="ranking-link">Página Inicial</Link>
-          <Link to="/quiz" className="ranking-link">Quiz</Link>
+          <Link
+            to="/home"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              transition: "color 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            Página Inicial
+          </Link>
+          <Link
+            to="/ranking"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              transition: "color 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            Ranking
+          </Link>
           <img src="/Logo.png" alt="Logo Aprova" className="ranking-logo" />
         </nav>
       </header>

@@ -67,8 +67,30 @@ export default function PerfilScreen() {
       <header className="perfil-header">
         <span className="perfil-title">Perfil</span>
         <nav className="perfil-nav">
-          <Link to="/home" className="perfil-link">Página Inicial</Link>
-          <Link to="/ranking" className="perfil-link">Ranking</Link>
+          <Link
+            to="/home"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              transition: "color 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            Página Inicial
+          </Link>
+          <Link
+            to="/ranking"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              transition: "color 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
+            Ranking
+          </Link>
           <img src="/Logo.png" alt="Logo ENEM" className="perfil-logo" />
         </nav>
       </header>
@@ -76,19 +98,39 @@ export default function PerfilScreen() {
       <div className="container">
         <div className="profile-info">
           <label>👤 Nome:</label>
-          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+          <input
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
 
           <label>🎯 Objetivo:</label>
-          <input type="text" value={objetivo} onChange={(e) => setObjetivo(e.target.value)} />
+          <input
+            type="text"
+            value={objetivo}
+            onChange={(e) => setObjetivo(e.target.value)}
+          />
 
           <label>📚 Estuda para:</label>
-          <input type="text" value={prova} onChange={(e) => setProva(e.target.value)} />
+          <input
+            type="text"
+            value={prova}
+            onChange={(e) => setProva(e.target.value)}
+          />
 
           <label>🧠 Matérias de maior Interesse:</label>
-          <textarea value={materias} onChange={(e) => setMaterias(e.target.value)} rows={4} />
+          <textarea
+            value={materias}
+            onChange={(e) => setMaterias(e.target.value)}
+            rows={4}
+          />
 
           <label>📅 Rotina de Estudos:</label>
-          <textarea value={rotina} onChange={(e) => setRotina(e.target.value)} rows={4} />
+          <textarea
+            value={rotina}
+            onChange={(e) => setRotina(e.target.value)}
+            rows={4}
+          />
 
           <button className="save-button" onClick={handleSalvar}>
             Salvar
