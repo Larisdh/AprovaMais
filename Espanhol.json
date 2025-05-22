@@ -1,0 +1,302 @@
+[
+  {
+    "pergunta": "Lee el siguiente fragmento: 'El sol se escondía tras las montañas, tiñendo el cielo de tonos naranjas y rojizos. Un silencio casi absoluto envolvía el valle, roto solo por el canto lejano de un pájaro.' ¿Qué sensación predomina en la descripción?",
+    "opcoes": {
+      "0": "Alegría y vitalidad.",
+      "1": "Misterio y temor.",
+      "2": "Paz y tranquilidad.",
+      "3": "Urgencia y movimiento."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "As imagens do sol se pondo, os tons quentes do céu e o silêncio quebrado por um canto distante evocam uma atmosfera de calma e serenidade.."
+  },
+  {
+    "pergunta": "En la frase 'El nuevo empleado demostró ser muy hábil en su trabajo.', ¿cuál es un sinónimo de la palabra destacada?",
+    "opcoes": {
+      "0": "Lento.",
+      "1": "Torpe.",
+      "2": "Experto.",
+      "3": "Desinteresado."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": " 'Hábil' se refere a alguém que tem destreza e capacidade para realizar uma tarefa, portanto 'experiente' é um sinônimo adequado."
+  },
+  {
+    "pergunta": "Lee el siguiente titular de noticia: 'Aumento del desempleo juvenil preocupa al gobierno.' ¿Cuál es la función principal de este texto?",
+    "opcoes": {
+      "0": "Entretener al lector con una historia.",
+      "1": "Informar sobre un hecho relevante.",
+      "2": "Persuadir al lector de una opinión.",
+      "3": "Dar instrucciones sobre cómo actuar."
+    },
+    "correcta": 1,
+    "materia": "Espanhol",
+    "explicacao": "Uma manchete de notícia tem como objetivo principal comunicar um fato de interesse público de maneira concisa."
+  },
+  {
+    "pergunta": "En la oración 'Aunque llovía a cántaros, decidimos salir a pasear.', la conjunción 'aunque' introduce una idea de:",
+    "opcoes": {
+      "0": "Causa.",
+      "1": "Consecuencia.",
+      "2": "Condición.",
+      "3": "Contraste u oposición."
+    },
+    "correta": 3,
+    "materia": "Espanhol",
+    "explicacao": "A conjunção 'aunque' (embora) é utilizada para expressar uma dificuldade ou um obstáculo que não impede a realização da ação principal, introduzindo uma ideia de contraste."
+  },
+  {
+    "pergunta": "Lee el siguiente microcuento: 'El dinosaurio ya no estaba allí. Solo quedaba el letrero: 'Se fue a comprar tabaco y vuelve en un millón de años'. ¿Cuál es la intención comunicativa principal del autor?",
+    "opcoes": {
+      "0": "Informar sobre la extinción de los dinosaurios.",
+      "1": "Criticar los hábitos de consumo de tabaco.",
+      "2": "Provocar humor e ironía.",
+      "3": "Describir un paisaje prehistórico."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "A situação absurda de um dinossauro saindo para comprar tabaco e demorando um milhão de anos sugere uma intenção humorística e a utilização da ironia."
+  },
+   {
+    "pergunta": "En la frase 'Su rostro reflejaba una amargura profunda tras la decepción.', ¿cuál es el significado de la palabra destacada?",
+    "opcoes": {
+      "0": "Alegría intensa.",
+      "1": "Satisfacción plena.",
+      "2": "Sentimiento de pena y aflicción.",
+      "3": "Indiferencia total."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "Amargura descreve um sentimento profundo de desgosto, pena ou ressentimento, geralmente causado por uma decepção."
+  },
+  {
+    "pergunta": "Lee el siguiente fragmento de un poema: 'Las olas besan la arena con suave murmullo.' ¿Qué figura retórica se utiliza principalmente?",
+    "opcoes": {
+      "0": "Metáfora.",
+      "1": "Hipérbole.",
+      "2": "Personificación.",
+      "3": "Símil."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "Atribui-se uma ação humana ('beijar') a um elemento da natureza ('as ondas', o que caracteriza a figura de linguagem personificação."
+  },
+  {
+    "pergunta": "¿Cuál de las siguientes palabras tiene un significado opuesto a 'optimista'?",
+    "opcoes": {
+      "0": "Alegre.",
+      "1": "Positivo.",
+      "2": "Pesimista.",
+      "3": "Entusiasmado."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "'Otimista' se refere a uma pessoa que tende a ver o lado bom das coisas, enquanto 'pessimista' é o contrário, esperando resultados negativos."
+  },
+  {
+    "pergunta": "Lee el siguiente texto breve: 'Se ruega a los pasajeros mantener la calma y seguir las instrucciones del personal de a bordo.' ¿Cuál es la función principal de este texto?",
+    "opcoes": {
+      "0": "Narrar un evento ocurrido en un avión.",
+      "1": "Describir las características de un vuelo.",
+      "2": "Dar indicaciones y normas de comportamiento.",
+      "3": "Expresar los sentimientos de los pasajeros."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O uso da forma verbal 'se ruega' (roga-se) indica um pedido formal ou uma instrução dirigida a um público específico, com o objetivo de dar indicações."
+  },
+  {
+    "pergunta": "En la frase 'El caudaloso río inundó las tierras bajas.', ¿qué nos dice el adjetivo destacado sobre el río?",
+    "opcoes": {
+      "0": "Que es poco profundo.",
+      "1": "Que tiene mucha corriente y volumen de agua.",
+      "2": "Que está contaminado.",
+      "3": "Que es de color claro."
+    },
+    "correta": 1,
+    "materia": "Espanhol",
+    "explicacao": "'Caudaloso' descreve um rio com uma grande quantidade de água que flui com força, indicando um volume e correnteza significativos."
+  },
+   {
+    "pergunta": "Lee el siguiente fragmento: 'Si hubiera estudiado más, habría aprobado el examen.' ¿Qué expresa esta oración?",
+    "opcoes": {
+      "0": "Una certeza sobre el pasado.",
+      "1": "Una condición real en el presente.",
+      "2": "Una hipótesis o condición irreal en el pasado.",
+      "3": "Una orden para el futuro."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O uso do condicional composto ('habría aprobado' - teria aprovado) e o pretérito mais-que-perfeito do subjuntivo ('hubiera estudiado' - tivesse estudado) indica uma situação hipotética que não ocorreu no passado,expressando uma condição irreal."
+  },
+  {
+    "pergunta": "¿Cuál de las siguientes palabras es un antónimo de 'generoso'?",
+    "opcoes": {
+      "0": "Bondadoso.",
+      "1": "Altruista.",
+      "2": "Tacaño.",
+      "3": "Benévolo."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "'Generoso' se refere a alguém que compartilha o que tem, enquanto 'tacaño' (mesquinho) é alguém que não gosta de dar ou compartilhar."
+  },
+  {
+    "pergunta": "Lee el siguiente texto: 'La deforestación continúa a un ritmo alarmante, poniendo en peligro la biodiversidad y contribuyendo al cambio climático.' ¿Cuál es la principal preocupación expresada en el texto?",
+    "opcoes": {
+      "0": "El aumento de la producción agrícola.",
+      "1": "La expansión de las áreas urbanas.",
+      "2": "Las consecuencias negativas de la pérdida de bosques.",
+      "3": "La falta de recursos naturales."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O texto expressa uma preocupação principal com as consequências negativas da perda de florestas, mencionando o perigo para a biodiversidade e a contribuição para a mudança climática."
+  },
+  {
+    "pergunta": "En la frase 'El público aplaudió efusivamente la actuación.', ¿qué indica el adverbio destacado sobre la acción de aplaudir?",
+    "opcoes": {
+      "0": "Que fue breve y discreta.",
+      "1": "Que fue larga y ruidosa.",
+      "2": "Que fue hecha con gran emoción e intensidad.",
+      "3": "Que fue realizada de mala gana."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "'Efusivamente' significa com grande entusiasmo e demonstração de sentimento, indicando que o público aplaudiu com muita emoção e intensidade."
+  },
+  {
+    "pergunta": "Lee el siguiente fragmento de una crítica de cine: 'La película, a pesar de su ambicioso guion, adolece de un ritmo irregular y actuaciones poco convincentes.' ¿Cuál es la opinión general del crítico sobre la película?",
+    "opcoes": {
+      "0": "Es una obra maestra del cine contemporáneo.",
+      "1": "Es una película entretenida y bien lograda.",
+      "2": "Tiene potencial pero presenta fallas importantes.",
+      "3": "Es una película completamente decepcionante."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O crítico reconhece o potencial do roteiro (';ambicioso guion') mas aponta falhas significativas ('adolece de un ritmo irregular y actuaciones poco convincentes'), indicando uma opinião mista com críticas importantes."
+  },
+   {
+    "pergunta": "¿Cuál de las siguientes palabras tiene un significado similar a 'persuadir'?",
+    "opcoes": {
+      "0": "Informar.",
+      "1": "Disuadir.",
+      "2": "Convencer.",
+      "3": "Narrar."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "'Persuadir' e ';convencer' se referem à ação de influenciar alguém para que acredite ou faça algo."
+  },
+  {
+    "pergunta": "Lee el siguiente texto instructivo: 'Para activar el dispositivo, pulse el botón de encendido y manténgalo presionado durante tres segundos.' ¿Cuál es la función principal de este texto?",
+    "opcoes": {
+      "0": "Describir las características del dispositivo.",
+      "1": "Explicar la historia del dispositivo.",
+      "2": "Dar instrucciones para el uso del dispositivo.",
+      "3": "Promocionar la venta del dispositivo."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O texto utiliza verbos no imperativo ('pulse', 'manténgalo' - pressione, mantenha) e fornece passos específicos para realizar uma ação, caracterizando um texto com função de dar instruções."
+  },
+  {
+    "pergunta": "En la frase 'Sintió un escalofrío al escuchar el ruido en la oscuridad.', ¿qué describe la palabra destacada?",
+    "opcoes": {
+      "0": "Una sensación de calor intenso.",
+      "1": "Una punzada de dolor agudo.",
+      "2": "Una sensación repentina de frío y temor.",
+      "3": "Una sensación de profunda alegría."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "Um 'escalofrío' (calafrio) é uma sensação repentina de frio acompanhada frequentemente de temor ou nervosismo, geralmente causada por medo ou excitação."
+  },
+  {
+    "pergunta": "Lee el siguiente fragmento de un cuento: 'La vieja casa permanecía en silencio, como esperando un secreto que nunca sería revelado.' ¿Qué atmósfera se crea principalmente?",
+    "opcoes": {
+      "0": "Alegría y celebración.",
+      "1": "Misterio y melancolía.",
+      "2": "Acción y aventura.",
+      "3": "Humor y ligereza."
+    },
+    "correta": 1,
+    "materia": "Espanhol",
+    "explicacao": "O silêncio da casa e a ideia de um segredo não revelado ('como esperando un secreto que nunca sería revelado') geram uma atmosfera de mistério e melancolia."
+  },
+  {
+    "pergunta": "¿Cuál de las siguientes palabras es un sinónimo de 'astuto'?",
+    "opcoes": {
+      "0": "Ingenuo.",
+      "1": "Sincero.",
+      "2": "Inteligente y hábil para engañar.",
+      "3": "Torpe."
+    },
+    "correta": 2,
+    "materia": "Español",
+    "explicacao": "'Astuto' refere a alguém que utiliza a inteligência e a habilidade para conseguir seus propósitos, frequentemente de maneira sutil ou enganosa."
+  },
+   {
+    "pergunta": "Lee el siguiente cartel: '¡Gran liquidación! Todos los artículos al 50% de descuento.' ¿Cuál es la función principal de este texto?",
+    "opcoes": {
+      "0": "Informar sobre las características de los productos.",
+      "1": "Contar una historia sobre la tienda.",
+      "2": "Persuadir al público para que compre.",
+      "3": "Dar instrucciones sobre cómo llegar a la tienda."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O uso da exclamação ('¡Gran liquidación!') e a menção de um grande desconto (50%) têm como objetivo persuadir o público a comprar os produtos."
+  },
+  {
+    "pergunta": "En la frase 'A pesar de su elocuencia, no logró convencer al jurado.', ¿qué significa la palabra destacada?",
+    "opcoes": {
+      "0": "Falta de claridad al hablar.",
+      "1": "Gran habilidad para hablar con fluidez y persuasión.",
+      "2": "Timidez al expresarse.",
+      "3": "Dificultad para articular las palabras."
+    },
+    "correta": 1,
+    "materia": "Espanhol",
+    "explicacao": "';Elocuencia' se refere à grande habilidade de falar com fluidez, persuasão e graça, mostrando domínio da palavra."
+  },
+  {
+    "pergunta": "Lee el siguiente fragmento de un artículo de opinión: 'Es imperativo que los gobiernos tomen medidas urgentes para combatir el cambio climático.' ¿Qué tipo de texto es principalmente?",
+    "opcoes": {
+      "0": "Narrativo.",
+      "1": "Descriptivo.",
+      "2": "Argumentativo.",
+      "3": "Instructivo."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "O autor expressa uma opinião ('Es imperativo que los gobiernos tomen medidas urgentes...') e busca influenciar a do leitor sobre a necessidade de tomar ações contra o cambio climático, caracterizando um texto argumentativo."
+  },
+  {
+    "pergunta": "¿Cuál de las siguientes palabras tiene un significado opuesto a 'valiente'?",
+    "opcoes": {
+      "0": "Audaz.",
+      "1": "Intrépido.",
+      "2": "Cobarde.",
+      "3": "Osado."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "'Valiente' (valente) se refere a alguém que mostra coragem, enquanto 'cobarde' (covarde) é alguém que tem falta de valor."
+  },
+  {
+    "pergunta": "Lee el siguiente mensaje de correo electrónico: 'Estimado cliente, le informamos que su pedido ha sido enviado y llegará en un plazo de 3 a 5 días hábiles.' ¿Cuál es la función principal de este texto?",
+    "opcoes": {
+      "0": "Expresar una opinión personal.",
+      "1": "Contar una experiencia de compra.",
+      "2": "Proporcionar información sobre el estado de un pedido.",
+      "3": "Solicitar información al cliente."
+    },
+    "correta": 2,
+    "materia": "Espanhol",
+    "explicacao": "A mensagem tem como objetivo principal fornecer informações ao cliente sobre o estado do seu pedido (enviado e prazo de entrega)."
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "pergunta": "Qual das seguintes alternativas representa uma mudança física?",
+    "opcoes": {
+      "0": "Queima de um pedaço de madeira.",
+      "1": "Fermentação do açúcar para produzir álcool.",
+      "2": "Dissolução de sal de cozinha em água.",
+      "3": "Enferrujamento de um prego de ferro."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A dissolução do sal em água altera apenas o estado físico da substância (sólido para solução), sem formar novas substâncias."
+  },
+  {
+    "pergunta": "Qual das seguintes substâncias é um exemplo de mistura heterogênea?",
+    "opcoes": {
+      "0": "Água e sal dissolvido.",
+      "1": "Ar atmosférico.",
+      "2": "Água e óleo.",
+      "3": "Álcool hidratado."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "Uma mistura heterogênea apresenta fases distintas visíveis, como a água e o óleo que não se misturam."
+  },
+  {
+    "pergunta": "O número de prótons no núcleo de um átomo define o seu:",
+    "opcoes": {
+      "0": "Número de massa.",
+      "1": "Número de nêutrons.",
+      "2": "Número atômico.",
+      "3": "Número de elétrons (em um íon)."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "O número atômico (Z) é igual ao número de prótons no núcleo de um átomo, sendo o que identifica um elemento químico."
+  },
+  {
+    "pergunta": "Qual das seguintes ligações químicas é predominantemente iônica?",
+    "opcoes": {
+      "0": "Ligação entre dois átomos de hidrogênio (H₂).",
+      "1": "Ligação entre um átomo de carbono e quatro átomos de hidrogênio (CH₄).",
+      "2": "Ligação entre um átomo de sódio e um átomo de cloro (NaCl).",
+      "3": "Ligação entre dois átomos de oxigênio (O₂)."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A ligação iônica ocorre entre átomos com grande diferença de eletronegatividade, como um metal (sódio) e um não metal (cloro), com transferência de elétrons."
+  },
+  {
+    "pergunta": "Qual das seguintes equações químicas representa uma reação de síntese (ou adição)?",
+    "opcoes": {
+      "0": "CaCO₃(s) → CaO(s) + CO₂(g)",
+      "1": "Zn(s) + 2 HCl(aq) → ZnCl₂(aq) + H₂(g)",
+      "2": "2 H₂(g) + O₂(g) → 2 H₂O(l)",
+      "3": "CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(g)"
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "Uma reação de síntese é aquela em que duas ou mais substâncias reagem para formar um único produto."
+  },
+   {
+    "pergunta": "Qual dos seguintes fatores NÃO afeta a velocidade de uma reação química?",
+    "opcoes": {
+      "0": "Concentração dos reagentes.",
+      "1": "Temperatura.",
+      "2": "Presença de um catalisador.",
+      "3": "Estado físico dos produtos."
+    },
+    "correta": 3,
+    "materia": "Química",
+    "explicacao": "O estado físico dos produtos não influencia a velocidade com que os reagentes se transformam em produtos."
+  },
+  {
+    "pergunta": "Em uma solução aquosa ácida, a concentração de íons hidrogênio (H⁺) é:",
+    "opcoes": {
+      "0": "Igual à concentração de íons hidroxila (OH⁻).",
+      "1": "Menor que a concentração de íons hidroxila (OH⁻).",
+      "2": "Maior que a concentração de íons hidroxila (OH⁻).",
+      "3": "Igual a zero."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "Soluções ácidas possuem um excesso de íons H⁺ em relação aos íons OH⁻, resultando em um pH menor que 7."
+  },
+  {
+    "pergunta": "Qual dos seguintes gases é o principal componente do ar atmosférico?",
+    "opcoes": {
+      "0": "Oxigênio (O₂).",
+      "1": "Dióxido de carbono (CO₂).",
+      "2": "Nitrogênio (N₂).",
+      "3": "Argônio (Ar)."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "O nitrogênio representa aproximadamente 78% da composição do ar atmosférico seco."
+  },
+  {
+    "pergunta": "Qual das seguintes alternativas apresenta a fórmula molecular do benzeno?",
+    "opcoes": {
+      "0": "CH₄",
+      "1": "C₂H₆",
+      "2": "C₆H₆",
+      "3": "C₂H₄"
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A fórmula molecular do benzeno é C₆H₆, representando um anel hexagonal de átomos de carbono com um hidrogênio ligado a cada um."
+  },
+  {
+    "pergunta": "Qual das seguintes funções orgânicas contém o grupo funcional -OH ligado diretamente a um átomo de carbono saturado?",
+    "opcoes": {
+      "0": "Aldeído.",
+      "1": "Cetona.",
+      "2": "Álcool.",
+      "3": "Ácido carboxílico."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "Um álcool possui o grupo hidroxila (-OH) ligado a um carbono que não faz parte de um anel aromático ou de uma ligação dupla carbono-oxigênio."
+  },
+  {
+    "pergunta": "Qual das seguintes afirmações sobre a pressão de vapor de um líquido é verdadeira?",
+    "opcoes": {
+      "0": "A pressão de vapor não depende da temperatura.",
+      "1": "A pressão de vapor diminui com o aumento da temperatura.",
+      "2": "A pressão de vapor aumenta com o aumento da temperatura.",
+      "3": "A pressão de vapor é constante para todos os líquidos na mesma temperatura."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "O aumento da temperatura fornece mais energia cinética às moléculas do líquido, facilitando sua passagem para a fase gasosa e, consequentemente, aumentando a pressão de vapor."
+  },
+  {
+    "pergunta": "Qual das seguintes propriedades dos gases ideais é descrita pela Lei de Boyle?",
+    "opcoes": {
+      "0": "A relação entre volume e temperatura a pressão constante.",
+      "1": "A relação entre pressão e temperatura a volume constante.",
+      "2": "A relação entre pressão e volume a temperatura constante.",
+      "3": "A relação entre o número de mols e o volume a pressão e temperatura constantes."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A Lei de Boyle estabelece que, para uma quantidade fixa de gás a temperatura constante, a pressão é inversamente proporcional ao volume (P₁V₁ = P₂V₂)."
+  },
+  {
+    "pergunta": "Qual das seguintes substâncias é um exemplo de polímero sintético?",
+    "opcoes": {
+      "0": "Celulose.",
+      "1": "Amido.",
+      "2": "Borracha natural.",
+      "3": "Polietileno (plástico)."
+    },
+    "correta": 3,
+    "materia": "Química",
+    "explicacao": "O polietileno é um plástico produzido industrialmente a partir da polimerização do etileno, sendo um polímero sintético."
+  },
+  {
+    "pergunta": "Qual dos seguintes processos é utilizado para separar os componentes de uma mistura homogênea de líquidos com diferentes pontos de ebulição?",
+    "opcoes": {
+      "0": "Filtração.",
+      "1": "Decantação.",
+      "2": "Destilação.",
+      "3": "Evaporação."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A destilação explora as diferentes volatilidades dos líquidos, permitindo a separação através do aquecimento e condensação seletiva dos vapores."
+  },
+  {
+    "pergunta": "Qual das seguintes alternativas apresenta um hidrocarboneto insaturado?",
+    "opcoes": {
+      "0": "Etano (C₂H₆).",
+      "1": "Propano (C₃H₈).",
+      "2": "Etileno (C₂H₄).",
+      "3": "Metano (CH₄)."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "Hidrocarbonetos insaturados possuem ligações duplas ou triplas entre os átomos de carbono. O etileno (C₂H₄) contém uma ligação dupla carbono-carbono."
+  },
+   {
+    "pergunta": "Qual das seguintes espécies químicas atua como um oxidante em uma reação redox?",
+    "opcoes": {
+      "0": "Aquela que perde elétrons.",
+      "1": "Aquela que ganha elétrons.",
+      "2": "Aquela que não altera seu número de oxidação.",
+      "3": "Aquela que doa prótons."
+    },
+    "correta": 1,
+    "materia": "Química",
+    "explicacao": "Um oxidante é uma espécie química que causa a oxidação de outra espécie ao receber elétrons, diminuindo seu próprio número de oxidação."
+  },
+  {
+    "pergunta": "Qual das seguintes unidades é utilizada para expressar a concentração molar de uma solução?",
+    "opcoes": {
+      "0": "g/L",
+      "1": "% (m/v)",
+      "2": "mol/L",
+      "3": "ppm"
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A concentração molar (M) é definida como o número de mols do soluto dissolvidos por litro de solução (mol/L)."
+  },
+  {
+    "pergunta": "Qual dos seguintes fatores desloca o equilíbrio químico para a direita em uma reação exotérmica (ΔH < 0)?",
+    "opcoes": {
+      "0": "Aumento da temperatura.",
+      "1": "Diminuição da temperatura.",
+      "2": "Aumento da pressão (se houver mais mols de gás nos reagentes).",
+      "3": "Adição de um catalisador."
+    },
+    "correta": 1,
+    "materia": "Química",
+    "explicacao": "Em uma reação exotérmica, o calor é um 'produto'. Diminuir a temperatura desloca o equilíbrio no sentido de liberar mais calor, ou seja, para a direita."
+  },
+  {
+    "pergunta": "Qual das seguintes funções orgânicas possui o grupo funcional -COOH?",
+    "opcoes": {
+      "0": "Álcool.",
+      "1": "Aldeído.",
+      "2": "Cetona.",
+      "3": "Ácido carboxílico."
+    },
+    "correta": 3,
+    "materia": "Química",
+    "explicacao": "O grupo carboxila (-COOH) é característico dos ácidos carboxílicos."
+  },
+  {
+    "pergunta": "Qual das seguintes reações orgânicas é um exemplo de reação de adição?",
+    "opcoes": {
+      "0": "Substituição de um hidrogênio do benzeno por um cloro.",
+      "1": "Quebra de uma ligação dupla em um alceno com a adição de hidrogênio.",
+      "2": "Eliminação de água de um álcool para formar um alceno.",
+      "3": "Oxidação de um álcool primário para formar um aldeído."
+    },
+    "correta": 1,
+    "materia": "Química",
+    "explicacao": "Uma reação de adição envolve a quebra de uma ligação pi (em duplas ou triplas ligações) e a adição de átomos aos carbonos envolvidos."
+  },
+  {
+    "pergunta": "Qual das seguintes alternativas descreve corretamente a entalpia de uma reação?",
+    "opcoes": {
+      "0": "A energia total dos reagentes.",
+      "1": "A energia total dos produtos.",
+      "2": "A variação de calor a pressão constante.",
+      "3": "A variação de energia interna a volume constante."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A entalpia (H) é uma função de estado termodinâmica, e a variação de entalpia (ΔH) em uma reação química a pressão constante é igual ao calor absorvido ou liberado pelo sistema."
+  },
+  {
+    "pergunta": "Qual das seguintes substâncias é um eletrólito forte em solução aquosa?",
+    "opcoes": {
+      "0": "Água pura (H₂O).",
+      "1": "Glicose (C₆H₁₂O₆).",
+      "2": "Ácido acético (CH₃COOH).",
+      "3": "Cloreto de sódio (NaCl)."
+    },
+    "correta": 3,
+    "materia": "Química",
+    "explicacao": "Um eletrólito forte se dissocia completamente em íons quando dissolvido em água, tornando a solução altamente condutora de eletricidade. O NaCl é um sal solúvel que se dissocia em Na⁺ e Cl⁻."
+  },
+  {
+    "pergunta": "Qual das seguintes alternativas apresenta a nomenclatura IUPAC correta para o composto CH₃CH₂CH₂OH?",
+    "opcoes": {
+      "0": "Metanol.",
+      "1": "Etanol.",
+      "2": "Propanol.",
+      "3": "Butanol."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A cadeia principal possui três átomos de carbono (prop-) e o grupo funcional álcool (-ol) está ligado ao primeiro carbono (implícito), resultando em propan-1-ol, comumente chamado de propanol."
+  },
+  {
+    "pergunta": "Qual das seguintes reações orgânicas é utilizada para produzir sabão?",
+    "opcoes": {
+      "0": "Esterificação.",
+      "1": "Saponificação.",
+      "2": "Polimerização.",
+      "3": "Fermentação."
+    },
+    "correta": 1,
+    "materia": "Química",
+    "explicacao": "A saponificação é a reação de hidrólise de ésteres de ácidos graxos (presentes em óleos e gorduras) com uma base forte (como NaOH ou KOH) para produzir sabão (sal de ácido graxo) e glicerol."
+  },
+  {
+    "pergunta": "Qual das seguintes alternativas representa a Lei de Hess?",
+    "opcoes": {
+      "0": "A velocidade de uma reação é diretamente proporcional à concentração dos reagentes.",
+      "1": "A pressão total de uma mistura de gases é igual à soma das pressões parciais dos gases componentes.",
+      "2": "A variação de entalpia de uma reação depende apenas dos estados inicial e final, e não do caminho percorrido.",
+      "3": "A massa total dos reagentes é igual à massa total dos produtos em uma reação química."
+    },
+    "correta": 2,
+    "materia": "Química",
+    "explicacao": "A Lei de Hess afirma que a variação de entalpia de uma reação é constante, independentemente de ser realizada em uma única etapa ou em várias etapas."
+  }
+]

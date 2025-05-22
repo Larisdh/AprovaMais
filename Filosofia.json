@@ -1,0 +1,302 @@
+[
+  {
+    "pergunta": "Para Aristóteles, a virtude ética reside em:",
+    "opcoes": {
+      "0": "Agir sempre conforme a lei.",
+      "1": "Buscar o prazer em todas as ações.",
+      "2": "Encontrar o justo meio entre dois extremos.",
+      "3": "Desenvolver habilidades intelectuais superiores."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Aristóteles desenvolveu a teoria da virtude como uma mediana entre o excesso e a falta. A coragem, por exemplo, é o justo meio entre a covardia e a temeridade."
+  },
+  {
+    "pergunta": "Qual dos seguintes filósofos é considerado um dos principais representantes da Filosofia Antiga, conhecido por seu método dialético?",
+    "opcoes": {
+      "0": "Immanuel Kant",
+      "1": "Jean-Paul Sartre",
+      "2": "Sócrates",
+      "3": "Friedrich Nietzsche"
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Sócrates é famoso por seu método de questionamento, a dialética, que buscava a verdade através do diálogo e da contraposição de ideias."
+  },
+  {
+    "pergunta": "A ética utilitarista, amplamente discutida na Filosofia Contemporânea, defende que uma ação é considerada moralmente correta se:",
+    "opcoes": {
+      "0": "For baseada em princípios universais e imutáveis.",
+      "1": "Promover a maior felicidade para o maior número de pessoas.",
+      "2": "Estiver de acordo com os costumes e tradições de uma sociedade.",
+      "3": "For motivada por boas intenções, independentemente de suas consequências."
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "O utilitarismo, defendido por filósofos como John Stuart Mill, avalia a moralidade de uma ação por suas consequências, visando o bem-estar coletivo."
+  },
+  {
+    "pergunta": "O conceito de justiça distributiva, que discute a alocação equitativa de bens e oportunidades, é central na obra de qual filósofo contemporâneo?",
+    "opcoes": {
+      "0": "Michel Foucault",
+      "1": "John Rawls",
+      "2": "Jürgen Habermas",
+      "3": "Simone de Beauvoir"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "John Rawls, em sua obra 'Uma Teoria da Justiça', propõe princípios para uma sociedade justa, incluindo a distribuição equitativa de recursos e oportunidades."
+  },
+  {
+    "pergunta": "Para os filósofos helenísticos, como os estoicos e epicuristas, o principal objetivo da vida era:",
+    "opcoes": {
+      "0": "Acumular riquezas e poder político.",
+      "1": "Alcançar a ataraxia, um estado de tranquilidade da alma.",
+      "2": "Dedicar-se à contemplação da natureza e do cosmos.",
+      "3": "Seguir rigorosamente os preceitos religiosos."
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "As filosofias helenísticas, como o estoicismo e o epicurismo, enfatizavam a busca pela paz interior e pela ausência de perturbações como o caminho para a felicidade."
+  },
+  {
+    "pergunta": "Qual filósofo antigo defendia que o ser humano é um 'animal político'?",
+    "opcoes": {
+      "0": "Platão",
+      "1": "Aristóteles",
+      "2": "Sócrates",
+      "3": "Epicuro"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Aristóteles acreditava que a natureza do ser humano se realiza na vida em comunidade e na participação na pólis (cidade-estado)."
+  },
+  {
+    "pergunta": "O existencialismo, corrente filosófica contemporânea, enfatiza principalmente:",
+    "opcoes": {
+      "0": "A busca por leis universais da moralidade.",
+      "1": "A importância da razão para alcançar a verdade.",
+      "2": "A liberdade, a responsabilidade individual e a angústia da existência.",
+      "3": "A determinação da história sobre a consciência humana."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Filósofos existencialistas como Sartre e Beauvoir colocam a experiência individual, a liberdade de escolha e a responsabilidade como centrais para a compreensão da existência."
+  },
+  {
+    "pergunta": "Para Immanuel Kant, uma ação só é moralmente válida se puder ser universalizada, ou seja:",
+    "opcoes": {
+      "0": "Se trouxer felicidade para o maior número de pessoas.",
+      "1": "Se estiver de acordo com os costumes da sociedade.",
+      "2": "Se a máxima que a guia puder valer para todos os seres racionais.",
+      "3": "Se for motivada por sentimentos nobres e altruístas."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "O imperativo categórico kantiano exige que ajamos de tal maneira que a máxima de nossa ação possa se tornar uma lei universal."
+  },
+  {
+    "pergunta": "Qual das escolas filosóficas da antiguidade clássica pregava a indiferença em relação aos prazeres e às dores externas como caminho para a felicidade?",
+    "opcoes": {
+      "0": "Hedonismo",
+      "1": "Estoicismo",
+      "2": "Ceticismo",
+      "3": "Sofismo"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Os estoicos valorizavam a autodisciplina, a razão e a aceitação do destino como meios para alcançar a tranquilidade interior."
+  },
+  {
+    "pergunta": "A filosofia de Friedrich Nietzsche é marcada pela crítica à moralidade tradicional e pela valorização:",
+    "opcoes": {
+      "0": "Da submissão à autoridade divina.",
+      "1": "Do desenvolvimento do espírito científico.",
+      "2": "Da 'vontade de poder' e da afirmação da vida.",
+      "3": "Da busca pela paz interior através da negação dos desejos."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Nietzsche questionava os valores morais estabelecidos e propunha uma filosofia da afirmação da vida, da força e da individualidade."
+  },
+   {
+    "pergunta": "O conceito de 'contrato social', fundamental para diversas teorias políticas e éticas, busca explicar:",
+    "opcoes": {
+      "0": "A origem divina do poder dos governantes.",
+      "1": "O desenvolvimento natural da sociedade humana.",
+      "2": "A justificação racional da autoridade política e das obrigações dos cidadãos.",
+      "3": "A inevitabilidade da luta de classes na história."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Teóricos como Hobbes, Locke e Rousseau utilizaram a ideia de um contrato social para fundamentar a legitimidade do governo e os direitos e deveres dos indivíduos na sociedade."
+  },
+  {
+    "pergunta": "Qual filósofo da antiguidade é conhecido por suas reflexões sobre a natureza do ser e a imutabilidade do mundo das Ideias?",
+    "opcoes": {
+      "0": "Heráclito",
+      "1": "Parmênides",
+      "2": "Demócrito",
+      "3": "Protágoras"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Parmênides defendia a ideia de que o ser é uno, imutável e eterno, em contraste com a visão do fluxo constante de Heráclito."
+  },
+  {
+    "pergunta": "A filosofia contemporânea frequentemente aborda questões relacionadas à tecnologia, à linguagem e ao poder. Qual filósofo é conhecido por sua análise das relações entre poder e conhecimento?",
+    "opcoes": {
+      "0": "Jean-François Lyotard",
+      "1": "Michel Foucault",
+      "2": "Gilles Deleuze",
+      "3": "Jacques Derrida"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Michel Foucault investigou como o poder se manifesta em diversas instituições e como ele molda o conhecimento e as práticas sociais."
+  },
+  {
+    "pergunta": "Para os sofistas, importantes pensadores da Grécia Antiga, a verdade era considerada:",
+    "opcoes": {
+      "0": "Absoluta e universal, podendo ser alcançada pela razão.",
+      "1": "Relativa e dependente da perspectiva de cada indivíduo.",
+      "2": "Inatingível para o conhecimento humano.",
+      "3": "Revelada apenas através da fé e da experiência religiosa."
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Os sofistas eram conhecidos por seu relativismo, argumentando que a verdade e a moralidade eram construções sociais e dependiam do ponto de vista."
+  },
+  {
+    "pergunta": "Qual corrente da filosofia contemporânea se caracteriza pela crítica às grandes narrativas e pela valorização da pluralidade e da diferença?",
+    "opcoes": {
+      "0": "Positivismo",
+      "1": "Marxismo",
+      "2": "Pós-estruturalismo",
+      "3": "Fenomenologia"
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "O pós-estruturalismo, com autores como Lyotard e Derrida, questiona as estruturas fixas de significado e enfatiza a contingência e a diversidade."
+  },
+  {
+    "pergunta": "A ética deontológica, como a de Kant, enfatiza o dever e as regras morais, independentemente das consequências das ações. Qual das seguintes afirmações melhor representa essa perspectiva?",
+    "opcoes": {
+      "0": "O fim justifica os meios.",
+      "1": "Age de tal maneira que a tua ação produza o maior bem para o maior número.",
+      "2": "Age apenas segundo aquela máxima pela qual possas ao mesmo tempo querer que ela se torne uma lei universal.",
+      "3": "A moralidade de uma ação reside nos sentimentos e intenções do agente."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "A formulação do imperativo categórico kantiano é a base da ética deontológica, focada no dever e na universalidade das máximas."
+  },
+  {
+    "pergunta": "Qual filósofo antigo desenvolveu a alegoria da caverna para ilustrar a distinção entre o mundo sensível e o mundo das Ideias?",
+    "opcoes": {
+      "0": "Zenão de Eleia",
+      "1": "Pitágoras",
+      "2": "Platão",
+      "3": "Anaxágoras"
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Na alegoria da caverna, Platão descreve prisioneiros que confundem sombras com a realidade, simbolizando a nossa percepção do mundo sensível em contraste com o mundo inteligível das Ideias."
+  },
+  {
+    "pergunta": "A filosofia contemporânea tem se dedicado a analisar as implicações éticas do desenvolvimento tecnológico. Qual questão ética emerge com o avanço da inteligência artificial?",
+    "opcoes": {
+      "0": "A obsolescência programada de bens de consumo.",
+      "1": "A privacidade e o uso de dados pessoais.",
+      "2": "A possibilidade de máquinas superarem a inteligência humana e tomarem decisões autônomas.",
+      "3": "O impacto ambiental da produção de dispositivos eletrônicos."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "A autonomia das máquinas e a possibilidade de superinteligência levantam questões éticas complexas sobre controle, responsabilidade e o futuro da relação entre humanos e IA."
+  },
+  {
+    "pergunta": "Para os céticos da antiguidade, a postura mais sábia diante do conhecimento era:",
+    "opcoes": {
+      "0": "A busca incessante pela verdade absoluta.",
+      "1": "A aceitação dogmática das doutrinas filosóficas estabelecidas.",
+      "2": "A suspensão do juízo e a dúvida constante.",
+      "3": "A valorização da experiência sensorial como fonte principal de conhecimento."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "O ceticismo antigo defendia a impossibilidade de alcançar a certeza e propunha a suspensão do juízo (epoché) como forma de alcançar a ataraxia."
+  },
+  {
+    "pergunta": "Qual filósofa contemporânea é conhecida por sua análise da condição feminina e por sua defesa da igualdade de gênero?",
+    "opcoes": {
+      "0": "Hannah Arendt",
+      "1": "Simone de Beauvoir",
+      "2": "Judith Butler",
+      "3": "Martha Nussbaum"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Simone de Beauvoir, em sua obra 'O Segundo Sexo', realizou uma análise profunda da opressão feminina e influenciou o desenvolvimento do pensamento feminista."
+  },
+   {
+    "pergunta": "A filosofia política de John Locke defendia, entre outros, o direito à propriedade privada e:",
+    "opcoes": {
+      "0": "A soberania absoluta do monarca.",
+      "1": "A separação dos poderes do Estado.",
+      "2": "A igualdade econômica entre todos os cidadãos.",
+      "3": "A subordinação do indivíduo ao Estado."
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Locke é um dos principais teóricos do liberalismo político e defendia a divisão do poder em legislativo, executivo e judiciário para evitar a tirania."
+  },
+  {
+    "pergunta": "Qual dos pré-socráticos buscava o princípio fundamental (arché) de todas as coisas na água?",
+    "opcoes": {
+      "0": "Anaximandro",
+      "1": "Heráclito",
+      "2": "Tales de Mileto",
+      "3": "Anaxímenes"
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "Tales de Mileto é considerado o primeiro filósofo e acreditava que a água era a substância primordial da qual tudo se originava."
+  },
+  {
+    "pergunta": "A ética aplicada é um ramo da filosofia contemporânea que se dedica a analisar questões morais específicas em áreas como a bioética, a ética ambiental e a ética nos negócios. Qual questão é central na bioética?",
+    "opcoes": {
+      "0": "A responsabilidade das empresas em relação ao meio ambiente.",
+      "1": "Os dilemas morais relacionados ao início, ao desenvolvimento e ao fim da vida humana.",
+      "2": "A justiça na distribuição de recursos econômicos.",
+      "3": "O papel da mídia na formação da opinião pública."
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "A bioética lida com as implicações éticas das ciências da vida e da saúde, abrangendo temas como aborto, eutanásia, pesquisa com células-tronco, entre outros."
+  },
+  {
+    "pergunta": "Para Epicuro e os epicuristas, o principal objetivo da vida feliz era:",
+    "opcoes": {
+      "0": "A busca incessante por prazeres intensos.",
+      "1": "A prática da virtude e do dever.",
+      "2": "A ausência de dor física (aponia) e de perturbação da alma (ataraxia).",
+      "3": "A contemplação da perfeição do cosmos."
+    },
+    "correta": 2,
+    "materia": "Filosofia",
+    "explicacao": "O epicurismo valorizava os prazeres simples e a tranquilidade como o caminho para a felicidade, evitando os excessos e as fontes de sofrimento."
+  },
+  {
+    "pergunta": "Qual filósofo contemporâneo desenvolveu o conceito de 'comunicação não violenta' como uma forma de promover o diálogo e a resolução pacífica de conflitos?",
+    "opcoes": {
+      "0": "Jürgen Habermas",
+      "1": "Marshall Rosenberg",
+      "2": "Noam Chomsky",
+      "3": "Paul Ricoeur"
+    },
+    "correta": 1,
+    "materia": "Filosofia",
+    "explicacao": "Marshall Rosenberg criou a Comunicação Não Violenta (CNV), um processo de comunicação que enfatiza a empatia, a honestidade e a busca por atender às necessidades de todas as partes envolvidas em um conflito."
+  }
+]
