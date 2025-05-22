@@ -102,7 +102,7 @@ export default function Quiz() {
       width: "100%",
       backgroundColor: "#B9DCF3",
       backgroundImage: "url('/imagem-fundo-enem.jpg')",
-      backgroundSize: "cover",  
+      backgroundSize: "cover",
       backgroundPosition: "center",
       display: "flex",
       flexDirection: "column",
@@ -297,12 +297,11 @@ export default function Quiz() {
           ) : (
             <>
               <div style={styles.questionText}>
-                <p>{perguntas[indice]?.pergunta}</p>
                 {perguntas[indice]?.textos?.length > 0 && (
                   <div style={{ marginTop: "1rem" }}>
                     {perguntas[indice].textos.map((texto, index) => (
                       <p key={index} style={{ fontStyle: "italic", fontSize: "0.9rem" }}>
-                        {texto}
+                        {typeof texto === "object" ? texto.conteudo : texto}
                       </p>
                     ))}
                   </div>

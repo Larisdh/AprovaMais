@@ -1,302 +1,302 @@
 [
   {
-    "pergunta": "Um carro se move em linha reta com velocidade constante. Qual das seguintes afirmações sobre a força resultante atuando sobre o carro é verdadeira?",
-    "opcoes": {
-      "0": "A força resultante é constante e diferente de zero.",
-      "1": "A força resultante é nula.",
-      "2": "A força resultante está aumentando com o tempo.",
-      "3": "A força resultante é proporcional à velocidade do carro."
-    },
+    "textos": ["Um carro se move em linha reta com velocidade constante. Qual das seguintes afirmações sobre a força resultante atuando sobre o carro é verdadeira?"],
+    "alternativas": [
+      "A força resultante é constante e diferente de zero.",
+      "A força resultante é nula.",
+      "A força resultante está aumentando com o tempo.",
+      "A força resultante é proporcional à velocidade do carro."
+    ],
     "correta": 1,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Pela Primeira Lei de Newton (Lei da Inércia), um corpo em movimento retilíneo uniforme permanece nesse estado se a força resultante sobre ele for nula."
   },
   {
-    "pergunta": "Um objeto é lançado verticalmente para cima. Desprezando a resistência do ar, qual das seguintes grandezas permanece constante durante todo o movimento?",
-    "opcoes": {
-      "0": "A velocidade.",
-      "1": "A aceleração.",
-      "2": "A força resultante.",
-      "3": "A energia potencial gravitacional."
-    },
+    "textos": ["Um objeto é lançado verticalmente para cima. Desprezando a resistência do ar, qual das seguintes grandezas permanece constante durante todo o movimento?"],
+    "alternativas": [
+      "A velocidade.",
+      "A aceleração.",
+      "A força resultante.",
+      "A energia potencial gravitacional."
+    ],
     "correta": 1,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A única força atuando sobre o objeto é a força gravitacional, que produz uma aceleração constante para baixo (a aceleração da gravidade)."
   },
   {
-    "pergunta": "Qual das seguintes unidades NÃO é uma unidade de energia?",
-    "opcoes": {
-      "0": "Joule (J).",
-      "1": "Watt (W).",
-      "2": "Caloria (cal).",
-      "3": "Quilowatt-hora (kWh)."
-    },
+    "textos": ["Qual das seguintes unidades NÃO é uma unidade de energia?"],
+    "alternativas": [
+      "Joule (J).",
+      "Watt (W).",
+      "Caloria (cal).",
+      "Quilowatt-hora (kWh)."
+    ],
     "correta": 1,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Watt (W) é a unidade de potência, que é a taxa de transferência ou conversão de energia por unidade de tempo (W = J/s)."
   },
   {
-    "pergunta": "Dois corpos de massas diferentes caem livremente da mesma altura, no vácuo. Qual deles atingirá o solo primeiro?",
-    "opcoes": {
-      "0": "O corpo de maior massa.",
-      "1": "O corpo de menor massa.",
-      "2": "Ambos atingirão o solo simultaneamente.",
-      "3": "Depende da forma dos corpos."
-    },
+    "textos": ["Dois corpos de massas diferentes caem livremente da mesma altura, no vácuo. Qual deles atingirá o solo primeiro?"],
+    "alternativas": [
+      "O corpo de maior massa.",
+      "O corpo de menor massa.",
+      "Ambos atingirão o solo simultaneamente.",
+      "Depende da forma dos corpos."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Na ausência de resistência do ar, a aceleração de queda livre é a mesma para todos os objetos, independentemente de suas massas (Galileu Galilei)."
   },
   {
-    "pergunta": "Um bloco desliza sobre uma superfície horizontal com atrito. Qual das seguintes afirmações sobre o trabalho realizado pela força de atrito é verdadeira?",
-    "opcoes": {
-      "0": "O trabalho é positivo.",
-      "1": "O trabalho é nulo.",
-      "2": "O trabalho é negativo.",
-      "3": "O trabalho depende da velocidade do bloco."
-    },
+    "textos": ["Um bloco desliza sobre uma superfície horizontal com atrito. Qual das seguintes afirmações sobre o trabalho realizado pela força de atrito é verdadeira?"],
+    "alternativas": [
+      "O trabalho é positivo.",
+      "O trabalho é nulo.",
+      "O trabalho é negativo.",
+      "O trabalho depende da velocidade do bloco."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A força de atrito sempre se opõe ao movimento, portanto, o ângulo entre a força e o deslocamento é de 180°, e o trabalho realizado (W = F.d.cosθ) é negativo (cos 180° = -1)."
   },
    {
-    "pergunta": "Qual das seguintes partículas subatômicas possui carga elétrica negativa?",
-    "opcoes": {
-      "0": "Próton.",
-      "1": "Neutro.",
-      "2": "Elétron.",
-      "3": "Positrão."
-    },
+    "textos": ["Qual das seguintes partículas subatômicas possui carga elétrica negativa?"],
+    "alternativas": [
+      "Próton.",
+      "Neutro.",
+      "Elétron.",
+      "Positrão."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "O elétron é uma partícula fundamental com carga elétrica elementar negativa."
   },
   {
-    "pergunta": "A Lei de Ohm relaciona três grandezas elétricas fundamentais. Quais são elas?",
-    "opcoes": {
-      "0": "Força, massa e aceleração.",
-      "1": "Energia, trabalho e potência.",
-      "2": "Tensão (voltagem), corrente elétrica e resistência elétrica.",
-      "3": "Carga elétrica, campo elétrico e potencial elétrico."
-    },
+    "textos": ["A Lei de Ohm relaciona três grandezas elétricas fundamentais. Quais são elas?"],
+    "alternativas": [
+      "Força, massa e aceleração.",
+      "Energia, trabalho e potência.",
+      "Tensão (voltagem), corrente elétrica e resistência elétrica.",
+      "Carga elétrica, campo elétrico e potencial elétrico."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A Lei de Ohm estabelece que a tensão (V) através de um condutor é diretamente proporcional à corrente (I) que passa por ele, sendo a constante de proporcionalidade a resistência (R): V = R.I."
   },
   {
-    "pergunta": "Qual dos seguintes dispositivos transforma energia elétrica em energia mecânica?",
-    "opcoes": {
-      "0": "Lâmpada incandescente.",
-      "1": "Resistor.",
-      "2": "Motor elétrico.",
-      "3": "Gerador elétrico."
-    },
+    "textos": ["Qual dos seguintes dispositivos transforma energia elétrica em energia mecânica?"],
+    "alternativas": [
+      "Lâmpada incandescente.",
+      "Resistor.",
+      "Motor elétrico.",
+      "Gerador elétrico."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Um motor elétrico utiliza a interação entre campos magnéticos e correntes elétricas para produzir movimento mecânico."
   },
   {
-    "pergunta": "Qual das seguintes associações de resistores resulta na menor resistência equivalente?",
-    "opcoes": {
-      "0": "Dois resistores em série.",
-      "1": "Dois resistores em paralelo.",
-      "2": "Três resistores em série.",
-      "3": "Três resistores em paralelo."
-    },
+    "textos": ["Qual das seguintes associações de resistores resulta na menor resistência equivalente?"],
+    "alternativas": [
+      "Dois resistores em série.",
+      "Dois resistores em paralelo.",
+      "Três resistores em série.",
+      "Três resistores em paralelo."
+    ],
     "correta": 3,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Em uma associação em paralelo, a resistência equivalente é sempre menor que a menor resistência individual. Adicionar mais resistores em paralelo diminui ainda mais a resistência equivalente."
   },
   {
-    "pergunta": "Qual das seguintes unidades é utilizada para medir a potência elétrica?",
-    "opcoes": {
-      "0": "Coulomb (C).",
-      "1": "Ampère (A).",
-      "2": "Volt (V).",
-      "3": "Watt (W)."
-    },
+    "textos": ["Qual das seguintes unidades é utilizada para medir a potência elétrica?"],
+    "alternativas": [
+      "Coulomb (C).",
+      "Ampère (A).",
+      "Volt (V).",
+      "Watt (W)."
+    ],
     "correta": 3,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Watt (W) é a unidade de potência elétrica, que representa a taxa na qual a energia elétrica é convertida em outra forma de energia."
   },
   {
-    "pergunta": "Qual dos seguintes processos de transferência de calor NÃO ocorre no vácuo?",
-    "opcoes": {
-      "0": "Condução.",
-      "1": "Convecção.",
-      "2": "Irradiação.",
-      "3": "Radiação."
-    },
+    "textos": ["Qual dos seguintes processos de transferência de calor NÃO ocorre no vácuo?"],
+    "alternativas": [
+      "Condução.",
+      "Convecção.",
+      "Irradiação.",
+      "Radiação."
+    ],
     "correta": 0,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A condução requer um meio material para a transferência de calor através da colisão de partículas. No vácuo, não há partículas para conduzir o calor."
   },
   {
-    "pergunta": "A temperatura de um corpo está diretamente relacionada a:",
-    "opcoes": {
-      "0": "A quantidade de calor contida no corpo.",
-      "1": "A energia cinética média das partículas que o constituem.",
-      "2": "A energia potencial das partículas que o constituem.",
-      "3": "Ao estado físico do corpo (sólido, líquido ou gasoso)."
-    },
+    "textos": ["A temperatura de um corpo está diretamente relacionada a:"],
+    "alternativas": [
+      "A quantidade de calor contida no corpo.",
+      "A energia cinética média das partículas que o constituem.",
+      "A energia potencial das partículas que o constituem.",
+      "Ao estado físico do corpo (sólido, líquido ou gasoso)."
+    ],
     "correta": 1,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A temperatura é uma medida da energia cinética média das moléculas ou átomos em um sistema. Quanto maior a energia cinética média, maior a temperatura."
   },
   {
-    "pergunta": "Qual das seguintes escalas termométricas possui o mesmo valor numérico para o ponto de fusão do gelo e o ponto de ebulição da água?",
-    "opcoes": {
-      "0": "Celsius (°C).",
-      "1": "Fahrenheit (°F).",
-      "2": "Kelvin (K).",
-      "3": "Nenhuma das anteriores."
-    },
+    "textos": ["Qual das seguintes escalas termométricas possui o mesmo valor numérico para o ponto de fusão do gelo e o ponto de ebulição da água?"],
+    "alternativas": [
+      "Celsius (°C).",
+      "Fahrenheit (°F).",
+      "Kelvin (K).",
+      "Nenhuma das anteriores."
+    ],
     "correta": 3,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Na escala Celsius, os pontos são 0°C e 100°C. Na Fahrenheit, 32°F e 212°F. Na Kelvin, 273,15 K e 373,15 K. Nenhuma delas tem os mesmos valores."
   },
   {
-    "pergunta": "Qual das seguintes transformações físicas libera calor para o ambiente?",
-    "opcoes": {
-      "0": "Fusão.",
-      "1": "Vaporização.",
-      "2": "Sublimação.",
-      "3": "Condensação."
-    },
+    "textos": ["Qual das seguintes transformações físicas libera calor para o ambiente?"],
+    "alternativas": [
+      "Fusão.",
+      "Vaporização.",
+      "Sublimação.",
+      "Condensação."
+    ],
     "correta": 3,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A condensação é a passagem do estado gasoso para o líquido, um processo exotérmico que libera energia térmica para o ambiente."
   },
   {
-    "pergunta": "A capacidade térmica de um corpo representa:",
-    "opcoes": {
-      "0": "A quantidade de calor necessária para elevar a temperatura de toda a massa do corpo em 1 grau Celsius.",
-      "1": "A quantidade de calor necessária para elevar a temperatura de 1 grama da substância em 1 grau Celsius.",
-      "2": "A temperatura máxima que o corpo pode atingir.",
-      "3": "A taxa de transferência de calor entre o corpo e o ambiente."
-    },
+    "textos": ["A capacidade térmica de um corpo representa:"],
+    "alternativas": [
+      "A quantidade de calor necessária para elevar a temperatura de toda a massa do corpo em 1 grau Celsius.",
+      "A quantidade de calor necessária para elevar a temperatura de 1 grama da substância em 1 grau Celsius.",
+      "A temperatura máxima que o corpo pode atingir.",
+      "A taxa de transferência de calor entre o corpo e o ambiente."
+    ],
     "correta": 0,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Capacidade térmica (C) é a razão entre a quantidade de calor (Q) fornecida a um corpo e a variação de temperatura (ΔT) resultante: C = Q/ΔT."
   },
    {
-    "pergunta": "Um objeto de massa m é acelerado por uma força resultante F. Se a massa for dobrada e a força resultante permanecer a mesma, qual será a nova aceleração?",
-    "opcoes": {
-      "0": "4F/m",
-      "1": "2F/m",
-      "2": "F/(2m)",
-      "3": "F/(4m)"
-    },
+    "textos": ["Um objeto de massa m é acelerado por uma força resultante F. Se a massa for dobrada e a força resultante permanecer a mesma, qual será a nova aceleração?"],
+    "alternativas": [
+      "4F/m",
+      "2F/m",
+      "F/(2m)",
+      "F/(4m)"
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Pela Segunda Lei de Newton (F = ma), se F é constante e m dobra, a aceleração (a = F/m) se reduz pela metade."
   },
   {
-    "pergunta": "Qual das seguintes fontes de energia é considerada não renovável?",
-    "opcoes": {
-      "0": "Energia solar.",
-      "1": "Energia eólica.",
-      "2": "Petróleo.",
-      "3": "Energia hidrelétrica."
-    },
+    "textos": ["Qual das seguintes fontes de energia é considerada não renovável?"],
+    "alternativas": [
+      "Energia solar.",
+      "Energia eólica.",
+      "Petróleo.",
+      "Energia hidrelétrica."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "O petróleo é um combustível fóssil, cuja formação leva milhões de anos, sendo considerado um recurso não renovável em escala humana."
   },
   {
-    "pergunta": "Qual dos seguintes fenômenos está relacionado com a conversão de energia mecânica em energia elétrica?",
-    "opcoes": {
-      "0": "Efeito Joule.",
-      "1": "Efeito fotoelétrico.",
-      "2": "Indução eletromagnética.",
-      "3": "Termoeletricidade."
-    },
+    "textos": ["Qual dos seguintes fenômenos está relacionado com a conversão de energia mecânica em energia elétrica?"],
+    "alternativas": [
+      "Efeito Joule.",
+      "Efeito fotoelétrico.",
+      "Indução eletromagnética.",
+      "Termoeletricidade."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A indução eletromagnética, descoberta por Faraday, é o princípio de funcionamento dos geradores elétricos, onde a variação do fluxo magnético através de um circuito induz uma corrente elétrica."
   },
   {
-    "pergunta": "Qual das seguintes grandezas físicas é escalar?",
-    "opcoes": {
-      "0": "Velocidade.",
-      "1": "Força.",
-      "2": "Aceleração.",
-      "3": "Temperatura."
-    },
+    "textos": ["Qual das seguintes grandezas físicas é escalar?"],
+    "alternativas": [
+      "Velocidade.",
+      "Força.",
+      "Aceleração.",
+      "Temperatura."
+    ],
     "correta": 3,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Uma grandeza escalar é aquela que possui apenas magnitude (valor numérico) e unidade, como a temperatura. Velocidade, força e aceleração são grandezas vetoriais, pois possuem magnitude, direção e sentido."
   },
   {
-    "pergunta": "Um corpo em equilíbrio térmico com outro possui a mesma:",
-    "opcoes": {
-      "0": "Energia interna.",
-      "1": "Quantidade de calor.",
-      "2": "Temperatura.",
-      "3": "Capacidade térmica."
-    },
+    "textos": ["Um corpo em equilíbrio térmico com outro possui a mesma:"],
+    "alternativas": [
+      "Energia interna.",
+      "Quantidade de calor.",
+      "Temperatura.",
+      "Capacidade térmica."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "O equilíbrio térmico ocorre quando dois ou mais corpos em contato atingem a mesma temperatura, não havendo mais troca líquida de calor entre eles (Lei Zero da Termodinâmica)."
   },
   {
-    "pergunta": "Qual das seguintes situações representa um aumento da energia potencial gravitacional de um objeto?",
-    "opcoes": {
-      "0": "Um livro caindo de uma prateleira.",
-      "1": "Um avião pousando na pista.",
-      "2": "Uma bola sendo lançada verticalmente para cima.",
-      "3": "Um carro freando em uma ladeira."
-    },
+    "textos": ["Qual das seguintes situações representa um aumento da energia potencial gravitacional de um objeto?"],
+    "alternativas": [
+      "Um livro caindo de uma prateleira.",
+      "Um avião pousando na pista.",
+      "Uma bola sendo lançada verticalmente para cima.",
+      "Um carro freando em uma ladeira."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A energia potencial gravitacional (Ep = mgh) é diretamente proporcional à altura (h) do objeto em relação a um referencial. Ao ser lançado para cima, a altura da bola aumenta."
   },
   {
-    "pergunta": "Qual dos seguintes materiais é considerado um bom condutor de eletricidade?",
-    "opcoes": {
-      "0": "Borracha.",
-      "1": "Vidro.",
-      "2": "Cobre.",
-      "3": "Plástico."
-    },
+    "textos": ["Qual dos seguintes materiais é considerado um bom condutor de eletricidade?"],
+    "alternativas": [
+      "Borracha.",
+      "Vidro.",
+      "Cobre.",
+      "Plástico."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "Metais como o cobre possuem elétrons livres que podem se mover facilmente, permitindo a passagem da corrente elétrica."
   },
   {
-    "pergunta": "A primeira lei da termodinâmica é uma aplicação do princípio da:",
-    "opcoes": {
-      "0": "Conservação da massa.",
-      "1": "Conservação da energia.",
-      "2": "Conservação do momento linear.",
-      "3": "Conservação da carga elétrica."
-    },
+    "textos": ["A primeira lei da termodinâmica é uma aplicação do princípio da:"],
+    "alternativas": [
+      "Conservação da massa.",
+      "Conservação da energia.",
+      "Conservação do momento linear.",
+      "Conservação da carga elétrica."
+    ],
     "correta": 1,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A primeira lei da termodinâmica estabelece que a variação da energia interna de um sistema é igual à diferença entre o calor adicionado ao sistema e o trabalho realizado pelo sistema (ΔU = Q - W), expressando a conservação da energia."
   },
   {
-    "pergunta": "Qual dos seguintes fenômenos está relacionado com a propagação de ondas eletromagnéticas?",
-    "opcoes": {
-      "0": "Condução térmica.",
-      "1": "Convecção térmica.",
-      "2": "Radiação térmica.",
-      "3": "Dilatação térmica."
-    },
+    "textos": ["Qual dos seguintes fenômenos está relacionado com a propagação de ondas eletromagnéticas?"],
+    "alternativas": [
+      "Condução térmica.",
+      "Convecção térmica.",
+      "Radiação térmica.",
+      "Dilatação térmica."
+    ],
     "correta": 2,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A radiação térmica é a transferência de calor através de ondas eletromagnéticas, que podem se propagar no vácuo."
   },
   {
-    "pergunta": "Um pêndulo simples oscila com pequena amplitude. Qual das seguintes grandezas NÃO permanece constante durante o movimento?",
-    "opcoes": {
-      "0": "O período.",
-      "1": "A frequência.",
-      "2": "A energia mecânica total (desprezando o atrito).",
-      "3": "A velocidade."
-    },
+    "textos": ["Um pêndulo simples oscila com pequena amplitude. Qual das seguintes grandezas NÃO permanece constante durante o movimento?"],
+    "alternativas": [
+      "O período.",
+      "A frequência.",
+      "A energia mecânica total (desprezando o atrito).",
+      "A velocidade."
+    ],
     "correta": 3,
-    "materia": "física",
+    "materia": "fisica",
     "explicacao": "A velocidade do pêndulo varia continuamente durante a oscilação, sendo máxima no ponto mais baixo e nula nos pontos de maior afastamento. O período, a frequência e a energia mecânica total (na ausência de atrito) permanecem constantes para pequenas amplitudes."
   }
 ]
