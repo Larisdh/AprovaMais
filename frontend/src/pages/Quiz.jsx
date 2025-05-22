@@ -27,7 +27,9 @@ export default function Quiz() {
     const buscarPerguntas = async () => {
       try {
         setCarregando(true);
-        const response = await fetch(`http://localhost:3000/api/perguntas?materia=${materia}&quantidade=${quantidade}`);
+        const response = await fetch(
+          `http://localhost:3000/api/perguntas?materia=${materia}&quantidade=${quantidade}`
+        );
         if (!response.ok) throw new Error("Falha ao buscar perguntas");
         const data = await response.json();
         if (data.length === 0) {
@@ -91,7 +93,10 @@ export default function Quiz() {
       } else {
         setResultadoFinal(novaPontuacao);
         setQuizFinalizado(true);
-        alert(`Você acertou ${novaPontuacao} de ${perguntas.length} perguntas!`);      }
+        alert(
+          `Você acertou ${novaPontuacao} de ${perguntas.length} perguntas!`
+        );
+      }
     }, 1000);
   }
 
@@ -110,7 +115,7 @@ export default function Quiz() {
     header: {
       backgroundColor: "#0a518e",
       color: "white",
-      padding: "1rem 2rem",
+      // padding: "1rem 2rem",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
@@ -140,7 +145,7 @@ export default function Quiz() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      padding: "1.5rem",
+      // padding: "1.5rem",
       width: "100%",
     },
     questionContainer: {
@@ -263,7 +268,7 @@ export default function Quiz() {
       <header style={styles.header}>
         <span style={styles.title}>Quiz - {materia}</span>
         <nav style={styles.nav}>
-        <Link
+          <Link
             to="/home"
             style={{
               color: "white",
@@ -296,7 +301,9 @@ export default function Quiz() {
         <div style={styles.questionContainer}>
           {carregando ? (
             <div style={styles.loadingContainer}>
-              <div style={styles.progressIndicator}>Carregando perguntas...</div>
+              <div style={styles.progressIndicator}>
+                Carregando perguntas...
+              </div>
             </div>
           ) : erro ? (
             <div style={styles.errorMessage}>{erro}</div>
@@ -307,7 +314,10 @@ export default function Quiz() {
                 Você acertou {resultadoFinal} de {perguntas.length} perguntas!
               </div>
               <div style={styles.resultButtons}>
-                <button onClick={() => navigate("/ranking")} style={styles.saveButton}>
+                <button
+                  onClick={() => navigate("/ranking")}
+                  style={styles.saveButton}
+                >
                   Ver Ranking
                 </button>
                 <button
@@ -317,7 +327,9 @@ export default function Quiz() {
                     setRespostaSelecionada(null);
                     setResultadoFinal(null);
                     setQuizFinalizado(false);
-                    setPerguntas((prev) => [...prev.sort(() => Math.random() - 0.5)]);
+                    setPerguntas((prev) => [
+                      ...prev.sort(() => Math.random() - 0.5),
+                    ]);
                   }}
                   style={{ ...styles.saveButton, backgroundColor: "#4CAF50" }}
                 >
@@ -331,7 +343,10 @@ export default function Quiz() {
                 {perguntas[indice]?.textos?.length > 0 && (
                   <div style={{ marginTop: "1rem" }}>
                     {perguntas[indice].textos.map((texto, index) => (
-                      <p key={index} style={{ fontStyle: "italic", fontSize: "0.9rem" }}>
+                      <p
+                        key={index}
+                        style={{ fontStyle: "italic", fontSize: "0.9rem" }}
+                      >
                         {typeof texto === "object" ? texto.conteudo : texto}
                       </p>
                     ))}
@@ -350,10 +365,10 @@ export default function Quiz() {
                       ...(respostaSelecionada === null
                         ? {}
                         : i === perguntas[indice].correta
-                          ? { backgroundColor: "#4CAF50", color: "white" }
-                          : i === respostaSelecionada
-                            ? { backgroundColor: "#F44336", color: "white" }
-                            : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }),
+                        ? { backgroundColor: "#4CAF50", color: "white" }
+                        : i === respostaSelecionada
+                        ? { backgroundColor: "#F44336", color: "white" }
+                        : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }),
                     }}
                   >
                     <span style={{ fontWeight: "bold" }}>
@@ -369,7 +384,10 @@ export default function Quiz() {
               </div>
 
               <div style={styles.saveButtonContainer}>
-                <button onClick={() => navigate("/ranking")} style={styles.saveButton}>
+                <button
+                  onClick={() => navigate("/ranking")}
+                  style={styles.saveButton}
+                >
                   Ver Ranking
                 </button>
               </div>

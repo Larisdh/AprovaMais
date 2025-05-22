@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
@@ -6,8 +7,8 @@ body {
 }
 
 .quiz-body {
-  min-height: 100vh;
-  width: 100vw;
+  /* min-height: 100vh;
+  width: 100vw; */
   background-color: #b9dcf3;
   /* Azul claro */
   background-image: url('/imagem-fundo-enem.jpg');
@@ -19,6 +20,7 @@ body {
   color: #333;
 }
 
+/* Header */
 .quiz-header {
   background-color: #0a518e;
   /* Azul escuro */
@@ -57,23 +59,7 @@ body {
   /* Cor mais clara no hover para contraste */
 }
 
-.quiz-logo {
-  height: 5rem;
-}
-
-.quiz-search {
-  padding: 0.75rem;
-  /* Mais espaçamento */
-  border-radius: 0.75rem;
-  /* Bordas mais arredondadas */
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  background-color: white;
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Sombra leve */
-}
-
+/* Título */
 .quiz-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -83,6 +69,7 @@ body {
   display: inline-block;
 }
 
+/* Conteúdo principal */
 .quiz-main {
   flex-grow: 1;
   display: flex;
@@ -180,23 +167,7 @@ body {
   /* Sombra mais intensa */
 }
 
-.quiz-option-correct {
-  background-color: #4caf50;
-  /* Verde para resposta correta */
-  color: white;
-}
-
-.quiz-option-wrong {
-  background-color: #f44336;
-  /* Vermelho para resposta errada */
-  color: white;
-}
-
-.quiz-option-disabled {
-  background-color: #e0e0e0;
-  color: #9e9e9e;
-}
-
+/* Botões de salvar */
 .quiz-save-button-container {
   display: flex;
   justify-content: flex-end;
@@ -231,53 +202,223 @@ body {
   .quiz-header {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    /* Um pouco mais de espaço que no celular menor */
+    text-align: center;
+    gap: 1.2rem;
   }
 
   .quiz-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    /* Um pouco maior que no celular menor */
+    margin-bottom: 0.75rem;
   }
 
   .quiz-logo {
-    height: 4rem;
-    margin-top: 0.5rem;
+    height: 3.5rem;
+    /* Um pouco maior */
+    margin: 0.75rem 0;
   }
 
   .quiz-nav {
     flex-direction: column;
+    align-items: center;
+    /* Centraliza os links se não forem 100% de largura */
     gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    /* Garante que a navegação ocupe a largura */
+  }
+
+  .quiz-nav a {
+    width: 80%;
+    /* Ou 100% se preferir, mas 80% pode ficar melhor em tablets */
+    max-width: 350px;
+    /* Evita que os botões fiquem excessivamente largos */
+    text-align: center;
+    padding: 0.75rem 0;
+    border-radius: 0.5rem;
+    background-color: #0a518e;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .quiz-nav a:hover {
+    background-color: #08416a;
+    color: #d5f3ff;
+  }
+
+  .bar {
+    min-width: 90%;
+    /* Similar ao exemplo do ranking */
+    text-align: center;
+    padding: 1rem;
+    /* Espaçamento interno um pouco maior */
   }
 
   .quiz-main {
-    padding: 1rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   .quiz-question-container {
     padding: 1.5rem;
     max-width: 90%;
+    margin: 1rem auto;
   }
 
   .quiz-question-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    /* Um pouco maior que no celular menor */
+    padding: 1rem;
+    line-height: 1.6;
   }
 
   .quiz-options-container {
+    gap: 1rem;
+    /* Espaçamento um pouco maior entre opções */
     align-items: center;
   }
 
   .quiz-option-button {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    /* Um pouco maior */
     padding: 0.75rem;
     width: 100%;
     max-width: 90%;
+    /* Para não encostar totalmente nas bordas */
+    text-align: center;
   }
 
   .quiz-save-button-container {
     justify-content: center;
+    margin-top: 1.5rem;
   }
 
   .quiz-save-button {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .quiz-number {
+    width: 28px;
+    /* Alinhado com o exemplo do ranking para este breakpoint */
+    height: 28px;
+    font-size: 0.875rem;
+  }
+}
+
+/* --- Celulares Menores (usando o seu 414px original, ou pode ser 480px para consistência com o exemplo) --- */
+@media (max-width: 480px) {
+
+  /* Alterado de 414px para 480px para alinhar com o exemplo do ranking, ajuste se preferir 414px */
+  .quiz-header {
+    /* flex-direction, align-items, text-align, gap já vêm do breakpoint 768px */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+  }
+
+  .quiz-title {
+    font-size: 1.6rem;
+    /* Ajusta o tamanho do título */
+    margin-bottom: 0.5rem;
+    /* Adiciona espaçamento abaixo */
+  }
+
+  .quiz-logo {
+    height: 3rem;
+    /* Ajusta o tamanho da logo */
+    margin: 0.5rem 0;
+    /* Adiciona espaçamento acima e abaixo */
+  }
+
+  .quiz-nav {
+    /* flex-direction e align-items já vêm do breakpoint 768px */
+    gap: 0.75rem;
+    /* Ajusta o espaçamento entre os links */
+    margin-top: 0.5rem;
+  }
+
+  .quiz-nav a {
+    width: 100%;
+    /* Faz os botões ocuparem toda a largura */
+    max-width: none;
+    /* Remove o max-width do breakpoint maior, se houver */
+    padding: 0.5rem 0;
+    /* Ajusta o espaçamento interno */
+    /* Outras propriedades como background, color, etc., são herdadas */
+  }
+
+  .bar {
+    min-width: 100%;
+    /* Faz a barra ocupar toda a largura */
+    padding: 0.75rem;
+    /* Ajusta o espaçamento interno */
+  }
+
+  .quiz-main {
+    /* flex-direction já vem do breakpoint 768px */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+    gap: 1rem;
+    /* Espaçamento entre os elementos */
+  }
+
+  .quiz-question-container {
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+    max-width: 95%;
+    /* Reduz a largura máxima */
+    /* margin já vem do breakpoint 768px ou é ajustado se necessário */
+  }
+
+  .quiz-question-text {
+    font-size: 0.95rem;
+    /* Reduz o tamanho da fonte */
+    padding: 0.75rem;
+    /* Ajusta o espaçamento interno */
+    line-height: 1.5;
+    /* Melhora o espaçamento entre linhas */
+  }
+
+  .quiz-options-container {
+    gap: 0.75rem;
+    /* Reduz o espaçamento entre os botões */
+    /* align-items já vem do breakpoint 768px */
+  }
+
+  .quiz-option-button {
+    font-size: 0.85rem;
+    /* Reduz o tamanho da fonte */
+    padding: 0.65rem;
+    /* Ajusta o espaçamento interno */
+    /* width e max-width já vêm do breakpoint 768px ou são sobrescritos */
+    max-width: 95%;
+    /* Garante que não fique muito colado nas bordas */
+    /* text-align já vem do breakpoint 768px */
+  }
+
+  .quiz-save-button-container {
+    /* justify-content já vem do breakpoint 768px */
+    margin-top: 1rem;
+    /* Adiciona espaçamento acima */
+  }
+
+  .quiz-save-button {
+    font-size: 0.85rem;
+    /* Reduz o tamanho da fonte */
     padding: 0.5rem 1rem;
+    /* Ajusta o espaçamento interno */
+  }
+
+  .quiz-number {
+    width: 24px;
+    /* Ajusta o tamanho do número */
+    height: 24px;
+    /* Ajusta o tamanho do número */
+    font-size: 0.8rem;
+    /* Reduz o tamanho da fonte */
   }
 }
