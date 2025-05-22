@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { auth } from "../firebaseConfig"; // Importando auth para identificar o usuário
-import { saveScore } from "../services/quizService"; // Importando o serviço
-import "./css/Quiz.css"; // Adjust the path if the file exists in the correct location
+import { useNavigate, useLocation, Link } from "react-router-dom";
+import { auth } from "../firebaseConfig";
+import { saveScore } from "../services/quizService";
+import "./css/Quiz.css";
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 export default function Quiz() {
   const navigate = useNavigate();
+  const query = useQuery();
+  const materia = query.get("materia");
+  const quantidade = query.get("questions");
+
   const [perguntas, setPerguntas] = useState([]);
   const [indice, setIndice] = useState(0);
   const [respostaSelecionada, setRespostaSelecionada] = useState(null);
@@ -15,20 +23,13 @@ export default function Quiz() {
   const [quizFinalizado, setQuizFinalizado] = useState(false);
   const [resultadoFinal, setResultadoFinal] = useState(null);
 
-  // Buscar perguntas da API ao carregar o componente
   useEffect(() => {
     const buscarPerguntas = async () => {
       try {
         setCarregando(true);
-        const response = await fetch("http://localhost:3000/api/perguntas");
-
-        if (!response.ok) {
-          throw new Error("Falha ao buscar perguntas");
-        }
-
+        const response = await fetch(`http://localhost:3000/api/perguntas?materia=${materia}&quantidade=${quantidade}`);
+        if (!response.ok) throw new Error("Falha ao buscar perguntas");
         const data = await response.json();
-        console.log("Perguntas carregadas:", data); // <-- Debug
-
         if (data.length === 0) {
           setErro("Nenhuma pergunta encontrada");
         } else {
@@ -36,17 +37,15 @@ export default function Quiz() {
         }
       } catch (error) {
         console.error("Erro ao buscar perguntas:", error);
-        setErro("Erro ao carregar perguntas. Por favor, tente novamente mais tarde.");
+        setErro("Erro ao carregar perguntas. Por favor, tente novamente.");
       } finally {
         setCarregando(false);
-        console.log("Busca de perguntas concluída.");
       }
     };
 
     buscarPerguntas();
-  }, []);
+  }, [materia, quantidade]);
 
-  // Efeito para salvar o resultado quando o quiz é finalizado
   useEffect(() => {
     const salvarResultado = async () => {
       if (quizFinalizado && resultadoFinal !== null) {
@@ -54,26 +53,17 @@ export default function Quiz() {
           const user = auth.currentUser;
           if (user) {
             const nome = user.displayName || user.email;
-            // Salvar pontuação no novo endpoint
             await saveScore(nome, resultadoFinal);
-
-            // Salvar resultado detalhado no endpoint existente
             await fetch("http://localhost:3000/api/resultados", {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
+              headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
                 userId: user.uid,
                 acertos: resultadoFinal,
                 total: perguntas.length,
-                materia: "" // ou a matéria específica se houver
+                materia: materia || "Geral",
               }),
             });
-
-            console.log("Resultado salvo com sucesso!");
-          } else {
-            console.error("Usuário não autenticado");
           }
         } catch (error) {
           console.error("Erro ao salvar resultado:", error);
@@ -82,30 +72,26 @@ export default function Quiz() {
     };
 
     salvarResultado();
-  }, [quizFinalizado, resultadoFinal, perguntas.length]);
+  }, [quizFinalizado, resultadoFinal, perguntas.length, materia]);
 
-  // Função para responder pergunta
   function responder(indiceAlternativa) {
     if (!perguntas.length || respostaSelecionada !== null) return;
 
     const perguntaAtual = perguntas[indice];
     setRespostaSelecionada(indiceAlternativa);
 
-    if (indiceAlternativa === perguntaAtual.correta) {
-      setAcertos(acertos + 1);
-    }
+    const acertou = indiceAlternativa === perguntaAtual.correta;
+    const novaPontuacao = acertou ? acertos + 1 : acertos;
+    if (acertou) setAcertos((prev) => prev + 1);
 
     setTimeout(() => {
       if (indice + 1 < perguntas.length) {
-        // Vai para próxima pergunta
-        setIndice(indice + 1);
+        setIndice((prev) => prev + 1);
         setRespostaSelecionada(null);
       } else {
-        // Quiz finalizado
-        const pontuacaoFinal = acertos + (indiceAlternativa === perguntaAtual.correta ? 1 : 0);
-        setResultadoFinal(pontuacaoFinal);
+        setResultadoFinal(novaPontuacao);
         setQuizFinalizado(true);
-        alert(`Você acertou ${pontuacaoFinal} de ${perguntas.length} perguntas!`);
+        alert(`Você acertou ${novaPontuacao} de ${perguntas.length} perguntas!`);
       }
     }, 1000);
   }
@@ -113,10 +99,10 @@ export default function Quiz() {
   const styles = {
     body: {
       minHeight: "100vh",
-      width: "100vw",
+      width: "100%",
       backgroundColor: "#B9DCF3",
       backgroundImage: "url('/imagem-fundo-enem.jpg')",
-      backgroundSize: "cover",
+      backgroundSize: "cover",  
       backgroundPosition: "center",
       display: "flex",
       flexDirection: "column",
@@ -142,14 +128,6 @@ export default function Quiz() {
     logo: {
       height: "5rem",
     },
-    search: {
-      padding: "0.5rem",
-      borderRadius: "0.5rem",
-      border: "1px solid #ccc",
-      fontSize: "1rem",
-      backgroundColor: "white",
-      color: "#333",
-    },
     title: {
       fontSize: "2rem",
       fontWeight: "bold",
@@ -169,9 +147,9 @@ export default function Quiz() {
     questionContainer: {
       backgroundColor: "white",
       color: "#0D6E9C",
-      width: "100%",
+      width: "75%",
       maxWidth: "40rem",
-      padding: "1.5rem",
+      margin: "1.5rem",
       borderRadius: "1.5rem",
       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     },
@@ -256,14 +234,22 @@ export default function Quiz() {
       display: "flex",
       justifyContent: "center",
       gap: "1rem",
-    }
+    },
   };
+
+  // Proteção contra erro de índice
+  if (!quizFinalizado && (!perguntas[indice] || indice >= perguntas.length)) {
+    return (
+      <div style={{ ...styles.body, padding: "2rem", color: "#F44336" }}>
+        ⚠️ Erro inesperado: pergunta inválida ou fora do índice.
+      </div>
+    );
+  }
 
   return (
     <div style={styles.body}>
-      {/* Cabeçalho */}
       <header style={styles.header}>
-        <span style={styles.title}>Quiz</span>
+        <span style={styles.title}>Quiz - {materia}</span>
         <nav style={styles.nav}>
           <Link to="/home" style={{ color: "white", textDecoration: "none" }}>
             Página Inicial
@@ -275,7 +261,6 @@ export default function Quiz() {
         </nav>
       </header>
 
-      {/* Corpo principal com pergunta */}
       <main style={styles.main}>
         <div style={styles.questionContainer}>
           {carregando ? (
@@ -287,21 +272,21 @@ export default function Quiz() {
           ) : quizFinalizado ? (
             <div style={styles.resultContainer}>
               <h2 style={styles.resultTitle}>Quiz Finalizado</h2>
-              <div style={styles.resultScore}>Você acertou {resultadoFinal} de {perguntas.length} perguntas!</div>
+              <div style={styles.resultScore}>
+                Você acertou {resultadoFinal} de {perguntas.length} perguntas!
+              </div>
               <div style={styles.resultButtons}>
-                <button
-                  onClick={() => navigate("/ranking")}
-                  style={styles.saveButton}
-                >
+                <button onClick={() => navigate("/ranking")} style={styles.saveButton}>
                   Ver Ranking
                 </button>
                 <button
                   onClick={() => {
-                    setQuizFinalizado(false);
                     setIndice(0);
                     setAcertos(0);
                     setRespostaSelecionada(null);
                     setResultadoFinal(null);
+                    setQuizFinalizado(false);
+                    setPerguntas((prev) => [...prev.sort(() => Math.random() - 0.5)]);
                   }}
                   style={{ ...styles.saveButton, backgroundColor: "#4CAF50" }}
                 >
@@ -309,8 +294,6 @@ export default function Quiz() {
                 </button>
               </div>
             </div>
-          ) : perguntas.length === 0 ? (
-            <div style={styles.errorMessage}>Nenhuma pergunta disponível</div>
           ) : (
             <>
               <div style={styles.questionText}>
@@ -326,7 +309,6 @@ export default function Quiz() {
                 )}
               </div>
 
-              {/* Alternativas */}
               <div style={styles.optionsContainer}>
                 {perguntas[indice]?.alternativas.map((alt, i) => (
                   <button
@@ -338,10 +320,10 @@ export default function Quiz() {
                       ...(respostaSelecionada === null
                         ? {}
                         : i === perguntas[indice].correta
-                          ? { backgroundColor: "#4CAF50", color: "white" } // Resposta correta (sempre verde)
+                          ? { backgroundColor: "#4CAF50", color: "white" }
                           : i === respostaSelecionada
-                            ? { backgroundColor: "#F44336", color: "white" } // Resposta errada do usuário
-                            : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }), // Outras opções
+                            ? { backgroundColor: "#F44336", color: "white" }
+                            : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }),
                     }}
                   >
                     <span style={{ fontWeight: "bold" }}>
@@ -352,17 +334,12 @@ export default function Quiz() {
                 ))}
               </div>
 
-              {/* Indicador de progresso */}
               <div style={{ marginTop: "1rem", textAlign: "center" }}>
                 Pergunta {indice + 1} de {perguntas.length}
               </div>
 
-              {/* Botões de ação */}
               <div style={styles.saveButtonContainer}>
-                <button
-                  onClick={() => navigate("/ranking")}
-                  style={styles.saveButton}
-                >
+                <button onClick={() => navigate("/ranking")} style={styles.saveButton}>
                   Ver Ranking
                 </button>
               </div>

@@ -8,7 +8,7 @@
       "3": "17"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A relação entre as questões acertadas e os pontos é uma regra de três simples. Para o primeiro candidato: 12 questões -> 39 pontos, logo, para 52 pontos, o segundo candidato acertará 16 questões."
   },
   {
@@ -20,7 +20,7 @@
       "3": "60º"
     },
     "correta": 0,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A soma dos ângulos internos de um triângulo é 180°. Então, a soma das proporções é 4 + 5 + 6 = 15. O menor ângulo será (4/15) * 180° = 48º."
   },
   {
@@ -32,7 +32,7 @@
       "3": "R$ 1.500.000"
     },
     "correta": 3,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A soma das idades é 24 + 28 + 44 = 96. A parte do herdeiro de 44 anos será (44/96) * 3.000.000 = R$ 1.375.000."
   },
   {
@@ -44,7 +44,7 @@
       "3": "475 km"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A relação é uma regra de três simples: 32 litros -> 272 km. Para 50 litros, o carro percorrerá (50 * 272) / 32 = 425 km."
   },
   {
@@ -56,7 +56,7 @@
       "3": "30 gotas"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A relação é 3 gotas para cada 2 kg. Para 18 kg, a criança precisará de (18 * 3) / 2 = 27 gotas."
   },
     {
@@ -68,7 +68,7 @@
       "3": "8500 litros"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A relação é uma regra de três simples: 10 famílias -> 5000 litros. Para 15 famílias, será (15 * 5000) / 10 = 7500 litros."
   },
   {
@@ -80,7 +80,7 @@
       "3": "5 segundos"
     },
     "correta": 0,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A relação é inversamente proporcional, ou seja, se 3 pessoas levam 4 segundos, 4 pessoas levarão (3 * 4) / 4 = 3 segundos."
   },
   {
@@ -92,7 +92,7 @@
       "3": "72"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A razão é 4/7, então, para 32 homens, temos a proporção 4/7 = 32/x. Resolvendo, x = (32 * 7) / 4 = 56 candidatos."
   },
   {
@@ -104,7 +104,7 @@
       "3": "72 cm"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A proporção entre a altura real e a maquete é 80/48. Para o prédio de 110 metros, a altura será (110 * 48) / 80 = 66 cm."
   },
   {
@@ -116,7 +116,7 @@
       "3": "O número de camisas triplica"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "Se a quantidade de tecido dobra, o número de camisas também dobra, pois a relação entre eles é diretamente proporcional."
   },
   {
@@ -128,7 +128,7 @@
       "3": "8,10"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A média ponderada é dada pela fórmula: (7,5 * 4 + 8,0 * 3 + 9,5 * 2) / (4 + 3 + 2) = 7,94."
   },
   {
@@ -140,7 +140,7 @@
       "3": "178"
     },
     "correta": 0,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A mediana é o valor central de um conjunto de dados ordenados. Como temos 10 números, a mediana será a média dos dois números centrais: (172 + 173) / 2 = 172,5."
   },
   {
@@ -152,7 +152,7 @@
       "3": "8"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A moda é o número que mais se repete em um conjunto de dados. No caso, o número 5 aparece três vezes."
   },
   {
@@ -164,7 +164,7 @@
       "3": "80"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A média é dada pela soma dos números dividida pelo número de elementos. Se a média é 12 e há 5 números, então a soma é 12 * 5 = 60."
   },
   {
@@ -176,7 +176,7 @@
       "3": "45"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A amplitude é dada pela diferença entre o valor máximo e o valor mínimo. Amplitude = 50 - 10 = 40."
   },
     {
@@ -188,7 +188,7 @@
       "3": "9,0"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A média desejada é 7,5. A soma das quatro primeiras notas é 6,8 + 7,0 + 8,2 + 7,9 = 29,9. A média é dada pela soma das notas dividida pelo número de provas, então a quinta nota deve ser tal que (29,9 + x) / 5 = 7,5. Resolvendo, x = 8,6."
   },
   {
@@ -200,7 +200,7 @@
       "3": "2,8"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "O desvio absoluto médio é a média das diferenças absolutas entre cada valor e a média dos dados. A média é (4 + 6 + 8 + 10 + 12) / 5 = 8. Os desvios absolutos são: |4-8|=4, |6-8|=2, |8-8|=0, |10-8|=2, |12-8|=4. O desvio absoluto médio é (4 + 2 + 0 + 2 + 4) / 5 = 2,0."
   },
   {
@@ -212,7 +212,7 @@
       "3": "12"
     },
     "correta": 0,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "Substituindo x = 4 na função f(x) = 2x + 3, temos f(4) = 2(4) + 3 = 8 + 3 = 9."
   },
   {
@@ -224,7 +224,7 @@
       "3": "3"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A função é uma parábola voltada para cima, e o valor mínimo ocorre no vértice. Para encontrar o vértice, usamos a fórmula x = -b / 2a. No caso de f(x) = x² - 4x + 5, temos a = 1 e b = -4, então x = -(-4) / (2 * 1) = 4 / 2 = 2."
   },
   {
@@ -236,7 +236,7 @@
       "3": "4"
     },
     "correta": 0,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "Substituindo f(x) = 8 na função f(x) = 3x - 1, temos 8 = 3x - 1. Resolvendo, 8 + 1 = 3x, ou seja, 9 = 3x, então x = 9 / 3 = 3."
   },
     {
@@ -248,7 +248,7 @@
       "3": "x = 6"
     },
     "correta": 0,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "Resolvendo a equação 5x - 2 = 3x + 6, temos 5x - 3x = 6 + 2, ou seja, 2x = 8, então x = 8 / 2 = 4."
   },
   {
@@ -260,7 +260,7 @@
       "3": "x = 6"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A equação x² - 6x + 9 = 0 é um quadrado perfeito. Podemos fatorá-la como (x - 3)² = 0, logo, x = 3."
   },
   {
@@ -272,7 +272,7 @@
       "3": "48 cm"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "Como o triângulo é equilátero, o perímetro é 3 vezes o comprimento de um lado. Assim, P = 3 * 8 = 24 cm."
   },
   {
@@ -284,7 +284,7 @@
       "3": "270º"
     },
     "correta": 1,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "A soma dos ângulos internos de qualquer triângulo é sempre 180º."
   },
   {
@@ -296,7 +296,7 @@
       "3": "y = 11"
     },
     "correta": 2,
-    "materia": "Matemática",
+    "materia": "matematica",
     "explicacao": "Substituindo x = 4 na equação y = 2x + 3, temos y = 2(4) + 3 = 8 + 3 = 11."
   }
 ]

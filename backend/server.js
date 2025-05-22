@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const admin = require("firebase-admin");
-
 require("dotenv").config();
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -21,22 +21,35 @@ const scoresRouter = require("./routes/scores");
 // Aplicar rotas
 app.use("/api/scores", scoresRouter);
 
-// Rota para obter perguntas
+// 🔄 Rota atualizada para obter perguntas filtradas por matéria e quantidade
 app.get("/api/perguntas", async (req, res) => {
   try {
-    const snapshot = await db.collection("perguntas").get();
-    const perguntas = snapshot.docs.map((doc) => {
+    const { materia, quantidade } = req.query;
+
+    let query = db.collection("perguntas");
+    if (materia) {
+      query = query.where("materia", "==", materia);
+    }
+
+    const snapshot = await query.get();
+    let perguntas = snapshot.docs.map((doc) => {
       const data = doc.data();
       return {
         id: doc.id,
         pergunta: data.pergunta,
-        textos: data.textos || [], // Adicionar os textos
+        textos: data.textos || [],
         alternativas: Object.values(data.opcoes),
         correta: data.correta,
         materia: data.materia || "",
         explicacao: data.explicacao || ""
       };
     });
+
+    // Embaralhar perguntas e limitar se necessário
+    if (quantidade) {
+      perguntas = perguntas.sort(() => Math.random() - 0.5).slice(0, parseInt(quantidade));
+    }
+
     res.json(perguntas);
   } catch (error) {
     console.error("Erro ao buscar perguntas:", error);
@@ -44,12 +57,11 @@ app.get("/api/perguntas", async (req, res) => {
   }
 });
 
-
-// Rota para salvar resultado de um quiz
+// Rota para salvar resultado do quiz
 app.post("/api/resultados", async (req, res) => {
   try {
     const { userId, acertos, total, materia } = req.body;
-    
+
     if (!userId || acertos === undefined || !total) {
       return res.status(400).json({ error: "Dados incompletos" });
     }
@@ -60,44 +72,37 @@ app.post("/api/resultados", async (req, res) => {
       return res.status(404).json({ error: "Usuário não encontrado" });
     }
 
-    // Salvar o resultado
     const resultado = {
       userId,
       acertos,
       total,
       percentual: (acertos / total) * 100,
       materia: materia || "Geral",
-      dataHora: admin.firestore.FieldValue.serverTimestamp()
+      dataHora: admin.firestore.FieldValue.serverTimestamp(),
     };
 
     await db.collection("resultados").add(resultado);
 
-    // Atualizar ou criar estatísticas do usuário
+    // Atualizar ou criar estatísticas
     const userStatsRef = db.collection("estatisticas").doc(userId);
     const userStats = await userStatsRef.get();
 
     if (userStats.exists) {
-      // Atualizar estatísticas existentes
       const dados = userStats.data();
       const materiaAtual = materia || "Geral";
-      
-      if (!dados.materias) {
-        dados.materias = {};
-      }
-      
-      if (!dados.materias[materiaAtual]) {
-        dados.materias[materiaAtual] = { acertos: 0, total: 0 };
-      }
-      
+
+      if (!dados.materias) dados.materias = {};
+      if (!dados.materias[materiaAtual]) dados.materias[materiaAtual] = { acertos: 0, total: 0 };
+
       dados.materias[materiaAtual].acertos += acertos;
       dados.materias[materiaAtual].total += total;
       dados.totalAcertos = (dados.totalAcertos || 0) + acertos;
       dados.totalPerguntas = (dados.totalPerguntas || 0) + total;
-      
+      dados.ultimaAtualizacao = admin.firestore.FieldValue.serverTimestamp();
+
       await userStatsRef.update(dados);
     } else {
-      // Criar novas estatísticas
-      const novosDados = {
+      await userStatsRef.set({
         userId,
         nome: userSnapshot.displayName || "Usuário",
         email: userSnapshot.email,
@@ -105,14 +110,12 @@ app.post("/api/resultados", async (req, res) => {
         totalPerguntas: total,
         materias: {
           [materia || "Geral"]: {
-            acertos: acertos,
-            total: total
-          }
+            acertos,
+            total,
+          },
         },
-        ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp()
-      };
-      
-      await userStatsRef.set(novosDados);
+        ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
+      });
     }
 
     res.status(201).json({ message: "Resultado salvo com sucesso" });
@@ -122,15 +125,15 @@ app.post("/api/resultados", async (req, res) => {
   }
 });
 
-// Rota para obter ranking geral
+// Rota para ranking geral (estatísticas)
 app.get("/api/ranking", async (req, res) => {
   try {
     const snapshot = await db.collection("estatisticas")
       .orderBy("totalAcertos", "desc")
       .limit(10)
       .get();
-    
-    const ranking = snapshot.docs.map(doc => {
+
+    const ranking = snapshot.docs.map((doc) => {
       const data = doc.data();
       return {
         id: doc.id,
@@ -138,11 +141,12 @@ app.get("/api/ranking", async (req, res) => {
         email: data.email,
         totalAcertos: data.totalAcertos,
         totalPerguntas: data.totalPerguntas,
-        percentual: data.totalPerguntas > 0 ? 
-          (data.totalAcertos / data.totalPerguntas) * 100 : 0
+        percentual: data.totalPerguntas > 0
+          ? (data.totalAcertos / data.totalPerguntas) * 100
+          : 0,
       };
     });
-    
+
     res.json(ranking);
   } catch (error) {
     console.error("Erro ao buscar ranking:", error);
@@ -150,17 +154,17 @@ app.get("/api/ranking", async (req, res) => {
   }
 });
 
-// Rota para obter estatísticas de um usuário específico
+// Rota para estatísticas por usuário
 app.get("/api/usuarios/:userId/estatisticas", async (req, res) => {
   try {
     const { userId } = req.params;
     const userStatsRef = db.collection("estatisticas").doc(userId);
     const userStats = await userStatsRef.get();
-    
+
     if (!userStats.exists) {
       return res.status(404).json({ error: "Estatísticas não encontradas" });
     }
-    
+
     res.json(userStats.data());
   } catch (error) {
     console.error("Erro ao buscar estatísticas do usuário:", error);

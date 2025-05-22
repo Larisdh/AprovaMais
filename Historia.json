@@ -19,7 +19,7 @@
             "4": "O fim das desigualdades raciais no país."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "Apesar de libertar legalmente os escravizados, a abolição não promoveu inclusão social nem econômica, mantendo a estrutura desigual da sociedade."
     },
     {
@@ -32,7 +32,7 @@
             "4": "Deu início imediato ao voto feminino."
         },
         "correta": 2,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Proclamação da República foi um golpe militar, sem participação popular e contra o governo constitucional da Monarquia."
     },
     {
@@ -45,7 +45,7 @@
             "4": "Participação popular nas decisões políticas."
         },
         "correta": 3,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A República Velha foi dominada pelas elites agrárias, especialmente dos estados de São Paulo e Minas Gerais, em um sistema político conhecido como 'coronelismo'."
     },
     {
@@ -64,7 +64,7 @@
             "4": "Houve consulta popular antes da mudança."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Proclamação da República ocorreu sem consulta popular e contra um governo constitucional, com a participação principal das forças militares."
     },
     {
@@ -77,7 +77,7 @@
             "4": "Tinham apoio das elites agrárias."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "Ambas as revoltas foram impulsionadas pela exclusão social das populações que não perceberam melhorias nas suas condições de vida após a Proclamação da República."
     },
     {
@@ -96,7 +96,7 @@
             "4": "Ingleses e russos."
         },
         "correta": 0,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A imigração para o Brasil no final do século XIX e início do século XX foi principalmente de italianos e alemães, em busca de melhores condições de vida."
     },
     {
@@ -108,7 +108,7 @@
             "3": "O fortalecimento da monarquia absoluta."
         },
         "correta": 2,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A partir da década de 1870, os militares começaram a se distanciar da monarquia devido à insatisfação com o governo e à pressão para a abolição da escravidão, o que resultou no enfraquecimento da monarquia."
     },
     {
@@ -120,7 +120,7 @@
             "3": "Foi apoiada unicamente pelos militares."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A abolição sem indenização gerou insatisfação entre os fazendeiros, que eram a base de apoio da monarquia, o que contribuiu para o apoio da elite agrária à República."
     },
     {
@@ -132,7 +132,7 @@
             "3": "Clero e monarquistas."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Proclamação da República foi liderada por militares insatisfeitos e elites republicanas, que viam a monarquia como um obstáculo ao progresso político e social do Brasil."
     },
     {
@@ -144,7 +144,7 @@
             "3": "O voto universal para todos os cidadãos."
         },
         "correta": 0,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Constituição de 1891 introduziu o federalismo no Brasil e o voto censitário, ou seja, o direito de voto era restrito aos homens alfabetizados e com uma renda mínima."
     },
     {
@@ -156,7 +156,7 @@
             "3": "Extinção das revoltas populares."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A República Velha foi dominada pelas oligarquias rurais, com destaque para a política do café com leite, que consistia na alternância de poder entre os estados de São Paulo e Minas Gerais."
     },
     {
@@ -168,7 +168,7 @@
             "3": "Dos republicanos contra a monarquia."
         },
         "correta": 0,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Revolta da Armada foi uma reação de militares que, insatisfeitos com o governo republicano e as mudanças políticas, se opuseram ao novo regime."
     },
     {
@@ -180,7 +180,7 @@
             "3": "Foi liderada por Dom Pedro II."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Confederação do Equador foi um movimento separatista que buscava maior autonomia para as províncias e criticava o autoritarismo do imperador Dom Pedro I."
     },
     {
@@ -192,7 +192,7 @@
             "3": "A abolição da escravidão."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "O Período Regencial foi marcado por disputas políticas e várias revoltas regionais, como a Cabanagem, a Revolta dos Malês e a Revolta Farroupilha."
     },
     {
@@ -204,7 +204,7 @@
             "3": "Poder de nomear o presidente da República."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "O poder moderador, que foi instituído pela Constituição de 1824, dava ao imperador o papel de árbitro entre os poderes Executivo, Legislativo e Judiciário, podendo até dissolver a câmara dos deputados."
     },
     {
@@ -216,7 +216,7 @@
             "3": "A abolição da escravidão."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "O positivismo, uma corrente filosófica que influenciou os militares, foi uma das ideologias que ajudaram a fundamentar a Proclamação da República em 1889, além de defenderem um governo centralizado com base no federalismo."
     },
     {
@@ -228,7 +228,7 @@
             "3": "Resultou na independência do Paraguai."
         },
         "correta": 0,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Guerra do Paraguai foi um marco para o Brasil, pois aumentou o prestígio do exército e do imperador, consolidando a posição política do governo imperial."
     },
     {
@@ -240,7 +240,7 @@
             "3": "Incentivou a imigração europeia para o campo."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Lei de Terras de 1850 regulamentou a posse de terras, restringindo o acesso à terra para os pequenos agricultores e libertos, e favorecendo a posse de grandes propriedades."
     },
     {
@@ -252,7 +252,7 @@
             "3": "Reforma agrária para pequenos produtores."
         },
         "correta": 0,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A política do café com leite foi a alternância de poder entre as oligarquias de São Paulo e Minas Gerais, sendo um pacto entre as elites agrárias dessas regiões durante a República Velha."
     },
     {
@@ -264,7 +264,7 @@
             "3": "Foi uma revolução popular."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A Proclamação da República foi um movimento liderado por um pequeno grupo de militares e políticos, sem o apoio popular e sem consulta à população."
     },
     {
@@ -276,7 +276,7 @@
             "3": "O exército exclusivamente."
         },
         "correta": 1,
-        "materia": "História",
+        "materia": "historia",
         "explicacao": "A escravidão foi questionada principalmente pelos movimentos abolicionistas urbanos e pelos setores liberais, que lutaram pela sua abolição."
     }
 ]

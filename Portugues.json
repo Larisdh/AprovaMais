@@ -8,7 +8,7 @@
       "3": "Ele se comporta como um touro."
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A comparação é uma figura de linguagem que estabelece uma relação de semelhança entre dois elementos, usando palavras como 'como' ou 'tal qual'."
   },
   {
@@ -20,7 +20,7 @@
       "3": "Ele é um leão na luta."
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A metonímia é uma figura de linguagem que substitui uma palavra por outra com a qual tem uma relação de proximidade ou contiguidade. 'Comprar um quadro de Picasso' é um exemplo, pois se refere à obra de Picasso."
   },
   {
@@ -32,7 +32,7 @@
       "3": "Ele é de ferro."
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A antítese é a figura de linguagem que consiste na aproximação de palavras ou ideias de significados opostos. No caso, 'forte e fraco ao mesmo tempo' representa oposição entre conceitos."
   },
   {
@@ -44,7 +44,7 @@
       "3": "Ele gritou com todas as suas forças."
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de objetos. 'Tic-tac' imita o som de um relógio."
   },
   {
@@ -56,7 +56,7 @@
       "3": "Ironia"
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A metáfora é uma figura de linguagem que consiste na substituição de uma palavra por outra, com a qual possui uma relação de semelhança. 'Ver verdadeiro anjo' é uma metáfora que compara a bondade de uma pessoa com a imagem de um anjo."
   },
     {
@@ -69,7 +69,7 @@
       "4": "Não aguentava mais aquele buá-buá nos meus ouvidos."
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A perífrase (ou antonomásia) é uma figura de linguagem que substitui um nome comum por uma expressão mais detalhada ou pelo nome de algo relacionado. No caso, 'melhor amigo do homem' é uma perífrase para o cão."
   },
   {
@@ -81,7 +81,7 @@
       "3": "Hipérbole"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de ações. ‘Urgh’ imita um som de repulsa ou nojo."
   },
   {
@@ -93,7 +93,7 @@
       "3": "Antítese"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A hipérbole é uma figura de linguagem que exagera a realidade. No caso, ‘morrendo de fome’ exagera o estado de fome da pessoa."
   },
   {
@@ -105,7 +105,7 @@
       "3": "Catacrese"
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A metáfora é uma figura de linguagem que faz uma comparação implícita entre dois elementos. ‘Ela é uma flor’ sugere que a pessoa é delicada e bonita sem usar a palavra ‘como’."
   },
   {
@@ -117,7 +117,7 @@
       "3": "Hipérbole"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A metonímia é uma figura de linguagem em que uma palavra é substituída por outra que tem uma relação de proximidade ou contiguidade. ‘Seis bocas’ substitui as pessoas que devem ser alimentadas."
   },
     {
@@ -129,7 +129,7 @@
       "3": "Emotiva"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A função conativa (ou apelativa) é caracterizada pela intenção de influenciar o receptor. Em textos publicitários, o objetivo é convencer o público a consumir um produto ou serviço."
   },
   {
@@ -141,7 +141,7 @@
       "3": "Metalinguística"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A função emotiva se destaca quando o emissor expressa seus sentimentos ou emoções. Ela se foca no emissor da mensagem."
   },
   {
@@ -153,7 +153,7 @@
       "3": "O contexto é o mais importante."
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A função metalinguística ocorre quando o código utilizado (linguagem) é explicado ou esclarecido dentro do próprio texto."
   },
   {
@@ -165,7 +165,7 @@
       "3": "Poética"
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "A função fática é voltada para o estabelecimento, manutenção e verificação da comunicação, como no caso de checar se o canal de comunicação está funcionando."
   },
   {
@@ -177,7 +177,7 @@
       "3": "Conativa"
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "Em textos poéticos, a função da linguagem mais evidente é a poética, que foca na forma e estética da mensagem, buscando a beleza e o impacto artístico."
   },
     {
@@ -189,7 +189,7 @@
       "3": "Descrever"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "O artigo de opinião visa principalmente convencer o leitor sobre um ponto de vista ou opinião, sendo um texto argumentativo que expressa a opinião do autor sobre determinado tema."
   },
   {
@@ -201,7 +201,7 @@
       "3": "Não variam com as mudanças sociais."
     },
     "correta": 2,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "Os gêneros textuais são adaptáveis ao contexto e à comunicação, variando conforme as necessidades de expressão social e as mudanças culturais."
   },
   {
@@ -213,7 +213,7 @@
       "3": "Usar rimas"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "Em textos dissertativos, é comum o uso de exemplos concretos para sustentar argumentos, tornando a argumentação mais persuasiva e sólida."
   },
   {
@@ -225,7 +225,7 @@
       "3": "Argumento por analogia"
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "O argumento de autoridade ocorre quando o autor cita uma pessoa ou fonte considerada referência sobre o tema, reforçando a credibilidade de seu ponto de vista."
   },
   {
@@ -237,7 +237,7 @@
       "3": "Argumento de exemplificação"
     },
     "correta": 2,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "O uso de dados estatísticos em um texto argumentativo é uma estratégia lógica, pois fundamenta o argumento em evidências objetivas e racionais."
   },
     {
@@ -249,7 +249,7 @@
       "3": "Ao século XIX, romantismo."
     },
     "correta": 0,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "O Quinhentismo corresponde ao século XVI, quando o Brasil foi descoberto e iniciado o processo de colonização por parte de Portugal."
   },
   {
@@ -261,7 +261,7 @@
       "3": "Temática urbana"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "Os textos do Quinhentismo têm uma característica predominante de descrever a natureza e os indígenas de forma objetiva, com o intuito de relatar o desconhecido para os europeus."
   },
   {
@@ -273,7 +273,7 @@
       "3": "Narrar lendas indígenas"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "Os textos do Quinhentismo, como cartas e relatos, tinham o objetivo principal de informar a Coroa portuguesa sobre as terras recém-descobertas, seus recursos naturais e os habitantes locais."
   },
   {
@@ -285,7 +285,7 @@
       "3": "Modernismo"
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "Pero Vaz de Caminha foi o autor da famosa 'Carta de Pero Vaz de Caminha', escrita em 1500, durante o período do Quinhentismo."
   },
   {
@@ -297,7 +297,7 @@
       "3": "Seus textos não abordam a catequese."
     },
     "correta": 1,
-    "materia": "Língua Portuguesa",
+    "materia": "portugues",
     "explicacao": "O Quinhentismo é marcado por textos de caráter informativo (relatos e cartas) e jesuítico, pois os missionários tinham grande presença na época, promovendo a catequese dos indígenas."
   }
 ]

@@ -15,7 +15,7 @@
       "4": "necessidade de empatia."
     },
     "correta": 1,
-    "materia": "Língua Inglesa",
+    "materia": "ingles",
     "explicacao": "A expressão 'No man is an island' ressalta a ideia de que nenhum ser humano é totalmente independente ou isolado, pois todos fazem parte de uma coletividade. O poema enfatiza a interconexão entre os indivíduos e como a perda de um afeta a todos."
   },
   {
@@ -32,7 +32,7 @@
       "4": "preferência pelo hindi."
     },
     "correta": 1,
-    "materia": "Língua Inglesa",
+    "materia": "ingles",
     "explicacao": "A autora expressa que, embora o inglês não seja sua língua materna, ela o torna seu, com todas as suas peculiaridades e mistura com o indiano. Isso demonstra consciência de sua identidade linguística."
   },
   {
@@ -49,7 +49,7 @@
       "4": "informar sobre um programa estudantil."
     },
     "correta": 1,
-    "materia": "Língua Inglesa",
+    "materia": "ingles",
     "explicacao": "O texto divulga uma campanha real de recrutamento de jovens para o serviço secreto britânico, com foco em jovens com formação técnica em ciência, tecnologia ou engenharia."
   },
   {
@@ -66,6 +66,7 @@
       "4": "desconhecer como usar um livro impresso."
     },
     "correta": "4",
+    "materia": "ingles",
     "explicacao": "O estudante usa um termo típico de aparelhos eletrônicos para um livro impresso, mostrando desconhecimento do uso do livro físico."
   },
   {
@@ -82,6 +83,7 @@
       "4": "relatar experiências negativas."
     },
     "correta": "1",
+    "materia": "ingles",
     "explicacao": "O texto explica as funções básicas do Instagram, como feed, explore e notificações."
   },
   {
@@ -98,6 +100,7 @@
       "4": "contar uma história engraçada."
     },
     "correta": "1",
+    "materia": "ingles",
     "explicacao": "O texto descreve sucessivos problemas, caracterizando um dia ruim."
   },
   {
@@ -114,6 +117,7 @@
       "4": "sugerir dietas restritivas."
     },
     "correta": "0",
+    "materia": "ingles",
     "explicacao": "O texto orienta o leitor a ler rótulos para saber o que consome."
   },
   {
@@ -130,6 +134,7 @@
       "4": "eufemismo."
     },
     "gabarito": "0",
+    "materia": "ingles",
     "explicacao": "O exagero na quantidade de selfies caracteriza a hipérbole, gerando humor e crítica."
   },
   {
@@ -139,13 +144,14 @@
     },
     "pergunta": "O que significa “idioms”?",
     "opcoes": {
-      "a": "ideias",
-      "b": "expressões idiomáticas",
-      "c": "palavras difíceis",
-      "d": "frases longas",
-      "e": "textos antigos"
+      "0": "ideias",
+      "1": "expressões idiomáticas",
+      "2": "palavras difíceis",
+      "3": "frases longas",
+      "4": "textos antigos"
     },
-    "gabarito": "b",
+    "gabarito": "1",
+    "materia": "ingles",
     "explicacao": "“Idioms” são expressões idiomáticas, importantes para fluência."
   },
   {
@@ -162,6 +168,7 @@
       "4": "animado"
     },
     "gabarito": "2",
+    "materia": "ingles",
     "explicacao": "“Starving” indica estar com muita fome."
   },
   {
@@ -178,6 +185,7 @@
       "4": "fábrica de roupas."
     },
     "gabarito": "0",
+    "materia": "ingles",
     "explicacao": "“Fabric” é tecido; logo, “fabric factory” é fábrica de tecidos."
   },
   {
@@ -194,6 +202,7 @@
       "4": "conhecidos"
     },
     "gabarito": "2",
+    "materia": "ingles",
     "explicacao": "“Relatives” são parentes."
   },
   {
@@ -210,6 +219,7 @@
       "4": "simpatia"
     },
     "correta": "1",
+    "materia": "ingles",
     "explicacao": "\"Prejudice\" é preconceito."
   },
   {
@@ -226,6 +236,7 @@
       "4": "permitir"
     },
     "gabarito": "1",
+    "materia": "ingles",
     "explicacao": "“Pretend” é um falso cognato, significando “fingir”."
   }
 ]

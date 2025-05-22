@@ -1,7 +1,6 @@
-/* Geral */
+/* ======== GERAL ======== */
 .home-container {
   background-color: #d5f3ff;
-  /* Fundo geral */
   font-family: 'Roboto', Sans-serif;
   width: 100vw;
   min-height: 100vh;
@@ -11,10 +10,9 @@
   overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
-  /* Garante que o contêiner ocupe toda a altura da tela */
 }
 
-/* Cabeçalho */
+/* ======== CABEÇALHO ======== */
 .home-header {
   background-color: #0a518e;
   color: white;
@@ -44,7 +42,7 @@
   transform: translateY(-50%);
 }
 
-/* Subtítulo */
+/* ======== SUBTÍTULO ======== */
 .home-subtitle {
   background-color: #e8f6f9;
   color: #0a518e;
@@ -57,7 +55,7 @@
   margin: 1rem 1.5rem;
 }
 
-/* Conteúdo principal */
+/* ======== CONTEÚDO PRINCIPAL ======== */
 .home-main {
   flex-grow: 1;
   display: flex;
@@ -77,21 +75,110 @@
   gap: 1.5rem;
   width: 100%;
   max-width: 1400px;
+  flex-wrap: wrap; /* Flexível no mobile */
 }
 
-/* Imagem */
-.home-image {
-  width: 30rem;
-  flex: 1;
+/* ======== ASIDE ======== */
+.home-aside {
+  flex: 0 0 20rem;
+  background-color: #0a518e;
+  color: white;
+  padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 38%;
-  height: auto;
-  margin-top: 1rem;
-  align-self: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 25rem;
+  text-align: left;
+  border: 1px solid #f0f8ff;
+  order: -1; /* Move o aside para a esquerda */
 }
 
-/* Descrição */
+.home-aside h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f0f8ff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.home-aside ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.home-aside button {
+  background-color: #f0f8ff;
+  color: #0a518e;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.home-aside button:hover {
+  background-color: #d5f3ff;
+  color: #083a6b;
+  transform: translateY(-2px);
+}
+
+/* ======== SELETOR DE PERGUNTAS ======== */
+.question-selector {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0f8ff;
+}
+
+.question-selector h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #f0f8ff;
+  white-space: nowrap;
+}
+
+.question-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.question-buttons button {
+  background-color: #f0f8ff;
+  color: #0a518e;
+  border: 1px solid #0a518e;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.question-buttons button:hover {
+  background-color: #d5f3ff;
+  color: #083a6b;
+}
+
+.question-buttons button.active {
+  background-color: #0a518e;
+  color: white;
+  border: 1px solid #083a6b;
+}
+
+/* ======== DESCRIÇÃO ======== */
 .home-description {
   max-width: 50rem;
   color: #083a6b;
@@ -99,10 +186,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Centraliza horizontalmente */
-  gap: 0.5rem; /* Espaçamento entre os elementos */
-  margin-top: 5rem; /* Aumenta o espaço acima para centralizar melhor */
-  margin-bottom: 2rem; /* Adiciona espaço abaixo */
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .home-description h2 {
@@ -122,7 +209,19 @@
   font-weight: 800;
 }
 
-/* Botão */
+/* ======== IMAGEM ======== */
+.home-image {
+  width: 30rem;
+  flex: 1;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 38%;
+  height: auto;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+/* ======== BOTÃO PRINCIPAL ======== */
 .home-button {
   background-color: #0a518e;
   color: white;
@@ -148,118 +247,27 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Barra lateral */
-.home-aside {
-  flex: 1;
-  background-color: #0a518e; /* Fundo azul escuro */
-  color: white; /* Texto branco */
-  padding: 1.5rem; /* Aumenta o espaçamento interno */
-  border-radius: 1rem; /* Bordas arredondadas maiores */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
-  max-width: 25rem;
-  text-align: left;
-  border: 1px solid #f0f8ff; /* Borda azul claro */
-}
-
-.home-aside h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #f0f8ff; /* Azul claro */
-  text-align: center; /* Centraliza o título */
-  font-weight: bold;
-}
-
-.home-aside ul {
-  list-style: none;
-  padding: 0;
-  display: grid; /* Usa grid para organizar os itens */
-  grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
-  gap: 0.5rem; /* Espaçamento entre os itens */
-}
-
-.home-aside li {
-  margin-bottom: 0;
-}
-
-.home-aside button {
-  background-color: #f0f8ff; /* Fundo azul claro */
-  color: #0a518e; /* Texto azul escuro */
-  border: none;
-  padding: 0.75rem 1rem; /* Botões maiores */
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  text-align: center; /* Centraliza o texto nos botões */
-}
-
-.home-aside button:hover {
-  background-color: #d5f3ff; /* Azul mais claro no hover */
-  color: #083a6b; /* Azul mais escuro no texto */
-  transform: translateY(-2px); /* Efeito de elevação */
-}
-
-/* Seletor de perguntas */
-.question-selector {
-  margin-top: 1rem;
-  text-align: left;
-  font-size: 1.5rem; /* Igual ao título da home-aside */
-  font-weight: bold; /* Negrito para combinar com o estilo */
-  color: #f0f8ff; /* Azul claro, igual ao texto da home-aside */
-}
-
-.question-selector h4 {
-  font-size: 1.5rem; /* Igual ao título da home-aside */
-  font-weight: bold; /* Negrito */
-  margin-bottom: 0.5rem;
-  color: #f0f8ff; /* Azul claro */
-  white-space: nowrap; /* Impede a quebra de linha */
-}
-
-.question-buttons {
-  display: flex; /* Alinha os botões em uma linha */
-  gap: 0.5rem; /* Espaçamento entre os botões */
-  justify-content: space-between; /* Distribui os botões uniformemente */
-  flex-wrap: nowrap; /* Impede que os botões quebrem linha */
-  overflow-x: auto; /* Adiciona scroll horizontal caso necessário */
-}
-
-.question-buttons button {
-  background-color: #f0f8ff; /* Fundo azul claro */
-  color: #0a518e; /* Texto azul escuro */
-  border: 1px solid #0a518e; /* Borda azul escuro */
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  white-space: nowrap; /* Impede que o texto dos botões quebre */
-}
-
-.question-buttons button:hover {
-  background-color: #d5f3ff; /* Fundo mais claro no hover */
-  color: #083a6b; /* Texto azul mais escuro */
-}
-
-.question-buttons button.active {
-  background-color: #0a518e; /* Fundo azul escuro para o botão ativo */
-  color: white; /* Texto branco */
-  border: 1px solid #083a6b; /* Borda azul mais escuro */
-}
-
-/* Media query para dispositivos móveis */
+/* ======== RESPONSIVO ======== */
 @media (max-width: 600px) {
-  .home-header h1 {
-    font-size: 2rem;
+  .home-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    position: relative;
   }
 
-  .home-logo {
+.home-logo {
     height: 4rem;
-    right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    position: static;
+    top: auto;
+    right: auto;
+    transform: none;
+    order: 2;
   }
-
+  
   .home-content {
     flex-direction: column;
     align-items: center;
@@ -282,7 +290,12 @@
   }
 
   .home-aside {
+    order: 0;
     max-width: 100%;
+  }
+
+  .home-aside ul {
+    grid-template-columns: 1fr;
   }
 
   .home-description {
@@ -300,5 +313,44 @@
   .home-button {
     font-size: 1rem;
     padding: 0.75rem 2rem;
+  }
+}
+/* NOVO BLOCO: Agrupamento da imagem e descrição */
+.home-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.home-image {
+  max-width: 45%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-description {
+  max-width: 50%;
+  text-align: left;
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .home-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-description,
+  .home-image {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .home-description {
+    margin-top: 1.5rem;
   }
 }

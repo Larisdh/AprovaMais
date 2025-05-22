@@ -67,6 +67,7 @@ function Ranking() {
       </header>
 
       <main className="ranking-main">
+        <h2 className="ranking-intro">🏆 Recorde dos Jogadores!</h2>
         {renderizarRanking()}
       </main>
     </div>
