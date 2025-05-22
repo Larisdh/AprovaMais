@@ -146,42 +146,55 @@ export default function Quiz() {
     questionContainer: {
       backgroundColor: "white",
       color: "#0D6E9C",
-      width: "75%",
+      width: "100%",
       maxWidth: "40rem",
-      margin: "1.5rem",
+      margin: "1.5rem auto", // Centraliza e adiciona espaçamento vertical
       borderRadius: "1.5rem",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)", // Sombra moderna
+      padding: "2rem", // Espaçamento interno maior
     },
     questionText: {
-      fontSize: "1rem",
+      fontSize: "1.2rem",
       textAlign: "left",
+      lineHeight: "1.8", // Melhor espaçamento entre linhas
+      marginBottom: "1.5rem", // Espaçamento abaixo do texto
+      color: "#083a6b", // Azul escuro
+      border: "2px solid #0D6E9C", // Borda azul escuro
+      borderRadius: "0.5rem",
+      padding: "1.5rem", // Espaçamento interno
+      backgroundColor: "#f9fcff", // Fundo claro
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Sombra leve
     },
     optionsContainer: {
       display: "flex",
       flexDirection: "column",
-      gap: "1rem",
-      marginTop: "1.5rem",
+      gap: "1rem", // Espaçamento entre os botões
+      marginTop: "1.5rem", // Espaçamento acima das opções
+      padding: "1rem", // Espaçamento interno para descolar da borda
+      backgroundColor: "#ffffff", // Fundo branco
+      borderRadius: "1rem",
     },
     optionButton: {
       display: "flex",
       alignItems: "center",
       gap: "0.5rem",
       padding: "1rem",
-      borderRadius: "9999px",
-      border: "2px solid #0D6E9C",
+      borderRadius: "9999px", // Bordas totalmente arredondadas
+      border: "2px solid #0D6E9C", // Borda azul escuro
       fontWeight: "bold",
       fontSize: "1rem",
       textAlign: "left",
       transition: "all 0.3s ease-in-out",
       cursor: "pointer",
-      backgroundColor: "#d5f3ff",
-      color: "#0D6E9C",
+      backgroundColor: "#d5f3ff", // Fundo azul claro
+      color: "#0D6E9C", // Texto azul escuro
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Sombra leve
     },
     saveButtonContainer: {
       display: "flex",
       justifyContent: "flex-end",
-      marginTop: "1.5rem",
-      gap: "1rem",
+      marginTop: "2rem", // Espaçamento acima do botão
+      gap: "1rem", // Espaçamento entre os botões
     },
     saveButton: {
       backgroundColor: "#0D6E9C",
@@ -190,7 +203,7 @@ export default function Quiz() {
       borderRadius: "9999px",
       fontWeight: "bold",
       fontSize: "1rem",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra leve
       cursor: "pointer",
       transition: "all 0.2s",
       border: "none",
@@ -250,12 +263,31 @@ export default function Quiz() {
       <header style={styles.header}>
         <span style={styles.title}>Quiz - {materia}</span>
         <nav style={styles.nav}>
-          <Link to="/home" style={{ color: "white", textDecoration: "none" }}>
+        <Link
+            to="/home"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              transition: "color 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
             Página Inicial
           </Link>
-          <Link to="/ranking" style={{ color: "white", textDecoration: "none" }}>
+          <Link
+            to="/ranking"
+            style={{
+              color: "white",
+              textDecoration: "none",
+              transition: "color 0.3s ease-in-out",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
+            onMouseLeave={(e) => (e.target.style.color = "white")}
+          >
             Ranking
           </Link>
+
           <img src="/Logo.png" alt="Logo ENEM" style={styles.logo} />
         </nav>
       </header>
