@@ -8,11 +8,11 @@
       "3": "Desenvolver habilidades intelectuais superiores."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Aristóteles desenvolveu a teoria da virtude como uma mediana entre o excesso e a falta. A coragem, por exemplo, é o justo meio entre a covardia e a temeridade."
   },
   {
-    "pergunta": "Qual dos seguintes filósofos é considerado um dos principais representantes da Filosofia Antiga, conhecido por seu método dialético?",
+    "pergunta": "Qual dos seguintes filósofos é considerado um dos principais representantes da filosofia Antiga, conhecido por seu método dialético?",
     "opcoes": {
       "0": "Immanuel Kant",
       "1": "Jean-Paul Sartre",
@@ -20,11 +20,11 @@
       "3": "Friedrich Nietzsche"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Sócrates é famoso por seu método de questionamento, a dialética, que buscava a verdade através do diálogo e da contraposição de ideias."
   },
   {
-    "pergunta": "A ética utilitarista, amplamente discutida na Filosofia Contemporânea, defende que uma ação é considerada moralmente correta se:",
+    "pergunta": "A ética utilitarista, amplamente discutida na filosofia Contemporânea, defende que uma ação é considerada moralmente correta se:",
     "opcoes": {
       "0": "For baseada em princípios universais e imutáveis.",
       "1": "Promover a maior felicidade para o maior número de pessoas.",
@@ -32,7 +32,7 @@
       "3": "For motivada por boas intenções, independentemente de suas consequências."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O utilitarismo, defendido por filósofos como John Stuart Mill, avalia a moralidade de uma ação por suas consequências, visando o bem-estar coletivo."
   },
   {
@@ -44,7 +44,7 @@
       "3": "Simone de Beauvoir"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "John Rawls, em sua obra 'Uma Teoria da Justiça', propõe princípios para uma sociedade justa, incluindo a distribuição equitativa de recursos e oportunidades."
   },
   {
@@ -56,7 +56,7 @@
       "3": "Seguir rigorosamente os preceitos religiosos."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "As filosofias helenísticas, como o estoicismo e o epicurismo, enfatizavam a busca pela paz interior e pela ausência de perturbações como o caminho para a felicidade."
   },
   {
@@ -68,7 +68,7 @@
       "3": "Epicuro"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Aristóteles acreditava que a natureza do ser humano se realiza na vida em comunidade e na participação na pólis (cidade-estado)."
   },
   {
@@ -80,7 +80,7 @@
       "3": "A determinação da história sobre a consciência humana."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Filósofos existencialistas como Sartre e Beauvoir colocam a experiência individual, a liberdade de escolha e a responsabilidade como centrais para a compreensão da existência."
   },
   {
@@ -92,7 +92,7 @@
       "3": "Se for motivada por sentimentos nobres e altruístas."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O imperativo categórico kantiano exige que ajamos de tal maneira que a máxima de nossa ação possa se tornar uma lei universal."
   },
   {
@@ -104,7 +104,7 @@
       "3": "Sofismo"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Os estoicos valorizavam a autodisciplina, a razão e a aceitação do destino como meios para alcançar a tranquilidade interior."
   },
   {
@@ -116,7 +116,7 @@
       "3": "Da busca pela paz interior através da negação dos desejos."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Nietzsche questionava os valores morais estabelecidos e propunha uma filosofia da afirmação da vida, da força e da individualidade."
   },
    {
@@ -128,7 +128,7 @@
       "3": "A inevitabilidade da luta de classes na história."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Teóricos como Hobbes, Locke e Rousseau utilizaram a ideia de um contrato social para fundamentar a legitimidade do governo e os direitos e deveres dos indivíduos na sociedade."
   },
   {
@@ -140,7 +140,7 @@
       "3": "Protágoras"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Parmênides defendia a ideia de que o ser é uno, imutável e eterno, em contraste com a visão do fluxo constante de Heráclito."
   },
   {
@@ -152,7 +152,7 @@
       "3": "Jacques Derrida"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Michel Foucault investigou como o poder se manifesta em diversas instituições e como ele molda o conhecimento e as práticas sociais."
   },
   {
@@ -164,7 +164,7 @@
       "3": "Revelada apenas através da fé e da experiência religiosa."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Os sofistas eram conhecidos por seu relativismo, argumentando que a verdade e a moralidade eram construções sociais e dependiam do ponto de vista."
   },
   {
@@ -176,7 +176,7 @@
       "3": "Fenomenologia"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O pós-estruturalismo, com autores como Lyotard e Derrida, questiona as estruturas fixas de significado e enfatiza a contingência e a diversidade."
   },
   {
@@ -188,7 +188,7 @@
       "3": "A moralidade de uma ação reside nos sentimentos e intenções do agente."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "A formulação do imperativo categórico kantiano é a base da ética deontológica, focada no dever e na universalidade das máximas."
   },
   {
@@ -200,7 +200,7 @@
       "3": "Anaxágoras"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Na alegoria da caverna, Platão descreve prisioneiros que confundem sombras com a realidade, simbolizando a nossa percepção do mundo sensível em contraste com o mundo inteligível das Ideias."
   },
   {
@@ -212,7 +212,7 @@
       "3": "O impacto ambiental da produção de dispositivos eletrônicos."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "A autonomia das máquinas e a possibilidade de superinteligência levantam questões éticas complexas sobre controle, responsabilidade e o futuro da relação entre humanos e IA."
   },
   {
@@ -224,7 +224,7 @@
       "3": "A valorização da experiência sensorial como fonte principal de conhecimento."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O ceticismo antigo defendia a impossibilidade de alcançar a certeza e propunha a suspensão do juízo (epoché) como forma de alcançar a ataraxia."
   },
   {
@@ -236,7 +236,7 @@
       "3": "Martha Nussbaum"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Simone de Beauvoir, em sua obra 'O Segundo Sexo', realizou uma análise profunda da opressão feminina e influenciou o desenvolvimento do pensamento feminista."
   },
    {
@@ -248,7 +248,7 @@
       "3": "A subordinação do indivíduo ao Estado."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Locke é um dos principais teóricos do liberalismo político e defendia a divisão do poder em legislativo, executivo e judiciário para evitar a tirania."
   },
   {
@@ -260,7 +260,7 @@
       "3": "Anaxímenes"
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Tales de Mileto é considerado o primeiro filósofo e acreditava que a água era a substância primordial da qual tudo se originava."
   },
   {
@@ -272,7 +272,7 @@
       "3": "O papel da mídia na formação da opinião pública."
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "A bioética lida com as implicações éticas das ciências da vida e da saúde, abrangendo temas como aborto, eutanásia, pesquisa com células-tronco, entre outros."
   },
   {
@@ -284,7 +284,7 @@
       "3": "A contemplação da perfeição do cosmos."
     },
     "correta": 2,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "O epicurismo valorizava os prazeres simples e a tranquilidade como o caminho para a felicidade, evitando os excessos e as fontes de sofrimento."
   },
   {
@@ -296,7 +296,7 @@
       "3": "Paul Ricoeur"
     },
     "correta": 1,
-    "materia": "Filosofia",
+    "materia": "filosofia",
     "explicacao": "Marshall Rosenberg criou a Comunicação Não Violenta (CNV), um processo de comunicação que enfatiza a empatia, a honestidade e a busca por atender às necessidades de todas as partes envolvidas em um conflito."
   }
 ]

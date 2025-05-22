@@ -8,7 +8,7 @@
       "3": "A força resultante é proporcional à velocidade do carro."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Pela Primeira Lei de Newton (Lei da Inércia), um corpo em movimento retilíneo uniforme permanece nesse estado se a força resultante sobre ele for nula."
   },
   {
@@ -20,7 +20,7 @@
       "3": "A energia potencial gravitacional."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A única força atuando sobre o objeto é a força gravitacional, que produz uma aceleração constante para baixo (a aceleração da gravidade)."
   },
   {
@@ -32,7 +32,7 @@
       "3": "Quilowatt-hora (kWh)."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Watt (W) é a unidade de potência, que é a taxa de transferência ou conversão de energia por unidade de tempo (W = J/s)."
   },
   {
@@ -44,7 +44,7 @@
       "3": "Depende da forma dos corpos."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Na ausência de resistência do ar, a aceleração de queda livre é a mesma para todos os objetos, independentemente de suas massas (Galileu Galilei)."
   },
   {
@@ -56,7 +56,7 @@
       "3": "O trabalho depende da velocidade do bloco."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A força de atrito sempre se opõe ao movimento, portanto, o ângulo entre a força e o deslocamento é de 180°, e o trabalho realizado (W = F.d.cosθ) é negativo (cos 180° = -1)."
   },
    {
@@ -68,7 +68,7 @@
       "3": "Positrão."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "O elétron é uma partícula fundamental com carga elétrica elementar negativa."
   },
   {
@@ -80,7 +80,7 @@
       "3": "Carga elétrica, campo elétrico e potencial elétrico."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A Lei de Ohm estabelece que a tensão (V) através de um condutor é diretamente proporcional à corrente (I) que passa por ele, sendo a constante de proporcionalidade a resistência (R): V = R.I."
   },
   {
@@ -92,7 +92,7 @@
       "3": "Gerador elétrico."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Um motor elétrico utiliza a interação entre campos magnéticos e correntes elétricas para produzir movimento mecânico."
   },
   {
@@ -104,7 +104,7 @@
       "3": "Três resistores em paralelo."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Em uma associação em paralelo, a resistência equivalente é sempre menor que a menor resistência individual. Adicionar mais resistores em paralelo diminui ainda mais a resistência equivalente."
   },
   {
@@ -116,7 +116,7 @@
       "3": "Watt (W)."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Watt (W) é a unidade de potência elétrica, que representa a taxa na qual a energia elétrica é convertida em outra forma de energia."
   },
   {
@@ -128,7 +128,7 @@
       "3": "Radiação."
     },
     "correta": 0,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A condução requer um meio material para a transferência de calor através da colisão de partículas. No vácuo, não há partículas para conduzir o calor."
   },
   {
@@ -140,7 +140,7 @@
       "3": "Ao estado físico do corpo (sólido, líquido ou gasoso)."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A temperatura é uma medida da energia cinética média das moléculas ou átomos em um sistema. Quanto maior a energia cinética média, maior a temperatura."
   },
   {
@@ -152,7 +152,7 @@
       "3": "Nenhuma das anteriores."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Na escala Celsius, os pontos são 0°C e 100°C. Na Fahrenheit, 32°F e 212°F. Na Kelvin, 273,15 K e 373,15 K. Nenhuma delas tem os mesmos valores."
   },
   {
@@ -164,7 +164,7 @@
       "3": "Condensação."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A condensação é a passagem do estado gasoso para o líquido, um processo exotérmico que libera energia térmica para o ambiente."
   },
   {
@@ -176,7 +176,7 @@
       "3": "A taxa de transferência de calor entre o corpo e o ambiente."
     },
     "correta": 0,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Capacidade térmica (C) é a razão entre a quantidade de calor (Q) fornecida a um corpo e a variação de temperatura (ΔT) resultante: C = Q/ΔT."
   },
    {
@@ -188,7 +188,7 @@
       "3": "F/(4m)"
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Pela Segunda Lei de Newton (F = ma), se F é constante e m dobra, a aceleração (a = F/m) se reduz pela metade."
   },
   {
@@ -200,7 +200,7 @@
       "3": "Energia hidrelétrica."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "O petróleo é um combustível fóssil, cuja formação leva milhões de anos, sendo considerado um recurso não renovável em escala humana."
   },
   {
@@ -212,7 +212,7 @@
       "3": "Termoeletricidade."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A indução eletromagnética, descoberta por Faraday, é o princípio de funcionamento dos geradores elétricos, onde a variação do fluxo magnético através de um circuito induz uma corrente elétrica."
   },
   {
@@ -224,7 +224,7 @@
       "3": "Temperatura."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Uma grandeza escalar é aquela que possui apenas magnitude (valor numérico) e unidade, como a temperatura. Velocidade, força e aceleração são grandezas vetoriais, pois possuem magnitude, direção e sentido."
   },
   {
@@ -236,7 +236,7 @@
       "3": "Capacidade térmica."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "O equilíbrio térmico ocorre quando dois ou mais corpos em contato atingem a mesma temperatura, não havendo mais troca líquida de calor entre eles (Lei Zero da Termodinâmica)."
   },
   {
@@ -248,7 +248,7 @@
       "3": "Um carro freando em uma ladeira."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A energia potencial gravitacional (Ep = mgh) é diretamente proporcional à altura (h) do objeto em relação a um referencial. Ao ser lançado para cima, a altura da bola aumenta."
   },
   {
@@ -260,7 +260,7 @@
       "3": "Plástico."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "Metais como o cobre possuem elétrons livres que podem se mover facilmente, permitindo a passagem da corrente elétrica."
   },
   {
@@ -272,7 +272,7 @@
       "3": "Conservação da carga elétrica."
     },
     "correta": 1,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A primeira lei da termodinâmica estabelece que a variação da energia interna de um sistema é igual à diferença entre o calor adicionado ao sistema e o trabalho realizado pelo sistema (ΔU = Q - W), expressando a conservação da energia."
   },
   {
@@ -284,7 +284,7 @@
       "3": "Dilatação térmica."
     },
     "correta": 2,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A radiação térmica é a transferência de calor através de ondas eletromagnéticas, que podem se propagar no vácuo."
   },
   {
@@ -296,7 +296,7 @@
       "3": "A velocidade."
     },
     "correta": 3,
-    "materia": "Física",
+    "materia": "física",
     "explicacao": "A velocidade do pêndulo varia continuamente durante a oscilação, sendo máxima no ponto mais baixo e nula nos pontos de maior afastamento. O período, a frequência e a energia mecânica total (na ausência de atrito) permanecem constantes para pequenas amplitudes."
   }
 ]

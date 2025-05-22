@@ -8,7 +8,7 @@
       "3": "Maior competitividade entre trabalhadores de diferentes países."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A globalização, em geral, enfraqueceu o poder dos sindicatos em nível nacional e global, devido à descentralização da produção e à maior mobilidade do capital."
   },
   {
@@ -20,7 +20,7 @@
       "3": "Baixa remuneração e más condições de trabalho."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A alienação, para Marx, é a perda de autonomia e controle do trabalhador sobre o seu trabalho e seus resultados, levando a um sentimento de estranhamento e desumanização."
   },
   {
@@ -32,7 +32,7 @@
       "3": "Produção baseada no conhecimento e na inovação tecnológica."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "O fordismo é caracterizado pela produção em larga escala de bens padronizados, utilizando a linha de montagem para aumentar a eficiência e reduzir custos."
   },
   {
@@ -44,7 +44,7 @@
       "3": "A organização dos trabalhadores em sindicatos e associações de classe."
     },
     "correta": 0,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A divisão social do trabalho é a forma como as diferentes atividades produtivas são distribuídas entre os membros de uma sociedade, gerando interdependência e especialização."
   },
   {
@@ -56,11 +56,11 @@
       "3": "Fortalecimento da legislação trabalhista e da fiscalização."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A precarização se manifesta através da informalidade, da terceirização excessiva, dos contratos temporários e da perda de direitos trabalhistas, tornando o trabalho mais vulnerável."
   },
   {
-    "pergunta": "Qual das seguintes afirmações sobre o conceito de cultura em Sociologia é INCORRETA?",
+    "pergunta": "Qual das seguintes afirmações sobre o conceito de cultura em sociologia é INCORRETA?",
     "opcoes": {
       "0": "Cultura abrange os conhecimentos, crenças, valores, normas e costumes de um grupo social.",
       "1": "Cultura é estática e imutável ao longo do tempo.",
@@ -68,7 +68,7 @@
       "3": "A cultura influencia a forma como as pessoas pensam, agem e interagem."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura é dinâmica e está em constante transformação, influenciada por diversos fatores como contato entre grupos, avanços tecnológicos e mudanças sociais."
   },
   {
@@ -80,7 +80,7 @@
       "3": "Criação de espaços para a livre expressão cultural e artística."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A indústria cultural, segundo Adorno e Horkheimer, transforma a cultura em mercadoria, padronizando produtos culturais e influenciando o pensamento e o comportamento das massas."
   },
   {
@@ -92,7 +92,7 @@
       "3": "Uma manifestação folclórica local transmitida oralmente."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Filmes de grande sucesso, com ampla divulgação e distribuição, são típicos produtos da indústria cultural, visando o consumo em massa."
   },
   {
@@ -104,7 +104,7 @@
       "3": "Sua capacidade de alienar e manipular o público, enfraquecendo o pensamento crítico."
     },
     "correta": 3,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Os críticos da indústria cultural argumentam que ela simplifica e padroniza os produtos culturais, limitando a capacidade das pessoas de refletir criticamente sobre a realidade."
   },
   {
@@ -116,7 +116,7 @@
       "3": "A coexistência pacífica de diversas culturas em uma mesma sociedade."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A hegemonia cultural ocorre quando a visão de mundo da classe dominante se torna a visão de mundo 'natural' e aceita pela maioria, mesmo que não sirva aos seus próprios interesses."
   },
   {
@@ -128,7 +128,7 @@
       "3": "O fortalecimento das tradições locais e a valorização das manifestações culturais populares."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Os meios de comunicação de massa permitiram a disseminação de informações e produtos culturais para um grande número de pessoas simultaneamente, moldando a cultura de massas."
   },
   {
@@ -140,7 +140,7 @@
       "3": "Uma diminuição da influência da mídia tradicional."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A internet e as redes sociais democratizaram parcialmente a produção e o consumo de informação, permitindo que os usuários se tornem também produtores de conteúdo e interajam de forma mais direta."
   },
   {
@@ -152,7 +152,7 @@
       "3": "As relações sociais são baseadas principalmente na comunicação face a face."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "Na sociedade da informação, o acesso, o processamento e a disseminação da informação são cruciais para o desenvolvimento econômico e social."
   },
   {
@@ -164,7 +164,7 @@
       "3": "O excesso de conteúdo educativo e a falta de opções de lazer."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A ampla disseminação de produtos culturais padronizados pode levar à perda de identidades culturais específicas e à uniformização de gostos e valores."
   },
   {
@@ -176,7 +176,7 @@
       "3": "A diminuição do impacto das redes sociais na formação da opinião pública."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A velocidade e a falta de filtros nas mídias digitais facilitam a propagação de informações falsas, com potenciais impactos na opinião pública e nos processos democráticos."
   },
   {
@@ -188,7 +188,7 @@
       "3": "Trabalho em equipe e multifuncionalidade dos trabalhadores."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "O toyotismo se diferencia do fordismo justamente por priorizar a flexibilidade e a produção sob demanda, em contraposição à produção em massa e aos grandes estoques."
   },
   {
@@ -200,7 +200,7 @@
       "3": "Apoiar artistas independentes e produções alternativas."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A indústria do entretenimento visa principalmente o divertimento e o consumo, muitas vezes com menor preocupação com o conteúdo crítico ou a profundidade cultural."
   },
   {
@@ -212,7 +212,7 @@
       "3": "Uma separação clara entre produtores e consumidores de conteúdo."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura participativa é marcada pela descentralização da produção de conteúdo e pelo engajamento ativo dos usuários nas plataformas digitais."
   },
   {
@@ -224,7 +224,7 @@
       "3": "O uso intensivo de estratégias de marketing e publicidade."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura de massas tende a homogeneizar gostos e valores, o que pode ir de encontro à valorização das particularidades culturais de cada local."
   },
   {
@@ -236,7 +236,7 @@
       "3": "Produzir conteúdo para as diversas plataformas digitais."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A alfabetização midiática capacita os indivíduos a compreenderem a complexidade dos meios de comunicação e a avaliarem criticamente as informações que recebem."
   },
   {
@@ -248,7 +248,7 @@
       "3": "Diminuição da desigualdade salarial entre diferentes profissões."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A 'uberização' caracteriza-se pela intermediação digital entre trabalhadores e consumidores, muitas vezes com relações de trabalho flexíveis e sem os mesmos direitos do emprego tradicional."
   },
   {
@@ -260,7 +260,7 @@
       "3": "Tentativa de alcançar o maior público possível."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A indústria cultural tende a evitar a experimentação radical que possa não ser facilmente assimilada pelo grande público, priorizando fórmulas de sucesso e produtos de fácil consumo."
   },
   {
@@ -272,7 +272,7 @@
       "3": "Um ambiente online seguro e livre de notícias falsas."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A bolha de filtro pode limitar a exposição a diferentes perspectivas, reforçando vieses e dificultando o debate plural."
   },
   {
@@ -284,7 +284,7 @@
       "3": "A dificuldade de comunicação entre trabalhadores remotos."
     },
     "correta": 2,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A automação de tarefas e a crescente capacidade da inteligência artificial levantam preocupações sobre a substituição de trabalhadores humanos em diversas áreas."
   },
   {
@@ -296,7 +296,7 @@
       "3": "Uma resistência homogênea das culturas locais aos produtos da mídia de massa."
     },
     "correta": 1,
-    "materia": "Sociologia",
+    "materia": "sociologia",
     "explicacao": "A cultura de massas, através de seus produtos e narrativas, oferece referências e modelos que podem influenciar a forma como os indivíduos e grupos constroem suas identidades."
   }
 ]
