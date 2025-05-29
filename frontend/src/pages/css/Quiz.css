@@ -10,14 +10,6 @@
 }
 /* .quiz-page-container::before não é mais necessário sem a imagem de fundo */
 
-
-/* Customizações para o header global na página de Quiz */
-.quiz-custom-header.app-header {
-  /* Estilos globais do app-header são suficientes */
-  /* Se quiser uma borda inferior para separar do conteúdo: */
-  /* border-bottom: 1px solid var(--color-primary-light, #106bac); */
-}
-
 /* Conteúdo principal da página de Quiz */
 .quiz-main-content {
   display: flex;
