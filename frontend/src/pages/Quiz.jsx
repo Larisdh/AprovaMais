@@ -141,15 +141,15 @@ export default function Quiz() {
 
   const HeaderQuiz = ({ titleOverride }) => (
     <header className="app-header quiz-custom-header">
-      <Link to="/home" className="app-header-logo-link">
-        <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
-      </Link>
-      <h1 className="app-header-page-title">{titleOverride || `Quiz - ${materia}`}</h1>
-      <nav className="app-header-nav quiz-custom-nav">
-        <Link to="/home" className="app-header-nav-link">Início</Link>
-        <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
-      </nav>
-    </header>
+  <Link to="/home" className="app-header-logo-link"> {/* Alterado para redirecionar à página Home */}
+    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+  </Link>
+  <h1 className="app-header-page-title">{titleOverride || `Quiz - ${materia}`}</h1>
+  <nav className="app-header-nav quiz-custom-nav">
+    <Link to="/home" className="app-header-nav-link">Início</Link>
+    <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
+  </nav>
+</header>
   );
 
   if (carregando) {
@@ -231,62 +231,75 @@ export default function Quiz() {
   const perguntaAtual = perguntas[indice];
 
   return (
-    <div className="page-container quiz-page-container">
-      <HeaderQuiz />
-      <main className="quiz-main-content">
-        <div 
-            key={perguntaAtual.key}
-            className={`quiz-card ${applyCardAnimation ? 'animate-card-enter' : ''}`}
-        >
-          <div className="quiz-question-text">
-            {perguntaAtual.textos?.map((textoItem, idx) => (
-              <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
-                {typeof textoItem === "object" ? textoItem.conteudo : textoItem}
-              </p>
-            ))}
-          </div>
-
-          <div className="quiz-options">
-            {perguntaAtual.alternativas.map((alt, i) => {
-              let buttonClass = "quiz-option-button";
-              if (respostaSelecionada !== null) {
-                if (i === perguntaAtual.correta) {
-                  buttonClass += " correct";
-                } else if (i === respostaSelecionada) {
-                  buttonClass += " incorrect";
-                } else {
-                  buttonClass += " disabled";
-                }
+  <div className="page-container quiz-page-container">
+    <HeaderQuiz />
+    <main className="quiz-main-content">
+      <div
+        key={perguntaAtual.key}
+        className={`quiz-card ${applyCardAnimation ? "animate-card-enter" : ""}`}
+      >
+        {/* Texto da pergunta permanece visível */}
+        <div className="quiz-question-text">
+          {perguntaAtual.textos?.map((textoItem, idx) => (
+            <p
+              key={idx}
+              className={
+                idx === 0
+                  ? "quiz-question-main-text"
+                  : "quiz-question-support-text"
               }
-
-              return (
-                <button
-                  key={i}
-                  onClick={() => responder(i)}
-                  disabled={respostaSelecionada !== null}
-                  className={buttonClass}
-                >
-                  <span className="quiz-option-letter">{String.fromCharCode(65 + i)})</span>
-                  {alt}
-                </button>
-              );
-            })}
-          </div>
-
-          <div className="quiz-progress-indicator">
-            Pergunta {indice + 1} de {perguntas.length}
-          </div>
-
-          <div className="quiz-actions">
-            <button
-              onClick={() => navigate("/home")}
-              className="button button--secondary quiz-action-button"
             >
-              Escolher Matéria
-            </button>
-          </div>
+              {typeof textoItem === "object" ? textoItem.conteudo : textoItem}
+            </p>
+          ))}
         </div>
-      </main>
-    </div>
-  );
+
+        {/* Alternativas com cores de certo/errado */}
+        <div className="quiz-options">
+          {perguntaAtual.alternativas.map((alt, i) => {
+            let buttonClass = "quiz-option-button";
+            if (respostaSelecionada !== null) {
+              if (i === perguntaAtual.correta) {
+                buttonClass += " correct"; // Verde para resposta correta
+              } else if (i === respostaSelecionada) {
+                buttonClass += " incorrect"; // Vermelho para resposta errada
+              } else {
+                buttonClass += " disabled"; // Desabilitado para outras opções
+              }
+            }
+
+            return (
+              <button
+                key={i}
+                onClick={() => responder(i)}
+                disabled={respostaSelecionada !== null}
+                className={buttonClass}
+              >
+                <span className="quiz-option-letter">
+                  {String.fromCharCode(65 + i)}) {/* Letra da alternativa */}
+                </span>
+                {alt}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Indicador de progresso */}
+        <div className="quiz-progress-indicator">
+          Pergunta {indice + 1} de {perguntas.length}
+        </div>
+
+        {/* Botão para escolher matéria */}
+        <div className="quiz-actions">
+          <button
+            onClick={() => navigate("/home")}
+            className="button button--secondary quiz-action-button"
+          >
+            Escolher Matéria
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+);
 }

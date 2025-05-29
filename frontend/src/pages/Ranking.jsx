@@ -73,22 +73,22 @@ function Ranking() {
     <div className="page-container ranking-page-container">
       {/* Reutilizando o app-header global */}
       <header className="app-header ranking-custom-header">
-        <Link to="/" className="app-header-logo-link">
-          <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
-        </Link>
-        <h1 className="app-header-page-title">Ranking Geral</h1>
-        <nav className="app-header-nav ranking-custom-nav">
-          <Link to="/home" className="app-header-nav-link">
-            Início
-          </Link>
-          <Link to="/ranking" className="app-header-nav-link active"> {/* Adiciona classe 'active' */}
-            Ranking
-          </Link>
-          <Link to="/perfil" className="app-header-nav-link">
-            Perfil
-          </Link>
-        </nav>
-      </header>
+  <Link to="/home" className="app-header-logo-link"> {/* Alterado para redirecionar à página Home */}
+    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+  </Link>
+  <h1 className="app-header-page-title">Ranking Geral</h1>
+  <nav className="app-header-nav ranking-custom-nav">
+    <Link to="/home" className="app-header-nav-link">
+      Início
+    </Link>
+    <Link to="/ranking" className="app-header-nav-link active"> {/* Adiciona classe 'active' */}
+      Ranking
+    </Link>
+    <Link to="/perfil" className="app-header-nav-link">
+      Perfil
+    </Link>
+  </nav>
+</header>
 
       <main className="ranking-main-content">
         <div className="ranking-card">
