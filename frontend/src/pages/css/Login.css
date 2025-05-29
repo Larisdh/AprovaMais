@@ -95,7 +95,7 @@
 .login-box {
   /* Efeito Glassmorphism Sutil */
   background-color: rgba(var(--color-white-rgb, 255,255,255), 0.1); /* Fundo semi-transparente */
-  backdrop-filter: blur(100px) saturate(190%);
+  backdrop-filter: blur(100px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(150%); /* Para Safari */
   border-radius: var(--border-radius-lg); /* Um pouco mais arredondado */
   padding: var(--space-lg);
