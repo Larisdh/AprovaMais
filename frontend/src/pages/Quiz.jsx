@@ -3,6 +3,31 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import "./css/Quiz.css";
 
+// Mapeamento dos nomes das matérias para exibição formatada
+const nomesMateriasFormatados = {
+  historia: "História",
+  filosofia: "Filosofia",
+  sociologia: "Sociologia",
+  geografia: "Geografia",
+  matematica: "Matemática",
+  fisica: "Física",
+  quimica: "Química",
+  biologia: "Biologia",
+  portugues: "Português",
+  ingles: "Inglês",
+  espanhol: "Espanhol",
+  // Adicione mais matérias aqui conforme necessário
+};
+
+// Função para obter o nome formatado da matéria
+const getNomeMateriaFormatado = (materiaKey) => {
+  if (!materiaKey) return "Geral"; // Se não houver matéria (quiz geral)
+  // Retorna o nome formatado do objeto, ou capitaliza o original como fallback
+  return nomesMateriasFormatados[materiaKey.toLowerCase()] || 
+         (materiaKey.charAt(0).toUpperCase() + materiaKey.slice(1));
+};
+
+
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -10,10 +35,11 @@ function useQuery() {
 export default function Quiz() {
   const navigate = useNavigate();
   const query = useQuery();
-  // Se 'materia' não estiver na URL, query.get("materia") será null.
-  // O || "Indefinida" garante que temos um valor, mas podemos tratar null/undefined diretamente.
-  const materiaParam = query.get("materia"); // Pegar o parâmetro como está
+  const materiaParam = query.get("materia"); // ex: "historia", ou null se for geral
   const quantidade = parseInt(query.get("questions"), 10) || 10;
+
+  // Obtém o nome da matéria formatado para exibição
+  const nomeMateriaExibicao = getNomeMateriaFormatado(materiaParam);
 
   const [perguntas, setPerguntas] = useState([]);
   const [indice, setIndice] = useState(0);
@@ -27,7 +53,6 @@ export default function Quiz() {
 
   useEffect(() => {
     const buscarPerguntas = async () => {
-      // Validação da quantidade
       if (!quantidade || quantidade <= 0) {
         setErro("Quantidade de perguntas inválida.");
         setCarregando(false);
@@ -38,13 +63,10 @@ export default function Quiz() {
         setCarregando(true);
         setErro(null);
         
-        // Constrói a URL base
         let apiUrl = `http://localhost:3000/api/perguntas?quantidade=${quantidade}`;
-        // Adiciona o parâmetro 'materia' apenas se materiaParam tiver um valor
-        if (materiaParam) {
+        if (materiaParam) { // USA materiaParam (ex: "historia") para a API
           apiUrl += `&materia=${materiaParam}`;
         }
-        // Se materiaParam for null/undefined, o backend não filtrará por matéria.
 
         const response = await fetch(apiUrl);
 
@@ -56,8 +78,8 @@ export default function Quiz() {
         }
         const data = await response.json();
         if (data.length === 0) {
-          const materiaNome = materiaParam ? `"${materiaParam}"` : "gerais";
-          setErro(`Nenhuma pergunta encontrada para ${materiaNome}. Tente outra configuração.`);
+          const materiaNomeErro = materiaParam ? `"${nomeMateriaExibicao}"` : "gerais";
+          setErro(`Nenhuma pergunta encontrada para ${materiaNomeErro}. Tente outra configuração.`);
         } else {
           setPerguntas(data.map(p => ({...p, key: Math.random().toString(36).substring(7) })));
           setApplyCardAnimation(true);
@@ -70,7 +92,7 @@ export default function Quiz() {
     };
 
     buscarPerguntas();
-  }, [materiaParam, quantidade]); // Depende de materiaParam e quantidade
+  }, [materiaParam, quantidade, nomeMateriaExibicao]); // Adicionado nomeMateriaExibicao por causa da mensagem de erro
 
   useEffect(() => {
     const salvarResultadoNoBackend = async () => {
@@ -85,7 +107,7 @@ export default function Quiz() {
                 userId: user.uid,
                 acertos: resultadoFinal,
                 total: perguntas.length,
-                materia: materiaParam || "Geral", // Usa "Geral" se materiaParam for null/undefined
+                materia: materiaParam || "Geral", // USA materiaParam ou "Geral" para a API
               }),
             });
             if (!response.ok) {
@@ -102,7 +124,7 @@ export default function Quiz() {
       }
     };
     salvarResultadoNoBackend();
-  }, [quizFinalizado, resultadoFinal, perguntas, materiaParam]); // Depende de materiaParam
+  }, [quizFinalizado, resultadoFinal, perguntas, materiaParam]);
 
   function responder(indiceAlternativa) {
     if (!perguntas.length || indice >= perguntas.length || respostaSelecionada !== null) return;
@@ -142,7 +164,7 @@ export default function Quiz() {
 
   const reiniciarQuiz = () => {
     let quizUrl = `/quiz?questions=${quantidade}`;
-    if (materiaParam) {
+    if (materiaParam) { // USA materiaParam para a URL
       quizUrl += `&materia=${materiaParam}`;
     }
     quizUrl += `&rerun=${Math.random().toString(36).substring(7)}`;
@@ -150,8 +172,8 @@ export default function Quiz() {
   };
 
   const HeaderQuiz = ({ titleOverride }) => {
-    // Determina o título do quiz com base na presença de materiaParam
-    const quizTitle = materiaParam ? `Quiz - ${materiaParam.charAt(0).toUpperCase() + materiaParam.slice(1)}` : "Quiz Geral";
+    // USA nomeMateriaExibicao para o título
+    const quizTitle = `Quiz - ${nomeMateriaExibicao}`;
     return (
       <header className="app-header quiz-custom-header">
         <Link to="/home" className="app-header-logo-link">
@@ -168,7 +190,6 @@ export default function Quiz() {
   
 
   if (carregando) {
-    // ... (código de carregamento inalterado) ...
     return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Carregando Quiz" />
@@ -183,7 +204,6 @@ export default function Quiz() {
   }
 
   if (erro) {
-    // ... (código de erro inalterado) ...
      return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Erro no Quiz" />
@@ -200,8 +220,6 @@ export default function Quiz() {
   }
 
   if (quizFinalizado) {
-    // ... (código de quiz finalizado, mas ajustando a exibição da matéria) ...
-    const materiaExibida = materiaParam ? materiaParam.charAt(0).toUpperCase() + materiaParam.slice(1) : "Geral";
     return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Resultado do Quiz" />
@@ -209,7 +227,8 @@ export default function Quiz() {
           <div className="quiz-feedback-container quiz-result-container">
             <h2 className="quiz-result-title">🎉 Quiz Finalizado! 🎉</h2>
             <p className="quiz-result-score">
-              Você acertou {resultadoFinal} de {perguntas.length} perguntas em {materiaExibida}!
+              {/* USA nomeMateriaExibicao para a mensagem de resultado */}
+              Você acertou {resultadoFinal} de {perguntas.length} perguntas em {nomeMateriaExibicao}!
             </p>
             <div className="quiz-result-actions">
               <button
@@ -222,7 +241,8 @@ export default function Quiz() {
                 onClick={reiniciarQuiz}
                 className="button button--secondary"
               >
-                Jogar Novamente ({materiaExibida})
+                {/* USA nomeMateriaExibicao para o botão de reiniciar */}
+                Jogar Novamente ({nomeMateriaExibicao})
               </button>
             </div>
           </div>
@@ -232,7 +252,6 @@ export default function Quiz() {
   }
   
   if (!perguntas.length || !perguntas[indice]) {
-    // ... (código de 'sem pergunta' inalterado) ...
      return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Erro no Quiz" />
@@ -251,7 +270,6 @@ export default function Quiz() {
   const perguntaAtual = perguntas[indice];
 
   return (
-    // ... (JSX principal do quiz inalterado, exceto o HeaderQuiz que já pega o título dinâmico) ...
     <div className="page-container quiz-page-container">
       <HeaderQuiz />
       <main className="quiz-main-content">
