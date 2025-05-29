@@ -1,51 +1,67 @@
+// src/pages/PerfilScreen.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
-import "./css/Perfil.css";
+import "./css/Perfil.css"; // CSS específico do Perfil
 
 export default function PerfilScreen() {
-  const [user] = useAuthState(auth);
+  const [user, loadingAuth, errorAuth] = useAuthState(auth); // Adicionando loading e error do hook
 
   const [nome, setNome] = useState("");
   const [objetivo, setObjetivo] = useState("");
   const [prova, setProva] = useState("");
   const [materias, setMaterias] = useState("");
   const [rotina, setRotina] = useState("");
+  const [carregandoPerfil, setCarregandoPerfil] = useState(true);
+  const [erroPerfil, setErroPerfil] = useState(null);
+  const [salvando, setSalvando] = useState(false);
+
 
   useEffect(() => {
-    if (!user) return;
-
-    async function carregarPerfil() {
-      try {
-        const refUser = doc(db, "usuarios", user.uid);
-        const snap = await getDoc(refUser);
-
-        if (snap.exists()) {
-          const data = snap.data();
-          setNome(data.nome || "");
-          setObjetivo(data.objetivo || "");
-          setProva(data.prova || "");
-          setMaterias(data.materias || "");
-          setRotina(data.rotina || "");
-        } else {
-          console.log("Perfil ainda não existe.");
-        }
-      } catch (err) {
-        console.error("Erro ao carregar perfil:", err);
-      }
+    if (!user && !loadingAuth) { // Se não houver usuário e autenticação não estiver carregando
+      setCarregandoPerfil(false);
+      // Poderia redirecionar para o login aqui se desejado
+      // navigate("/login");
+      return;
     }
+    if (user) {
+      async function carregarPerfil() {
+        setCarregandoPerfil(true);
+        setErroPerfil(null);
+        try {
+          const refUser = doc(db, "usuarios", user.uid);
+          const snap = await getDoc(refUser);
 
-    carregarPerfil();
-  }, [user]);
+          if (snap.exists()) {
+            const data = snap.data();
+            setNome(data.nome || "");
+            setObjetivo(data.objetivo || "");
+            setProva(data.prova || "");
+            setMaterias(data.materias || "");
+            setRotina(data.rotina || "");
+          } else {
+            console.log("Perfil ainda não existe, usuário pode preencher.");
+          }
+        } catch (err) {
+          console.error("Erro ao carregar perfil:", err);
+          setErroPerfil("Falha ao carregar dados do perfil.");
+        } finally {
+          setCarregandoPerfil(false);
+        }
+      }
+      carregarPerfil();
+    }
+  }, [user, loadingAuth]); // Adicionado loadingAuth
 
-  const handleSalvar = async () => {
+  const handleSalvar = async (e) => {
+    e.preventDefault(); // Prevenir submit padrão se estiver em um form
     if (!user) {
       alert("Usuário não autenticado.");
       return;
     }
-
+    setSalvando(true);
     try {
       await setDoc(doc(db, "usuarios", user.uid), {
         nome: nome || "",
@@ -54,89 +70,168 @@ export default function PerfilScreen() {
         materias: materias || "",
         rotina: rotina || "",
       });
-
-      alert("Perfil atualizado com sucesso!");
+      alert("Perfil atualizado com sucesso!"); // Idealmente, usar um toast/notificação
     } catch (error) {
       console.error("Erro ao salvar perfil:", error);
-      alert("Erro ao salvar perfil.");
+      alert("Erro ao salvar perfil."); // Idealmente, usar um toast/notificação
+    } finally {
+      setSalvando(false);
     }
   };
 
+  // Se autenticação ainda está carregando
+  if (loadingAuth) {
+    return (
+      <div className="page-container perfil-page-container">
+        {/* Pode usar o mesmo spinner da página de Quiz */}
+        <div className="perfil-feedback-container">
+          <p className="perfil-feedback-text">Verificando autenticação...</p>
+          <div className="quiz-spinner"></div> {}
+        </div>
+      </div>
+    );
+  }
+
+  // Se não há usuário logado (após autenticação terminar)
+  if (!user) {
+    return (
+        <div className="page-container perfil-page-container">
+            <header className="app-header perfil-custom-header">
+                <Link to="/" className="app-header-logo-link">
+                    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+                </Link>
+                <h1 className="app-header-page-title">Perfil</h1>
+            </header>
+            <main className="perfil-main-content">
+                <div className="perfil-feedback-container">
+                    <p className="perfil-feedback-text">Você precisa estar logado para ver seu perfil.</p>
+                    <Link to="/login" className="button button--primary">Ir para Login</Link>
+                </div>
+            </main>
+        </div>
+    );
+  }
+
+
   return (
-    <>
-      <header className="perfil-header">
-        <span className="perfil-title">Perfil</span>
-        <nav className="perfil-nav">
-          <Link
-            to="/home"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              transition: "color 0.3s ease-in-out",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
-            onMouseLeave={(e) => (e.target.style.color = "white")}
-          >
-            Página Inicial
+    // Adiciona page-container para consistência com outras páginas
+    <div className="page-container perfil-page-container">
+      {/* Reutilizando o app-header global com customizações se necessário */}
+      <header className="app-header perfil-custom-header">
+        <Link to="/" className="app-header-logo-link">
+          <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+        </Link>
+        <h1 className="app-header-page-title">Meu Perfil</h1>
+        <nav className="app-header-nav perfil-custom-nav">
+          <Link to="/home" className="app-header-nav-link">
+            Início
           </Link>
-          <Link
-            to="/ranking"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              transition: "color 0.3s ease-in-out",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
-            onMouseLeave={(e) => (e.target.style.color = "white")}
-          >
+          <Link to="/ranking" className="app-header-nav-link">
             Ranking
           </Link>
-          <img src="/Logo.png" alt="Logo ENEM" className="perfil-logo" />
         </nav>
       </header>
 
-      <div className="container">
-        <div className="profile-info">
-          <label>👤 Nome:</label>
-          <input
-            type="text"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-          />
+      <main className="perfil-main-content">
+        {carregandoPerfil ? (
+          <div className="perfil-feedback-container">
+            <p className="perfil-feedback-text">Carregando perfil...</p>
+            <div className="quiz-spinner"></div> {/* Reutilizando spinner */}
+          </div>
+        ) : erroPerfil ? (
+          <div className="perfil-feedback-container error-container">
+            <p className="perfil-feedback-text error-text">{erroPerfil}</p>
+          </div>
+        ) : (
+          // Formulário envolto em um 'card' para estilização
+          <form className="perfil-form-card" onSubmit={handleSalvar}>
+            <h2 className="perfil-form-title">Informações Pessoais</h2>
+            
+            {/* Seção de Imagem de Perfil (opcional, adicione a lógica se for usar) */}
+            {/* 
+            <div className="perfil-pic-section">
+              <div className="profile-pic-wrapper">
+                <div 
+                  className="profile-pic" 
+                  style={{ backgroundImage: `url(${user.photoURL || '/default-avatar.png'})` }}
+                  aria-label="Foto do perfil"
+                ></div>
+              </div>
+              <div className="profile-pic-actions">
+                <button type="button" className="button button--outline mudar-foto-btn">Mudar Foto</button>
+                <button type="button" className="button button--danger remover-foto-btn">Remover Foto</button>
+              </div>
+            </div>
+            */}
 
-          <label>🎯 Objetivo:</label>
-          <input
-            type="text"
-            value={objetivo}
-            onChange={(e) => setObjetivo(e.target.value)}
-          />
+            <div className="form-grid">
+              <div className="form-group">
+                <label htmlFor="nome" className="form-label">👤 Nome Completo:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  className="form-input"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  placeholder="Seu nome como será exibido"
+                />
+              </div>
 
-          <label>📚 Estuda para:</label>
-          <input
-            type="text"
-            value={prova}
-            onChange={(e) => setProva(e.target.value)}
-          />
+              <div className="form-group">
+                <label htmlFor="objetivo" className="form-label">🎯 Seu Principal Objetivo:</label>
+                <input
+                  type="text"
+                  id="objetivo"
+                  className="form-input"
+                  value={objetivo}
+                  onChange={(e) => setObjetivo(e.target.value)}
+                  placeholder="Ex: Ser aprovado em Medicina na USP"
+                />
+              </div>
 
-          <label>🧠 Matérias de maior Interesse:</label>
-          <textarea
-            value={materias}
-            onChange={(e) => setMaterias(e.target.value)}
-            rows={4}
-          />
+              <div className="form-group">
+                <label htmlFor="prova" className="form-label">📚 Estuda para qual prova?</label>
+                <input
+                  type="text"
+                  id="prova"
+                  className="form-input"
+                  value={prova}
+                  onChange={(e) => setProva(e.target.value)}
+                  placeholder="Ex: ENEM, FUVEST, Vestibular específico"
+                />
+              </div>
+            </div> {/* Fim do form-grid */}
+            
+            <div className="form-group">
+              <label htmlFor="materias" className="form-label">🧠 Matérias de Maior Interesse/Foco:</label>
+              <textarea
+                id="materias"
+                className="form-textarea"
+                value={materias}
+                onChange={(e) => setMaterias(e.target.value)}
+                rows={4}
+                placeholder="Liste as matérias que você mais se dedica ou tem interesse"
+              />
+            </div>
 
-          <label>📅 Rotina de Estudos:</label>
-          <textarea
-            value={rotina}
-            onChange={(e) => setRotina(e.target.value)}
-            rows={4}
-          />
+            <div className="form-group">
+              <label htmlFor="rotina" className="form-label">📅 Descreva sua Rotina de Estudos:</label>
+              <textarea
+                id="rotina"
+                className="form-textarea"
+                value={rotina}
+                onChange={(e) => setRotina(e.target.value)}
+                rows={4}
+                placeholder="Como você organiza seus estudos? Manhã, tarde, noite? Quantas horas?"
+              />
+            </div>
 
-          <button className="save-button" onClick={handleSalvar}>
-            Salvar
-          </button>
-        </div>
-      </div>
-    </>
+            <button type="submit" className="button button--primary perfil-save-button" disabled={salvando}>
+              {salvando ? "Salvando..." : "Salvar Alterações"}
+            </button>
+          </form>
+        )}
+      </main>
+    </div>
   );
 }

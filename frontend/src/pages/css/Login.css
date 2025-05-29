@@ -1,171 +1,343 @@
-.login-body {
-  min-height: 100vh;
-  width: 100vw;
+/* No seu arquivo de variáveis globais (ex: :root) */
+:root {
+  /* ... suas variáveis existentes ... */
+  --color-primary-rgb: 10, 81, 142; /* Exemplo, ajuste para sua --color-primary */
+  --color-background-element-rgb: 240, 242, 245; /* Exemplo, ajuste para sua --color-background-element */
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0, 0, 0;
+
+  /* Novas sombras mais suaves ou com profundidade */
+  --shadow-input-focus: 0 0 0 3px rgba(var(--color-primary-rgb), 0.2);
+  --shadow-card-hover: 0 10px 20px rgba(var(--color-black-rgb), 0.1), 0 3px 6px rgba(var(--color-black-rgb), 0.08);
+  --shadow-button-hover: 0 4px 12px rgba(var(--color-primary-rgb), 0.15);
+}
+/* src/pages/css/Login.css */
+
+/* Container principal da página de login */
+.login-page-container {
   background-image: url('https://jwnews.com.br/wp-content/uploads/2024/08/enem1.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-attachment: scroll; /* PADRÃO/MELHOR PARA MOBILE */
+  position: relative;
+  min-height: 100vh; /* Garante que ocupe toda a altura da viewport */
+  display: flex; /* Para centralizar o conteúdo verticalmente se necessário */
+  flex-direction: column; /* Mantém o fluxo do header e main */
+}
+
+.login-page-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Overlay um pouco mais escuro e com um leve gradiente para profundidade */
+  background: linear-gradient(180deg, rgba(var(--color-black-rgb, 0,0,0), 0.4) 0%, rgba(var(--color-black-rgb, 0,0,0), 0.65) 100%);
+  z-index: 0;
+}
+
+/* Header customizado para a página de login */
+.login-custom-header.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-max-width);
+  z-index: 2;
+  /* Adiciona um leve fundo para destacar do background, se necessário */
+  /* background-color: rgba(var(--color-background-element-rgb), 0.1); */
+  /* backdrop-filter: blur(5px); */ /* Efeito de vidro sutil no header */
+}
+
+/* Conteúdo principal da página de login */
+.login-main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Roboto', Sans-serif; /* Fonte mais moderna */
-  color: #333; /* Cor de texto padrão */
+  justify-content: center; /* Centraliza o wrapper verticalmente */
+  flex-grow: 1;
+  padding: var(--space-md);
+  padding-top: calc(var(--header-height-mobile, 6rem) + var(--space-lg));
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  /* Animação suave de entrada */
+  animation: fadeInContent 0.6s ease-out forwards;
 }
 
-.login-header {
-  background-color: #0a518e; /* Mantido */
-  width: 95.7%;
-  padding: 1.5rem 2rem; /* Mais espaçamento */
-  color: white;
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Wrapper para os boxes de formulário e social */
+.login-content-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  border-bottom-left-radius: 1.5rem; /* Bordas mais arredondadas */
-  border-bottom-right-radius: 1.5rem;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais moderna */
-}
-
-.login-title {
-  font-size: 2rem; /* Fonte maior */
-  font-weight: 900; /* Peso mais forte */
-  text-align: center;
-  border-bottom: 2px solid white; /* Linha mais grossa */
-  display: inline-block;
-  letter-spacing: 0.05em; /* Espaçamento entre letras */
-  font-family: inherit; /* Restaura a fonte herdada ou padrão */
-}
-
-.login-nav {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  font-size: 1rem;
-}
-
-.login-logo {
-  height: 5rem;
-  transition: transform 0.3s ease-in-out; /* Efeito de hover */
-}
-
-.login-logo:hover {
-  transform: scale(1.1); /* Aumenta levemente no hover */
-}
-
-.login-box {
-  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
-  border-radius: 2rem;
-  padding: 2.5rem; /* Mais espaçamento */
-  margin-top: 4rem;
-  width: 90%;
+  gap: var(--space-lg);
+  width: 100%;
   max-width: 400px;
+}
+
+/* Estilo base para os "cards" de login */
+.login-box {
+  /* Efeito Glassmorphism Sutil */
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 0.1); /* Fundo semi-transparente */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%); /* Para Safari */
+  border-radius: var(--border-radius-lg); /* Um pouco mais arredondado */
+  padding: var(--space-lg);
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais moderna */
+  gap: var(--space-md);
+  box-shadow: 0 8px 32px 0 rgba(var(--color-black-rgb,0,0,0), 0.15), var(--shadow-md); /* Sombra mais elaborada */
+  border: 1px solid rgba(var(--color-white-rgb, 255,255,255), 0.18); /* Borda sutil para o efeito glass */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Para hover sutil */
 }
 
-.login-input {
-  padding: 1rem;
-  border-radius: 2rem;
-  border: 1px solid #ccc; /* Adiciona uma borda leve */
-  background-color: #f0f8ff; /* Azul claro */
-  color: #333;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: border-color 0.3s ease-in-out;
-}
+/* Efeito de hover no card (opcional) */
+/* .login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+} */
 
-.login-input:focus {
-  border-color: #0a518e; /* Destaque ao focar */
-  outline: none;
-}
-
-.login-button {
-  background-color: #0a518e; /* Mantido */
-  color: white;
-  border: none;
-  padding: 1rem;
-  border-radius: 2rem;
-  font-weight: bold;
-  font-size: 1.1rem; /* Fonte maior */
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-.login-button:hover {
-  background-color: #083a6b; /* Cor mais escura no hover */
-  transform: translateY(-3px); /* Efeito de elevação */
-}
-
-.login-divisor {
+.login-box__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  /* Cor do título pode precisar de ajuste para contraste com o fundo "glass" */
+  color: var(--color-white, #FFFFFF); /* Teste com branco ou uma cor clara */
+  /* Se usar branco, adicione uma leve sombra de texto para legibilidade */
+  text-shadow: 0 1px 3px rgba(var(--color-black-rgb,0,0,0), 0.2);
   text-align: center;
-  font-weight: bold;
-  color: #555; /* Cor mais suave */
+  margin-bottom: var(--space-xs);
 }
 
-.login-error {
-  color: #f44336; /* Vermelho mais vibrante */
-  font-weight: bold;
-  text-align: center;
-}
-
-.login-google {
-  align-items: center;
-  padding: 1rem;
+.form-group {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+  position: relative; /* Para posicionar ícones ou labels flutuantes, se desejar */
+}
+.form-label.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.login-input.form-input {
+  padding: var(--space-sm) var(--space-md);
+  padding-left: calc(var(--space-md) + 5px); /* Mais espaço se for adicionar ícone */
+  border-radius: var(--border-radius-md); /* Um pouco mais arredondado que sm */
+  border: 1px solid rgba(var(--color-white-rgb, 255,255,255), 0.3); /* Borda sutil para o input */
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 0.15); /* Fundo levemente transparente */
+  color: var(--color-white, #FFFFFF); /* Texto do input branco/claro */
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  width: 100%;
+}
+.login-input.form-input::placeholder {
+  color: rgba(var(--color-white-rgb, 255,255,255), 0.6); /* Placeholder mais claro */
+}
+.login-input.form-input:focus {
+  border-color: rgba(var(--color-white-rgb, 255,255,255), 0.7);
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 0.25); /* Levemente mais opaco no foco */
+  box-shadow: var(--shadow-input-focus); /* Sombra de foco mais moderna */
+  outline: none;
+  color: var(--color-white, #FFFFFF); /* Garante que o texto digitado seja branco */
+}
+
+/* Estilo para quando o input é preenchido (opcional, via JS ou :not(:placeholder-shown)) */
+.login-input.form-input:not(:placeholder-shown) {
+  border-color: rgba(var(--color-white-rgb, 255,255,255), 0.5);
+}
+
+
+.login-button.button {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 1.5rem;
+  border-radius: var(--border-radius-md); /* Consistência */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out, filter 0.2s ease-out;
+  will-change: transform, box-shadow; /* Otimização para transições */
+  /* Certifique-se que .button--primary e .button--secondary tenham cores que contrastem bem */
+}
+.login-button.button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-hover);
+  filter: brightness(1.1); /* Deixa um pouco mais claro/brilhante */
+}
+.login-button.button:active {
+  transform: translateY(0px);
+  filter: brightness(0.9); /* Deixa um pouco mais escuro ao clicar */
+  box-shadow: inset 0 2px 4px rgba(var(--color-black-rgb,0,0,0), 0.1);
+}
+
+
+/* Separador "ou" */
+.login-social-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(var(--color-white-rgb, 255,255,255), 0.7); /* Cor do texto "ou" */
+  width: 100%;
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0;
+}
+.login-divisor__line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 0.3); /* Linha divisória */
+}
+.login-divisor__text {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.login-social-box {
+  padding: var(--space-md);
+  /* O glassmorphism já vem de .login-box */
+}
+
+.login-button-google.button {
+  /* Ajuste para o tema glass/claro */
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 0.9); /* Fundo quase opaco para destacar o logo do Google */
+  color: #333; /* Texto escuro para contraste */
+  border: 1px solid rgba(var(--color-white-rgb, 255,255,255), 0.5);
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  background-color: #f5f5f5; /* Fundo claro */
-  border-radius: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-sm); /* Sombra sutil */
+}
+.login-button-google.button:hover {
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 1); /* Totalmente branco no hover */
+  border-color: rgba(var(--color-black-rgb,0,0,0),0.1);
+  box-shadow: var(--shadow-button-hover); /* Usa a sombra de botão genérica */
+  transform: translateY(-2px);
+  color: #222;
+}
+.login-button-google.button:active {
+  background-color: rgba(var(--color-white-rgb, 255,255,255), 0.85);
+  transform: translateY(0);
+  filter: none; /* Reseta o filter do botão genérico se necessário */
 }
 
-.login-google:hover {
-  background-color: #e0e0e0; /* Fundo mais escuro no hover */
-  transform: translateY(-3px); /* Efeito de elevação */
+.google-icon-svg {
+  width: 20px; /* Aumentado um pouco */
+  height: 20px;
 }
 
-/* Media query para dispositivos móveis */
-@media (max-width: 768px) {
-  .login-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+.login-error.form-message--error {
+  /* Ajuste para melhor contraste com o fundo glass */
+  color: var(--color-error-dark, #b71c1c); /* Cor de texto de erro mais escura */
+  background-color: rgba(255, 232, 232, 0.9); /* Fundo de erro com opacidade */
+  padding: var(--space-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(var(--color-error-rgb, 222, 55, 55), 0.5); /* Borda de erro com opacidade */
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+  margin-top: var(--space-xs); /* Adiciona um pouco de espaço acima */
+  box-shadow: 0 2px 4px rgba(var(--color-black-rgb,0,0,0),0.1);
+}
+
+
+/* ======== RESPONSIVIDADE - A PARTIR DE TABLET (min-width) ======== */
+
+@media (min-width: 768px) {
+  .login-page-container {
+    background-attachment: fixed;
   }
 
-  .login-title {
-    font-size: 1.8rem; /* Fonte menor */
+  .login-custom-header.app-header {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* Se adicionou backdrop-filter, pode manter ou remover para desktop */
+    /* background-color: rgba(var(--color-background-element-rgb), 0.05); */
   }
 
-  .login-logo {
-    height: 4rem;
-    margin-top: 0.5rem;
+  .login-main-content {
+    padding: var(--space-xl);
+    padding-top: calc(var(--header-height-desktop, 7rem) + var(--space-xl));
   }
 
-  .login-nav {
-    flex-direction: column;
-    gap: 1rem;
+  .login-content-wrapper {
+    max-width: 420px;
+    gap: var(--space-xl);
   }
 
   .login-box {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    gap: 1rem;
+    padding: var(--space-xl); /* Padding maior para desktop */
+    gap: var(--space-lg);
+    /* A sombra pode ser um pouco mais pronunciada em desktop */
+    box-shadow: 0 12px 35px rgba(var(--color-black-rgb,0,0,0), 0.2), var(--shadow-lg);
+  }
+  .login-box__title {
+    font-size: clamp(2rem, 4vw, 2.4rem);
+    margin-bottom: var(--space-sm);
   }
 
-  .login-input {
-    font-size: 0.9rem;
-    padding: 0.75rem;
+  .login-input.form-input {
+    padding: var(--space-md) var(--space-lg);
+    font-size: 1.6rem;
+  }
+  /* .login-input.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.15); // Já definido em --shadow-input-focus
+  } */
+
+  .login-button.button {
+    padding: var(--space-md) var(--space-xl);
+    font-size: 1.6rem;
   }
 
-  .login-button {
-    font-size: 0.9rem;
-    padding: 0.75rem;
+  .login-divisor__text {
+    font-size: 1.4rem;
   }
 
-  .login-google {
-    padding: 0.5rem;
+  .login-social-box {
+    padding: var(--space-lg);
+  }
+
+  .login-error.form-message--error {
+    font-size: 1.4rem;
+  }
+}
+
+/* Para telas ainda menores, se necessário (ex: dispositivos muito pequenos) */
+@media (max-width: 360px) {
+  .login-main-content {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+    padding-top: calc(var(--header-height-mobile, 6rem) + var(--space-md));
+  }
+  .login-box {
+    padding: var(--space-md);
+    border-radius: var(--border-radius-md); /* Raio um pouco menor para telas pequenas */
+  }
+  .login-box__title {
+    font-size: 1.7rem;
+  }
+  .login-input.form-input,
+  .login-button.button {
+    font-size: 1.4rem;
+  }
+  .login-divisor__text {
+    font-size: 1.2rem;
+  }
+  .login-error.form-message--error {
+    font-size: 1.2rem;
   }
 }

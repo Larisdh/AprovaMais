@@ -1,263 +1,301 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+/* src/pages/css/Ranking.css */
 
-.ranking-body {
-  background-color: #B9DCF3;
-  font-family: 'Roboto', Sans-serif;
-  min-height: 100vh;
-  width: 100vw;
-  background-image: url('/imagem-fundo-enem.jpg');
-  background-size: cover;
-  background-position: center;
+/* Container principal da página de Ranking */
+.ranking-page-container {
+  /* Se for usar imagem de fundo, descomente e ajuste: */
+  /* background-image: url('/imagem-fundo-enem.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center center; */
+  /* background-attachment: fixed; */
+  /* background-color: var(--color-background-page); */ /* Se não usar imagem, usa o azul global */
+  
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  min-height: 100vh;
+  /* O ::before para overlay só é necessário se a imagem de fundo for muito clara */
+}
+/*
+.ranking-page-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(var(--color-black-rgb, 0,0,0), 0.3);
+  z-index: 0;
+}
+*/
+
+/* Header customizado para Ranking, mas herda de .app-header global */
+.ranking-custom-header.app-header {
+  /* Ajustes específicos aqui se o global não for suficiente.
+     Se o fundo da página for uma imagem, pode querer o header semi-transparente: */
+  /* background-color: rgba(var(--color-primary-rgb, 10, 81, 142), 0.9);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+}
+.ranking-custom-nav.app-header-nav {
+  /* Os links já são estilizados por .app-header-nav-link global */
+  /* A classe .active no link já deve ser tratada pelo CSS global do .app-header-nav-link */
 }
 
-.ranking-header {
-  background-color: #0a518e;
-  color: white;
-  padding: 1rem 4rem;
+/* Conteúdo principal */
+.ranking-main-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-  box-shadow: 0 8px 70px rgba(0, 0, 0, 0.2);
-}
-
-.ranking-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid white;
-  display: inline-block;
-}
-
-.ranking-nav {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  font-size: 1rem;
-}
-
-.ranking-nav a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.ranking-nav a:hover {
-  color: #d5f3ff;
-}
-
-.ranking-logo {
-  height: 5rem;
-  transition: transform 0.3s ease-in-out;
-}
-
-.ranking-logo:hover {
-  transform: scale(1.1);
-}
-
-.ranking-main {
+  justify-content: flex-start; /* Alinha o card no topo */
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;  /* Coluna para centralizar */
-  align-items: center;
-  padding: 2rem 1rem;
-  gap: 1rem;
+  padding: var(--space-lg, 2.4rem);
   width: 100%;
-  max-width: 600px;        /* Limita largura */
-  margin: 0 auto;
-  overflow-x: hidden;
+  position: relative; /* Para o z-index do ::before funcionar se usado */
+  z-index: 1; /* Conteúdo acima do overlay */
+  animation: rankingContentFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes rankingContentFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card principal do Ranking */
+.ranking-card {
+  background-color: var(--color-background-element, #ffffff);
+  color: var(--color-text-primary, #333);
+  width: 100%;
+  max-width: 800px; /* Pode ser um pouco maior para ranking */
+  padding: var(--space-lg, 2.4rem);
+  border-radius: var(--border-radius-lg, 16px);
+  box-shadow: var(--shadow-lg, 0 8px 16px rgba(0,0,0,0.1));
+  border: 1px solid var(--color-border-light, #e7edf3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg, 2.4rem);
+}
+
+.ranking-card-title {
+  font-family: var(--font-heading, 'Montserrat', sans-serif);
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  color: var(--color-primary-dark, #084a7e);
+  text-align: center;
+  margin-bottom: 0; /* Gap do flex container pai cuida */
+  padding-bottom: var(--space-md, 1.6rem);
+  border-bottom: 2px solid var(--color-primary-light, #106bac);
+}
+
+/* Wrapper da lista para eventual scroll interno */
+.ranking-list-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Permite scroll horizontal se a tabela for muito larga */
+}
+
+.ranking-list-header,
+.ranking-entry {
+  display: grid;
+  grid-template-columns: 60px minmax(150px, 1fr) 100px 100px; /* Posição, Nome (flexível), Pontos, % */
+  gap: var(--space-md, 1.6rem);
+  align-items: center;
+  padding: var(--space-sm, 0.8rem) var(--space-md, 1.6rem);
+  text-align: left;
   box-sizing: border-box;
 }
 
-.bar {
-  background-color: #d5f3ff;
-  padding: 1rem 1.5rem;
-  border-radius: 2rem;
-  width: 100%;
-  max-width: 500px;
-  font-weight: bold;
-  color: #003b6f;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+.ranking-list-header {
+  font-weight: 600;
+  color: var(--color-primary, #0a518e); /* Azul mais vibrante para cabeçalho */
+  border-bottom: 2px solid var(--color-primary-border, #cce7ff);
+  font-size: 1.3rem; /* Um pouco menor para cabeçalho de tabela */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--color-primary-xtra-light, #e9f5ff);
+  border-top-left-radius: var(--border-radius-sm, 6px);
+  border-top-right-radius: var(--border-radius-sm, 6px);
 }
 
-.bar:hover {
-  background-color: #b9e4ff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.ranking-item {
+.ranking-list-entries {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  background-color: #f0f8ff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; /* permite quebrar linhas se necessário */
+  flex-direction: column;
+  gap: var(--space-sm, 0.8rem); /* Espaço entre as entradas */
 }
 
-.ranking-item:hover {
-  background-color: #e0f0ff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.ranking-entry {
+  background-color: var(--color-background-element, #ffffff);
+  border-radius: var(--border-radius-md, 10px); /* Borda mais arredondada */
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--color-border-light, #e7edf3);
+  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.06));
 }
 
-.ranking-item span:first-child {
-  word-break: break-word;
-  max-width: 70%;
-  overflow-wrap: break-word;
-  flex: 1;
+.ranking-entry:hover {
+  background-color: var(--color-primary-xtra-light, #e9f5ff);
+  transform: translateY(-3px) scale(1.005); /* Efeito sutil */
+  box-shadow: var(--shadow-md, 0 5px 10px rgba(0,0,0,0.08));
+  border-color: var(--color-primary-border, #cce7ff);
 }
 
-.score-value {
-  font-weight: bold;
-  color: #0a518e;
+/* Alinhamento de colunas */
+.ranking-list-header .header-position,
+.ranking-entry .ranking-position {
+  text-align: center;
 }
 
-.ranking-number {
-  background-color: #0a518e;
-  color: white;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.5rem;
-  font-size: 1rem;
+.ranking-list-header .header-score,
+.ranking-entry .ranking-score,
+.ranking-list-header .header-percentage,
+.ranking-entry .ranking-percentage {
+  text-align: right;
 }
 
-.loading-container {
+.ranking-position-number {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary-dark, #084a7e);
+  display: inline-block; /* Para permitir padding/margin se necessário */
+  padding: var(--space-xs, 0.4rem); /* Pequeno padding */
+  min-width: 30px; /* Garante que números de 1 dígito também centralizem bem */
+}
+.ranking-position-number.gold { color: #d4af37; } /* Cor de ouro mais elegante */
+.ranking-position-number.silver { color: #a8a8a8; } /* Cor de prata */
+.ranking-position-number.bronze { color: #b08d57; } /* Cor de bronze */
+
+
+.ranking-name {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--color-text-primary, #333);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Evita quebra de nome longo */
+}
+
+.ranking-score {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-accent, #1abc9c); /* Cor de destaque para pontos */
+}
+
+.ranking-percentage {
+  font-size: 1.4rem;
+  color: var(--color-text-subtle, #555);
+}
+
+/* Mensagens de Carregamento, Erro e Vazio */
+.ranking-message {
+  text-align: center;
+  padding: var(--space-xl, 3.2rem) var(--space-lg, 2.4rem);
+  font-size: 1.6rem;
+  color: var(--color-text-subtle, #555);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 300px;
+  gap: var(--space-md, 1.6rem);
+}
+.ranking-message p {
+  margin: 0;
+  line-height: 1.6;
+}
+.ranking-message.ranking-loading,
+.ranking-message.ranking-error {
+  /* Estilos já no .ranking-card, mas pode ter fundos específicos se desejar */
 }
 
-.error-message {
-  color: white;
-  background-color: #f44336;
-  text-align: center;
-  font-size: 1rem;
-  padding: 1rem;
-  border-radius: 0.75rem;
-  margin: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.ranking-message.ranking-loading p {
+  font-size: 1.8rem;
+  color: var(--color-primary, #0a518e);
+  font-weight: 500;
 }
 
-.user-container {
-  background-color: #0a518e;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.ranking-message.ranking-error p:first-of-type {
+  font-size: 1.8rem;
+  color: var(--color-error, #e74c3c);
+  font-weight: 600;
+}
+.ranking-message.ranking-error p:last-of-type {
+  font-size: 1.5rem;
+  color: var(--color-text-primary, #333);
 }
 
+.ranking-message.ranking-empty {
+  font-size: 1.7rem;
+  font-style: italic;
+}
+.ranking-empty-button {
+  margin-top: var(--space-md, 1.6rem);
+}
+
+/* Reutilizando o spinner */
+.quiz-spinner { /* Copiado do Quiz.css para garantir que funcione */
+  width: var(--spinner-size, 5rem);
+  height: var(--spinner-size, 5rem);
+  border: var(--spinner-border-width, 0.5rem) solid var(--color-primary-border, #cce7ff);
+  border-top-color: var(--color-primary, #0a518e);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .ranking-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+  .ranking-main-content {
+    padding: var(--space-md, 1.6rem);
   }
-
-  .ranking-title {
-    font-size: 1.8rem;
-    text-align: center;
+  .ranking-card {
+    padding: var(--space-lg, 2.4rem);
+    max-width: 95%;
   }
-
-  .ranking-nav {
-    flex-direction: column;
-    gap: 1rem;
+  .ranking-list-header,
+  .ranking-entry {
+    grid-template-columns: 45px minmax(120px, 1fr) 80px 80px; /* Ajuste de colunas */
+    font-size: 1.4rem; /* Ajuste global para entradas e header */
+    gap: var(--space-sm, 0.8rem);
+    padding: var(--space-sm, 0.8rem);
   }
-
-  .ranking-logo {
-    height: 3rem;
-    margin-top: 0.5rem;
+  .ranking-list-header {
+    font-size: 1.2rem; /* Header um pouco menor que as entradas */
   }
-
-  .ranking-main {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .bar {
-    min-width: 90%;
-    text-align: center;
-  }
-
-  .ranking-item {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .ranking-number {
-    width: 28px;
-    height: 28px;
-    font-size: 0.875rem;
-  }
-}
-@media (max-width: 480px) {
-  .ranking-header {
-    padding: 0.5rem;
-  }
-
-  .ranking-title {
+  .ranking-name {
     font-size: 1.5rem;
   }
-
-  .ranking-nav {
-    flex-direction: column;
-    gap: 0.5rem;
+  .ranking-score, .ranking-percentage {
+    font-size: 1.3rem;
   }
-
-  .ranking-logo {
-    height: 2.5rem;
-  }
-
-  .ranking-main {
-    padding: 0.5rem;
-    gap: 0.5rem;
-  }
-
-  .bar {
-    min-width: 100%;
-    text-align: center;
-  }
-
-  .ranking-item {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .ranking-number {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
-  }
-  .loading-container {
-    height: 200px;
+  .ranking-position-number {
+    font-size: 1.3rem;
   }
 }
-.ranking-intro {
-  font-size: 1.8rem;
-  color: #0a518e;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: bold;
+
+@media (max-width: 480px) {
+  .ranking-main-content {
+    padding: var(--space-sm, 0.8rem);
+  }
+  .ranking-card {
+    padding: var(--space-md, 1.6rem);
+  }
+  .ranking-card-title {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+  .ranking-list-header,
+  .ranking-entry {
+    grid-template-columns: 40px minmax(100px, 1fr) 65px 65px; /* Ajuste mais fino */
+    font-size: 1.3rem;
+    padding: var(--space-xs, 0.4rem) var(--space-sm, 0.8rem);
+    gap: var(--space-xs, 0.4rem);
+  }
+  .ranking-list-header {
+    font-size: 1.1rem;
+  }
+  .ranking-name {
+    font-size: 1.4rem;
+    white-space: normal; /* Permite quebra de nome em telas muito pequenas */
+  }
+  .ranking-score, .ranking-percentage {
+    font-size: 1.2rem;
+  }
+  .ranking-position-number {
+    font-size: 1.2rem;
+    padding: 0;
+    min-width: 26px;
+  }
 }

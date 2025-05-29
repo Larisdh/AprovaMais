@@ -1,210 +1,221 @@
+// -----------------------------------------------------------------------------
+// Imports e Configurações Iniciais
+// -----------------------------------------------------------------------------
 const express = require("express");
 const cors = require("cors");
 const admin = require("firebase-admin");
-require("dotenv").config();
+require("dotenv").config(); // Para carregar variáveis de ambiente (ex: PORT)
 
+// -----------------------------------------------------------------------------
+// Inicialização do Express App
+// -----------------------------------------------------------------------------
 const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(cors()); // Habilita CORS para todas as rotas
+app.use(express.json()); // Middleware para parsear JSON no corpo das requisições
 
-// Inicialização do Firebase Admin
-const serviceAccount = require("./firebase-key.json"); // Certifique-se que este caminho está correto
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+// -----------------------------------------------------------------------------
+// Inicialização do Firebase Admin SDK
+// -----------------------------------------------------------------------------
+try {
+  const serviceAccount = require("./firebase-key.json"); // ATENÇÃO: Mantenha este arquivo seguro!
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
+  console.log("✔️ Firebase Admin SDK inicializado com sucesso.");
+} catch (error) {
+  console.error("❌ Erro ao inicializar Firebase Admin SDK:", error);
+  process.exit(1); // Encerra o processo se o Firebase não puder ser inicializado
+}
 
-const db = admin.firestore();
+const db = admin.firestore(); // Instância do Firestore
 
-// Importar rotas
-const scoresRouter = require("./routes/scores"); // Se você tiver este arquivo de rotas
+// -----------------------------------------------------------------------------
+// Rotas da API
+// -----------------------------------------------------------------------------
 
-// Aplicar rotas
-app.use("/api/scores", scoresRouter); // Se você tiver este arquivo de rotas
-
-// Rota atualizada para obter perguntas filtradas por matéria e quantidade
+/**
+ * Rota para obter perguntas filtradas por matéria e quantidade.
+ * Query Params:
+ *  - materia (string, opcional): Filtra perguntas pela matéria especificada.
+ *  - quantidade (number, opcional): Limita o número de perguntas retornadas (e as embaralha).
+ */
 app.get("/api/perguntas", async (req, res) => {
+  console.log(`[GET /api/perguntas] Recebida requisição com query:`, req.query);
   try {
     const { materia, quantidade } = req.query;
 
     let query = db.collection("perguntas");
     if (materia) {
+      console.log(`[GET /api/perguntas] Filtrando por matéria: ${materia}`);
       query = query.where("materia", "==", materia);
     }
 
     const snapshot = await query.get();
+    if (snapshot.empty) {
+      console.log(`[GET /api/perguntas] Nenhuma pergunta encontrada para os critérios.`);
+      return res.json([]); // Retorna array vazio se não encontrar nada
+    }
+
     let perguntas = snapshot.docs.map((doc) => {
       const data = doc.data();
-      // Ajustado para corresponder à estrutura dos JSONs corrigidos
       return {
         id: doc.id,
-        textos: data.textos || [], // O frontend espera 'textos' como um array
-        alternativas: data.alternativas || [], // O frontend espera 'alternativas' como um array
+        textos: data.textos || [],
+        alternativas: data.alternativas || [],
         correta: data.correta,
         materia: data.materia || "",
-        explicacao: data.explicacao || ""
-        // O campo 'pergunta' (data.pergunta) foi removido daqui, pois o conteúdo principal
-        // da pergunta deve estar dentro do array 'textos' conforme a estrutura do frontend.
-        // Se você ainda tiver um campo 'pergunta' separado no Firestore e quiser combiná-lo:
-        // textos: data.pergunta ? [data.pergunta, ...(data.textos || [])] : (data.textos || []),
-        // Mas pela nossa correção dos JSONs, o enunciado já está em 'data.textos[0]'
+        explicacao: data.explicacao || "",
       };
     });
 
-    // Embaralhar perguntas e limitar se necessário
-    if (quantidade && parseInt(quantidade) > 0) { // Adicionado verificação para quantidade > 0
-      perguntas = perguntas.sort(() => Math.random() - 0.5).slice(0, parseInt(quantidade));
-    } else if (quantidade === undefined || parseInt(quantidade) <= 0) {
-      // Se quantidade não for fornecida ou for inválida, pode-se optar por retornar todas ou um número padrão
-      // Aqui, estou mantendo o comportamento de retornar todas se a quantidade for inválida/ausente após o filtro de matéria
-      // Ou você pode adicionar um limite padrão:
-      // perguntas = perguntas.sort(() => Math.random() - 0.5).slice(0, 10); // Exemplo: padrão de 10
-    }
+    console.log(`[GET /api/perguntas] ${perguntas.length} perguntas encontradas antes de limitar/embaralhar.`);
 
-
-    if (perguntas.length === 0 && materia) {
-        // Se nenhuma pergunta foi encontrada para a matéria específica,
-        // você pode querer retornar um array vazio em vez de um erro,
-        // ou uma mensagem específica. O frontend já trata data.length === 0.
-        console.log(`Nenhuma pergunta encontrada para a matéria: ${materia}`);
+    if (quantidade && parseInt(quantidade) > 0) {
+      const numQuantidade = parseInt(quantidade);
+      perguntas = perguntas.sort(() => Math.random() - 0.5).slice(0, numQuantidade);
+      console.log(`[GET /api/perguntas] Retornando ${perguntas.length} perguntas após limitar para ${numQuantidade}.`);
     }
 
     res.json(perguntas);
   } catch (error) {
-    console.error("Erro ao buscar perguntas no servidor:", error); // Log de erro mais específico
-    res.status(500).json({ error: "Erro interno no servidor ao buscar perguntas." }); // Mensagem mais genérica para o cliente
+    console.error("[GET /api/perguntas] Erro ao buscar perguntas:", error);
+    res.status(500).json({ error: "Erro interno no servidor ao buscar perguntas." });
   }
 });
 
-// Rota para salvar resultado do quiz
+/**
+ * Rota para salvar o resultado de um quiz e atualizar estatísticas do usuário.
+ * Corpo da Requisição (JSON):
+ *  - userId (string, obrigatório): ID do usuário do Firebase Auth.
+ *  - acertos (number, obrigatório): Número de acertos no quiz.
+ *  - total (number, obrigatório): Número total de perguntas no quiz.
+ *  - materia (string, opcional): Matéria do quiz (default: "Geral").
+ */
 app.post("/api/resultados", async (req, res) => {
+  console.log(`[POST /api/resultados] Recebida requisição com corpo:`, req.body);
   try {
     const { userId, acertos, total, materia } = req.body;
 
-    if (!userId || acertos === undefined || total === undefined || total <= 0) { // Verificação de 'total'
-      return res.status(400).json({ error: "Dados incompletos ou inválidos" });
+    if (!userId || acertos === undefined || total === undefined || total <= 0) {
+      console.warn("[POST /api/resultados] Dados incompletos ou inválidos:", req.body);
+      return res.status(400).json({ error: "Dados incompletos ou inválidos. userId, acertos e total (maior que 0) são obrigatórios." });
     }
 
-    // Verificar se o usuário existe
-    const userSnapshot = await admin.auth().getUser(userId).catch((err) => {
-      console.error("Erro ao buscar usuário no Firebase Auth:", err);
-      return null;
-    });
-    if (!userSnapshot) {
-      return res.status(404).json({ error: "Usuário não encontrado" });
+    let userSnapshot;
+    try {
+      userSnapshot = await admin.auth().getUser(userId);
+    } catch (authError) {
+      console.warn(`[POST /api/resultados] Usuário não encontrado no Firebase Auth: ${userId}`, authError.message);
+      return res.status(404).json({ error: "Usuário não encontrado." });
     }
 
-    const percentual = total > 0 ? (acertos / total) * 100 : 0; // Evitar divisão por zero
+    const percentual = (acertos / total) * 100;
+    const materiaQuiz = materia || "Geral";
 
     const resultado = {
       userId,
       acertos,
       total,
-      percentual,
-      materia: materia || "Geral",
+      percentual: parseFloat(percentual.toFixed(2)), // Armazena com 2 casas decimais
+      materia: materiaQuiz,
       dataHora: admin.firestore.FieldValue.serverTimestamp(),
     };
 
-    const docRef = await db.collection("resultados").add(resultado);
-    console.log("Resultado salvo com ID:", docRef.id);
+    const resultadoRef = await db.collection("resultados").add(resultado);
+    console.log(`[POST /api/resultados] Resultado salvo na coleção 'resultados' com ID: ${resultadoRef.id}`);
 
-
-    // Atualizar ou criar estatísticas
+    // Atualizar ou criar estatísticas na coleção 'estatisticas'
     const userStatsRef = db.collection("estatisticas").doc(userId);
-    const userStatsDoc = await userStatsRef.get(); // Renomeado para userStatsDoc para clareza
-
-    const materiaAtual = materia || "Geral";
+    const userStatsDoc = await userStatsRef.get();
+    const nomeUsuario = userSnapshot.displayName || userSnapshot.email || "Usuário Anônimo";
 
     if (userStatsDoc.exists) {
-      const dados = userStatsDoc.data();
-      
-      // Inicializar campos se não existirem
-      if (!dados.materias) dados.materias = {};
-      if (!dados.materias[materiaAtual]) dados.materias[materiaAtual] = { acertos: 0, total: 0 };
-      
-      dados.materias[materiaAtual].acertos = (dados.materias[materiaAtual].acertos || 0) + acertos;
-      dados.materias[materiaAtual].total = (dados.materias[materiaAtual].total || 0) + total;
-      dados.totalAcertos = (dados.totalAcertos || 0) + acertos;
-      dados.totalPerguntas = (dados.totalPerguntas || 0) + total;
-      dados.ultimaAtualizacao = admin.firestore.FieldValue.serverTimestamp();
-
-      await userStatsRef.update(dados);
-      console.log("Estatísticas do usuário atualizadas:", userId);
+      const dadosAtuais = userStatsDoc.data();
+      const novasEstatisticas = {
+        materias: {
+          ...(dadosAtuais.materias || {}),
+          [materiaQuiz]: {
+            acertos: ((dadosAtuais.materias?.[materiaQuiz]?.acertos) || 0) + acertos,
+            total: ((dadosAtuais.materias?.[materiaQuiz]?.total) || 0) + total,
+          },
+        },
+        totalAcertos: (dadosAtuais.totalAcertos || 0) + acertos,
+        totalPerguntas: (dadosAtuais.totalPerguntas || 0) + total,
+        ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
+        nome: dadosAtuais.nome || nomeUsuario, // Atualiza nome se não existir
+        email: dadosAtuais.email || userSnapshot.email, // Atualiza email se não existir
+      };
+      await userStatsRef.update(novasEstatisticas);
+      console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} atualizadas.`);
     } else {
       const novasEstatisticas = {
         userId,
-        nome: userSnapshot.displayName || userSnapshot.email || "Usuário Anônimo", // Melhor fallback para nome
+        nome: nomeUsuario,
         email: userSnapshot.email,
         totalAcertos: acertos,
         totalPerguntas: total,
         materias: {
-          [materiaAtual]: {
-            acertos,
-            total,
-          },
+          [materiaQuiz]: { acertos, total },
         },
         ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
       };
       await userStatsRef.set(novasEstatisticas);
-      console.log("Estatísticas do usuário criadas:", userId);
+      console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} criadas.`);
     }
 
-    res.status(201).json({ message: "Resultado salvo com sucesso", resultadoId: docRef.id });
+    res.status(201).json({ message: "Resultado salvo com sucesso!", resultadoId: resultadoRef.id });
   } catch (error) {
-    console.error("Erro ao salvar resultado no servidor:", error);
+    console.error("[POST /api/resultados] Erro ao salvar resultado:", error);
     res.status(500).json({ error: "Erro interno no servidor ao salvar resultado." });
   }
 });
 
-// Rota para ranking geral (estatísticas)
+/**
+ * Rota para obter o ranking geral dos usuários.
+ * Busca dados da coleção 'estatisticas'.
+ * Retorna os top 10 usuários por total de acertos.
+ */
 app.get("/api/ranking", async (req, res) => {
+  console.log(`[GET /api/ranking] Recebida requisição.`);
   try {
     const snapshot = await db.collection("estatisticas")
       .orderBy("totalAcertos", "desc")
-      .limit(10) // Você pode querer tornar este limite configurável via query param
+      .limit(10)
       .get();
+
+    if (snapshot.empty) {
+      console.log(`[GET /api/ranking] Nenhuma estatística encontrada para o ranking.`);
+      return res.json([]);
+    }
 
     const ranking = snapshot.docs.map((doc) => {
       const data = doc.data();
       const percentual = data.totalPerguntas > 0
-          ? parseFloat(((data.totalAcertos / data.totalPerguntas) * 100).toFixed(2)) // Arredondar percentual
-          : 0;
+        ? parseFloat(((data.totalAcertos / data.totalPerguntas) * 100).toFixed(2))
+        : 0;
       return {
-        id: doc.id, // ou userId, se preferir
+        id: doc.id, // ID do documento de estatística (que é o userId)
         nome: data.nome || "Usuário Anônimo",
-        // email: data.email, // Considere se realmente precisa expor o email no ranking público
         totalAcertos: data.totalAcertos || 0,
         totalPerguntas: data.totalPerguntas || 0,
         percentual,
       };
     });
-
+    console.log(`[GET /api/ranking] Ranking com ${ranking.length} usuários retornado.`);
     res.json(ranking);
   } catch (error) {
-    console.error("Erro ao buscar ranking no servidor:", error);
+    console.error("[GET /api/ranking] Erro ao buscar ranking:", error);
     res.status(500).json({ error: "Erro interno no servidor ao buscar ranking." });
   }
 });
 
-// Rota para estatísticas por usuário
-app.get("/api/usuarios/:userId/estatisticas", async (req, res) => {
-  try {
-    const { userId } = req.params;
-    if (!userId) {
-        return res.status(400).json({ error: "ID do usuário não fornecido."});
-    }
-    const userStatsRef = db.collection("estatisticas").doc(userId);
-    const userStatsDoc = await userStatsRef.get();
-
-    if (!userStatsDoc.exists) {
-      return res.status(404).json({ error: "Estatísticas não encontradas para este usuário." });
-    }
-
-    res.json(userStatsDoc.data());
-  } catch (error) {
-    console.error("Erro ao buscar estatísticas do usuário no servidor:", error);
-    res.status(500).json({ error: "Erro interno no servidor ao buscar estatísticas do usuário." });
-  }
-});
-
+// -----------------------------------------------------------------------------
+// Inicialização do Servidor
+// -----------------------------------------------------------------------------
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}!`)); // Mensagem um pouco mais amigável
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT}!`);
+  console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
+  console.log(`🔗 API de Resultados disponível em: http://localhost:${PORT}/api/resultados`);
+  console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
+});

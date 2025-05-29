@@ -8,7 +8,7 @@
       "Enferrujamento de um prego de ferro."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A dissolução do sal em água altera apenas o estado físico da substância (sólido para solução), sem formar novas substâncias."
   },
   {
@@ -20,7 +20,7 @@
       "Álcool hidratado."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Uma mistura heterogênea apresenta fases distintas visíveis, como a água e o óleo que não se misturam."
   },
   {
@@ -32,7 +32,7 @@
       "Número de elétrons (em um íon)."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "O número atômico (Z) é igual ao número de prótons no núcleo de um átomo, sendo o que identifica um elemento químico."
   },
   {
@@ -44,7 +44,7 @@
       "Ligação entre dois átomos de oxigênio (O₂)."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A ligação iônica ocorre entre átomos com grande diferença de eletronegatividade, como um metal (sódio) e um não metal (cloro), com transferência de elétrons."
   },
   {
@@ -56,7 +56,7 @@
       "CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(g)"
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Uma reação de síntese é aquela em que duas ou mais substâncias reagem para formar um único produto."
   },
   {
@@ -68,7 +68,7 @@
       "Estado físico dos produtos."
     ],
     "correta": 3,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "O estado físico dos produtos não influencia a velocidade com que os reagentes se transformam em produtos."
   },
   {
@@ -80,7 +80,7 @@
       "Igual a zero."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Soluções ácidas possuem um excesso de íons H⁺ em relação aos íons OH⁻, resultando em um pH menor que 7."
   },
   {
@@ -92,7 +92,7 @@
       "Argônio (Ar)."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "O nitrogênio representa aproximadamente 78% da composição do ar atmosférico seco."
   },
   {
@@ -104,7 +104,7 @@
       "C₂H₄"
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A fórmula molecular do benzeno é C₆H₆, representando um anel hexagonal de átomos de carbono com um hidrogênio ligado a cada um."
   },
   {
@@ -116,7 +116,7 @@
       "Ácido carboxílico."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Um álcool possui o grupo hidroxila (-OH) ligado a um carbono que não faz parte de um anel aromático ou de uma ligação dupla carbono-oxigênio."
   },
   {
@@ -128,7 +128,7 @@
       "A pressão de vapor é constante para todos os líquidos na mesma temperatura."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "O aumento da temperatura fornece mais energia cinética às moléculas do líquido, facilitando sua passagem para a fase gasosa e, consequentemente, aumentando a pressão de vapor."
   },
   {
@@ -140,7 +140,7 @@
       "A relação entre o número de mols e o volume a pressão e temperatura constantes."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A Lei de Boyle estabelece que, para uma quantidade fixa de gás a temperatura constante, a pressão é inversamente proporcional ao volume (P₁V₁ = P₂V₂)."
   },
   {
@@ -152,7 +152,7 @@
       "Polietileno (plástico)."
     ],
     "correta": 3,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "O polietileno é um plástico produzido industrialmente a partir da polimerização do etileno, sendo um polímero sintético."
   },
   {
@@ -164,7 +164,7 @@
       "Evaporação."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A destilação explora as diferentes volatilidades dos líquidos, permitindo a separação através do aquecimento e condensação seletiva dos vapores."
   },
   {
@@ -176,7 +176,7 @@
       "Metano (CH₄)."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Hidrocarbonetos insaturados possuem ligações duplas ou triplas entre os átomos de carbono. O etileno (C₂H₄) contém uma ligação dupla carbono-carbono."
   },
   {
@@ -188,7 +188,7 @@
       "Aquela que doa prótons."
     ],
     "correta": 1,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Um oxidante é uma espécie química que causa a oxidação de outra espécie ao receber elétrons, diminuindo seu próprio número de oxidação."
   },
   {
@@ -200,7 +200,7 @@
       "ppm"
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A concentração molar (M) é definida como o número de mols do soluto dissolvidos por litro de solução (mol/L)."
   },
   {
@@ -212,7 +212,7 @@
       "Adição de um catalisador."
     ],
     "correta": 1,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Em uma reação exotérmica, o calor é um 'produto'. Diminuir a temperatura desloca o equilíbrio no sentido de liberar mais calor, ou seja, para a direita."
   },
   {
@@ -224,7 +224,7 @@
       "Ácido carboxílico."
     ],
     "correta": 3,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "O grupo carboxila (-COOH) é característico dos ácidos carboxílicos."
   },
   {
@@ -236,7 +236,7 @@
       "Oxidação de um álcool primário para formar um aldeído."
     ],
     "correta": 1,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Uma reação de adição envolve a quebra de uma ligação pi (em duplas ou triplas ligações) e a adição de átomos aos carbonos envolvidos."
   },
   {
@@ -248,7 +248,7 @@
       "A variação de energia interna a volume constante."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A entalpia (H) é uma função de estado termodinâmica, e a variação de entalpia (ΔH) em uma reação química a pressão constante é igual ao calor absorvido ou liberado pelo sistema."
   },
   {
@@ -260,7 +260,7 @@
       "Cloreto de sódio (NaCl)."
     ],
     "correta": 3,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "Um eletrólito forte se dissocia completamente em íons quando dissolvido em água, tornando a solução altamente condutora de eletricidade. O NaCl é um sal solúvel que se dissocia em Na⁺ e Cl⁻."
   },
   {
@@ -272,7 +272,7 @@
       "Butanol."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A cadeia principal possui três átomos de carbono (prop-) e o grupo funcional álcool (-ol) está ligado ao primeiro carbono (implícito), resultando em propan-1-ol, comumente chamado de propanol."
   },
   {
@@ -284,7 +284,7 @@
       "Fermentação."
     ],
     "correta": 1,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A saponificação é a reação de hidrólise de ésteres de ácidos graxos (presentes em óleos e gorduras) com uma base forte (como NaOH ou KOH) para produzir sabão (sal de ácido graxo) e glicerol."
   },
   {
@@ -296,7 +296,7 @@
       "A massa total dos reagentes é igual à massa total dos produtos em uma reação química."
     ],
     "correta": 2,
-    "materia": "química",
+    "materia": "quimica",
     "explicacao": "A Lei de Hess afirma que a variação de entalpia de uma reação é constante, independentemente de ser realizada em uma única etapa ou em várias etapas."
   }
 ]
