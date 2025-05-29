@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { auth } from "../firebaseConfig"; // Verifique o caminho
-import "./css/Quiz.css"; // Importa o CSS refatorado
+import { auth } from "../firebaseConfig";
+import "./css/Quiz.css";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -10,7 +10,9 @@ function useQuery() {
 export default function Quiz() {
   const navigate = useNavigate();
   const query = useQuery();
-  const materia = query.get("materia") || "Indefinida";
+  // Se 'materia' não estiver na URL, query.get("materia") será null.
+  // O || "Indefinida" garante que temos um valor, mas podemos tratar null/undefined diretamente.
+  const materiaParam = query.get("materia"); // Pegar o parâmetro como está
   const quantidade = parseInt(query.get("questions"), 10) || 10;
 
   const [perguntas, setPerguntas] = useState([]);
@@ -23,20 +25,29 @@ export default function Quiz() {
   const [resultadoFinal, setResultadoFinal] = useState(null);
   const [applyCardAnimation, setApplyCardAnimation] = useState(false);
 
-
   useEffect(() => {
     const buscarPerguntas = async () => {
-      if (!materia || materia === "Indefinida" || !quantidade) {
-        setErro("Matéria ou quantidade de perguntas não especificadas corretamente.");
+      // Validação da quantidade
+      if (!quantidade || quantidade <= 0) {
+        setErro("Quantidade de perguntas inválida.");
         setCarregando(false);
         return;
       }
+
       try {
         setCarregando(true);
         setErro(null);
-        const response = await fetch(
-          `http://localhost:3000/api/perguntas?materia=${materia}&quantidade=${quantidade}`
-        );
+        
+        // Constrói a URL base
+        let apiUrl = `http://localhost:3000/api/perguntas?quantidade=${quantidade}`;
+        // Adiciona o parâmetro 'materia' apenas se materiaParam tiver um valor
+        if (materiaParam) {
+          apiUrl += `&materia=${materiaParam}`;
+        }
+        // Se materiaParam for null/undefined, o backend não filtrará por matéria.
+
+        const response = await fetch(apiUrl);
+
         if (!response.ok) {
           const errorBody = await response.text();
           let errorJson = {};
@@ -45,9 +56,9 @@ export default function Quiz() {
         }
         const data = await response.json();
         if (data.length === 0) {
-          setErro(`Nenhuma pergunta encontrada para "${materia}". Tente outra matéria.`);
+          const materiaNome = materiaParam ? `"${materiaParam}"` : "gerais";
+          setErro(`Nenhuma pergunta encontrada para ${materiaNome}. Tente outra configuração.`);
         } else {
-          // Adiciona uma key única para cada pergunta para ajudar na animação do React
           setPerguntas(data.map(p => ({...p, key: Math.random().toString(36).substring(7) })));
           setApplyCardAnimation(true);
         }
@@ -59,7 +70,7 @@ export default function Quiz() {
     };
 
     buscarPerguntas();
-  }, [materia, quantidade]);
+  }, [materiaParam, quantidade]); // Depende de materiaParam e quantidade
 
   useEffect(() => {
     const salvarResultadoNoBackend = async () => {
@@ -74,7 +85,7 @@ export default function Quiz() {
                 userId: user.uid,
                 acertos: resultadoFinal,
                 total: perguntas.length,
-                materia: materia,
+                materia: materiaParam || "Geral", // Usa "Geral" se materiaParam for null/undefined
               }),
             });
             if (!response.ok) {
@@ -91,7 +102,7 @@ export default function Quiz() {
       }
     };
     salvarResultadoNoBackend();
-  }, [quizFinalizado, resultadoFinal, perguntas, materia]);
+  }, [quizFinalizado, resultadoFinal, perguntas, materiaParam]); // Depende de materiaParam
 
   function responder(indiceAlternativa) {
     if (!perguntas.length || indice >= perguntas.length || respostaSelecionada !== null) return;
@@ -104,16 +115,11 @@ export default function Quiz() {
     setRespostaSelecionada(indiceAlternativa);
 
     const acertouResposta = indiceAlternativa === perguntaAtual.correta;
-    // Atualiza acertos imediatamente para o estado `resultadoFinal`
-    // A atualização de `acertos` para a próxima pergunta é feita no `useEffect` que lida com `indice`.
-    // No entanto, é mais seguro atualizar o `resultadoFinal` no momento em que o quiz termina.
-    
     let novaPontuacaoTemp = acertos;
     if (acertouResposta) {
       novaPontuacaoTemp = acertos + 1;
-      setAcertos(prevAcertos => prevAcertos + 1); // Atualiza o estado de acertos para a UI
+      setAcertos(prevAcertos => prevAcertos + 1);
     }
-
 
     const feedbackDuration = 1000;
     const transitionDelay = 200;
@@ -127,32 +133,42 @@ export default function Quiz() {
           setRespostaSelecionada(null);
           setApplyCardAnimation(true); 
         } else {
-          setResultadoFinal(novaPontuacaoTemp); // Usa a pontuação calculada neste clique
+          setResultadoFinal(novaPontuacaoTemp);
           setQuizFinalizado(true);
         }
       }, transitionDelay);
-
     }, feedbackDuration);
   }
 
   const reiniciarQuiz = () => {
-    navigate(`/quiz?materia=${materia}&questions=${quantidade}&rerun=${Math.random().toString(36).substring(7)}`);
+    let quizUrl = `/quiz?questions=${quantidade}`;
+    if (materiaParam) {
+      quizUrl += `&materia=${materiaParam}`;
+    }
+    quizUrl += `&rerun=${Math.random().toString(36).substring(7)}`;
+    navigate(quizUrl);
   };
 
-  const HeaderQuiz = ({ titleOverride }) => (
-    <header className="app-header quiz-custom-header">
-      <Link to="/home" className="app-header-logo-link">
-        <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
-      </Link>
-      <h1 className="app-header-page-title">{titleOverride || `Quiz - ${materia}`}</h1>
-      <nav className="app-header-nav quiz-custom-nav">
-        <Link to="/home" className="app-header-nav-link">Início</Link>
-        <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
-      </nav>
-    </header>
-  );
+  const HeaderQuiz = ({ titleOverride }) => {
+    // Determina o título do quiz com base na presença de materiaParam
+    const quizTitle = materiaParam ? `Quiz - ${materiaParam.charAt(0).toUpperCase() + materiaParam.slice(1)}` : "Quiz Geral";
+    return (
+      <header className="app-header quiz-custom-header">
+        <Link to="/home" className="app-header-logo-link">
+          <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+        </Link>
+        <h1 className="app-header-page-title">{titleOverride || quizTitle}</h1>
+        <nav className="app-header-nav quiz-custom-nav">
+          <Link to="/home" className="app-header-nav-link">Início</Link>
+          <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
+        </nav>
+      </header>
+    );
+  };
+  
 
   if (carregando) {
+    // ... (código de carregamento inalterado) ...
     return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Carregando Quiz" />
@@ -167,7 +183,8 @@ export default function Quiz() {
   }
 
   if (erro) {
-    return (
+    // ... (código de erro inalterado) ...
+     return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Erro no Quiz" />
         <main className="quiz-main-content">
@@ -183,6 +200,8 @@ export default function Quiz() {
   }
 
   if (quizFinalizado) {
+    // ... (código de quiz finalizado, mas ajustando a exibição da matéria) ...
+    const materiaExibida = materiaParam ? materiaParam.charAt(0).toUpperCase() + materiaParam.slice(1) : "Geral";
     return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Resultado do Quiz" />
@@ -190,7 +209,7 @@ export default function Quiz() {
           <div className="quiz-feedback-container quiz-result-container">
             <h2 className="quiz-result-title">🎉 Quiz Finalizado! 🎉</h2>
             <p className="quiz-result-score">
-              Você acertou {resultadoFinal} de {perguntas.length} perguntas em {materia}!
+              Você acertou {resultadoFinal} de {perguntas.length} perguntas em {materiaExibida}!
             </p>
             <div className="quiz-result-actions">
               <button
@@ -203,7 +222,7 @@ export default function Quiz() {
                 onClick={reiniciarQuiz}
                 className="button button--secondary"
               >
-                Jogar Novamente ({materia})
+                Jogar Novamente ({materiaExibida})
               </button>
             </div>
           </div>
@@ -213,6 +232,7 @@ export default function Quiz() {
   }
   
   if (!perguntas.length || !perguntas[indice]) {
+    // ... (código de 'sem pergunta' inalterado) ...
      return (
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Erro no Quiz" />
@@ -231,6 +251,7 @@ export default function Quiz() {
   const perguntaAtual = perguntas[indice];
 
   return (
+    // ... (JSX principal do quiz inalterado, exceto o HeaderQuiz que já pega o título dinâmico) ...
     <div className="page-container quiz-page-container">
       <HeaderQuiz />
       <main className="quiz-main-content">
@@ -267,7 +288,6 @@ export default function Quiz() {
                   className={buttonClass}
                 >
                   <span className="quiz-option-letter">{String.fromCharCode(65 + i)})</span>
-                  {/* Envolve o texto da alternativa em um span para controle de z-index */}
                   <span className="quiz-option-text-content">{alt}</span>
                 </button>
               );

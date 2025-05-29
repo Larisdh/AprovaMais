@@ -216,6 +216,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}!`);
   console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
-  console.log(`🔗 API de Resultados disponível em: http://localhost:${PORT}/api/resultados`);
   console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
 });
