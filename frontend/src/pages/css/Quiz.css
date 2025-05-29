@@ -10,14 +10,6 @@
 }
 /* .quiz-page-container::before não é mais necessário sem a imagem de fundo */
 
-
-/* Customizações para o header global na página de Quiz */
-.quiz-custom-header.app-header {
-  /* Estilos globais do app-header são suficientes */
-  /* Se quiser uma borda inferior para separar do conteúdo: */
-  /* border-bottom: 1px solid var(--color-primary-light, #106bac); */
-}
-
 /* Conteúdo principal da página de Quiz */
 .quiz-main-content {
   display: flex;
@@ -347,49 +339,117 @@
     height: 2.6rem;
     font-size: 1.3rem;
   }
-  .quiz-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .quiz-actions .button {
-    width: 100%;
-  }
-  .quiz-result-container .quiz-result-actions {
-    flex-direction: column;
-    gap: var(--space-md, 1.6rem);
-  }
-  .quiz-result-container .quiz-result-actions .button {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
 }
 
+/* --- Celulares Menores (usando o seu 414px original, ou pode ser 480px para consistência com o exemplo) --- */
 @media (max-width: 480px) {
-  .quiz-main-content {
-    padding: var(--space-sm, 0.8rem);
+
+  /* Alterado de 414px para 480px para alinhar com o exemplo do ranking, ajuste se preferir 414px */
+  .quiz-header {
+    /* flex-direction, align-items, text-align, gap já vêm do breakpoint 768px */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
   }
-  .quiz-card,
-  .quiz-feedback-container {
-    padding: var(--space-md, 1.6rem);
-    gap: var(--space-sm, 0.8rem);
+
+  .quiz-title {
+    font-size: 1.6rem;
+    /* Ajusta o tamanho do título */
+    margin-bottom: 0.5rem;
+    /* Adiciona espaçamento abaixo */
   }
+
+  .quiz-logo {
+    height: 3rem;
+    /* Ajusta o tamanho da logo */
+    margin: 0.5rem 0;
+    /* Adiciona espaçamento acima e abaixo */
+  }
+
+  .quiz-nav {
+    /* flex-direction e align-items já vêm do breakpoint 768px */
+    gap: 0.75rem;
+    /* Ajusta o espaçamento entre os links */
+    margin-top: 0.5rem;
+  }
+
+  .quiz-nav a {
+    width: 100%;
+    /* Faz os botões ocuparem toda a largura */
+    max-width: none;
+    /* Remove o max-width do breakpoint maior, se houver */
+    padding: 0.5rem 0;
+    /* Ajusta o espaçamento interno */
+    /* Outras propriedades como background, color, etc., são herdadas */
+  }
+
+  .bar {
+    min-width: 100%;
+    /* Faz a barra ocupar toda a largura */
+    padding: 0.75rem;
+    /* Ajusta o espaçamento interno */
+  }
+
+  .quiz-main {
+    /* flex-direction já vem do breakpoint 768px */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+    gap: 1rem;
+    /* Espaçamento entre os elementos */
+  }
+
+  .quiz-question-container {
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+    max-width: 95%;
+    /* Reduz a largura máxima */
+    /* margin já vem do breakpoint 768px ou é ajustado se necessário */
+  }
+
   .quiz-question-text {
-    font-size: 1.5rem;
+    font-size: 0.95rem;
+    /* Reduz o tamanho da fonte */
+    padding: 0.75rem;
+    /* Ajusta o espaçamento interno */
+    line-height: 1.5;
+    /* Melhora o espaçamento entre linhas */
   }
+
+  .quiz-options-container {
+    gap: 0.75rem;
+    /* Reduz o espaçamento entre os botões */
+    /* align-items já vem do breakpoint 768px */
+  }
+
   .quiz-option-button {
-    font-size: 1.4rem;
-    padding: var(--space-sm, 0.8rem) var(--space-sm, 0.8rem);
+    font-size: 0.85rem;
+    /* Reduz o tamanho da fonte */
+    padding: 0.65rem;
+    /* Ajusta o espaçamento interno */
+    /* width e max-width já vêm do breakpoint 768px ou são sobrescritos */
+    max-width: 95%;
+    /* Garante que não fique muito colado nas bordas */
+    /* text-align já vem do breakpoint 768px */
   }
-  .quiz-option-letter {
-    width: 2.4rem;
-    height: 2.4rem;
-    font-size: 1.2rem;
+
+  .quiz-save-button-container {
+    /* justify-content já vem do breakpoint 768px */
+    margin-top: 1rem;
+    /* Adiciona espaçamento acima */
   }
-  .quiz-result-container .quiz-result-title {
-    font-size: clamp(2rem, 6vw, 2.6rem);
+
+  .quiz-save-button {
+    font-size: 0.85rem;
+    /* Reduz o tamanho da fonte */
+    padding: 0.5rem 1rem;
+    /* Ajusta o espaçamento interno */
   }
-  .quiz-result-container .quiz-result-score {
-    font-size: clamp(1.7rem, 5vw, 2.1rem);
+
+  .quiz-number {
+    width: 24px;
+    /* Ajusta o tamanho do número */
+    height: 24px;
+    /* Ajusta o tamanho do número */
+    font-size: 0.8rem;
+    /* Reduz o tamanho da fonte */
   }
 }
