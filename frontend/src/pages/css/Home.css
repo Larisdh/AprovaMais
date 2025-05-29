@@ -355,40 +355,44 @@
 }
 
 /* ======== GLOBAL BUTTON STYLES ======== */
-.button {
-  display: inline-block;
-  font-weight: 600;
-  font-size: clamp(1.5rem, 2.5vw, 1.6rem);
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--border-radius-md);
-  transition: background 0.25s ease-out, color 0.25s ease-out, transform var(--transition-fast), box-shadow var(--transition-fast);
-  text-transform: uppercase;
-  letter-spacing: 0.8px; /* Aumenta o espaçamento entre letras */
-  text-align: center;
-  line-height: 1.4;
-  border: none;
-  outline: none;
-  will-change: transform, box-shadow; /* Otimização para animações */
-  cursor: pointer;
+.perfil-save-button,
+.perfil-home-button,
+.perfil-profile-button {
+  align-self: center; /* Centraliza os botões no card */
+  min-width: 200px; /* Largura mínima para os botões */
+  margin-top: var(--space-md, 1.6rem); /* Espaço acima dos botões */
+  padding: var(--space-md, 1.6rem) var(--space-xl, 3.2rem); /* Botões mais robustos */
+  background-color: var(--color-primary, #0a518e); /* Fundo azul escuro */
+  color: var(--color-text-on-primary, #ffffff); /* Texto branco */
+  border: none; /* Remove bordas padrão */
+  border-radius: var(--border-radius-lg, 12px); /* Bordas arredondadas maiores */
+  font-size: 1.2rem; /* Tamanho da fonte maior */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Cursor em formato de ponteiro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave padrão */
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out; /* Transições suaves */
 }
-/* Estilo para foco com teclado */
-.button:focus-visible {
-  outline: none;
-  box-shadow: var(--shadow-focus-ring);
+
+/* Efeito ao passar o mouse sobre os botões */
+.perfil-save-button:hover,
+.perfil-home-button:hover,
+.perfil-profile-button:hover {
+  background-color: #08416a; /* Fundo mais escuro no hover */
+  transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
 }
-.button--primary {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
-  color: var(--color-text-on-primary);
-  box-shadow: var(--shadow-button-hover); /* Sombra inicial para botões primários */
-}
-.button--primary:hover {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 7px 18px rgba(var(--color-primary-rgb), 0.25); /* Sombra mais pronunciada */
-}
-.button--primary:active {
-  transform: translateY(-1px) scale(0.99);
-  box-shadow: var(--shadow-button-active-inset), 0 3px 8px rgba(var(--color-primary-rgb), 0.2);
+
+/* Estado desabilitado para qualquer um dos botões */
+.perfil-save-button:disabled,
+.perfil-home-button:disabled,
+.perfil-profile-button:disabled {
+  background: var(--color-text-subtle, #555); /* Cinza para indicar desabilitado */
+  cursor: not-allowed; /* Cursor de não permitido */
+  box-shadow: none; /* Remove sombra */
+  transform: none; /* Sem elevação */
 }
 .home-info-section__action-button.button--primary {
   margin-top: var(--space-md);
