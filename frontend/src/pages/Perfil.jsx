@@ -18,7 +18,6 @@ export default function PerfilScreen() {
   const [erroPerfil, setErroPerfil] = useState(null);
   const [salvando, setSalvando] = useState(false);
 
-
   useEffect(() => {
     if (!user && !loadingAuth) { // Se não houver usuário e autenticação não estiver carregando
       setCarregandoPerfil(false);
@@ -86,7 +85,7 @@ export default function PerfilScreen() {
         {/* Pode usar o mesmo spinner da página de Quiz */}
         <div className="perfil-feedback-container">
           <p className="perfil-feedback-text">Verificando autenticação...</p>
-          <div className="quiz-spinner"></div> {}
+          <div className="quiz-spinner"></div>
         </div>
       </div>
     );
@@ -95,23 +94,22 @@ export default function PerfilScreen() {
   // Se não há usuário logado (após autenticação terminar)
   if (!user) {
     return (
-        <div className="page-container perfil-page-container">
-            <header className="app-header perfil-custom-header">
-                <Link to="/" className="app-header-logo-link">
-                    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
-                </Link>
-                <h1 className="app-header-page-title">Perfil</h1>
-            </header>
-            <main className="perfil-main-content">
-                <div className="perfil-feedback-container">
-                    <p className="perfil-feedback-text">Você precisa estar logado para ver seu perfil.</p>
-                    <Link to="/login" className="button button--primary">Ir para Login</Link>
-                </div>
-            </main>
-        </div>
+      <div className="page-container perfil-page-container">
+        <header className="app-header perfil-custom-header">
+          <Link to="/" className="app-header-logo-link">
+            <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+          </Link>
+          <h1 className="app-header-page-title">Perfil</h1>
+        </header>
+        <main className="perfil-main-content">
+          <div className="perfil-feedback-container">
+            <p className="perfil-feedback-text">Você precisa estar logado para ver seu perfil.</p>
+            <Link to="/login" className="button button--primary">Ir para Login</Link>
+          </div>
+        </main>
+      </div>
     );
   }
-
 
   return (
     // Adiciona page-container para consistência com outras páginas
@@ -123,12 +121,8 @@ export default function PerfilScreen() {
         </Link>
         <h1 className="app-header-page-title">Meu Perfil</h1>
         <nav className="app-header-nav perfil-custom-nav">
-          <Link to="/home" className="app-header-nav-link">
-            Início
-          </Link>
-          <Link to="/ranking" className="app-header-nav-link">
-            Ranking
-          </Link>
+          <Link to="/home" className="app-header-nav-link">Início</Link>
+          <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
         </nav>
       </header>
 
@@ -146,23 +140,6 @@ export default function PerfilScreen() {
           // Formulário envolto em um 'card' para estilização
           <form className="perfil-form-card" onSubmit={handleSalvar}>
             <h2 className="perfil-form-title">Informações Pessoais</h2>
-            
-            {/* Seção de Imagem de Perfil (opcional, adicione a lógica se for usar) */}
-            {/* 
-            <div className="perfil-pic-section">
-              <div className="profile-pic-wrapper">
-                <div 
-                  className="profile-pic" 
-                  style={{ backgroundImage: `url(${user.photoURL || '/default-avatar.png'})` }}
-                  aria-label="Foto do perfil"
-                ></div>
-              </div>
-              <div className="profile-pic-actions">
-                <button type="button" className="button button--outline mudar-foto-btn">Mudar Foto</button>
-                <button type="button" className="button button--danger remover-foto-btn">Remover Foto</button>
-              </div>
-            </div>
-            */}
 
             <div className="form-grid">
               <div className="form-group">
@@ -201,7 +178,7 @@ export default function PerfilScreen() {
                 />
               </div>
             </div> {/* Fim do form-grid */}
-            
+
             <div className="form-group">
               <label htmlFor="materias" className="form-label">🧠 Matérias de Maior Interesse/Foco:</label>
               <textarea
@@ -226,9 +203,19 @@ export default function PerfilScreen() {
               />
             </div>
 
-            <button type="submit" className="button button--primary perfil-save-button" disabled={salvando}>
-              {salvando ? "Salvando..." : "Salvar Alterações"}
-            </button>
+            <div className="form-actions">
+              <button
+                type="submit"
+                className="button button--primary perfil-save-button"
+                disabled={salvando}
+              >
+                {salvando ? "Salvando..." : "Salvar Alterações"}
+              </button>
+              <Link
+                to="/home"
+                className="button button--secondary perfil-home-button"
+              >Voltar para Início</Link>
+            </div>
           </form>
         )}
       </main>
