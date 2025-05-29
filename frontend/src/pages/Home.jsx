@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import "./css/Home.css"; // Descomente se tiver um Home.css separado
 
 export default function Home() {
   const [questions, setQuestions] = useState(10);
@@ -11,8 +10,6 @@ export default function Home() {
   };
 
   const handleStartGeneralQuiz = () => {
-    // Navega para o quiz sem o parâmetro 'materia',
-    // o Quiz.jsx e o backend tratarão isso como "todas as matérias"
     navigate(`/quiz?questions=${questions}`);
   };
 
@@ -42,7 +39,8 @@ export default function Home() {
 
       <main className="home-main-content">
         <div className="home-layout-grid">
-          <aside className="home-aside">
+          {/* Seções alinhadas lado a lado */}
+          <aside className="home-aside home-aside--materias">
             <h3 className="home-aside__title">Escolha uma Matéria:</h3>
             <ul className="home-aside__subject-list">
               {materiasDisponiveis.map((materia) => (
@@ -56,31 +54,20 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </aside>
 
-            {/* Botão para Desafio Geral */}
-            <div className="home-aside__general-challenge">
-              <h4 className="home-aside__title">Ou tente um Desafio Geral:</h4>
-              <button
-                className="button button--primary home-aside__general-button" // Usando classes de botão global e uma específica
-                onClick={handleStartGeneralQuiz}
-              >
-                Todas as Matérias
-              </button>
-            </div>
-
-            <div className="home-aside__question-selector">
-              <h4 className="home-aside__title">Quantidade de Perguntas:</h4>
-              <div className="home-aside__question-buttons">
-                {quantidadesPerguntas.map((value) => (
-                  <button
-                    key={value}
-                    onClick={() => setQuestions(value)}
-                    className={`home-aside__quantity-button ${questions === value ? "active" : ""}`}
-                  >
-                    {value}
-                  </button>
-                ))}
-              </div>
+          <aside className="home-aside home-aside--quantidade">
+            <h3 className="home-aside__title">Quantidade de Perguntas:</h3>
+            <div className="home-aside__question-buttons">
+              {quantidadesPerguntas.map((value) => (
+                <button
+                  key={value}
+                  onClick={() => setQuestions(value)}
+                  className={`home-aside__quantity-button ${questions === value ? "active" : ""}`}
+                >
+                  {value}
+                </button>
+              ))}
             </div>
           </aside>
 

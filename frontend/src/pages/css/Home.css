@@ -204,10 +204,28 @@
 }
 
 .home-layout-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
-  width: 100%;
+  display: flex;
+  gap: var(--space-lg); /* Espaçamento entre as seções */
+  flex-wrap: wrap; /* Permite quebra em telas menores */
+  justify-content: space-between; /* Distribui as seções */
+}
+
+/* Estilo para o aside de matérias */
+.home-aside--materias {
+  flex: 1; /* Ocupa um terço do espaço disponível */
+  max-width: 30%; /* Limita a largura */
+}
+
+/* Estilo para o aside de quantidade de perguntas */
+.home-aside--quantidade {
+  flex: 1; /* Ocupa um terço do espaço disponível */
+  max-width: 20%; /* Limita a largura */
+}
+
+/* Estilo para a seção de informações */
+.home-info-section {
+  flex: 1; /* Ocupa um terço do espaço disponível */
+  max-width: 30%; /* Limita a largura */
 }
 
 /* Estilo base para os cards da Home - pode ser uma classe ou aplicado diretamente */
@@ -448,6 +466,7 @@
   }
   .home-layout-grid {
     grid-template-columns: 300px 1fr;
+    flex-direction: column;
     align-items: flex-start; /* Importante para cards de alturas diferentes */
     gap: var(--space-xl);
   }
@@ -472,6 +491,11 @@
   .home-info-section__description p {
      font-size: 1.7rem;
      color: var(--color-text-primary); /* Pode ser um pouco mais escuro que subtle para melhor leitura */
+  }
+  .home-aside--materias,
+  .home-aside--quantidade,
+  .home-info-section {
+    max-width: 100%; /* Ocupa toda a largura */
   }
 }
 
