@@ -298,5 +298,155 @@
     "correta": 1,
     "materia": "sociologia",
     "explicacao": "A cultura de massas, através de seus produtos e narrativas, oferece referências e modelos que podem influenciar a forma como os indivíduos e grupos constroem suas identidades."
-  }
+  },
+   {
+        "textos": [
+            "A divisão social do trabalho, segundo Émile Durkheim, contribui para:"
+        ],
+        "alternativas": [
+            "Aumentar o desemprego estrutural",
+            "Promover a solidariedade social",
+            "Eliminar as desigualdades sociais",
+            "Impedir o desenvolvimento tecnológico",
+            "Reduzir a coesão social"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Durkheim afirma que a divisão do trabalho é fundamental para a solidariedade e integração social nas sociedades modernas."
+    },
+    {
+        "textos": [
+            "O conceito de “alienação” no trabalho, segundo Karl Marx, refere-se:"
+        ],
+        "alternativas": [
+            "À satisfação plena do trabalhador",
+            "À autonomia total do indivíduo",
+            "À perda do sentido do trabalho pelo trabalhador",
+            "À igualdade nas relações de trabalho",
+            "Ao aumento do lazer"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "Para Marx, a alienação ocorre quando o trabalhador não reconhece mais o produto do seu trabalho como algo próprio."
+    },
+    {
+        "textos": [
+            "A precarização do trabalho na contemporaneidade está relacionada:"
+        ],
+        "alternativas": [
+            "Ao aumento dos direitos trabalhistas",
+            "À estabilidade no emprego",
+            "À flexibilização das leis e à informalidade",
+            "À diminuição da tecnologia",
+            "Ao crescimento do setor público"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "A precarização envolve contratos temporários, terceirização e falta de garantias, fenômenos comuns no mundo atual."
+    },
+    {
+        "textos": [
+            "Segundo Theodor Adorno e Max Horkheimer, a indústria cultural:"
+        ],
+        "alternativas": [
+            "Incentiva a autonomia crítica dos indivíduos",
+            "Promove a criatividade popular",
+            "Padroniza produtos culturais e manipula o consumo",
+            "Valoriza a diversidade cultural",
+            "É neutra em relação à sociedade"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "Para Adorno e Horkheimer, a indústria cultural transforma cultura em mercadoria, promovendo homogeneização e alienação."
+    },
+    {
+        "textos": [
+            "O conceito de “cultura de massa” está relacionado:"
+        ],
+        "alternativas": [
+            "À produção artesanal de bens culturais",
+            "À difusão de produtos culturais para grandes públicos",
+            "À exclusividade da cultura erudita",
+            "À rejeição das mídias",
+            "À ausência de influência social"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Cultura de massa refere-se à produção e consumo em larga escala, geralmente mediada pelos meios de comunicação."
+    },
+    {
+        "textos": [
+            "O termo “globalização cultural” refere-se:"
+        ],
+        "alternativas": [
+            "À preservação das culturas locais sem influências externas",
+            "À circulação mundial de valores, símbolos e produtos culturais",
+            "À eliminação de todas as tradições",
+            "Ao isolamento das sociedades",
+            "À rejeição da tecnologia"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "A globalização cultural é marcada pela troca e circulação de elementos culturais entre diferentes sociedades."
+    },
+    {
+        "textos": [
+            "A influência dos meios de comunicação de massa pode ser observada:"
+        ],
+        "alternativas": [
+            "Apenas na economia",
+            "Na formação de opiniões, comportamentos e valores sociais",
+            "Exclusivamente na política",
+            "Apenas na cultura erudita",
+            "Só em sociedades tradicionais"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Os meios de comunicação de massa moldam comportamentos, opiniões e valores em larga escala."
+    },
+    {
+        "textos": [
+            "O conceito de “aldeia global”, proposto por Marshall McLuhan, refere-se:"
+        ],
+        "alternativas": [
+            "Ao isolamento das comunidades",
+            "À interconexão mundial promovida pelos meios de comunicação",
+            "À rejeição da tecnologia",
+            "Ao fim da comunicação instantânea",
+            "À volta das sociedades tribais"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "McLuhan usou o termo para descrever como a tecnologia conecta pessoas globalmente, tornando o mundo mais integrado."
+    },
+    {
+        "textos": [
+            "A chamada “sociedade da informação” caracteriza-se por:"
+        ],
+        "alternativas": [
+            "Priorizar o trabalho manual",
+            "Valorizar o acesso e a produção de conhecimento e tecnologia",
+            "Rejeitar a comunicação digital",
+            "Depender apenas de recursos naturais",
+            "Manter as formas tradicionais de comunicação"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Na sociedade da informação, o conhecimento e a tecnologia são centrais para a economia e as relações sociais."
+    },
+    {
+        "textos": [
+            "O trabalho informal é caracterizado por:"
+        ],
+        "alternativas": [
+            "Garantia de direitos trabalhistas",
+            "Registro em carteira",
+            "Ausência de proteção social e instabilidade",
+            "Estabilidade e benefícios",
+            "Exclusividade do setor público"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "O trabalho informal não oferece garantias legais nem estabilidade, sendo uma das marcas da precarização do trabalho."
+    }
 ]

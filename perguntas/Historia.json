@@ -278,5 +278,155 @@
         "correta": 1,
         "materia": "historia",
         "explicacao": "A escravidão foi questionada principalmente pelos movimentos abolicionistas urbanos e pelos setores liberais, que lutaram pela sua abolição."
+    },
+    {
+        "textos": [
+            "A Revolução Francesa foi um marco da Idade Contemporânea porque:"
+        ],
+        "alternativas": [
+            "Restaurou o absolutismo na França",
+            "Defendeu os privilégios do clero",
+            "Propagou ideias de liberdade, igualdade e fraternidade",
+            "Manteve a escravidão como base econômica",
+            "Fortaleceu o feudalismo europeu"
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "A Revolução Francesa difundiu ideais iluministas que influenciaram movimentos sociais e políticos em todo o mundo."
+    },
+    {
+        "textos": [
+            "Durante a Guerra Fria, um dos principais conflitos indiretos foi:"
+        ],
+        "alternativas": [
+            "Revolução Industrial",
+            "Guerra da Coreia",
+            "Revolução Francesa",
+            "Primeira Guerra Mundial",
+            "Conferência de Berlim"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Guerra da Coreia foi um conflito entre o bloco capitalista e o socialista, representando a disputa indireta entre EUA e URSS."
+    },
+    {
+        "textos": [
+            "A Revolução Industrial alterou a sociedade europeia ao:"
+        ],
+        "alternativas": [
+            "Reduzir a urbanização",
+            "Eliminar a classe operária",
+            "Intensificar o trabalho fabril e a urbanização",
+            "Manter o trabalho artesanal como predominante",
+            "Impedir o surgimento de novas tecnologias"
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "O processo industrial promoveu o crescimento das cidades e o surgimento da classe operária."
+    },
+    {
+        "textos": [
+            "O neocolonialismo europeu no século XIX resultou em:"
+        ],
+        "alternativas": [
+            "Independência imediata das colônias",
+            "Exploração econômica e dominação política na África e Ásia",
+            "Fortalecimento das culturas locais",
+            "Fim da escravidão mundial",
+            "Redução das desigualdades sociais globais"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O neocolonialismo intensificou a exploração e a dependência das regiões colonizadas."
+    },
+    {
+        "textos": [
+            "A sociedade colonial brasileira era estruturada principalmente:"
+        ],
+        "alternativas": [
+            "Pela igualdade social",
+            "Pelo sistema escravocrata",
+            "Pela democracia direta",
+            "Pela ausência de hierarquia",
+            "Pela industrialização"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A escravidão foi fundamental para a economia e organização social do Brasil Colônia."
+    },
+    {
+        "textos": [
+            "O ciclo do açúcar no Brasil Colônia caracterizou-se por:"
+        ],
+        "alternativas": [
+            "Predomínio do trabalho livre",
+            "Exportação para o mercado europeu",
+            "Uso de mão de obra indígena assalariada",
+            "Industrialização das cidades",
+            "Comércio apenas interno"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O açúcar era produzido para exportação, principalmente para a Europa, com uso intensivo de mão de obra escrava."
+    },
+    {
+        "textos": [
+            "A influência indígena e africana na cultura brasileira pode ser vista:"
+        ],
+        "alternativas": [
+            "Apenas na arquitetura",
+            "Na alimentação, língua, religiosidade e festas populares",
+            "Exclusivamente na política",
+            "Só na economia",
+            "Apenas na literatura"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A cultura brasileira foi profundamente marcada por elementos indígenas e africanos em diversos aspectos."
+    },
+    {
+        "textos": [
+            "O pacto colonial estabelecia que:"
+        ],
+        "alternativas": [
+            "O Brasil podia comercializar livremente",
+            "Toda produção deveria ser vendida à metrópole",
+            "O Brasil era independente economicamente",
+            "Não havia restrições comerciais",
+            "O Brasil exportava apenas para a África"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O pacto colonial restringia o comércio colonial à metrópole, mantendo a dependência econômica."
+    },
+    {
+        "textos": [
+            "No Segundo Reinado, a economia cafeeira e a resistência à escravidão contribuíram para:"
+        ],
+        "alternativas": [
+            "Fortalecer o absolutismo",
+            "Surgimento de movimentos abolicionistas e republicanos",
+            "Redução do trabalho livre",
+            "Manutenção da monarquia sem oposição",
+            "Fim da imigração europeia"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A expansão do café e a luta contra a escravidão impulsionaram movimentos sociais e políticos que levaram ao fim da monarquia."
+    },
+    {
+        "textos": [
+            "A Proclamação da República, em 1889, ocorreu principalmente devido:"
+        ],
+        "alternativas": [
+            "Ao apoio popular à monarquia",
+            "À estabilidade política do Império",
+            "À insatisfação de militares, elites e abolicionistas com a monarquia",
+            "Ao fim da economia cafeeira",
+            "Ao apoio da Inglaterra à monarquia"
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "Diversos grupos estavam insatisfeitos com a monarquia, o que levou à proclamação da República."
     }
 ]
