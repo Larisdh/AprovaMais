@@ -1,5 +1,3 @@
-// src/pages/Quiz.jsx
-
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig"; // Verifique o caminho
@@ -61,7 +59,7 @@ export default function Quiz() {
     };
 
     buscarPerguntas();
-  }, [materia, quantidade]); // Removido 'navigate' das dependências, pois não é usado para refetch aqui
+  }, [materia, quantidade]);
 
   useEffect(() => {
     const salvarResultadoNoBackend = async () => {
@@ -106,25 +104,30 @@ export default function Quiz() {
     setRespostaSelecionada(indiceAlternativa);
 
     const acertouResposta = indiceAlternativa === perguntaAtual.correta;
-    const novaPontuacao = acertouResposta ? acertos + 1 : acertos;
+    // Atualiza acertos imediatamente para o estado `resultadoFinal`
+    // A atualização de `acertos` para a próxima pergunta é feita no `useEffect` que lida com `indice`.
+    // No entanto, é mais seguro atualizar o `resultadoFinal` no momento em que o quiz termina.
     
+    let novaPontuacaoTemp = acertos;
     if (acertouResposta) {
-      setAcertos(prevAcertos => prevAcertos + 1);
+      novaPontuacaoTemp = acertos + 1;
+      setAcertos(prevAcertos => prevAcertos + 1); // Atualiza o estado de acertos para a UI
     }
+
 
     const feedbackDuration = 1000;
     const transitionDelay = 200;
 
     setTimeout(() => {
-      setApplyCardAnimation(false); // Desativa a animação do card atual
+      setApplyCardAnimation(false);
       
       setTimeout(() => {
         if (indice + 1 < perguntas.length) {
           setIndice((prevIndice) => prevIndice + 1);
           setRespostaSelecionada(null);
-          setApplyCardAnimation(true); // Ativa animação para o novo card
+          setApplyCardAnimation(true); 
         } else {
-          setResultadoFinal(novaPontuacao);
+          setResultadoFinal(novaPontuacaoTemp); // Usa a pontuação calculada neste clique
           setQuizFinalizado(true);
         }
       }, transitionDelay);
@@ -133,23 +136,20 @@ export default function Quiz() {
   }
 
   const reiniciarQuiz = () => {
-    // Força um refetch da página do quiz com um parâmetro aleatório para garantir a remontagem
     navigate(`/quiz?materia=${materia}&questions=${quantidade}&rerun=${Math.random().toString(36).substring(7)}`);
-    // Opcionalmente, resetar estados locais aqui se a navegação não remontar totalmente.
-    // Mas a navegação com query param diferente geralmente força.
   };
 
   const HeaderQuiz = ({ titleOverride }) => (
     <header className="app-header quiz-custom-header">
-  <Link to="/home" className="app-header-logo-link"> {/* Alterado para redirecionar à página Home */}
-    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
-  </Link>
-  <h1 className="app-header-page-title">{titleOverride || `Quiz - ${materia}`}</h1>
-  <nav className="app-header-nav quiz-custom-nav">
-    <Link to="/home" className="app-header-nav-link">Início</Link>
-    <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
-  </nav>
-</header>
+      <Link to="/home" className="app-header-logo-link">
+        <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+      </Link>
+      <h1 className="app-header-page-title">{titleOverride || `Quiz - ${materia}`}</h1>
+      <nav className="app-header-nav quiz-custom-nav">
+        <Link to="/home" className="app-header-nav-link">Início</Link>
+        <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
+      </nav>
+    </header>
   );
 
   if (carregando) {
@@ -157,7 +157,7 @@ export default function Quiz() {
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Carregando Quiz" />
         <main className="quiz-main-content">
-          <div className="quiz-feedback-container"> {/* Usando uma classe genérica para o container */}
+          <div className="quiz-feedback-container">
             <p className="quiz-feedback-text">Carregando perguntas...</p>
             <div className="quiz-spinner"></div>
           </div>
@@ -171,7 +171,7 @@ export default function Quiz() {
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Erro no Quiz" />
         <main className="quiz-main-content">
-          <div className="quiz-feedback-container quiz-error-container"> {/* Classe adicional para erro */}
+          <div className="quiz-feedback-container quiz-error-container">
             <p className="quiz-feedback-text error-text">{erro}</p>
             <Link to="/home" className="button button--primary quiz-error-button">
               Voltar para Início
@@ -187,7 +187,7 @@ export default function Quiz() {
       <div className="page-container quiz-page-container">
         <HeaderQuiz titleOverride="Resultado do Quiz" />
         <main className="quiz-main-content">
-          <div className="quiz-feedback-container quiz-result-container"> {/* Classe adicional para resultado */}
+          <div className="quiz-feedback-container quiz-result-container">
             <h2 className="quiz-result-title">🎉 Quiz Finalizado! 🎉</h2>
             <p className="quiz-result-score">
               Você acertou {resultadoFinal} de {perguntas.length} perguntas em {materia}!
@@ -231,75 +231,63 @@ export default function Quiz() {
   const perguntaAtual = perguntas[indice];
 
   return (
-  <div className="page-container quiz-page-container">
-    <HeaderQuiz />
-    <main className="quiz-main-content">
-      <div
-        key={perguntaAtual.key}
-        className={`quiz-card ${applyCardAnimation ? "animate-card-enter" : ""}`}
-      >
-        {/* Texto da pergunta permanece visível */}
-        <div className="quiz-question-text">
-          {perguntaAtual.textos?.map((textoItem, idx) => (
-            <p
-              key={idx}
-              className={
-                idx === 0
-                  ? "quiz-question-main-text"
-                  : "quiz-question-support-text"
+    <div className="page-container quiz-page-container">
+      <HeaderQuiz />
+      <main className="quiz-main-content">
+        <div 
+            key={perguntaAtual.key}
+            className={`quiz-card ${applyCardAnimation ? 'animate-card-enter' : ''}`}
+        >
+          <div className="quiz-question-text">
+            {perguntaAtual.textos?.map((textoItem, idx) => (
+              <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
+                {typeof textoItem === "object" ? textoItem.conteudo : textoItem}
+              </p>
+            ))}
+          </div>
+
+          <div className="quiz-options">
+            {perguntaAtual.alternativas.map((alt, i) => {
+              let buttonClass = "quiz-option-button";
+              if (respostaSelecionada !== null) {
+                if (i === perguntaAtual.correta) {
+                  buttonClass += " correct";
+                } else if (i === respostaSelecionada) {
+                  buttonClass += " incorrect";
+                } else {
+                  buttonClass += " disabled";
+                }
               }
+
+              return (
+                <button
+                  key={i}
+                  onClick={() => responder(i)}
+                  disabled={respostaSelecionada !== null}
+                  className={buttonClass}
+                >
+                  <span className="quiz-option-letter">{String.fromCharCode(65 + i)})</span>
+                  {/* Envolve o texto da alternativa em um span para controle de z-index */}
+                  <span className="quiz-option-text-content">{alt}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="quiz-progress-indicator">
+            Pergunta {indice + 1} de {perguntas.length}
+          </div>
+
+          <div className="quiz-actions">
+            <button
+              onClick={() => navigate("/home")}
+              className="button button--secondary quiz-action-button"
             >
-              {typeof textoItem === "object" ? textoItem.conteudo : textoItem}
-            </p>
-          ))}
+              Escolher Matéria
+            </button>
+          </div>
         </div>
-
-        {/* Alternativas com cores de certo/errado */}
-        <div className="quiz-options">
-          {perguntaAtual.alternativas.map((alt, i) => {
-            let buttonClass = "quiz-option-button";
-            if (respostaSelecionada !== null) {
-              if (i === perguntaAtual.correta) {
-                buttonClass += " correct"; // Verde para resposta correta
-              } else if (i === respostaSelecionada) {
-                buttonClass += " incorrect"; // Vermelho para resposta errada
-              } else {
-                buttonClass += " disabled"; // Desabilitado para outras opções
-              }
-            }
-
-            return (
-              <button
-                key={i}
-                onClick={() => responder(i)}
-                disabled={respostaSelecionada !== null}
-                className={buttonClass}
-              >
-                <span className="quiz-option-letter">
-                  {String.fromCharCode(65 + i)}) {/* Letra da alternativa */}
-                </span>
-                {alt}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Indicador de progresso */}
-        <div className="quiz-progress-indicator">
-          Pergunta {indice + 1} de {perguntas.length}
-        </div>
-
-        {/* Botão para escolher matéria */}
-        <div className="quiz-actions">
-          <button
-            onClick={() => navigate("/home")}
-            className="button button--secondary quiz-action-button"
-          >
-            Escolher Matéria
-          </button>
-        </div>
-      </div>
-    </main>
-  </div>
-);
+      </main>
+    </div>
+  );
 }
