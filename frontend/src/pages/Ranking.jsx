@@ -1,29 +1,25 @@
+// src/pages/Ranking.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../firebaseConfig";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { fetchRanking } from "../services/quizService";
+import { fetchRanking } from "../services/quizService"; // Verifique o caminho do serviço
 import "./css/Ranking.css";
 
 function Ranking() {
-  const [user] = useAuthState(auth);
   const [ranking, setRanking] = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(null);
 
-  // Buscar dados do ranking
   useEffect(() => {
     const buscarDados = async () => {
       try {
         setCarregando(true);
-        console.log("🔍 Buscando ranking...");
+        setErro(null);
         const rankingData = await fetchRanking();
-        console.log("✅ Ranking obtido:", rankingData);
         setRanking(rankingData);
       } catch (error) {
-        console.error("❌ Erro ao buscar ranking:", error);
+        console.error("[Ranking.jsx] Erro ao buscar ranking:", error.message);
         setErro(
-          "Erro ao carregar dados. Por favor, tente novamente mais tarde."
+          error.message || "Erro ao carregar dados do ranking. Tente novamente."
         );
       } finally {
         setCarregando(false);
@@ -33,64 +29,102 @@ function Ranking() {
     buscarDados();
   }, []);
 
-  // Função para formatar o ranking
   const renderizarRanking = () => {
-    if (carregando) return <h2>Carregando dados...</h2>;
-    if (erro) return <h2>{erro}</h2>;
+    if (ranking.length === 0 && !carregando && !erro) {
+      return (
+        <div className="ranking-message ranking-empty">
+          <p>Nenhum dado de ranking disponível no momento. 🤔</p>
+          <p>Jogue alguns quizzes para aparecer aqui!</p>
+          <Link to="/home" className="button button--primary ranking-empty-button">
+            Escolher Matéria
+          </Link>
+        </div>
+      );
+    }
 
-    return ranking.length > 0 ? (
-      ranking.map((aluno, index) => (
-        <div key={aluno.id} className="bar">
-          <div className="ranking-item">
-            <span>
-              <span className="ranking-number">{index + 1}</span>
-              {aluno.user || "Usuário Anônimo"}
-            </span>
-            <span className="score-value">{aluno.pontos} pontos</span>
+    return ranking.map((aluno, index) => {
+      // Define classe para os top 3
+      let positionClass = "ranking-position-number";
+      if (index === 0) positionClass += " gold";
+      if (index === 1) positionClass += " silver";
+      if (index === 2) positionClass += " bronze";
+
+      return (
+        <div key={aluno.id || index} className="ranking-entry">
+          <div className="ranking-position">
+            <span className={positionClass}>{index + 1}º</span>
+          </div>
+          <div className="ranking-name" title={aluno.nome || "Usuário Anônimo"}>
+            {aluno.nome || "Usuário Anônimo"}
+          </div>
+          <div className="ranking-score">
+            {aluno.totalAcertos} pts
+          </div>
+          <div className="ranking-percentage">
+            ({aluno.totalPerguntas > 0 ? aluno.percentual.toFixed(0) : 0}%)
           </div>
         </div>
-      ))
-    ) : (
-      <div className="bar">Nenhum dado de ranking disponível</div>
-    );
+      );
+    });
   };
 
   return (
-    <div className="ranking-body">
-      <header className="ranking-header">
-        <span className="ranking-title">Ranking</span>
-        <nav className="ranking-nav">
-          <Link
-            to="/home"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              transition: "color 0.3s ease-in-out",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
-            onMouseLeave={(e) => (e.target.style.color = "white")}
-          >
-            Página Inicial
+    // Usando a estrutura .page-container
+    <div className="page-container ranking-page-container">
+      {/* Reutilizando o app-header global */}
+      <header className="app-header ranking-custom-header">
+        <Link to="/" className="app-header-logo-link">
+          <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+        </Link>
+        <h1 className="app-header-page-title">Ranking Geral</h1>
+        <nav className="app-header-nav ranking-custom-nav">
+          <Link to="/home" className="app-header-nav-link">
+            Início
           </Link>
-          <Link
-            to="/ranking"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              transition: "color 0.3s ease-in-out",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
-            onMouseLeave={(e) => (e.target.style.color = "white")}
-          >
+          <Link to="/ranking" className="app-header-nav-link active"> {/* Adiciona classe 'active' */}
             Ranking
           </Link>
-          <img src="/Logo.png" alt="Logo Aprova" className="ranking-logo" />
+          <Link to="/perfil" className="app-header-nav-link">
+            Perfil
+          </Link>
         </nav>
       </header>
 
-      <main className="ranking-main">
-        <h2 className="ranking-intro">🏆 Recorde dos Jogadores!</h2>
-        {renderizarRanking()}
+      <main className="ranking-main-content">
+        <div className="ranking-card">
+          <h2 className="ranking-card-title">🏆 Melhores Pontuações 🏆</h2>
+          
+          {carregando && (
+            <div className="ranking-message ranking-loading">
+              <div className="quiz-spinner"></div> {/* Reutiliza o spinner */}
+              <p>Carregando ranking...</p>
+            </div>
+          )}
+
+          {erro && (
+            <div className="ranking-message ranking-error">
+              <p>😕 Oops! Algo deu errado.</p>
+              <p>{erro}</p>
+              <button onClick={() => window.location.reload()} className="button button--secondary">
+                Tentar Novamente
+              </button>
+            </div>
+          )}
+
+          {!carregando && !erro && (
+            <div className="ranking-list-wrapper">
+              <div className="ranking-list-header">
+                <span className="header-position">Pos.</span>
+                <span className="header-name">Nome</span>
+                <span className="header-score">Pontos</span>
+                <span className="header-percentage">% Acerto</span>
+              </div>
+              <div className="ranking-list-entries">
+                {renderizarRanking()}
+              </div>
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );

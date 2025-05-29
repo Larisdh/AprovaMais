@@ -1,8 +1,9 @@
+// src/pages/Quiz.jsx
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { auth } from "../firebaseConfig";
-import { saveScore } from "../services/quizService";
-import "./css/Quiz.css";
+import { auth } from "../firebaseConfig"; // Verifique o caminho
+import "./css/Quiz.css"; // Importa o CSS refatorado
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -11,8 +12,8 @@ function useQuery() {
 export default function Quiz() {
   const navigate = useNavigate();
   const query = useQuery();
-  const materia = query.get("materia");
-  const quantidade = query.get("questions");
+  const materia = query.get("materia") || "Indefinida";
+  const quantidade = parseInt(query.get("questions"), 10) || 10;
 
   const [perguntas, setPerguntas] = useState([]);
   const [indice, setIndice] = useState(0);
@@ -22,377 +23,268 @@ export default function Quiz() {
   const [erro, setErro] = useState(null);
   const [quizFinalizado, setQuizFinalizado] = useState(false);
   const [resultadoFinal, setResultadoFinal] = useState(null);
+  const [applyCardAnimation, setApplyCardAnimation] = useState(false);
+
 
   useEffect(() => {
     const buscarPerguntas = async () => {
+      if (!materia || materia === "Indefinida" || !quantidade) {
+        setErro("Matéria ou quantidade de perguntas não especificadas corretamente.");
+        setCarregando(false);
+        return;
+      }
       try {
         setCarregando(true);
+        setErro(null);
         const response = await fetch(
           `http://localhost:3000/api/perguntas?materia=${materia}&quantidade=${quantidade}`
         );
-        if (!response.ok) throw new Error("Falha ao buscar perguntas");
+        if (!response.ok) {
+          const errorBody = await response.text();
+          let errorJson = {};
+          try { errorJson = JSON.parse(errorBody); } catch (e) { /* ignore */ }
+          throw new Error(errorJson.error || `Falha ao buscar perguntas (status: ${response.status})`);
+        }
         const data = await response.json();
         if (data.length === 0) {
-          setErro("Nenhuma pergunta encontrada");
+          setErro(`Nenhuma pergunta encontrada para "${materia}". Tente outra matéria.`);
         } else {
-          setPerguntas(data);
+          // Adiciona uma key única para cada pergunta para ajudar na animação do React
+          setPerguntas(data.map(p => ({...p, key: Math.random().toString(36).substring(7) })));
+          setApplyCardAnimation(true);
         }
       } catch (error) {
-        console.error("Erro ao buscar perguntas:", error);
-        setErro("Erro ao carregar perguntas. Por favor, tente novamente.");
+        setErro(`Erro ao carregar perguntas: ${error.message}.`);
       } finally {
         setCarregando(false);
       }
     };
 
     buscarPerguntas();
-  }, [materia, quantidade]);
+  }, [materia, quantidade]); // Removido 'navigate' das dependências, pois não é usado para refetch aqui
 
   useEffect(() => {
-    const salvarResultado = async () => {
-      if (quizFinalizado && resultadoFinal !== null) {
+    const salvarResultadoNoBackend = async () => {
+      if (quizFinalizado && resultadoFinal !== null && perguntas.length > 0) {
         try {
           const user = auth.currentUser;
           if (user) {
-            const nome = user.displayName || user.email;
-            await saveScore(nome, resultadoFinal);
-            await fetch("http://localhost:3000/api/resultados", {
+            const response = await fetch("http://localhost:3000/api/resultados", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
                 userId: user.uid,
                 acertos: resultadoFinal,
                 total: perguntas.length,
-                materia: materia || "Geral",
+                materia: materia,
               }),
             });
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                console.error("Erro ao salvar resultado:", response.status, errorData);
+            } else {
+                const successData = await response.json();
+                console.log("Resultado salvo:", successData);
+            }
           }
         } catch (error) {
-          console.error("Erro ao salvar resultado:", error);
+          console.error("Erro de rede ao salvar resultado:", error);
         }
       }
     };
-
-    salvarResultado();
-  }, [quizFinalizado, resultadoFinal, perguntas.length, materia]);
+    salvarResultadoNoBackend();
+  }, [quizFinalizado, resultadoFinal, perguntas, materia]);
 
   function responder(indiceAlternativa) {
-    if (!perguntas.length || respostaSelecionada !== null) return;
+    if (!perguntas.length || indice >= perguntas.length || respostaSelecionada !== null) return;
 
     const perguntaAtual = perguntas[indice];
+    if (!perguntaAtual) {
+        setErro("Erro ao processar a pergunta.");
+        return;
+    }
     setRespostaSelecionada(indiceAlternativa);
 
-    const acertou = indiceAlternativa === perguntaAtual.correta;
-    const novaPontuacao = acertou ? acertos + 1 : acertos;
-    if (acertou) setAcertos((prev) => prev + 1);
+    const acertouResposta = indiceAlternativa === perguntaAtual.correta;
+    const novaPontuacao = acertouResposta ? acertos + 1 : acertos;
+    
+    if (acertouResposta) {
+      setAcertos(prevAcertos => prevAcertos + 1);
+    }
+
+    const feedbackDuration = 1000;
+    const transitionDelay = 200;
 
     setTimeout(() => {
-      if (indice + 1 < perguntas.length) {
-        setIndice((prev) => prev + 1);
-        setRespostaSelecionada(null);
-      } else {
-        setResultadoFinal(novaPontuacao);
-        setQuizFinalizado(true);
-        alert(
-          `Você acertou ${novaPontuacao} de ${perguntas.length} perguntas!`
-        );
-      }
-    }, 1000);
+      setApplyCardAnimation(false); // Desativa a animação do card atual
+      
+      setTimeout(() => {
+        if (indice + 1 < perguntas.length) {
+          setIndice((prevIndice) => prevIndice + 1);
+          setRespostaSelecionada(null);
+          setApplyCardAnimation(true); // Ativa animação para o novo card
+        } else {
+          setResultadoFinal(novaPontuacao);
+          setQuizFinalizado(true);
+        }
+      }, transitionDelay);
+
+    }, feedbackDuration);
   }
 
-  const styles = {
-    body: {
-      minHeight: "100vh",
-      width: "100%",
-      backgroundColor: "#B9DCF3",
-      backgroundImage: "url('/imagem-fundo-enem.jpg')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      display: "flex",
-      flexDirection: "column",
-      fontFamily: "Sans-serif",
-    },
-    header: {
-      backgroundColor: "#0a518e",
-      color: "white",
-      // padding: "1rem 2rem",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      borderBottomLeftRadius: "1rem",
-      borderBottomRightRadius: "1rem",
-      boxShadow: "0 4px 6px rgba(227, 203, 203, 0.1)",
-    },
-    nav: {
-      display: "flex",
-      gap: "2rem",
-      alignItems: "center",
-      fontSize: "1rem",
-    },
-    logo: {
-      height: "5rem",
-    },
-    title: {
-      fontSize: "2rem",
-      fontWeight: "bold",
-      textAlign: "center",
-      marginBottom: "0.5rem",
-      borderBottom: "2px solid white",
-      display: "inline-block",
-    },
-    main: {
-      flexGrow: 1,
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      // padding: "1.5rem",
-      width: "100%",
-    },
-    questionContainer: {
-      backgroundColor: "white",
-      color: "#0D6E9C",
-      width: "100%",
-      maxWidth: "40rem",
-      margin: "1.5rem auto", // Centraliza e adiciona espaçamento vertical
-      borderRadius: "1.5rem",
-      boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)", // Sombra moderna
-      padding: "2rem", // Espaçamento interno maior
-    },
-    questionText: {
-      fontSize: "1.2rem",
-      textAlign: "left",
-      lineHeight: "1.8", // Melhor espaçamento entre linhas
-      marginBottom: "1.5rem", // Espaçamento abaixo do texto
-      color: "#083a6b", // Azul escuro
-      border: "2px solid #0D6E9C", // Borda azul escuro
-      borderRadius: "0.5rem",
-      padding: "1.5rem", // Espaçamento interno
-      backgroundColor: "#f9fcff", // Fundo claro
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Sombra leve
-    },
-    optionsContainer: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "1rem", // Espaçamento entre os botões
-      marginTop: "1.5rem", // Espaçamento acima das opções
-      padding: "1rem", // Espaçamento interno para descolar da borda
-      backgroundColor: "#ffffff", // Fundo branco
-      borderRadius: "1rem",
-    },
-    optionButton: {
-      display: "flex",
-      alignItems: "center",
-      gap: "0.5rem",
-      padding: "1rem",
-      borderRadius: "9999px", // Bordas totalmente arredondadas
-      border: "2px solid #0D6E9C", // Borda azul escuro
-      fontWeight: "bold",
-      fontSize: "1rem",
-      textAlign: "left",
-      transition: "all 0.3s ease-in-out",
-      cursor: "pointer",
-      backgroundColor: "#d5f3ff", // Fundo azul claro
-      color: "#0D6E9C", // Texto azul escuro
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Sombra leve
-    },
-    saveButtonContainer: {
-      display: "flex",
-      justifyContent: "flex-end",
-      marginTop: "2rem", // Espaçamento acima do botão
-      gap: "1rem", // Espaçamento entre os botões
-    },
-    saveButton: {
-      backgroundColor: "#0D6E9C",
-      color: "white",
-      padding: "0.75rem 1.5rem",
-      borderRadius: "9999px",
-      fontWeight: "bold",
-      fontSize: "1rem",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Sombra leve
-      cursor: "pointer",
-      transition: "all 0.2s",
-      border: "none",
-    },
-    loadingContainer: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "300px",
-    },
-    progressIndicator: {
-      fontSize: "1rem",
-      margin: "1rem 0",
-      color: "#0D6E9C",
-    },
-    errorMessage: {
-      color: "#F44336",
-      textAlign: "center",
-      fontSize: "1rem",
-      padding: "2rem",
-    },
-    resultContainer: {
-      textAlign: "center",
-      padding: "2rem",
-    },
-    resultTitle: {
-      fontSize: "1.5rem",
-      fontWeight: "bold",
-      marginBottom: "1rem",
-      color: "#0D6E9C",
-    },
-    resultScore: {
-      fontSize: "2rem",
-      fontWeight: "bold",
-      marginBottom: "1.5rem",
-      color: "#0D6E9C",
-    },
-    resultButtons: {
-      display: "flex",
-      justifyContent: "center",
-      gap: "1rem",
-    },
+  const reiniciarQuiz = () => {
+    // Força um refetch da página do quiz com um parâmetro aleatório para garantir a remontagem
+    navigate(`/quiz?materia=${materia}&questions=${quantidade}&rerun=${Math.random().toString(36).substring(7)}`);
+    // Opcionalmente, resetar estados locais aqui se a navegação não remontar totalmente.
+    // Mas a navegação com query param diferente geralmente força.
   };
 
-  // Proteção contra erro de índice
-  if (!quizFinalizado && (!perguntas[indice] || indice >= perguntas.length)) {
+  const HeaderQuiz = ({ titleOverride }) => (
+    <header className="app-header quiz-custom-header">
+      <Link to="/home" className="app-header-logo-link">
+        <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+      </Link>
+      <h1 className="app-header-page-title">{titleOverride || `Quiz - ${materia}`}</h1>
+      <nav className="app-header-nav quiz-custom-nav">
+        <Link to="/home" className="app-header-nav-link">Início</Link>
+        <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
+      </nav>
+    </header>
+  );
+
+  if (carregando) {
     return (
-      <div style={{ ...styles.body, padding: "2rem", color: "#F44336" }}>
-        ⚠️ Erro inesperado: pergunta inválida ou fora do índice.
+      <div className="page-container quiz-page-container">
+        <HeaderQuiz titleOverride="Carregando Quiz" />
+        <main className="quiz-main-content">
+          <div className="quiz-feedback-container"> {/* Usando uma classe genérica para o container */}
+            <p className="quiz-feedback-text">Carregando perguntas...</p>
+            <div className="quiz-spinner"></div>
+          </div>
+        </main>
       </div>
     );
   }
 
+  if (erro) {
+    return (
+      <div className="page-container quiz-page-container">
+        <HeaderQuiz titleOverride="Erro no Quiz" />
+        <main className="quiz-main-content">
+          <div className="quiz-feedback-container quiz-error-container"> {/* Classe adicional para erro */}
+            <p className="quiz-feedback-text error-text">{erro}</p>
+            <Link to="/home" className="button button--primary quiz-error-button">
+              Voltar para Início
+            </Link>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (quizFinalizado) {
+    return (
+      <div className="page-container quiz-page-container">
+        <HeaderQuiz titleOverride="Resultado do Quiz" />
+        <main className="quiz-main-content">
+          <div className="quiz-feedback-container quiz-result-container"> {/* Classe adicional para resultado */}
+            <h2 className="quiz-result-title">🎉 Quiz Finalizado! 🎉</h2>
+            <p className="quiz-result-score">
+              Você acertou {resultadoFinal} de {perguntas.length} perguntas em {materia}!
+            </p>
+            <div className="quiz-result-actions">
+              <button
+                onClick={() => navigate("/ranking")}
+                className="button button--primary"
+              >
+                Ver Ranking
+              </button>
+              <button
+                onClick={reiniciarQuiz}
+                className="button button--secondary"
+              >
+                Jogar Novamente ({materia})
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+  
+  if (!perguntas.length || !perguntas[indice]) {
+     return (
+      <div className="page-container quiz-page-container">
+        <HeaderQuiz titleOverride="Erro no Quiz" />
+        <main className="quiz-main-content">
+          <div className="quiz-feedback-container quiz-error-container">
+             <p className="quiz-feedback-text error-text">Não foi possível carregar a pergunta. Por favor, tente selecionar a matéria novamente.</p>
+            <Link to="/home" className="button button--primary quiz-error-button">
+              Voltar para Início
+            </Link>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  const perguntaAtual = perguntas[indice];
+
   return (
-    <div style={styles.body}>
-      <header style={styles.header}>
-        <span style={styles.title}>Quiz - {materia}</span>
-        <nav style={styles.nav}>
-          <Link
-            to="/home"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              transition: "color 0.3s ease-in-out",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
-            onMouseLeave={(e) => (e.target.style.color = "white")}
-          >
-            Página Inicial
-          </Link>
-          <Link
-            to="/ranking"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              transition: "color 0.3s ease-in-out",
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "#405ceaee")}
-            onMouseLeave={(e) => (e.target.style.color = "white")}
-          >
-            Ranking
-          </Link>
+    <div className="page-container quiz-page-container">
+      <HeaderQuiz />
+      <main className="quiz-main-content">
+        <div 
+            key={perguntaAtual.key}
+            className={`quiz-card ${applyCardAnimation ? 'animate-card-enter' : ''}`}
+        >
+          <div className="quiz-question-text">
+            {perguntaAtual.textos?.map((textoItem, idx) => (
+              <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
+                {typeof textoItem === "object" ? textoItem.conteudo : textoItem}
+              </p>
+            ))}
+          </div>
 
-          <img src="/Logo.png" alt="Logo ENEM" style={styles.logo} />
-        </nav>
-      </header>
+          <div className="quiz-options">
+            {perguntaAtual.alternativas.map((alt, i) => {
+              let buttonClass = "quiz-option-button";
+              if (respostaSelecionada !== null) {
+                if (i === perguntaAtual.correta) {
+                  buttonClass += " correct";
+                } else if (i === respostaSelecionada) {
+                  buttonClass += " incorrect";
+                } else {
+                  buttonClass += " disabled";
+                }
+              }
 
-      <main style={styles.main}>
-        <div style={styles.questionContainer}>
-          {carregando ? (
-            <div style={styles.loadingContainer}>
-              <div style={styles.progressIndicator}>
-                Carregando perguntas...
-              </div>
-            </div>
-          ) : erro ? (
-            <div style={styles.errorMessage}>{erro}</div>
-          ) : quizFinalizado ? (
-            <div style={styles.resultContainer}>
-              <h2 style={styles.resultTitle}>Quiz Finalizado</h2>
-              <div style={styles.resultScore}>
-                Você acertou {resultadoFinal} de {perguntas.length} perguntas!
-              </div>
-              <div style={styles.resultButtons}>
+              return (
                 <button
-                  onClick={() => navigate("/ranking")}
-                  style={styles.saveButton}
+                  key={i}
+                  onClick={() => responder(i)}
+                  disabled={respostaSelecionada !== null}
+                  className={buttonClass}
                 >
-                  Ver Ranking
+                  <span className="quiz-option-letter">{String.fromCharCode(65 + i)})</span>
+                  {alt}
                 </button>
-                <button
-                  onClick={() => {
-                    setIndice(0);
-                    setAcertos(0);
-                    setRespostaSelecionada(null);
-                    setResultadoFinal(null);
-                    setQuizFinalizado(false);
-                    setPerguntas((prev) => [
-                      ...prev.sort(() => Math.random() - 0.5),
-                    ]);
-                  }}
-                  style={{ ...styles.saveButton, backgroundColor: "#4CAF50" }}
-                >
-                  Jogar Novamente
-                </button>
-              </div>
-            </div>
-          ) : (
-            <>
-              <div style={styles.questionText}>
-                {perguntas[indice]?.textos?.length > 0 && (
-                  <div style={{ marginTop: "1rem" }}>
-                    {perguntas[indice].textos.map((texto, index) => (
-                      <p
-                        key={index}
-                        style={{ fontStyle: "italic", fontSize: "0.9rem" }}
-                      >
-                        {typeof texto === "object" ? texto.conteudo : texto}
-                      </p>
-                    ))}
-                  </div>
-                )}
-              </div>
+              );
+            })}
+          </div>
 
-              <div style={styles.optionsContainer}>
-                {perguntas[indice]?.alternativas.map((alt, i) => (
-                  <button
-                    key={i}
-                    onClick={() => responder(i)}
-                    disabled={respostaSelecionada !== null}
-                    style={{
-                      ...styles.optionButton,
-                      ...(respostaSelecionada === null
-                        ? {}
-                        : i === perguntas[indice].correta
-                        ? { backgroundColor: "#4CAF50", color: "white" }
-                        : i === respostaSelecionada
-                        ? { backgroundColor: "#F44336", color: "white" }
-                        : { backgroundColor: "#E0E0E0", color: "#9E9E9E" }),
-                    }}
-                  >
-                    <span style={{ fontWeight: "bold" }}>
-                      {String.fromCharCode(65 + i)}){" "}
-                    </span>
-                    {alt}
-                  </button>
-                ))}
-              </div>
+          <div className="quiz-progress-indicator">
+            Pergunta {indice + 1} de {perguntas.length}
+          </div>
 
-              <div style={{ marginTop: "1rem", textAlign: "center" }}>
-                Pergunta {indice + 1} de {perguntas.length}
-              </div>
-
-              <div style={styles.saveButtonContainer}>
-                <button
-                  onClick={() => navigate("/ranking")}
-                  style={styles.saveButton}
-                >
-                  Ver Ranking
-                </button>
-              </div>
-            </>
-          )}
+          <div className="quiz-actions">
+            <button
+              onClick={() => navigate("/home")}
+              className="button button--secondary quiz-action-button"
+            >
+              Escolher Matéria
+            </button>
+          </div>
         </div>
       </main>
     </div>

@@ -1,15 +1,16 @@
-// Serviço para interagir com a API de quiz
+// src/services/quizService.js
 const API_URL = "http://localhost:3000/api";
 
 /**
- * Salva a pontuação do usuário no servidor
- * @param {string} user - Nome do usuário
- * @param {number} pontos - Pontuação obtida
- * @returns {Promise} - Promise com o resultado da operação
+ * Salva a pontuação do usuário no servidor (OBS: Esta função se torna redundante
+ * se o POST para /api/resultados já está sendo feito diretamente no Quiz.jsx
+ * e é a forma principal de registrar o resultado e atualizar estatísticas)
+ *
+ * Se você remover a chamada a esta função no Quiz.jsx, pode remover esta função daqui também.
  */
 export const saveScore = async (user, pontos) => {
   try {
-    const response = await fetch(`${API_URL}/scores`, {
+    const response = await fetch(`${API_URL}/scores`, { // Esta rota foi removida do server.js refatorado
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,24 +19,47 @@ export const saveScore = async (user, pontos) => {
     });
 
     if (!response.ok) {
-      throw new Error("Falha ao salvar pontuação");
+      const errorData = await response.json().catch(() => ({ message: "Falha ao salvar pontuação (opcional)"}));
+      console.error("Erro ao salvar pontuação (opcional):", response.status, errorData);
+      throw new Error(errorData.error || errorData.message || `Falha ao salvar pontuação (opcional) (status: ${response.status})`);
     }
 
     return await response.json();
   } catch (error) {
-    console.error("Erro ao salvar pontuação:", error);
-    throw error;
+    console.error("Erro em saveScore (opcional):", error);
+    // Não re-lançar se for opcional e o outro salvamento for o principal
+    // throw error; 
+    return { message: "Tentativa de salvamento opcional falhou ou não necessária." };
   }
 };
 
 /**
- * Busca o ranking dos melhores jogadores
+ * Busca o ranking dos melhores jogadores da coleção 'estatisticas'
  * @returns {Promise<Array>} - Promise com a lista de ranking
  */
 export const fetchRanking = async () => {
-  const response = await fetch(`${API_URL}/scores`);
-  if (!response.ok) {
-    throw new Error("Falha ao buscar ranking");
+  try {
+    console.log("[quizService] Solicitando /api/ranking...");
+    const response = await fetch(`${API_URL}/ranking`); // ✅ ALTERADO PARA /api/ranking
+    
+    if (!response.ok) {
+      const errorBody = await response.text(); // Pegar o corpo do erro como texto
+      let errorJson = {};
+      try {
+        errorJson = JSON.parse(errorBody);
+      } catch (e) {
+        // Não é JSON, usar o texto do corpo ou um erro padrão
+        console.error("Erro na API de Ranking (não JSON):", response.status, errorBody);
+        throw new Error(`Falha ao buscar ranking (status: ${response.status}) - ${errorBody.substring(0, 100)}`);
+      }
+      console.error("Erro na resposta da API de Ranking:", response.status, errorJson);
+      throw new Error(errorJson.error || `Falha ao buscar ranking (status: ${response.status})`);
+    }
+    const data = await response.json();
+    console.log("[quizService] Ranking recebido de /api/ranking:", data);
+    return data;
+  } catch (error) {
+    console.error("Erro em fetchRanking:", error.message);
+    throw error; // Re-lança o erro para ser pego pelo componente Ranking.jsx
   }
-  return await response.json();
 };

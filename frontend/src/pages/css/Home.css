@@ -1,356 +1,464 @@
-/* ======== GERAL ======== */
-.home-container {
-  background-color: #d5f3ff;
-  font-family: 'Roboto', Sans-serif;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100vh;
+/* src/style.css (ou seu arquivo CSS global principal) */
+
+/* ... (seu reset e base styles, que já estão ótimos) ... */
+
+/* ======== CSS VARIABLES (CUSTOM PROPERTIES) ======== */
+:root {
+  /* Colors */
+  --color-primary: #0a518e;
+  --color-primary-dark: #084a7e;
+  --color-primary-light: #106bac;
+  --color-primary-xtra-light: #e9f5ff; /* Perfeito para fundos de botões secundários */
+  --color-primary-border: #cce7ff;   /* Bom para bordas sutis */
+
+  --color-secondary: #34495e; /* Use para elementos de apoio */
+  --color-accent: #1abc9c;    /* Cor de destaque vibrante, ótima para CTAs ou ênfase */
+  --color-accent-dark: #16a085;
+
+  --color-text-primary: #333;
+  --color-text-on-primary: #ffffff;
+  --color-text-subtle: #555;    /* Para textos menos importantes */
+  --color-text-on-accent: #ffffff;
+
+  --color-background-page: #eef7ff;
+  --color-background-element: #ffffff;
+  --color-border-light: #e7edf3; /* Um pouco mais sutil que e0eaf3 */
+
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+  --color-warning: #f39c12;
+
+  /* RGB Colors for opacity */
+  --color-primary-rgb: 10, 81, 142;
+  --color-secondary-rgb: 52, 73, 94;
+  --color-accent-rgb: 26, 188, 156;
+  --color-black-rgb: 0, 0, 0;
+  --color-white-rgb: 255, 255, 255;
+
+  /* Typography */
+  --font-body: 'Roboto', 'Arial', sans-serif;
+  --font-heading: 'Montserrat', 'Arial', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-xxl: 4.8rem;
+
+  /* Borders & Radii (Ajustados para mais suavidade) */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px; /* Para cards maiores */
+
+  /* Sombras Refinadas */
+  --shadow-sm: 0 2px 4px rgba(var(--color-black-rgb), 0.06);
+  --shadow-md: 0 5px 10px rgba(var(--color-black-rgb), 0.08);
+  --shadow-lg: 0 8px 16px rgba(var(--color-black-rgb), 0.1);
+  --shadow-xl: 0 12px 24px rgba(var(--color-black-rgb), 0.12);
+  --shadow-card-hover: 0 10px 25px rgba(var(--color-black-rgb), 0.12), 0 5px 10px rgba(var(--color-black-rgb), 0.08);
+  --shadow-button-hover: 0 4px 12px rgba(var(--color-primary-rgb), 0.2);
+  --shadow-button-active-inset: inset 0 2px 4px rgba(var(--color-black-rgb), 0.1);
+  --shadow-focus-ring: 0 0 0 3px rgba(var(--color-primary-rgb), 0.3); /* Anel de foco */
+
+
+  /* Transitions */
+  --transition-fast: all 0.2s ease-out;
+  --transition-default: all 0.3s ease-in-out;
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --header-height-mobile: 6rem;
+  --header-height-desktop: 7rem;
 }
 
-/* ======== CABEÇALHO ======== */
-.home-header {
-  background-color: #0a518e;
-  color: white;
-  padding: 1.5rem 2rem;
+/* ... (Resto do seu CSS global base como #root, body, html, etc.) ... */
+
+/* ======== GLOBAL APP HEADER ======== */
+.app-header {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: 0 var(--space-md);
+  height: var(--header-height-mobile);
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  /* border-bottom-left-radius: var(--border-radius-lg); (Removido para header full-width, mais moderno) */
+  /* border-bottom-right-radius: var(--border-radius-lg); (Removido) */
+  box-shadow: 0 3px 10px rgba(var(--color-primary-rgb), 0.2); /* Sombra mais sutil e temática */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.app-logo {
+  height: calc(var(--header-height-mobile) * 0.65);
+  transition: transform var(--transition-default), filter var(--transition-default); /* Adicionado filter */
+}
+.app-logo:hover {
+  transform: scale(1.08) rotate(-4deg);
+  filter: brightness(1.1); /* Leve brilho no hover */
+}
+.app-header-page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 700;
   text-align: center;
-  position: relative;
-  z-index: 10;
-}
-
-.home-header h1 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
-.home-logo {
-  height: 5rem;
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
-}
-
-/* ======== SUBTÍTULO ======== */
-.home-subtitle {
-  background-color: #e8f6f9;
-  color: #0a518e;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1rem 1.5rem;
-}
-
-/* ======== CONTEÚDO PRINCIPAL ======== */
-.home-main {
+  margin: 0 var(--space-sm);
   flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-direction: column;
-  padding: 1rem 1rem;
-  text-align: center;
-  z-index: 5;
+}
+.app-header-nav-link {
+  color: var(--color-text-on-primary);
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  font-weight: 500;
+  padding: var(--space-xs) var(--space-xs); /* Adicionado padding lateral para melhor área de clique */
+  position: relative;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  border-radius: var(--border-radius-sm); /* Leve arredondamento */
+}
+.app-header-nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -3px; /* Ajustado para não colar no texto */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent); /* Usando cor de destaque */
+  transition: width var(--transition-default); /* Transição mais suave */
+  border-radius: 1px; /* Pequeno arredondamento na linha */
+}
+.app-header-nav-link:hover,
+.app-header-nav-link.active { /* Supondo que 'active' é uma classe do React Router */
+  color: var(--color-accent);
+  /* background-color: rgba(var(--color-white-rgb), 0.1); (Opcional: leve fundo no hover) */
+  transform: translateY(-1px);
+}
+.app-header-nav-link:hover::after,
+.app-header-nav-link.active::after {
+  width: 70%; /* Linha não ocupa 100%, mais sutil */
+}
+.app-header-nav-link:active {
+  transform: translateY(0);
+  color: var(--color-accent-dark);
 }
 
-.home-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.5rem;
+
+/* ======== ESTILOS ESPECÍFICOS DA HOME ======== */
+
+/* Animação de entrada para elementos da Home */
+@keyframes fadeInUpSlight {
+  from {
+    opacity: 0;
+    transform: translateY(15px); /* Menos deslocamento */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-container .app-header-page-title.home-header-custom-title {
+  font-size: clamp(2rem, 5vw, 2.7rem); /* Um pouco maior */
+  font-weight: 700; /* Mantido, 900 pode ser excessivo */
+  letter-spacing: 0.04em;
+  color: var(--color-text-on-primary); /* Garante a cor, já herdada */
+  text-shadow: 1px 1px 3px rgba(var(--color-black-rgb), 0.15); /* Sombra sutil no texto */
+}
+
+.home-subtitle {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  color: var(--color-text-on-primary);
+  text-align: center;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: clamp(1.5rem, 2.5vw, 1.7rem);
+  font-weight: 500; /* Mais leve que 600, já que é um subtítulo */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  margin: var(--space-lg) auto;
+  width: fit-content;
+  max-width: 90%;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  animation: fadeInUpSlight 0.5s 0.2s var(--transition-smooth) forwards;
+  opacity: 0; /* Para animação */
+  transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
+.home-subtitle:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.home-main-content {
+  padding: var(--space-lg) var(--space-md);
   width: 100%;
-  max-width: 1400px;
-  flex-wrap: wrap; /* Flexível no mobile */
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-/* ======== ASIDE ======== */
-.home-aside {
-  flex: 0 0 20rem;
-  background-color: #0a518e;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  max-width: 25rem;
-  text-align: left;
-  border: 1px solid #f0f8ff;
-  order: -1; /* Move o aside para a esquerda */
-}
-
-.home-aside h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #f0f8ff;
-  text-align: center;
-  font-weight: bold;
-}
-
-.home-aside ul {
-  list-style: none;
-  padding: 0;
+.home-layout-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  width: 100%;
 }
 
-.home-aside button {
-  background-color: #f0f8ff;
-  color: #0a518e;
-  border: none;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+/* Estilo base para os cards da Home - pode ser uma classe ou aplicado diretamente */
+.home-aside,
+.home-info-section {
+  background-color: var(--color-background-element);
+  color: var(--color-text-primary);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-lg); /* Raio maior e consistente */
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); /* Gap interno dos cards */
+  transition: transform var(--transition-default), box-shadow var(--transition-default);
+  opacity: 0; /* Para animação */
+}
+.home-aside:hover,
+.home-info-section:hover {
+  transform: translateY(-6px); /* Mais elevação no hover */
+  box-shadow: var(--shadow-card-hover); /* Sombra mais pronunciada */
+}
+
+.home-aside {
+  animation: fadeInUpSlight 0.6s 0.4s var(--transition-smooth) forwards;
+}
+
+.home-info-section {
+  animation: fadeInUpSlight 0.6s 0.55s var(--transition-smooth) forwards; /* Delay um pouco maior */
+}
+
+
+.home-aside__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3vw, 2.1rem);
+  color: var(--color-primary-dark);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: var(--space-xs); /* Adiciona pequeno espaço abaixo do título */
+}
+.home-aside__subject-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: var(--space-md);
+}
+
+.home-aside__subject-button,
+.home-aside__quantity-button {
+  background-color: var(--color-primary-xtra-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-border);
+  padding: var(--space-sm) var(--space-sm); /* Padding mais uniforme */
+  border-radius: var(--border-radius-md);
+  font-size: clamp(1.4rem, 2vw, 1.5rem); /* Tamanho ligeiramente aumentado */
+  font-weight: 600; /* Mais destaque */
+  transition: all var(--transition-fast); /* Transição para todas as propriedades */
   width: 100%;
   text-align: center;
-  box-sizing: border-box;
+  line-height: 1.4;
+  box-shadow: var(--shadow-sm); /* Sombra sutil inicial */
+}
+.home-aside__subject-button:hover,
+.home-aside__quantity-button:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--shadow-md); /* Sombra mais forte no hover */
+}
+.home-aside__subject-button:active,
+.home-aside__quantity-button:active:not(.active) { /* Evita conflito com estilo .active */
+  transform: translateY(-1px) scale(0.98);
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-button-active-inset);
+}
+/* Para foco com teclado */
+.home-aside__subject-button:focus-visible,
+.home-aside__quantity-button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus-ring);
 }
 
-.home-aside button:hover {
-  background-color: #d5f3ff;
-  color: #083a6b;
-  transform: translateY(-2px);
-}
 
-/* ======== SELETOR DE PERGUNTAS ======== */
-.question-selector {
-  margin-top: 1rem;
-  text-align: left;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f0f8ff;
-}
-
-.question-selector h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #f0f8ff;
-  white-space: nowrap;
-}
-
-.question-buttons {
+.home-aside__question-selector {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-light);
   display: flex;
-  gap: 0.5rem;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.home-aside__question-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.home-aside__quantity-button {
+  padding: var(--space-sm) var(--space-md);
+  min-width: 48px;
+}
+.home-aside__quantity-button.active {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.4), var(--shadow-md); /* Sombra de foco */
+  font-weight: 700; /* Mais bold quando ativo */
+  transform: scale(1.05); /* Leve destaque */
 }
 
-.question-buttons button {
-  background-color: #f0f8ff;
-  color: #0a518e;
-  border: 1px solid #0a518e;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  white-space: nowrap;
+.home-info-section__image-container {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--border-radius-md); /* Consistente com outros elementos */
+  overflow: hidden; /* Garante que a imagem respeite o border-radius */
+  box-shadow: var(--shadow-sm); /* Sombra sutil na imagem */
+}
+.home-info-section__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform var(--transition-smooth); /* Transição mais suave para o zoom */
+  display: block; /* Garante que não haja espaço extra abaixo da imagem */
+}
+.home-info-section:hover .home-info-section__image {
+  transform: scale(1.06); /* Zoom um pouco maior no hover do card */
 }
 
-.question-buttons button:hover {
-  background-color: #d5f3ff;
-  color: #083a6b;
-}
-
-.question-buttons button.active {
-  background-color: #0a518e;
-  color: white;
-  border: 1px solid #083a6b;
-}
-
-/* ======== DESCRIÇÃO ======== */
-.home-description {
-  max-width: 50rem;
-  color: #083a6b;
+.home-info-section__description {
+  color: var(--color-text-subtle);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  gap: var(--space-md);
 }
-
-.home-description h2 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.home-description p {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+.home-info-section__description h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
   line-height: 1.3;
 }
-
-.home-description p:last-child {
-  font-size: 1.2rem;
-  font-weight: 800;
+.home-info-section__description p {
+  font-size: clamp(1.5rem, 2.2vw, 1.7rem);
+  line-height: 1.75; /* Melhor legibilidade */
 }
 
-/* ======== IMAGEM ======== */
-.home-image {
-  width: 30rem;
-  flex: 1;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 38%;
-  height: auto;
-  margin-top: 1rem;
-  align-self: center;
-}
-
-/* ======== BOTÃO PRINCIPAL ======== */
-.home-button {
-  background-color: #0a518e;
-  color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 1rem 2.5rem;
-  border-radius: 1.5rem;
-  margin-top: 1rem;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ======== GLOBAL BUTTON STYLES ======== */
+.button {
+  display: inline-block;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 1.6rem);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius-md);
+  transition: background 0.25s ease-out, color 0.25s ease-out, transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* Aumenta o espaçamento entre letras */
+  text-align: center;
+  line-height: 1.4;
   border: none;
+  outline: none;
+  will-change: transform, box-shadow; /* Otimização para animações */
   cursor: pointer;
 }
-
-.home-button:hover {
-  background-color: #083a6b;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+/* Estilo para foco com teclado */
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus-ring);
+}
+.button--primary {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  color: var(--color-text-on-primary);
+  box-shadow: var(--shadow-button-hover); /* Sombra inicial para botões primários */
+}
+.button--primary:hover {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 7px 18px rgba(var(--color-primary-rgb), 0.25); /* Sombra mais pronunciada */
+}
+.button--primary:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: var(--shadow-button-active-inset), 0 3px 8px rgba(var(--color-primary-rgb), 0.2);
+}
+.home-info-section__action-button.button--primary {
+  margin-top: var(--space-md);
+  padding: var(--space-md) var(--space-xl); /* Botão de ação principal mais robusto */
+  font-size: clamp(1.6rem, 2.6vw, 1.7rem);
 }
 
-.home-button:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
 
-/* ======== RESPONSIVO ======== */
-@media (max-width: 600px) {
-  .home-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    justify-content: center;
-    position: relative;
+/* ======== RESPONSIVIDADE (MOBILE-FIRST - Estilos acima são base mobile) ======== */
+@media (min-width: 768px) {
+  .app-header {
+    height: var(--header-height-desktop);
+    padding: 0 var(--space-lg);
   }
-
-.home-logo {
-    height: 4rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    position: static;
-    top: auto;
-    right: auto;
-    transform: none;
-    order: 2;
-  }
-  
-  .home-content {
-    flex-direction: column;
-    align-items: center;
+  .app-logo {
+    height: calc(var(--header-height-desktop) * 0.6);
   }
 
   .home-subtitle {
-    font-size: 1.1rem;
-    padding: 0.75rem;
-    margin: 1rem;
+    padding: var(--space-md) var(--space-xl);
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
   }
 
-  .home-main {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+  .home-main-content {
+    padding: var(--space-xl) var(--space-lg);
   }
-
-  .home-image {
-    width: 22rem;
+  .home-layout-grid {
+    grid-template-columns: 300px 1fr;
+    align-items: flex-start; /* Importante para cards de alturas diferentes */
+    gap: var(--space-xl);
   }
-
-  .home-aside {
-    order: 0;
-    max-width: 100%;
+  .home-aside__subject-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Maior min para botões em desktop */
+    gap: var(--space-md);
   }
-
-  .home-aside ul {
-    grid-template-columns: 1fr;
-  }
-
-  .home-description {
-    max-width: 90%;
-  }
-
-  .home-description h2 {
-    font-size: 1.2rem;
-  }
-
-  .home-description p {
-    font-size: 1rem;
-  }
-
-  .home-button {
-    font-size: 1rem;
-    padding: 0.75rem 2rem;
-  }
-}
-/* NOVO BLOCO: Agrupamento da imagem e descrição */
-.home-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex: 1;
-  flex-wrap: wrap;
-}
-
-.home-image {
-  max-width: 45%;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.home-description {
-  max-width: 50%;
-  text-align: left;
-  align-self: center;
-}
-
-@media (max-width: 900px) {
-  .home-info {
-    flex-direction: column;
+  .home-info-section {
+    flex-direction: row;
     align-items: center;
+    text-align: left;
+    gap: var(--space-xl);
+    padding: var(--space-xl);
   }
+  .home-info-section__image-container {
+    flex: 0 0 clamp(280px, 35%, 350px);
+  }
+  .home-info-section__description {
+    flex: 1;
+    text-align: left;
+  }
+  .home-info-section__description p {
+     font-size: 1.7rem;
+     color: var(--color-text-primary); /* Pode ser um pouco mais escuro que subtle para melhor leitura */
+  }
+}
 
-  .home-description,
-  .home-image {
-    max-width: 90%;
-    text-align: center;
+@media (min-width: 992px) {
+  .home-layout-grid {
+    grid-template-columns: 340px 1fr;
+    gap: var(--space-xl);
   }
+   .home-aside__title {
+     font-size: 2.2rem;
+   }
+   .home-info-section__description h2 {
+     font-size: 2.6rem;
+   }
+}
 
-  .home-description {
-    margin-top: 1.5rem;
-  }
+@media (min-width: 1200px) {
+    .home-layout-grid {
+        grid-template-columns: 360px 1fr; /* Mais espaço para o aside em telas largas */
+    }
 }
