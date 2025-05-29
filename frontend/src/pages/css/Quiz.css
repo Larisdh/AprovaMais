@@ -10,14 +10,6 @@
 }
 /* .quiz-page-container::before não é mais necessário sem a imagem de fundo */
 
-
-/* Customizações para o header global na página de Quiz */
-.quiz-custom-header.app-header {
-  /* Estilos globais do app-header são suficientes */
-  /* Se quiser uma borda inferior para separar do conteúdo: */
-  /* border-bottom: 1px solid var(--color-primary-light, #106bac); */
-}
-
 /* Conteúdo principal da página de Quiz */
 .quiz-main-content {
   display: flex;
@@ -224,6 +216,13 @@
   color: var(--color-text-on-primary, #ffffff); /* Texto branco */
 }
 
+/* NOVO ESTILO PARA O TEXTO DA ALTERNATIVA */
+.quiz-option-text-content {
+  position: relative; /* Necessário para que z-index funcione corretamente */
+  z-index: 1;      /* Garante que este span fique acima do ::after */
+  flex-grow: 1;    /* Permite que o texto ocupe o espaço restante no botão flexível */
+}
+
 
 .quiz-progress-indicator {
   text-align: center;
@@ -347,49 +346,113 @@
     height: 2.6rem;
     font-size: 1.3rem;
   }
-  .quiz-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .quiz-actions .button {
-    width: 100%;
-  }
-  .quiz-result-container .quiz-result-actions {
-    flex-direction: column;
-    gap: var(--space-md, 1.6rem);
-  }
-  .quiz-result-container .quiz-result-actions .button {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-  }
 }
 
+/* --- Celulares Menores (usando o seu 414px original, ou pode ser 480px para consistência com o exemplo) --- */
+/* A seção @media (max-width: 480px) abaixo parece conter classes que não estão sendo usadas
+   no JSX atual do Quiz.jsx (ex: .quiz-header, .quiz-title, .bar).
+   Você pode revisar e remover se não forem mais necessárias ou ajustar para as classes atuais.
+   A responsividade principal para os elementos do quiz está sendo tratada em @media (max-width: 767px).
+*/
 @media (max-width: 480px) {
-  .quiz-main-content {
-    padding: var(--space-sm, 0.8rem);
+
+  /* Alterado de 414px para 480px para alinhar com o exemplo do ranking, ajuste se preferir 414px */
+  .quiz-header { /* Esta classe não parece estar no JSX atual do Quiz */
+    /* flex-direction, align-items, text-align, gap já vêm do breakpoint 768px */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
   }
-  .quiz-card,
-  .quiz-feedback-container {
-    padding: var(--space-md, 1.6rem);
-    gap: var(--space-sm, 0.8rem);
+
+  .quiz-title { /* Esta classe não parece estar no JSX atual do Quiz */
+    font-size: 1.6rem;
+    /* Ajusta o tamanho do título */
+    margin-bottom: 0.5rem;
+    /* Adiciona espaçamento abaixo */
   }
-  .quiz-question-text {
-    font-size: 1.5rem;
+
+  .quiz-logo { /* Esta classe não parece estar no JSX atual do Quiz */
+    height: 3rem;
+    /* Ajusta o tamanho da logo */
+    margin: 0.5rem 0;
+    /* Adiciona espaçamento acima e abaixo */
   }
-  .quiz-option-button {
-    font-size: 1.4rem;
-    padding: var(--space-sm, 0.8rem) var(--space-sm, 0.8rem);
+
+  .quiz-nav { /* Esta classe não parece estar no JSX atual do Quiz */
+    /* flex-direction e align-items já vêm do breakpoint 768px */
+    gap: 0.75rem;
+    /* Ajusta o espaçamento entre os links */
+    margin-top: 0.5rem;
   }
-  .quiz-option-letter {
-    width: 2.4rem;
-    height: 2.4rem;
-    font-size: 1.2rem;
+
+  .quiz-nav a { /* Esta classe não parece estar no JSX atual do Quiz */
+    width: 100%;
+    /* Faz os botões ocuparem toda a largura */
+    max-width: none;
+    /* Remove o max-width do breakpoint maior, se houver */
+    padding: 0.5rem 0;
+    /* Ajusta o espaçamento interno */
+    /* Outras propriedades como background, color, etc., são herdadas */
   }
-  .quiz-result-container .quiz-result-title {
-    font-size: clamp(2rem, 6vw, 2.6rem);
+
+  .bar { /* Esta classe não parece estar no JSX atual do Quiz */
+    min-width: 100%;
+    /* Faz a barra ocupar toda a largura */
+    padding: 0.75rem;
+    /* Ajusta o espaçamento interno */
   }
-  .quiz-result-container .quiz-result-score {
-    font-size: clamp(1.7rem, 5vw, 2.1rem);
+
+  .quiz-main { /* Esta classe não parece estar no JSX atual do Quiz */
+    /* flex-direction já vem do breakpoint 768px */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+    gap: 1rem;
+    /* Espaçamento entre os elementos */
+  }
+
+  .quiz-question-container { /* Esta classe não parece estar no JSX atual do Quiz */
+    padding: 1rem;
+    /* Ajusta o espaçamento interno */
+    max-width: 95%;
+    /* Reduz a largura máxima */
+    /* margin já vem do breakpoint 768px ou é ajustado se necessário */
+  }
+
+  /* Ajustes para as classes existentes em telas muito pequenas, se necessário */
+  /* .quiz-question-text {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    line-height: 1.5;
+  } */
+
+  /* .quiz-options-container {
+    gap: 0.75rem;
+  } */
+
+  /* .quiz-option-button {
+    font-size: 0.85rem;
+    padding: 0.65rem;
+    max-width: 95%;
+  } */
+
+  .quiz-save-button-container { /* Esta classe não parece estar no JSX atual do Quiz */
+    /* justify-content já vem do breakpoint 768px */
+    margin-top: 1rem;
+    /* Adiciona espaçamento acima */
+  }
+
+  .quiz-save-button { /* Esta classe não parece estar no JSX atual do Quiz */
+    font-size: 0.85rem;
+    /* Reduz o tamanho da fonte */
+    padding: 0.5rem 1rem;
+    /* Ajusta o espaçamento interno */
+  }
+
+  .quiz-number { /* Esta classe não parece estar no JSX atual do Quiz */
+    width: 24px;
+    /* Ajusta o tamanho do número */
+    height: 24px;
+    /* Ajusta o tamanho do número */
+    font-size: 0.8rem;
+    /* Reduz o tamanho da fonte */
   }
 }

@@ -298,5 +298,155 @@
     "correta": 1,
     "materia": "filosofia",
     "explicacao": "Marshall Rosenberg criou a Comunicação Não Violenta (CNV), um processo de comunicação que enfatiza a empatia, a honestidade e a busca por atender às necessidades de todas as partes envolvidas em um conflito."
-  }
+  },
+   {
+        "textos": [
+            "Segundo Aristóteles, a virtude ética está relacionada:"
+        ],
+        "alternativas": [
+            "À obediência cega às leis",
+            "Ao excesso de prazer",
+            "Ao equilíbrio entre os extremos (justo meio)",
+            "À busca da riqueza",
+            "À negação da razão"
+        ],
+        "correta": 2,
+        "materia": "filosofia",
+        "explicacao": "Aristóteles defendia que a virtude está no equilíbrio, ou seja, no meio-termo entre os excessos e as faltas."
+    },
+    {
+        "textos": [
+            "Para Immanuel Kant, uma ação é moralmente correta quando:"
+        ],
+        "alternativas": [
+            "Produz felicidade à maioria",
+            "É motivada pelo dever e pela razão",
+            "Segue os costumes locais",
+            "Busca o prazer individual",
+            "Depende das consequências"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Para Kant, a moralidade está em agir por dever, de acordo com princípios racionais universais, não pelas consequências."
+    },
+    {
+        "textos": [
+            "O conceito de justiça para John Rawls está baseado:"
+        ],
+        "alternativas": [
+            "No mérito individual",
+            "Na igualdade de oportunidades e no “véu da ignorância”",
+            "No poder do Estado",
+            "Na tradição religiosa",
+            "Na supremacia da maioria"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Rawls propõe que princípios de justiça devem ser escolhidos sem saber a posição social que se ocupará, garantindo imparcialidade."
+    },
+    {
+        "textos": [
+            "Para Sócrates, o conhecimento verdadeiro é alcançado por meio:"
+        ],
+        "alternativas": [
+            "Da tradição",
+            "Da retórica",
+            "Do diálogo e da maiêutica",
+            "Da revelação divina",
+            "Da força"
+        ],
+        "correta": 2,
+        "materia": "filosofia",
+        "explicacao": "Sócrates utilizava o diálogo (maiêutica) para estimular o autoconhecimento e a busca pela verdade."
+    },
+    {
+        "textos": [
+            "Platão defendia que o mundo sensível:"
+        ],
+        "alternativas": [
+            "É a única realidade",
+            "É uma ilusão, sendo o mundo das ideias a verdadeira realidade",
+            "Deve ser rejeitado totalmente",
+            "É superior ao mundo das ideias",
+            "Não tem importância filosófica"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Para Platão, o mundo sensível é imperfeito e transitório, enquanto o mundo das ideias é eterno e verdadeiro."
+    },
+    {
+        "textos": [
+            "O pensamento de Epicuro está relacionado principalmente:"
+        ],
+        "alternativas": [
+            "Ao ascetismo",
+            "À busca do prazer moderado e da ausência de perturbação (ataraxia)",
+            "À defesa do Estado forte",
+            "Ao niilismo",
+            "Ao ceticismo radical"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Epicuro defendia a busca racional do prazer e a tranquilidade da alma como o caminho para a felicidade."
+    },
+    {
+        "textos": [
+            "Segundo Nietzsche, os valores morais tradicionais:"
+        ],
+        "alternativas": [
+            "São eternos e universais",
+            "Devem ser questionados e superados pelo “além-do-homem” (Übermensch)",
+            "Garantem a evolução da humanidade",
+            "São impostos pela natureza",
+            "Não têm relação com a cultura"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Nietzsche critica a moral tradicional e propõe a criação de novos valores pelo indivíduo livre."
+    },
+    {
+        "textos": [
+            "O existencialismo de Sartre afirma que:"
+        ],
+        "alternativas": [
+            "O ser humano nasce com uma essência definida",
+            "A existência precede a essência",
+            "Os valores são impostos por Deus",
+            "O destino é inalterável",
+            "A liberdade é uma ilusão"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Sartre defende que o ser humano existe primeiro e só depois constrói sua essência por meio de escolhas livres."
+    },
+    {
+        "textos": [
+            "Para Michel Foucault, o poder:"
+        ],
+        "alternativas": [
+            "Está concentrado apenas no Estado",
+            "Circula por toda a sociedade e está presente nas relações sociais",
+            "É sempre negativo",
+            "Não influencia o conhecimento",
+            "É apenas repressivo"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Foucault entende o poder como algo difuso, presente em todas as relações sociais, e não apenas centralizado."
+    },
+    {
+        "textos": [
+            "O utilitarismo, defendido por Jeremy Bentham e John Stuart Mill, afirma que:"
+        ],
+        "alternativas": [
+            "O valor moral de uma ação depende de sua intenção",
+            "O valor moral de uma ação depende de suas consequências para a felicidade geral",
+            "A moralidade é determinada pela tradição",
+            "O dever é mais importante que o resultado",
+            "O sofrimento deve ser buscado"
+        ],
+        "correta": 1,
+        "materia": "filosofia",
+        "explicacao": "Para os utilitaristas, uma ação é correta se promove o maior bem para o maior número de pessoas."
+    }
 ]

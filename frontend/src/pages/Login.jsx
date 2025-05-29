@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  createUserWithEmailAndPassword, // Importar a função de criação de usuário
+} from "firebase/auth";
 import { auth, googleProvider } from "../firebaseConfig"; // Verifique se este caminho está correto
 import { useNavigate } from "react-router-dom";
 import "./css/Login.css"; // Importa o arquivo CSS específico do Login
@@ -18,26 +22,65 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState(""); // Novo estado para confirmar senha
   const [erro, setErro] = useState("");
+  const [isRegisterMode, setIsRegisterMode] = useState(false); // Estado para alternar entre login e registro
 
-  const handleLoginEmailSenha = async (e) => {
+  const resetForm = () => {
+    setEmail("");
+    setSenha("");
+    setConfirmarSenha("");
+    setErro("");
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErro("");
+
     if (!email || !senha) {
       setErro("Por favor, preencha e-mail e senha.");
       return;
     }
-    try {
-      await signInWithEmailAndPassword(auth, email, senha);
-      navigate("/home");
-    } catch (error) {
-      console.error("Erro no login com email/senha:", error);
-      if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
-        setErro("E-mail ou senha inválidos.");
-      } else if (error.code === 'auth/invalid-email') {
-        setErro("O formato do e-mail é inválido.");
-      } else {
-        setErro("Ocorreu um erro ao tentar fazer login.");
+
+    if (isRegisterMode) {
+      // Lógica de Registro
+      if (senha !== confirmarSenha) {
+        setErro("As senhas não coincidem.");
+        return;
+      }
+      try {
+        await createUserWithEmailAndPassword(auth, email, senha);
+        // O Firebase automaticamente loga o usuário após o registro
+        // Se quiser adicionar um nome de usuário no momento do registro, pode usar:
+        // import { updateProfile } from "firebase/auth";
+        // await updateProfile(auth.currentUser, { displayName: "Nome do Novo Usuário" });
+        navigate("/home");
+      } catch (error) {
+        console.error("Erro no registro:", error);
+        if (error.code === 'auth/email-already-in-use') {
+          setErro("Este e-mail já está em uso.");
+        } else if (error.code === 'auth/weak-password') {
+          setErro("Senha muito fraca. Use pelo menos 6 caracteres.");
+        } else if (error.code === 'auth/invalid-email') {
+          setErro("O formato do e-mail é inválido.");
+        } else {
+          setErro("Ocorreu um erro ao tentar criar a conta.");
+        }
+      }
+    } else {
+      // Lógica de Login (já existente)
+      try {
+        await signInWithEmailAndPassword(auth, email, senha);
+        navigate("/home");
+      } catch (error) {
+        console.error("Erro no login com email/senha:", error);
+        if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
+          setErro("E-mail ou senha inválidos.");
+        } else if (error.code === 'auth/invalid-email') {
+          setErro("O formato do e-mail é inválido.");
+        } else {
+          setErro("Ocorreu um erro ao tentar fazer login.");
+        }
       }
     }
   };
@@ -57,18 +100,25 @@ function Login() {
     }
   };
 
+  const toggleMode = () => {
+    setIsRegisterMode(!isRegisterMode);
+    resetForm(); // Limpa os campos e erros ao trocar de modo
+  };
+
   return (
     <div className="page-container login-page-container">
       <header className="app-header login-custom-header">
         {/* O span para o título e o img para o logo são estilizados globalmente por .app-header */}
-        <span className="app-header-page-title">Login</span>
+        <span className="app-header-page-title">{isRegisterMode ? "Crie sua Conta" : "Login"}</span>
         <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
       </header>
 
       <main className="login-main-content">
         <div className="login-content-wrapper">
-          <form onSubmit={handleLoginEmailSenha} className="login-box">
-            <h2 className="login-box__title">Acesse sua conta</h2>
+          <form onSubmit={handleSubmit} className="login-box">
+            <h2 className="login-box__title">
+              {isRegisterMode ? "Crie sua conta" : "Acesse sua conta"}
+            </h2>
 
             <div className="form-group">
               <label htmlFor="email-login" className="form-label sr-only">E-mail</label>
@@ -96,15 +146,41 @@ function Login() {
                 onChange={(e) => setSenha(e.target.value)}
                 required
                 aria-label="Campo de senha"
-                autoComplete="current-password"
+                autoComplete={isRegisterMode ? "new-password" : "current-password"}
               />
             </div>
+
+            {/* Campo de Confirmar Senha - aparece apenas no modo de registro */}
+            {isRegisterMode && (
+              <div className="form-group">
+                <label htmlFor="confirmar-senha-login" className="form-label sr-only">Confirmar Senha</label>
+                <input
+                  type="password"
+                  id="confirmar-senha-login"
+                  className="form-input login-input"
+                  placeholder="Confirme sua Senha"
+                  value={confirmarSenha}
+                  onChange={(e) => setConfirmarSenha(e.target.value)}
+                  required
+                  aria-label="Campo de confirmação de senha"
+                  autoComplete="new-password"
+                />
+              </div>
+            )}
 
             {erro && <p className="form-message form-message--error login-error">{erro}</p>}
 
             <button type="submit" className="button button--primary login-button">
-              Entrar com E-mail
+              {isRegisterMode ? "Criar Conta" : "Entrar com E-mail"}
             </button>
+
+            {/* Link para alternar entre Login e Registro */}
+            <p className="login-toggle-mode">
+              {isRegisterMode ? "Já tem uma conta? " : "Não tem uma conta? "}
+              <button type="button" onClick={toggleMode} className="login-toggle-button">
+                {isRegisterMode ? "Faça Login" : "Crie uma conta"}
+              </button>
+            </p>
           </form>
 
           <div className="login-social-separator">

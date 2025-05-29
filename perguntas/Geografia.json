@@ -298,5 +298,155 @@
     "correta": 1,
     "materia": "geografia",
     "explicacao": "Os avanços tecnológicos nas áreas de comunicação (internet, telefonia) e transporte (contêineres, aviões) facilitaram a integração dos mercados, a circulação de bens, serviços e informações em escala global."
-  }
+  },
+   {
+        "textos": [
+            "No Brasil, a reforma agrária tem como prioridade a distribuição de terras:"
+        ],
+        "alternativas": [
+            "Exclusivamente para grandes latifúndios produtivos",
+            "Para terras devolutas ocupadas ilegalmente e latifúndios improdutivos",
+            "Para áreas urbanas consolidadas",
+            "Para propriedades indígenas e quilombolas apenas",
+            "Para áreas de mineração"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A reforma agrária prioriza terras improdutivas ou ocupadas ilegalmente para cumprir a função social da terra e reduzir a concentração fundiária."
+    },
+    {
+        "textos": [
+            "O modelo agrícola predominante em 90% dos municípios brasileiros com até 20 mil habitantes é:"
+        ],
+        "alternativas": [
+            "Agricultura familiar, com pequena escala e uso restrito de capital",
+            "Agronegócio, com alta mecanização e capital intensivo",
+            "Agricultura orgânica, sem uso de agroquímicos",
+            "Agricultura patronal, baseada em mão de obra qualificada",
+            "Sistema agroflorestal, baseado no extrativismo"
+        ],
+        "correta": 0,
+        "materia": "geografia",
+        "explicacao": "A agricultura familiar é a base da economia rural em grande parte do Brasil, sendo responsável por grande parte da mão de obra no campo."
+    },
+    {
+        "textos": [
+            "A expansão da produção de soja no Brasil nas últimas décadas está associada a:"
+        ],
+        "alternativas": [
+            "Prioridade ao pequeno produtor rural",
+            "Avanços tecnológicos e manejo eficiente",
+            "Redução da mecanização",
+            "Restrição ao uso de agroquímicos",
+            "Crescimento da agricultura orgânica"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "O crescimento da soja se deve à mecanização, uso de agroquímicos e técnicas modernas de cultivo."
+    },
+    {
+        "textos": [
+            "Um dos principais impactos ambientais causados pela expansão da fronteira agrícola no Brasil é:"
+        ],
+        "alternativas": [
+            "Aumento da biodiversidade",
+            "Desmatamento e perda de áreas naturais",
+            "Recuperação de áreas degradadas",
+            "Redução da poluição do solo",
+            "Diminuição da emissão de gases do efeito estufa"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A expansão agrícola tem provocado desmatamento, principalmente na Amazônia, causando perda ambiental significativa."
+    },
+    {
+        "textos": [
+            "A “Revolução Verde” refere-se a:"
+        ],
+        "alternativas": [
+            "Um movimento ambientalista global",
+            "A modernização da agricultura com uso de tecnologias, fertilizantes e sementes melhoradas",
+            "O fim da agricultura tradicional",
+            "A substituição da agricultura pela indústria",
+            "A agricultura orgânica"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A Revolução Verde promoveu aumento da produtividade agrícola por meio de tecnologias e insumos químicos."
+    },
+    {
+        "textos": [
+            "A globalização econômica é caracterizada por:"
+        ],
+        "alternativas": [
+            "Isolamento dos países em suas economias nacionais",
+            "Integração dos mercados e circulação global de capitais, mercadorias e informações",
+            "Restrição do comércio internacional",
+            "Exclusão das economias emergentes",
+            "Aumento do protecionismo"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A globalização envolve a interdependência econômica entre países via comércio, investimentos e tecnologia."
+    },
+    {
+        "textos": [
+            "O agronegócio brasileiro é importante para a economia porque:"
+        ],
+        "alternativas": [
+            "Produz apenas para o mercado interno",
+            "É um dos maiores exportadores de commodities agrícolas do mundo",
+            "Não utiliza tecnologia em sua produção",
+            "Depende exclusivamente da agricultura familiar",
+            "Não gera emprego no campo"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "O Brasil é líder mundial na exportação de soja, milho, carne e outras commodities, graças ao agronegócio moderno."
+    },
+    {
+        "textos": [
+            "A função social da terra, prevista na Constituição Federal brasileira, implica que:"
+        ],
+        "alternativas": [
+            "A terra deve ser usada exclusivamente para produção agrícola intensiva",
+            "A terra deve cumprir um papel social, garantindo uso produtivo e acesso à população",
+            "A terra deve ser propriedade privada sem restrições",
+            "A terra deve ser destinada apenas à preservação ambiental",
+            "A terra deve ser usada para mineração"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A função social da terra busca evitar a concentração e o uso improdutivo, promovendo justiça social no campo."
+    },
+    {
+        "textos": [
+            "Um dos principais conflitos no meio rural brasileiro decorre de:"
+        ],
+        "alternativas": [
+            "Concentração fundiária e ausência de reforma agrária efetiva",
+            "Igualdade na distribuição de terras",
+            "Ausência de produção agrícola",
+            "Exclusão da agricultura familiar",
+            "Falta de tecnologia no campo"
+        ],
+        "correta": 0,
+        "materia": "geografia",
+        "explicacao": "A concentração de terras provoca desigualdade e conflitos entre grandes proprietários, posseiros e pequenos agricultores."
+    },
+    {
+        "textos": [
+            "O avanço da tecnologia na agricultura contribui para:"
+        ],
+        "alternativas": [
+            "Reduzir a produtividade",
+            "Aumentar a eficiência e a produção agrícola",
+            "Diminuir o uso de insumos agrícolas",
+            "Eliminar o agronegócio",
+            "Reduzir a exportação de alimentos"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A tecnologia, como mecanização e biotecnologia, eleva a produtividade e competitividade da agricultura."
+    }
 ]

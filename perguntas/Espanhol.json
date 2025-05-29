@@ -1,6 +1,8 @@
 [
   {
-    "textos": ["Lee el siguiente fragmento: 'El sol se escondía tras las montañas, tiñendo el cielo de tonos naranjas y rojizos. Un silencio casi absoluto envolvía el valle, roto solo por el canto lejano de un pájaro.' ¿Qué sensación predomina en la descripción?"],
+    "textos": [
+      "Lee el siguiente fragmento: 'El sol se escondía tras las montañas, tiñendo el cielo de tonos naranjas y rojizos. Un silencio casi absoluto envolvía el valle, roto solo por el canto lejano de un pájaro.' ¿Qué sensación predomina en la descripción?"
+    ],
     "alternativas": [
       "Alegría y vitalidad.",
       "Misterio y temor.",
@@ -12,7 +14,9 @@
     "explicacao": "As imagens do sol se pondo, os tons quentes do céu e o silêncio quebrado por um canto distante evocam uma atmosfera de calma e serenidade.."
   },
   {
-    "textos": ["En la frase 'El nuevo empleado demostró ser muy hábil en su trabajo.', ¿cuál es un sinónimo de la palabra destacada?"],
+    "textos": [
+      "En la frase 'El nuevo empleado demostró ser muy hábil en su trabajo.', ¿cuál es un sinónimo de la palabra destacada?"
+    ],
     "alternativas": [
       "Lento.",
       "Torpe.",
@@ -24,7 +28,9 @@
     "explicacao": " 'Hábil' se refere a alguém que tem destreza e capacidade para realizar uma tarefa, portanto 'experiente' é um sinônimo adequado."
   },
   {
-    "textos": ["Lee el siguiente titular de noticia: 'Aumento del desempleo juvenil preocupa al gobierno.' ¿Cuál es la función principal de este texto?"],
+    "textos": [
+      "Lee el siguiente titular de noticia: 'Aumento del desempleo juvenil preocupa al gobierno.' ¿Cuál es la función principal de este texto?"
+    ],
     "alternativas": [
       "Entretener al lector con una historia.",
       "Informar sobre un hecho relevante.",
@@ -36,7 +42,9 @@
     "explicacao": "Uma manchete de notícia tem como objetivo principal comunicar um fato de interesse público de maneira concisa."
   },
   {
-    "textos": ["En la oración 'Aunque llovía a cántaros, decidimos salir a pasear.', la conjunción 'aunque' introduce una idea de:"],
+    "textos": [
+      "En la oración 'Aunque llovía a cántaros, decidimos salir a pasear.', la conjunción 'aunque' introduce una idea de:"
+    ],
     "alternativas": [
       "Causa.",
       "Consecuencia.",
@@ -48,7 +56,9 @@
     "explicacao": "A conjunção 'aunque' (embora) é utilizada para expressar uma dificuldade ou um obstáculo que não impede a realização da ação principal, introduzindo uma ideia de contraste."
   },
   {
-    "textos": ["Lee el siguiente microcuento: 'El dinosaurio ya no estaba allí. Solo quedaba el letrero: 'Se fue a comprar tabaco y vuelve en un millón de años'. ¿Cuál es la intención comunicativa principal del autor?"],
+    "textos": [
+      "Lee el siguiente microcuento: 'El dinosaurio ya no estaba allí. Solo quedaba el letrero: 'Se fue a comprar tabaco y vuelve en un millón de años'. ¿Cuál es la intención comunicativa principal del autor?"
+    ],
     "alternativas": [
       "Informar sobre la extinción de los dinosaurios.",
       "Criticar los hábitos de consumo de tabaco.",
@@ -59,8 +69,10 @@
     "materia": "espanhol",
     "explicacao": "A situação absurda de um dinossauro saindo para comprar tabaco e demorando um milhão de anos sugere uma intenção humorística e a utilização da ironia."
   },
-   {
-    "textos": ["En la frase 'Su rostro reflejaba una amargura profunda tras la decepción.', ¿cuál es el significado de la palabra destacada?"],
+  {
+    "textos": [
+      "En la frase 'Su rostro reflejaba una amargura profunda tras la decepción.', ¿cuál es el significado de la palabra destacada?"
+    ],
     "alternativas": [
       "Alegría intensa.",
       "Satisfacción plena.",
@@ -72,7 +84,9 @@
     "explicacao": "Amargura descreve um sentimento profundo de desgosto, pena ou ressentimento, geralmente causado por uma decepção."
   },
   {
-    "textos": ["Lee el siguiente fragmento de un poema: 'Las olas besan la arena con suave murmullo.' ¿Qué figura retórica se utiliza principalmente?"],
+    "textos": [
+      "Lee el siguiente fragmento de un poema: 'Las olas besan la arena con suave murmullo.' ¿Qué figura retórica se utiliza principalmente?"
+    ],
     "alternativas": [
       "Metáfora.",
       "Hipérbole.",
@@ -84,7 +98,9 @@
     "explicacao": "Atribui-se uma ação humana ('beijar') a um elemento da natureza ('as ondas', o que caracteriza a figura de linguagem personificação."
   },
   {
-    "textos": ["¿Cuál de las siguientes palabras tiene un significado opuesto a 'optimista'?"],
+    "textos": [
+      "¿Cuál de las siguientes palabras tiene un significado opuesto a 'optimista'?"
+    ],
     "alternativas": [
       "Alegre.",
       "Positivo.",
@@ -96,7 +112,9 @@
     "explicacao": "'Otimista' se refere a uma pessoa que tende a ver o lado bom das coisas, enquanto 'pessimista' é o contrário, esperando resultados negativos."
   },
   {
-    "textos": ["Lee el siguiente texto breve: 'Se ruega a los pasajeros mantener la calma y seguir las instrucciones del personal de a bordo.' ¿Cuál es la función principal de este texto?"],
+    "textos": [
+      "Lee el siguiente texto breve: 'Se ruega a los pasajeros mantener la calma y seguir las instrucciones del personal de a bordo.' ¿Cuál es la función principal de este texto?"
+    ],
     "alternativas": [
       "Narrar un evento ocurrido en un avión.",
       "Describir las características de un vuelo.",
@@ -108,7 +126,9 @@
     "explicacao": "O uso da forma verbal 'se ruega' (roga-se) indica um pedido formal ou uma instrução dirigida a um público específico, com o objetivo de dar indicações."
   },
   {
-    "textos": ["En la frase 'El caudaloso río inundó las tierras bajas.', ¿qué nos dice el adjetivo destacado sobre el río?"],
+    "textos": [
+      "En la frase 'El caudaloso río inundó las tierras bajas.', ¿qué nos dice el adjetivo destacado sobre el río?"
+    ],
     "alternativas": [
       "Que es poco profundo.",
       "Que tiene mucha corriente y volumen de agua.",
@@ -119,8 +139,10 @@
     "materia": "espanhol",
     "explicacao": "'Caudaloso' descreve um rio com uma grande quantidade de água que flui com força, indicando um volume e correnteza significativos."
   },
-   {
-    "textos": ["Lee el siguiente fragmento: 'Si hubiera estudiado más, habría aprobado el examen.' ¿Qué expresa esta oración?"],
+  {
+    "textos": [
+      "Lee el siguiente fragmento: 'Si hubiera estudiado más, habría aprobado el examen.' ¿Qué expresa esta oración?"
+    ],
     "alternativas": [
       "Una certeza sobre el pasado.",
       "Una condición real en el presente.",
@@ -132,7 +154,9 @@
     "explicacao": "O uso do condicional composto ('habría aprobado' - teria aprovado) e o pretérito mais-que-perfeito do subjuntivo ('hubiera estudiado' - tivesse estudado) indica uma situação hipotética que não ocorreu no passado,expressando uma condição irreal."
   },
   {
-    "textos": ["¿Cuál de las siguientes palabras es un antónimo de 'generoso'?"],
+    "textos": [
+      "¿Cuál de las siguientes palabras es un antónimo de 'generoso'?"
+    ],
     "alternativas": [
       "Bondadoso.",
       "Altruista.",
@@ -144,7 +168,9 @@
     "explicacao": "'Generoso' se refere a alguém que compartilha o que tem, enquanto 'tacaño' (mesquinho) é alguém que não gosta de dar ou compartilhar."
   },
   {
-    "textos": ["Lee el siguiente texto: 'La deforestación continúa a un ritmo alarmante, poniendo en peligro la biodiversidad y contribuyendo al cambio climático.' ¿Cuál es la principal preocupación expresada en el texto?"],
+    "textos": [
+      "Lee el siguiente texto: 'La deforestación continúa a un ritmo alarmante, poniendo en peligro la biodiversidad y contribuyendo al cambio climático.' ¿Cuál es la principal preocupación expresada en el texto?"
+    ],
     "alternativas": [
       "El aumento de la producción agrícola.",
       "La expansión de las áreas urbanas.",
@@ -156,7 +182,9 @@
     "explicacao": "O texto expressa uma preocupação principal com as consequências negativas da perda de florestas, mencionando o perigo para a biodiversidade e a contribuição para a mudança climática."
   },
   {
-    "textos": ["En la frase 'El público aplaudió efusivamente la actuación.', ¿qué indica el adverbio destacado sobre la acción de aplaudir?"],
+    "textos": [
+      "En la frase 'El público aplaudió efusivamente la actuación.', ¿qué indica el adverbio destacado sobre la acción de aplaudir?"
+    ],
     "alternativas": [
       "Que fue breve y discreta.",
       "Que fue larga y ruidosa.",
@@ -168,7 +196,9 @@
     "explicacao": "'Efusivamente' significa com grande entusiasmo e demonstração de sentimento, indicando que o público aplaudiu com muita emoção e intensidade."
   },
   {
-    "textos": ["Lee el siguiente fragmento de una crítica de cine: 'La película, a pesar de su ambicioso guion, adolece de un ritmo irregular y actuaciones poco convincentes.' ¿Cuál es la opinión general del crítico sobre la película?"],
+    "textos": [
+      "Lee el siguiente fragmento de una crítica de cine: 'La película, a pesar de su ambicioso guion, adolece de un ritmo irregular y actuaciones poco convincentes.' ¿Cuál es la opinión general del crítico sobre la película?"
+    ],
     "alternativas": [
       "Es una obra maestra del cine contemporáneo.",
       "Es una película entretenida y bien lograda.",
@@ -179,8 +209,10 @@
     "materia": "espanhol",
     "explicacao": "O crítico reconhece o potencial do roteiro (';ambicioso guion') mas aponta falhas significativas ('adolece de un ritmo irregular y actuaciones poco convincentes'), indicando uma opinião mista com críticas importantes."
   },
-   {
-    "textos": ["¿Cuál de las siguientes palabras tiene un significado similar a 'persuadir'?"],
+  {
+    "textos": [
+      "¿Cuál de las siguientes palabras tiene un significado similar a 'persuadir'?"
+    ],
     "alternativas": [
       "Informar.",
       "Disuadir.",
@@ -192,7 +224,9 @@
     "explicacao": "'Persuadir' e ';convencer' se referem à ação de influenciar alguém para que acredite ou faça algo."
   },
   {
-    "textos": ["Lee el siguiente texto instructivo: 'Para activar el dispositivo, pulse el botón de encendido y manténgalo presionado durante tres segundos.' ¿Cuál es la función principal de este texto?"],
+    "textos": [
+      "Lee el siguiente texto instructivo: 'Para activar el dispositivo, pulse el botón de encendido y manténgalo presionado durante tres segundos.' ¿Cuál es la función principal de este texto?"
+    ],
     "alternativas": [
       "Describir las características del dispositivo.",
       "Explicar la historia del dispositivo.",
@@ -204,7 +238,9 @@
     "explicacao": "O texto utiliza verbos no imperativo ('pulse', 'manténgalo' - pressione, mantenha) e fornece passos específicos para realizar uma ação, caracterizando um texto com função de dar instruções."
   },
   {
-    "textos": ["En la frase 'Sintió un escalofrío al escuchar el ruido en la oscuridad.', ¿qué describe la palabra destacada?"],
+    "textos": [
+      "En la frase 'Sintió un escalofrío al escuchar el ruido en la oscuridad.', ¿qué describe la palabra destacada?"
+    ],
     "alternativas": [
       "Una sensación de calor intenso.",
       "Una punzada de dolor agudo.",
@@ -216,7 +252,9 @@
     "explicacao": "Um 'escalofrío' (calafrio) é uma sensação repentina de frio acompanhada frequentemente de temor ou nervosismo, geralmente causada por medo ou excitação."
   },
   {
-    "textos": ["Lee el siguiente fragmento de un cuento: 'La vieja casa permanecía en silencio, como esperando un secreto que nunca sería revelado.' ¿Qué atmósfera se crea principalmente?"],
+    "textos": [
+      "Lee el siguiente fragmento de un cuento: 'La vieja casa permanecía en silencio, como esperando un secreto que nunca sería revelado.' ¿Qué atmósfera se crea principalmente?"
+    ],
     "alternativas": [
       "Alegría y celebración.",
       "Misterio y melancolía.",
@@ -228,7 +266,9 @@
     "explicacao": "O silêncio da casa e a ideia de um segredo não revelado ('como esperando un secreto que nunca sería revelado') geram uma atmosfera de mistério e melancolia."
   },
   {
-    "textos": ["¿Cuál de las siguientes palabras es un sinónimo de 'astuto'?"],
+    "textos": [
+      "¿Cuál de las siguientes palabras es un sinónimo de 'astuto'?"
+    ],
     "alternativas": [
       "Ingenuo.",
       "Sincero.",
@@ -239,8 +279,10 @@
     "materia": "espanhol",
     "explicacao": "'Astuto' refere a alguém que utiliza a inteligência e a habilidade para conseguir seus propósitos, frequentemente de maneira sutil ou enganosa."
   },
-   {
-    "textos": ["Lee el siguiente cartel: '¡Gran liquidación! Todos los artículos al 50% de descuento.' ¿Cuál es la función principal de este texto?"],
+  {
+    "textos": [
+      "Lee el siguiente cartel: '¡Gran liquidación! Todos los artículos al 50% de descuento.' ¿Cuál es la función principal de este texto?"
+    ],
     "alternativas": [
       "Informar sobre las características de los productos.",
       "Contar una historia sobre la tienda.",
@@ -252,7 +294,9 @@
     "explicacao": "O uso da exclamação ('¡Gran liquidación!') e a menção de um grande desconto (50%) têm como objetivo persuadir o público a comprar os produtos."
   },
   {
-    "textos": ["En la frase 'A pesar de su elocuencia, no logró convencer al jurado.', ¿qué significa la palabra destacada?"],
+    "textos": [
+      "En la frase 'A pesar de su elocuencia, no logró convencer al jurado.', ¿qué significa la palabra destacada?"
+    ],
     "alternativas": [
       "Falta de claridad al hablar.",
       "Gran habilidad para hablar con fluidez y persuasión.",
@@ -264,7 +308,9 @@
     "explicacao": "';Elocuencia' se refere à grande habilidade de falar com fluidez, persuasão e graça, mostrando domínio da palavra."
   },
   {
-    "textos": ["Lee el siguiente fragmento de un artículo de opinión: 'Es imperativo que los gobiernos tomen medidas urgentes para combatir el cambio climático.' ¿Qué tipo de texto es principalmente?"],
+    "textos": [
+      "Lee el siguiente fragmento de un artículo de opinión: 'Es imperativo que los gobiernos tomen medidas urgentes para combatir el cambio climático.' ¿Qué tipo de texto es principalmente?"
+    ],
     "alternativas": [
       "Narrativo.",
       "Descriptivo.",
@@ -276,7 +322,9 @@
     "explicacao": "O autor expressa uma opinião ('Es imperativo que los gobiernos tomen medidas urgentes...') e busca influenciar a do leitor sobre a necessidade de tomar ações contra o cambio climático, caracterizando um texto argumentativo."
   },
   {
-    "textos": ["¿Cuál de las siguientes palabras tiene un significado opuesto a 'valiente'?"],
+    "textos": [
+      "¿Cuál de las siguientes palabras tiene un significado opuesto a 'valiente'?"
+    ],
     "alternativas": [
       "Audaz.",
       "Intrépido.",
@@ -288,7 +336,9 @@
     "explicacao": "'Valiente' (valente) se refere a alguém que mostra coragem, enquanto 'cobarde' (covarde) é alguém que tem falta de valor."
   },
   {
-    "textos": ["Lee el siguiente mensaje de correo electrónico: 'Estimado cliente, le informamos que su pedido ha sido enviado y llegará en un plazo de 3 a 5 días hábiles.' ¿Cuál es la función principal de este texto?"],
+    "textos": [
+      "Lee el siguiente mensaje de correo electrónico: 'Estimado cliente, le informamos que su pedido ha sido enviado y llegará en un plazo de 3 a 5 días hábiles.' ¿Cuál es la función principal de este texto?"
+    ],
     "alternativas": [
       "Expresar una opinión personal.",
       "Contar una experiencia de compra.",
@@ -298,5 +348,158 @@
     "correta": 2,
     "materia": "espanhol",
     "explicacao": "A mensagem tem como objetivo principal fornecer informações ao cliente sobre o estado do seu pedido (enviado e prazo de entrega)."
+  },
+  {
+    "textos": [
+      "Lea el fragmento a seguir de \"El Aleph\" de Jorge Luis Borges:",
+      "\"El diámetro del Aleph sería de dos o tres centímetros, pero el espacio cósmico estaba ahí, sin disminución de tamaño. Cada cosa (el espejo de una cómoda, la pared de un cuarto, un mapa de América, las nubes del cielo, los mares, las cumbres, los desiertos) era el Aleph, sin superposición, sin ocultación. Simultáneamente. Y cada cosa era un Aleph, sin disminución, sin superposición, sin ocultación. Simultáneamente.\"",
+      "¿Cuál de las siguientes afirmaciones mejor describe la principal característica del Aleph, conforme el texto?"
+    ],
+    "alternativas": [
+      "Es un objeto que permite viajar en el tiempo.",
+      "Representa la totalidad del universo en un punto diminuto, visible simultáneamente.",
+      "Es una dimensión paralela donde los objetos pierden su tamaño original.",
+      "Simboliza la capacidad humana de observar múltiples universos en secuencia.",
+      "Es una metáfora para la infinitud del conocimiento."
+    ],
+    "correta": 1,
+    "materia": "espanhol",
+    "explicacao": "O Aleph representa um ponto do espaço que contém todo o universo de forma simultânea e sem sobreposição, conforme descrito por Borges."
+  },
+  {
+    "textos": [
+      "O vocábulo \"sensible\" em espanhol possui múltiplos significados. Em qual das opções abaixo o termo \"sensible\" é empregado com o sentido de \"sensível\" (no sentido de ser afetado ou perceber facilmente) e NÃO com o sentido de \"lamentável\" ou \"deplorável\"?"
+    ],
+    "alternativas": [
+      "Fue una pérdida muy sensible para toda la comunidad.",
+      "El cambio climático ha provocado un sensible aumento de las temperaturas.",
+      "Es una persona muy sensible a la injusticia social.",
+      "El error cometido tuvo un impacto sensible en los resultados finales.",
+      "La ausencia del director fue sensiblemente percibida por el público."
+    ],
+    "correta": 2,
+    "materia": "espanhol",
+    "explicacao": "Na frase 'Es una persona muy sensible a la injusticia social', 'sensible' é usado no sentido de uma pessoa que sente ou percebe facilmente, ou seja, sensível emocionalmente."
+  },
+  {
+    "textos": [
+      "En el poema \"Me gustas cuando callas\" de Pablo Neruda, el verso \"Me gustas cuando callas porque estás como ausente\" sugiere principalmente:"
+    ],
+    "alternativas": [
+      "La preferencia del yo lírico por el silencio de la persona amada.",
+      "La indiferencia del yo lírico hacia la presencia de la persona amada.",
+      "La idea de que el silencio de la persona amada intensifica su presencia.",
+      "El dolor del yo lírico por la ausencia física de la persona amada.",
+      "La incomprensión del yo lírico ante el silencio."
+    ],
+    "correta": 0,
+    "materia": "espanhol",
+    "explicacao": "O eu lírico expressa sua admiração pelo silêncio da pessoa amada, sugerindo que esse silêncio contribui para a beleza ou encantamento que ela provoca."
+  },
+  {
+    "textos": [
+      "En \"Crónica de una muerte anunciada\" de Gabriel García Márquez, la repetición constante de la información de que Santiago Nasar sería asesinado, incluso antes del evento, sirve principalmente para:"
+    ],
+    "alternativas": [
+      "Crear un suspenso sobre el desenlace de la historia.",
+      "Enfatizar la fatalidad y la inevitabilidad del destino.",
+      "Demostrar la incapacidad de los personajes para evitar lo ocurrido.",
+      "Alertar al lector sobre la estructura no lineal de la narrativa.",
+      "Subrayar la pasividad de la comunidad."
+    ],
+    "correta": 1,
+    "materia": "espanhol",
+    "explicacao": "A repetição da informação sobre a morte anunciada enfatiza a inevitabilidade do destino, elemento marcante da obra."
+  },
+  {
+    "textos": [
+      "Una charge muestra una balanza desequilibrada, con un símbolo de dinero en un plato y una persona pobre en el otro. Encima de la balanza, hay un juez con los ojos vendados.",
+      "¿Cuál es la principal crítica social implícita en esta charge?"
+    ],
+    "alternativas": [
+      "La complejidad del sistema legal.",
+      "La importancia de la economía para la justicia.",
+      "La falta de imparcialidad y la corrupción en el sistema judicial.",
+      "La necesidad de mayor igualdad económica.",
+      "La ceguera de la justicia en general."
+    ],
+    "correta": 2,
+    "materia": "espanhol",
+    "explicacao": "A balança desequilibrada simboliza um sistema judicial parcial, onde o dinheiro pesa mais do que a justiça, sugerindo corrupção e falta de imparcialidade."
+  },
+  {
+    "textos": [
+      "Un correo electrónico recibido por un empleado de una empresa, con el asunto \"Urgente: Nueva política de teletrabajo\", que detalla los procedimientos y requisitos para trabajar remotamente, tiene como función principal:"
+    ],
+    "alternativas": [
+      "Expresiva.",
+      "Poética.",
+      "Conativa.",
+      "Fática.",
+      "Metalingüística."
+    ],
+    "correta": 2,
+    "materia": "espanhol",
+    "explicacao": "A função do texto é orientar ou convencer o destinatário a agir conforme os novos procedimentos, característica da função conativa."
+  },
+  {
+    "textos": [
+      "Quando um dicionário apresenta a definição de uma palavra, la función de lenguaje predominante es la:"
+    ],
+    "alternativas": [
+      "Emotiva.",
+      "Fática.",
+      "Referencial.",
+      "Poética.",
+      "Conativa."
+    ],
+    "correta": 2,
+    "materia": "espanhol",
+    "explicacao": "A função referencial é predominante em textos informativos e objetivos, como definições de dicionário, pois visa transmitir informações sobre o mundo de forma clara e direta."
+  },
+  {
+    "textos": [
+      "La celebración del 'Día de Muertos' en México, con altares coloridos, calaveras de azúcar y la visita a cementerios, es un ejemplo claro de:"
+    ],
+    "alternativas": [
+      "Una imposición cultural externa.",
+      "Una tradición religiosa exclusivamente católica.",
+      "Una manifestación de sincretismo cultural y valorización de la ancestralidad.",
+      "Un evento puramente turístico y comercial.",
+      "Una práctica aislada sin conexión con la identidad nacional."
+    ],
+    "correta": 2,
+    "materia": "espanhol",
+    "explicacao": "O Día de Muertos é uma manifestação cultural mexicana que mistura elementos indígenas e católicos (sincretismo), celebrando e valorizando os antepassados."
+  },
+  {
+    "textos": [
+      "Si un romance español describe en detalles un cuadro de Goya, como 'Los fusilamientos del 3 de mayo', y explora las emociones y la historia detrás de la pintura, ¿cuál es la principal relación entre la lectura y el arte explorada en ese contexto?"
+    ],
+    "alternativas": [
+      "El arte sirve apenas como fondo para la narrativa literaria.",
+      "La literatura funciona como una extensión e interpretación de la obra de arte visual.",
+      "La pintura se utiliza para ilustrar pasajes del texto.",
+      "La lectura de la obra literaria anula la necesidad de ver la pintura original.",
+      "El arte visual se torna completamente secundario en relación con la prosa."
+    ],
+    "correta": 1,
+    "materia": "espanhol",
+    "explicacao": "Ao descrever e explorar uma obra de arte visual, a literatura amplia seu significado e propõe uma interpretação emocional e histórica da pintura."
+  },
+  {
+    "textos": [
+      "Identifique la figura de lenguaje presente en la frase: 'Tus ojos son dos luceros que iluminan mi camino.'"
+    ],
+    "alternativas": [
+      "Metáfora.",
+      "Comparación.",
+      "Hipérbole.",
+      "Ironía.",
+      "Personificación."
+    ],
+    "correta": 0,
+    "materia": "espanhol",
+    "explicacao": "A frase utiliza uma metáfora ao dizer que os olhos são 'luceros' (astros/luzes), sugerindo que iluminam e guiam, sem o uso de conectivos comparativos."
   }
 ]

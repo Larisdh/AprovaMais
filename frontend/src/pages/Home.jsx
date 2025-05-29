@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// Certifique-se de que seu CSS global (style.css) está importado na raiz do projeto (ex: App.js ou index.js)
-// Se você tiver um Home.css específico APENAS para estilos que não são globais, importe-o aqui.
-// Para este exemplo, assumimos que a maioria dos estilos de home estará no style.css global.
-// import "./css/Home.css"; // Descomente se tiver um Home.css separado para coisas muito específicas da Home.
+// import "./css/Home.css"; // Descomente se tiver um Home.css separado
 
 export default function Home() {
   const [questions, setQuestions] = useState(10);
   const navigate = useNavigate();
 
-  const handleStartQuiz = (materia) => {
+  const handleStartQuizBySubject = (materia) => {
     navigate(`/quiz?materia=${materia}&questions=${questions}`);
+  };
+
+  const handleStartGeneralQuiz = () => {
+    // Navega para o quiz sem o parâmetro 'materia',
+    // o Quiz.jsx e o backend tratarão isso como "todas as matérias"
+    navigate(`/quiz?questions=${questions}`);
   };
 
   const materiasDisponiveis = [
@@ -21,7 +24,7 @@ export default function Home() {
   const quantidadesPerguntas = [5, 10, 15, 20, 25];
 
   return (
-    <div className="page-container home-container"> {/* Classe global e específica da página */}
+    <div className="page-container home-container">
       <header className="app-header">
         <Link to="/" className="app-header-logo-link">
           <img src="/Logo.png" alt="Logo Aprova" className="app-logo" />
@@ -46,13 +49,24 @@ export default function Home() {
                 <li key={materia}>
                   <button
                     className="home-aside__subject-button"
-                    onClick={() => handleStartQuiz(materia)}
+                    onClick={() => handleStartQuizBySubject(materia)}
                   >
                     {materia.charAt(0).toUpperCase() + materia.slice(1)}
                   </button>
                 </li>
               ))}
             </ul>
+
+            {/* Botão para Desafio Geral */}
+            <div className="home-aside__general-challenge">
+              <h4 className="home-aside__title">Ou tente um Desafio Geral:</h4>
+              <button
+                className="button button--primary home-aside__general-button" // Usando classes de botão global e uma específica
+                onClick={handleStartGeneralQuiz}
+              >
+                Todas as Matérias
+              </button>
+            </div>
 
             <div className="home-aside__question-selector">
               <h4 className="home-aside__title">Quantidade de Perguntas:</h4>
