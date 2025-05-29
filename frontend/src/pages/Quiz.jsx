@@ -1,3 +1,5 @@
+// src/pages/Quiz.jsx
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig";
@@ -21,8 +23,7 @@ const nomesMateriasFormatados = {
 
 // Função para obter o nome formatado da matéria
 const getNomeMateriaFormatado = (materiaKey) => {
-  if (!materiaKey) return "Geral"; // Se não houver matéria (quiz geral)
-  // Retorna o nome formatado do objeto, ou capitaliza o original como fallback
+  if (!materiaKey) return "Geral";
   return nomesMateriasFormatados[materiaKey.toLowerCase()] || 
          (materiaKey.charAt(0).toUpperCase() + materiaKey.slice(1));
 };
@@ -35,10 +36,9 @@ function useQuery() {
 export default function Quiz() {
   const navigate = useNavigate();
   const query = useQuery();
-  const materiaParam = query.get("materia"); // ex: "historia", ou null se for geral
+  const materiaParam = query.get("materia");
   const quantidade = parseInt(query.get("questions"), 10) || 10;
 
-  // Obtém o nome da matéria formatado para exibição
   const nomeMateriaExibicao = getNomeMateriaFormatado(materiaParam);
 
   const [perguntas, setPerguntas] = useState([]);
@@ -64,7 +64,7 @@ export default function Quiz() {
         setErro(null);
         
         let apiUrl = `http://localhost:3000/api/perguntas?quantidade=${quantidade}`;
-        if (materiaParam) { // USA materiaParam (ex: "historia") para a API
+        if (materiaParam) {
           apiUrl += `&materia=${materiaParam}`;
         }
 
@@ -78,8 +78,10 @@ export default function Quiz() {
         }
         const data = await response.json();
         if (data.length === 0) {
-          const materiaNomeErro = materiaParam ? `"${nomeMateriaExibicao}"` : "gerais";
-          setErro(`Nenhuma pergunta encontrada para ${materiaNomeErro}. Tente outra configuração.`);
+          // Usar getNomeMateriaFormatado diretamente aqui para a mensagem de erro,
+          // já que nomeMateriaExibicao não está mais na dependência deste useEffect.
+          const materiaNomeErro = getNomeMateriaFormatado(materiaParam);
+          setErro(`Nenhuma pergunta encontrada para "${materiaNomeErro}". Tente outra configuração.`);
         } else {
           setPerguntas(data.map(p => ({...p, key: Math.random().toString(36).substring(7) })));
           setApplyCardAnimation(true);
@@ -92,7 +94,10 @@ export default function Quiz() {
     };
 
     buscarPerguntas();
-  }, [materiaParam, quantidade, nomeMateriaExibicao]); // Adicionado nomeMateriaExibicao por causa da mensagem de erro
+  // *** MUDANÇA AQUI: Removido nomeMateriaExibicao do array de dependências ***
+  }, [materiaParam, quantidade]); 
+
+  // ... (resto do código permanece o mesmo) ...
 
   useEffect(() => {
     const salvarResultadoNoBackend = async () => {
@@ -107,7 +112,7 @@ export default function Quiz() {
                 userId: user.uid,
                 acertos: resultadoFinal,
                 total: perguntas.length,
-                materia: materiaParam || "Geral", // USA materiaParam ou "Geral" para a API
+                materia: materiaParam || "Geral",
               }),
             });
             if (!response.ok) {
@@ -164,7 +169,7 @@ export default function Quiz() {
 
   const reiniciarQuiz = () => {
     let quizUrl = `/quiz?questions=${quantidade}`;
-    if (materiaParam) { // USA materiaParam para a URL
+    if (materiaParam) {
       quizUrl += `&materia=${materiaParam}`;
     }
     quizUrl += `&rerun=${Math.random().toString(36).substring(7)}`;
@@ -172,8 +177,7 @@ export default function Quiz() {
   };
 
   const HeaderQuiz = ({ titleOverride }) => {
-    // USA nomeMateriaExibicao para o título
-    const quizTitle = `Quiz - ${nomeMateriaExibicao}`;
+    const quizTitle = `Quiz - ${nomeMateriaExibicao}`; // nomeMateriaExibicao é calculado fora do useEffect, está ok
     return (
       <header className="app-header quiz-custom-header">
         <Link to="/home" className="app-header-logo-link">
@@ -227,7 +231,6 @@ export default function Quiz() {
           <div className="quiz-feedback-container quiz-result-container">
             <h2 className="quiz-result-title">🎉 Quiz Finalizado! 🎉</h2>
             <p className="quiz-result-score">
-              {/* USA nomeMateriaExibicao para a mensagem de resultado */}
               Você acertou {resultadoFinal} de {perguntas.length} perguntas em {nomeMateriaExibicao}!
             </p>
             <div className="quiz-result-actions">
@@ -241,7 +244,6 @@ export default function Quiz() {
                 onClick={reiniciarQuiz}
                 className="button button--secondary"
               >
-                {/* USA nomeMateriaExibicao para o botão de reiniciar */}
                 Jogar Novamente ({nomeMateriaExibicao})
               </button>
             </div>
@@ -274,42 +276,52 @@ export default function Quiz() {
       <HeaderQuiz />
       <main className="quiz-main-content">
         <div 
-            key={perguntaAtual.key}
+            key={perguntaAtual.key} // A key aqui deve ser estável por pergunta, não aleatória a cada render. A key adicionada no map de `data` já faz isso.
             className={`quiz-card ${applyCardAnimation ? 'animate-card-enter' : ''}`}
         >
           <div className="quiz-question-text">
-            {perguntaAtual.textos?.map((textoItem, idx) => (
-              <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
-                {typeof textoItem === "object" ? textoItem.conteudo : textoItem}
-              </p>
-            ))}
+            {/* Adiciona uma verificação para garantir que perguntaAtual.textos existe e é um array */}
+            {perguntaAtual && perguntaAtual.textos && Array.isArray(perguntaAtual.textos) ? (
+              perguntaAtual.textos.map((textoItem, idx) => (
+                <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
+                  {typeof textoItem === "object" && textoItem !== null && textoItem.hasOwnProperty('conteudo') ? textoItem.conteudo : textoItem}
+                </p>
+              ))
+            ) : (
+              <p className="quiz-question-main-text">Carregando texto da pergunta...</p> // Ou alguma mensagem de erro/placeholder
+            )}
           </div>
 
           <div className="quiz-options">
-            {perguntaAtual.alternativas.map((alt, i) => {
-              let buttonClass = "quiz-option-button";
-              if (respostaSelecionada !== null) {
-                if (i === perguntaAtual.correta) {
-                  buttonClass += " correct";
-                } else if (i === respostaSelecionada) {
-                  buttonClass += " incorrect";
-                } else {
-                  buttonClass += " disabled";
+            {/* Adiciona uma verificação para garantir que perguntaAtual.alternativas existe e é um array */}
+            {perguntaAtual && perguntaAtual.alternativas && Array.isArray(perguntaAtual.alternativas) ? (
+              perguntaAtual.alternativas.map((alt, i) => {
+                let buttonClass = "quiz-option-button";
+                if (respostaSelecionada !== null) {
+                  if (i === perguntaAtual.correta) {
+                    buttonClass += " correct";
+                  } else if (i === respostaSelecionada) {
+                    buttonClass += " incorrect";
+                  } else {
+                    buttonClass += " disabled";
+                  }
                 }
-              }
 
-              return (
-                <button
-                  key={i}
-                  onClick={() => responder(i)}
-                  disabled={respostaSelecionada !== null}
-                  className={buttonClass}
-                >
-                  <span className="quiz-option-letter">{String.fromCharCode(65 + i)})</span>
-                  <span className="quiz-option-text-content">{alt}</span>
-                </button>
-              );
-            })}
+                return (
+                  <button
+                    key={i}
+                    onClick={() => responder(i)}
+                    disabled={respostaSelecionada !== null}
+                    className={buttonClass}
+                  >
+                    <span className="quiz-option-letter">{String.fromCharCode(65 + i)})</span>
+                    <span className="quiz-option-text-content">{alt}</span>
+                  </button>
+                );
+              })
+            ) : (
+              <p>Carregando alternativas...</p> // Ou alguma mensagem de erro/placeholder
+            )}
           </div>
 
           <div className="quiz-progress-indicator">

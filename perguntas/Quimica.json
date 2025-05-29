@@ -350,123 +350,96 @@
     "explicacao": "A Lei de Hess afirma que a variação de entalpia de uma reação é constante, independentemente de ser realizada em uma única etapa ou em várias etapas."
   },
   {
-    "pergunta": "Uma reação química ocorre entre 4 mols de hidrogênio (H₂) e 2 mols de oxigênio (O₂) para formar água (H₂O). Qual a quantidade de água formada, em mols?",
-    "alternativas": {
-      "a": "2 mols",
-      "b": "4 mols",
-      "c": "6 mols",
-      "d": "8 mols",
-      "e": "10 mols"
-    },
-    "correta": "c",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "Qual das substâncias abaixo é um ácido segundo a teoria de Brønsted-Lowry?",
-    "alternativas": {
-      "a": "NH₃",
-      "b": "H₂O",
-      "c": "HCl",
-      "d": "NaOH",
-      "e": "CO₂"
-    },
-    "correta": "c",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "As forças intermoleculares responsáveis pelo ponto de ebulição mais alto da água são:",
-    "alternativas": {
-      "a": "ligações iônicas",
-      "b": "ligações covalentes",
-      "c": "ligações de hidrogênio",
-      "d": "forças de Van der Waals",
-      "e": "ligações metálicas"
-    },
-    "correta": "c",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "O césio-137 é um isótopo radioativo com meia-vida de aproximadamente 30 anos. Após 90 anos, que fração da amostra inicial ainda estará radioativa?",
-    "alternativas": {
-      "a": "1/2",
-      "b": "1/3",
-      "c": "1/4",
-      "d": "1/8",
-      "e": "1/16"
-    },
-    "correta": "d",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "Qual a concentração molar de uma solução preparada dissolvendo 58 g de NaCl (massa molar = 58 g/mol) em 1 litro de água?",
-    "alternativas": {
-      "a": "0,1 mol/L",
-      "b": "0,5 mol/L",
-      "c": "1 mol/L",
-      "d": "2 mol/L",
-      "e": "5 mol/L"
-    },
-    "correta": "c",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "Uma solução aquosa tem concentração de íons H⁺ igual a 1 x 10⁻⁵ mol/L. Qual é o pH dessa solução?",
-    "alternativas": {
-      "a": "3",
-      "b": "4",
-      "c": "5",
-      "d": "6",
-      "e": "7"
-    },
-    "correta": "c",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "Qual grupo funcional caracteriza os álcoois?",
-    "alternativas": {
-      "a": "-COOH",
-      "b": "-OH",
-      "c": "-NH₂",
-      "d": "-CHO",
-      "e": "-CO"
-    },
-    "correta": "b",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "Um gás ideal ocupa 10 litros a 2 atm e 300 K. Qual será o volume do gás se a pressão for aumentada para 4 atm, mantendo a temperatura constante?",
-    "alternativas": {
-      "a": "5 L",
-      "b": "10 L",
-      "c": "15 L",
-      "d": "20 L",
-      "e": "25 L"
-    },
-    "correta": "a",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "O aumento da temperatura em uma reação química geralmente:",
-    "alternativas": {
-      "a": "diminui a energia de ativação",
-      "b": "aumenta a energia de ativação",
-      "c": "aumenta a velocidade da reação",
-      "d": "diminui a velocidade da reação",
-      "e": "não altera a velocidade da reação"
-    },
-    "correta": "c",
-    "materia": "quimica"
-  },
-  {
-    "pergunta": "O polietileno é um polímero formado pela repetição do monômero:",
-    "alternativas": {
-      "a": "eteno (C₂H₄)",
-      "b": "etino (C₂H₂)",
-      "c": "propeno (C₃H₆)",
-      "d": "benzeno (C₆H₆)",
-      "e": "metano (CH₄)"
-    },
-    "correta": "a",
+    "textos": ["Uma reação química ocorre entre 4 mols de hidrogênio (H₂) e 2 mols de oxigênio (O₂) para formar água (H₂O). Qual a quantidade de água formada, em mols?"],
+    "alternativas": [
+      "2 mols",
+      "4 mols",
+      "6 mols",
+      "8 mols",
+      "10 mols"
+    ],
+    "correta": 2, "materia": "quimica" }, {
+    "textos": ["Qual das substâncias abaixo é um ácido segundo a teoria de Brønsted-Lowry?"],
+    "alternativas": [
+      "NH₃",
+      "H₂O",
+      "HCl",
+      "NaOH",
+      "CO₂"
+    ],
+    "correta": 2, "materia": "quimica" }, {
+    "textos": ["As forças intermoleculares responsáveis pelo ponto de ebulição mais alto da água são:"],
+    "alternativas": [
+      "ligações iônicas",
+      "ligações covalentes",
+      "ligações de hidrogênio",
+      "forças de Van der Waals",
+      "ligações metálicas"
+    ],
+    "correta": 2, "materia": "quimica" }, {
+    "textos": ["O césio-137 é um isótopo radioativo com meia-vida de aproximadamente 30 anos. Após 90 anos, que fração da amostra inicial ainda estará radioativa?"],
+    "alternativas": [
+      "1/2",
+      "1/3",
+      "1/4",
+      "1/8",
+      "1/16"
+    ],
+    "correta": 3, "materia": "quimica" }, {
+    "textos": ["Qual a concentração molar de uma solução preparada dissolvendo 58 g de NaCl (massa molar = 58 g/mol) em 1 litro de água?"],
+    "alternativas": [
+      "0,1 mol/L",
+      "0,5 mol/L",
+      "1 mol/L",
+      "2 mol/L",
+      "5 mol/L"
+    ],
+    "correta": 2, "materia": "quimica" }, {
+    "textos": ["Uma solução aquosa tem concentração de íons H⁺ igual a 1 x 10⁻⁵ mol/L. Qual é o pH dessa solução?"],
+    "alternativas": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correta": 2, "materia": "quimica" }, {
+    "textos": ["Qual grupo funcional caracteriza os álcoois?"],
+    "alternativas": [
+      "-COOH",
+      "-OH",
+      "-NH₂",
+      "-CHO",
+      "-CO"
+    ],
+    "correta": 1, "materia": "quimica" }, {
+    "textos": ["Um gás ideal ocupa 10 litros a 2 atm e 300 K. Qual será o volume do gás se a pressão for aumentada para 4 atm, mantendo a temperatura constante?"],
+    "alternativas": [
+      "5 L",
+      "10 L",
+      "15 L",
+      "20 L",
+      "25 L"
+    ],
+    "correta": 0, "materia": "quimica" }, {
+    "textos": ["O aumento da temperatura em uma reação química geralmente:"],
+    "alternativas": [
+      "diminui a energia de ativação",
+      "aumenta a energia de ativação",
+      "aumenta a velocidade da reação",
+      "diminui a velocidade da reação",
+      "não altera a velocidade da reação"
+    ],
+    "correta": 2, "materia": "quimica" }, {
+    "textos": ["O polietileno é um polímero formado pela repetição do monômero:"],
+    "alternativas": [
+      "eteno (C₂H₄)",
+      "etino (C₂H₂)",
+      "propeno (C₃H₆)",
+      "benzeno (C₆H₆)",
+      "metano (CH₄)"
+    ],
+    "correta": 0,
     "materia": "quimica"
   }
 ]
