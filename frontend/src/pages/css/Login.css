@@ -5,6 +5,10 @@
   --color-background-element-rgb: 240, 242, 245; /* Exemplo, ajuste para sua --color-background-element */
   --color-white-rgb: 255, 255, 255;
   --color-black-rgb: 0, 0, 0;
+  --color-error-rgb: 222, 55, 55; /* Adicionado para login-error */
+  --color-error-dark: #b71c1c; /* Adicionado para login-error */
+  --color-primary-xtra-light: #e9f5ff; /* Usado no login-toggle-button:hover */
+
 
   /* Novas sombras mais suaves ou com profundidade */
   --shadow-input-focus: 0 0 0 3px rgba(var(--color-primary-rgb), 0.2);
@@ -69,7 +73,7 @@
   animation: fadeInContent 0.6s ease-out forwards;
 }
 
-@keyframes fadeInContent {
+/* @keyframes fadeInContent {
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -78,7 +82,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 
 /* Wrapper para os boxes de formulário e social */
@@ -95,8 +99,8 @@
 .login-box {
   /* Efeito Glassmorphism Sutil */
   background-color: rgba(var(--color-white-rgb, 255,255,255), 0.1); /* Fundo semi-transparente */
-  backdrop-filter: blur(100px) saturate(190%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%); /* Para Safari */
+  backdrop-filter: blur(100px) saturate(160%);
+  -webkit-backdrop-filter: blur(100px) saturate(160%); /* Para Safari */
   border-radius: var(--border-radius-lg); /* Um pouco mais arredondado */
   padding: var(--space-lg);
   width: 100%;
@@ -340,4 +344,28 @@
   .login-error.form-message--error {
     font-size: 1.2rem;
   }
+}
+
+/* ======== NOVOS ESTILOS PARA O BOTÃO DE ALTERNAR MODO LOGIN/REGISTRO ======== */
+.login-toggle-mode {
+  text-align: center;
+  margin-top: var(--space-md); /* Adiciona espaço acima do texto/botão */
+  font-size: 1.4rem;
+  color: rgba(var(--color-white-rgb, 255,255,255), 0.85); /* Cor para o texto "Não tem uma conta?" */
+}
+
+.login-toggle-button {
+  background: none;
+  border: none;
+  color: var(--color-white, #FFFFFF); /* Cor principal do link/botão */
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0 var(--space-xxs); /* Pequeno padding horizontal para melhor clique */
+  font-size: inherit; /* Herda o tamanho do <p> pai */
+  transition: color var(--transition-fast);
+}
+
+.login-toggle-button:hover {
+  color: var(--color-primary-xtra-light, #e0f2ff); /* Cor no hover, use uma variável se tiver */
 }
