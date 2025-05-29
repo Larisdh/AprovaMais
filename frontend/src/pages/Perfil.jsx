@@ -116,7 +116,6 @@ export default function PerfilScreen() {
     <div className="page-container perfil-page-container">
       {/* Reutilizando o app-header global com customizações se necessário */}
       <header className="app-header perfil-custom-header">
-<<<<<<< HEAD
         <Link to="/" className="app-header-logo-link">
           <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
         </Link>
@@ -126,21 +125,6 @@ export default function PerfilScreen() {
           <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
         </nav>
       </header>
-=======
-  <Link to="/home" className="app-header-logo-link"> {/* Alterado para redirecionar à página Home */}
-    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
-  </Link>
-  <h1 className="app-header-page-title">Meu Perfil</h1>
-  <nav className="app-header-nav perfil-custom-nav">
-    <Link to="/home" className="app-header-nav-link">
-      Início
-    </Link>
-    <Link to="/ranking" className="app-header-nav-link">
-      Ranking
-    </Link>
-  </nav>
-</header>
->>>>>>> 55cdc6a427071cd5a9b685b747e2b6863a167c75
 
       <main className="perfil-main-content">
         {carregandoPerfil ? (
@@ -230,7 +214,9 @@ export default function PerfilScreen() {
               <Link
                 to="/home"
                 className="button button--secondary perfil-home-button"
-              >Voltar para Início</Link>
+              >
+                Voltar para Início
+              </Link>
             </div>
           </form>
         )}
