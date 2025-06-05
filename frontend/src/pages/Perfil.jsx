@@ -121,8 +121,8 @@ export default function PerfilScreen() {
         </Link>
         <h1 className="app-header-page-title">Meu Perfil</h1>
         <nav className="app-header-nav perfil-custom-nav">
-          <Link to="/home" className="app-header-nav-link">Início</Link>
-          <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
+          <Link to="/Home" className="app-header-nav-link">Início</Link>
+          <Link to="/Ranking" className="app-header-nav-link">Ranking</Link>
         </nav>
       </header>
 

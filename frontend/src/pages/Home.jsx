@@ -10,7 +10,7 @@ export default function Home() {
   };
 
   const handleStartGeneralQuiz = () => {
-    navigate(`/quiz?questions=${questions}`);
+    navigate(`/quiz?questions=${questions}`); // Navega sem o parâmetro 'materia'
   };
 
   const materiasDisponiveis = [
@@ -54,6 +54,15 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <div className="home-aside__general-challenge">
+              <h3 className="home-aside__title">Desafio Geral:</h3> {/* Título opcional */}
+              <button
+                className="home-aside__general-button button button--primary" // Usando classes genéricas de botão e uma específica
+                onClick={handleStartGeneralQuiz}
+              >
+                Todas as Matérias
+              </button>
+            </div>
           </aside>
 
           <aside className="home-aside home-aside--quantidade">

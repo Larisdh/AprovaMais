@@ -307,7 +307,17 @@
   outline: none;
   box-shadow: var(--shadow-focus-ring);
 }
-
+.home-aside__general-button{
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  padding: var(--space-md) var(--space-lg);
+  font-size: clamp(1.5rem, 2.5vw, 1.7rem);
+  font-weight: bold;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
 
 .home-aside__question-selector {
   padding-top: var(--space-md);
@@ -334,6 +344,7 @@
   font-weight: 700; /* Mais bold quando ativo */
   transform: scale(1.05); /* Leve destaque */
 }
+
 
 .home-info-section__image-container {
   width: 100%;
