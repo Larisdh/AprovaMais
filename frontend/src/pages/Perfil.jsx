@@ -96,7 +96,7 @@ export default function PerfilScreen() {
     return (
       <div className="page-container perfil-page-container">
         <header className="app-header perfil-custom-header">
-          <Link to="/" className="app-header-logo-link">
+          <Link to="/home" className="app-header-logo-link">
             <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
           </Link>
           <h1 className="app-header-page-title">Perfil</h1>
@@ -116,7 +116,7 @@ export default function PerfilScreen() {
     <div className="page-container perfil-page-container">
       {/* Reutilizando o app-header global com customizações se necessário */}
       <header className="app-header perfil-custom-header">
-        <Link to="/" className="app-header-logo-link">
+        <Link to="/home" className="app-header-logo-link">
           <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
         </Link>
         <h1 className="app-header-page-title">Meu Perfil</h1>
