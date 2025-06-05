@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="page-container home-container">
       <header className="app-header">
-        <Link to="/" className="app-header-logo-link">
+        <Link to="/home" className="app-header-logo-link">
           <img src="/Logo.png" alt="Logo Aprova" className="app-logo" />
         </Link>
         <h1 className="app-header-page-title home-header-custom-title">BEM-VINDOS!</h1>
