@@ -14,8 +14,17 @@ export default function Home() {
   };
 
   const materiasDisponiveis = [
-    "historia", "filosofia", "sociologia", "geografia", "matematica",
-    "fisica", "quimica", "biologia", "portugues", "ingles", "espanhol"
+    "historia",
+    "filosofia",
+    "sociologia",
+    "geografia",
+    "matematica",
+    "fisica",
+    "quimica",
+    "biologia",
+    "portugues",
+    "ingles",
+    "espanhol",
   ];
 
   const quantidadesPerguntas = [5, 10, 15, 20, 25];
@@ -23,13 +32,18 @@ export default function Home() {
   return (
     <div className="page-container home-container">
       <header className="app-header">
-        
-          <img src="/Logo.png" alt="Logo Aprova" className="app-logo" />
-        
-        <h1 className="app-header-page-title home-header-custom-title">BEM-VINDOS!</h1>
+        <img src="/Logo.png" alt="Logo Aprova" className="app-logo" />
+
+        <h1 className="app-header-page-title home-header-custom-title">
+          BEM-VINDOS!
+        </h1>
         <nav className="app-header-nav">
-          <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
-          <Link to="/perfil" className="app-header-nav-link">Perfil</Link>
+          <Link to="/ranking" className="app-header-nav-link">
+            Ranking
+          </Link>
+          <Link to="/perfil" className="app-header-nav-link">
+            Perfil
+          </Link>
         </nav>
       </header>
 
@@ -40,7 +54,7 @@ export default function Home() {
       <main className="home-main">
         <div className="home-layout">
           {/* Seções alinhadas lado a lado */}
-          <aside className="home-aside home-aside--materias">
+          <div className="home-aside-materias">
             <h3 className="home-aside__title">Escolha uma Matéria:</h3>
             <ul className="home-aside__subject-list">
               {materiasDisponiveis.map((materia) => (
@@ -55,7 +69,8 @@ export default function Home() {
               ))}
             </ul>
             <div className="home-aside__general-challenge">
-              <h3 className="home-aside__title">Desafio Geral:</h3> {/* Título opcional */}
+              <h3 className="home-aside__title">Desafio Geral:</h3>{" "}
+              {/* Título opcional */}
               <button
                 className="home-aside__general-button button button--primary" // Usando classes genéricas de botão e uma específica
                 onClick={handleStartGeneralQuiz}
@@ -63,22 +78,24 @@ export default function Home() {
                 Todas as Matérias
               </button>
             </div>
-          </aside>
+          </div>
 
-          <aside className="home-aside home-aside--quantidade">
+          <div className="home-aside-quantidade">
             <h3 className="home-aside__title">Quantidade de Perguntas:</h3>
-            <div className="home-aside__question-buttons">
+            <div className="home-aside-numero">
               {quantidadesPerguntas.map((value) => (
                 <button
                   key={value}
                   onClick={() => setQuestions(value)}
-                  className={`home-aside__quantity-button ${questions === value ? "active" : ""}`}
+                  className={`home-aside__quantity-button ${
+                    questions === value ? "active" : ""
+                  }`}
                 >
                   {value}
                 </button>
               ))}
             </div>
-          </aside>
+          </div>
 
           <section className="home-info-section">
             <div className="home-info-section__image-container">
@@ -98,7 +115,10 @@ export default function Home() {
               <p>
                 Comece agora e torne seu estudo mais inteligente e divertido!
               </p>
-              <Link to="/perfil" className="button button--primary home-info-section__action-button">
+              <Link
+                to="/perfil"
+                className="button button--primary home-info-section__action-button"
+              >
                 Ir para o Perfil
               </Link>
             </div>
