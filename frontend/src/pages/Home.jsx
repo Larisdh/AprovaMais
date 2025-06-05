@@ -23,9 +23,9 @@ export default function Home() {
   return (
     <div className="page-container home-container">
       <header className="app-header">
-        <Link to="/home" className="app-header-logo-link">
+        
           <img src="/Logo.png" alt="Logo Aprova" className="app-logo" />
-        </Link>
+        
         <h1 className="app-header-page-title home-header-custom-title">BEM-VINDOS!</h1>
         <nav className="app-header-nav">
           <Link to="/ranking" className="app-header-nav-link">Ranking</Link>
@@ -37,8 +37,8 @@ export default function Home() {
         "A CADA QUIZ, UM PASSO MAIS PERTO DA APROVAÇÃO"
       </div>
 
-      <main className="home-main-content">
-        <div className="home-layout-grid">
+      <main className="home-main">
+        <div className="home-layout">
           {/* Seções alinhadas lado a lado */}
           <aside className="home-aside home-aside--materias">
             <h3 className="home-aside__title">Escolha uma Matéria:</h3>
