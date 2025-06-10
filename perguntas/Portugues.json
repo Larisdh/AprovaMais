@@ -1,0 +1,530 @@
+[
+  {
+    "textos": [
+      "Assinale a alternativa que apresenta uma comparação:"
+    ],
+    "alternativas": [
+      "Ele é forte como um touro.",
+      "Ele é um touro.",
+      "Ele tem uma força de touro.",
+      "Ele se comporta como um touro."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A comparação é uma figura de linguagem que estabelece uma relação de semelhança entre dois elementos, usando palavras como 'como' ou 'tal qual'."
+  },
+  {
+    "textos": [
+      "Em qual alternativa há uma metonímia?"
+    ],
+    "alternativas": [
+      "Ele tem um coração de pedra.",
+      "Ela comprou um quadro de Picasso.",
+      "A casa caiu.",
+      "Ele é um leão na luta."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A metonímia é uma figura de linguagem que substitui uma palavra por outra com a qual tem uma relação de proximidade ou contiguidade. 'Comprar um quadro de Picasso' é um exemplo, pois se refere à obra de Picasso."
+  },
+  {
+    "textos": [
+      "Qual das alternativas a seguir apresenta uma antítese?"
+    ],
+    "alternativas": [
+      "Ele é forte e fraco ao mesmo tempo.",
+      "Ele é forte como um touro.",
+      "Ele tem o espírito de um leão.",
+      "Ele é de ferro."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A antítese é a figura de linguagem que consiste na aproximação de palavras ou ideias de significados opostos. No caso, 'forte e fraco ao mesmo tempo' representa oposição entre conceitos."
+  },
+  {
+    "textos": [
+      "Em qual alternativa há um exemplo de onomatopeia?"
+    ],
+    "alternativas": [
+      "O relógio fez tic-tac.",
+      "A chuva caía suavemente.",
+      "O vento assobiava no telhado.",
+      "Ele gritou com todas as suas forças."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de objetos. 'Tic-tac' imita o som de um relógio."
+  },
+  {
+    "textos": [
+      "Qual a figura de linguagem presente na frase: 'Ele é um verdadeiro anjo'?"
+    ],
+    "alternativas": [
+      "Metáfora",
+      "Metonímia",
+      "Antítese",
+      "Ironia"
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A metáfora é uma figura de linguagem que consiste na substituição de uma palavra por outra, com a qual possui uma relação de semelhança. 'Ver verdadeiro anjo' é uma metáfora que compara a bondade de uma pessoa com a imagem de um anjo."
+  },
+  {
+    "textos": [
+      "Qual das alternativas abaixo apresenta uma perífrase (antonomásia)?"
+    ],
+    "alternativas": [
+      "Saia já para fora!",
+      "Foi salvo pelo melhor amigo do homem.",
+      "‘É o pau, é a pedra, é o fim do caminho.’",
+      "Escreveu, não leu; o pau comeu.",
+      "Não aguentava mais aquele buá-buá nos meus ouvidos."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A perífrase (ou antonomásia) é uma figura de linguagem que substitui um nome comum por uma expressão mais detalhada ou pelo nome de algo relacionado. No caso, 'melhor amigo do homem' é uma perífrase para o cão."
+  },
+  {
+    "textos": [
+      "Em ‘Urgh, que nojo!’, qual figura de linguagem está presente?"
+    ],
+    "alternativas": [
+      "Ironia",
+      "Onomatopeia",
+      "Metáfora",
+      "Hipérbole"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A onomatopeia é a figura de linguagem que imita sons da natureza ou de ações. ‘Urgh’ imita um som de repulsa ou nojo."
+  },
+  {
+    "textos": [
+      "A frase ‘Estou morrendo de fome’ é um exemplo de:"
+    ],
+    "alternativas": [
+      "Eufemismo",
+      "Hipérbole",
+      "Metonímia",
+      "Antítese"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A hipérbole é uma figura de linguagem que exagera a realidade. No caso, ‘morrendo de fome’ exagera o estado de fome da pessoa."
+  },
+  {
+    "textos": [
+      "‘Ela é uma flor’ é um exemplo de:"
+    ],
+    "alternativas": [
+      "Metáfora",
+      "Comparação",
+      "Ironia",
+      "Catacrese"
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A metáfora é uma figura de linguagem que faz uma comparação implícita entre dois elementos. ‘Ela é uma flor’ sugere que a pessoa é delicada e bonita sem usar a palavra ‘como’."
+  },
+  {
+    "textos": [
+      "Em ‘Tem seis bocas para alimentar em casa’, temos:"
+    ],
+    "alternativas": [
+      "Catacrese",
+      "Metonímia",
+      "Prosopopeia",
+      "Hipérbole"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A metonímia é uma figura de linguagem em que uma palavra é substituída por outra que tem uma relação de proximidade ou contiguidade. ‘Seis bocas’ substitui as pessoas que devem ser alimentadas."
+  },
+  {
+    "textos": [
+      "A função da linguagem predominante em um texto publicitário é:"
+    ],
+    "alternativas": [
+      "Referencial",
+      "Conativa (apelativa)",
+      "Fática",
+      "Emotiva"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A função conativa (ou apelativa) é caracterizada pela intenção de influenciar o receptor. Em textos publicitários, o objetivo é convencer o público a consumir um produto ou serviço."
+  },
+  {
+    "textos": [
+      "Quando o texto enfatiza as emoções do emissor, temos a função:"
+    ],
+    "alternativas": [
+      "Referencial",
+      "Emotiva",
+      "Fática",
+      "Metalinguística"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "A função emotiva se destaca quando o emissor expressa seus sentimentos ou emoções. Ela se foca no emissor da mensagem."
+  },
+  {
+    "textos": [
+      "A função metalinguística está presente quando:"
+    ],
+    "alternativas": [
+      "O código é explicado pelo próprio código.",
+      "O canal é enfatizado.",
+      "O receptor é o foco.",
+      "O contexto é o mais importante."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A função metalinguística ocorre quando o código utilizado (linguagem) é explicado ou esclarecido dentro do próprio texto."
+  },
+  {
+    "textos": [
+      "Em uma conversa telefônica, quando alguém diz ‘Está me ouvindo?’, predomina a função:"
+    ],
+    "alternativas": [
+      "Fática",
+      "Referencial",
+      "Emotiva",
+      "Poética"
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A função fática é voltada para o estabelecimento, manutenção e verificação da comunicação, como no caso de checar se o canal de comunicação está funcionando."
+  },
+  {
+    "textos": [
+      "Em um poema, a função da linguagem mais evidente costuma ser:"
+    ],
+    "alternativas": [
+      "Poética",
+      "Referencial",
+      "Fática",
+      "Conativa"
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "Em textos poéticos, a função da linguagem mais evidente é a poética, que foca na forma e estética da mensagem, buscando a beleza e o impacto artístico."
+  },
+  {
+    "textos": [
+      "O artigo de opinião é um gênero textual que tem como principal objetivo:"
+    ],
+    "alternativas": [
+      "Informar",
+      "Convencer",
+      "Narrar",
+      "Descrever"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O artigo de opinião visa principalmente convencer o leitor sobre um ponto de vista ou opinião, sendo um texto argumentativo que expressa a opinião do autor sobre determinado tema."
+  },
+  {
+    "textos": [
+      "Assinale a alternativa correta sobre gêneros textuais:"
+    ],
+    "alternativas": [
+      "São estruturas fixas e imutáveis.",
+      "São limitados a cinco tipos.",
+      "São incontáveis e variam conforme o contexto comunicacional.",
+      "Não variam com as mudanças sociais."
+    ],
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "Os gêneros textuais são adaptáveis ao contexto e à comunicação, variando conforme as necessidades de expressão social e as mudanças culturais."
+  },
+  {
+    "textos": [
+      "Uma das estratégias argumentativas mais comuns em textos dissertativos é:"
+    ],
+    "alternativas": [
+      "Narrar fatos fictícios",
+      "Apresentar exemplos concretos",
+      "Descrever cenários",
+      "Usar rimas"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Em textos dissertativos, é comum o uso de exemplos concretos para sustentar argumentos, tornando a argumentação mais persuasiva e sólida."
+  },
+  {
+    "textos": [
+      "Quando o autor utiliza uma citação direta para reforçar seu ponto de vista, ele está empregando:"
+    ],
+    "alternativas": [
+      "Argumento de autoridade",
+      "Argumento de causa e consequência",
+      "Argumento por exemplificação",
+      "Argumento por analogia"
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "O argumento de autoridade ocorre quando o autor cita uma pessoa ou fonte considerada referência sobre o tema, reforçando a credibilidade de seu ponto de vista."
+  },
+  {
+    "textos": [
+      "Em um texto argumentativo, a apresentação de dados estatísticos corresponde a qual estratégia?"
+    ],
+    "alternativas": [
+      "Apelo à emoção",
+      "Argumento de autoridade",
+      "Argumento lógico",
+      "Argumento de exemplificação"
+    ],
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "O uso de dados estatísticos em um texto argumentativo é uma estratégia lógica, pois fundamenta o argumento em evidências objetivas e racionais."
+  },
+  {
+    "textos": [
+      "O Quinhentismo é um movimento literário que corresponde:"
+    ],
+    "alternativas": [
+      "Ao século XVI, início da colonização do Brasil.",
+      "Ao século XVII, barroco.",
+      "Ao século XVIII, arcadismo.",
+      "Ao século XIX, romantismo."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "O Quinhentismo corresponde ao século XVI, quando o Brasil foi descoberto e iniciado o processo de colonização por parte de Portugal."
+  },
+  {
+    "textos": [
+      "Uma característica marcante dos textos do Quinhentismo é:"
+    ],
+    "alternativas": [
+      "Forte subjetividade",
+      "Descrição objetiva da natureza e dos indígenas",
+      "Uso de linguagem rebuscada",
+      "Temática urbana"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Os textos do Quinhentismo têm uma característica predominante de descrever a natureza e os indígenas de forma objetiva, com o intuito de relatar o desconhecido para os europeus."
+  },
+  {
+    "textos": [
+      "O principal objetivo dos textos informativos do Quinhentismo era:"
+    ],
+    "alternativas": [
+      "Criticar a sociedade europeia",
+      "Relatar e descrever a terra e os habitantes do Brasil para a Coroa portuguesa",
+      "Expressar sentimentos pessoais",
+      "Narrar lendas indígenas"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Os textos do Quinhentismo, como cartas e relatos, tinham o objetivo principal de informar a Coroa portuguesa sobre as terras recém-descobertas, seus recursos naturais e os habitantes locais."
+  },
+  {
+    "textos": [
+      "O autor da 'Carta de Pero Vaz de Caminha' pertence ao período:"
+    ],
+    "alternativas": [
+      "Barroco",
+      "Quinhentismo",
+      "Romantismo",
+      "Modernismo"
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "Pero Vaz de Caminha foi o autor da famosa 'Carta de Pero Vaz de Caminha', escrita em 1500, durante o período do Quinhentismo."
+  },
+  {
+    "textos": [
+      "Sobre o Quinhentismo, é correto afirmar:"
+    ],
+    "alternativas": [
+      "É um movimento exclusivamente poético.",
+      "Tem textos de caráter informativo e jesuítico.",
+      "Surgiu no século XIX.",
+      "Seus textos não abordam a catequese."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O Quinhentismo é marcado por textos de caráter informativo (relatos e cartas) e jesuítico, pois os missionários tinham grande presença na época, promovendo a catequese dos indígenas."
+  },
+  {
+    "textos": [
+      "Leia o trecho:",
+      "“Aqui em Portugal eles dizem /– eles dizem – / que nosso português é errado, que nós não falamos português.”",
+      "Sobre o preconceito linguístico presente no texto, assinale a alternativa correta:"
+    ],
+    "alternativas": [
+      "O texto defende a superioridade do português falado em Portugal.",
+      "O texto denuncia a ideia equivocada de que existe apenas uma forma correta de falar português.",
+      "O texto aponta que o português brasileiro é uma língua diferente do português europeu.",
+      "O texto afirma que o português falado no Brasil é uma língua inferior.",
+      "O texto sugere que o português brasileiro deve ser substituído pelo português europeu."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O trecho critica o preconceito linguístico contra o português falado no Brasil, mostrando que há uma visão equivocada de que apenas o português de Portugal seria o correto."
+  },
+  {
+    "textos": [
+      "Leia o anúncio:",
+      "“Doe sangue. Salve vidas. Seja um herói.”",
+      "A função da linguagem predominante nesse texto é:"
+    ],
+    "alternativas": [
+      "Referencial",
+      "Emotiva",
+      "Apelativa (conativa)",
+      "Metalinguística",
+      "Poética"
+    ],
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "A função apelativa busca convencer o receptor a adotar um comportamento, como doar sangue no caso do anúncio."
+  },
+  {
+    "textos": [
+      "Leia as frases:",
+      "I. “Ele estudou muito, portanto foi aprovado.”",
+      "II. “Embora estivesse cansada, ela continuou trabalhando.”",
+      "III. “Se chover, não sairemos.”",
+      "IV. “Ele gosta de futebol, mas não joga.”",
+      "Associe as frases aos tipos de oração subordinada ou coordenada que apresentam:"
+    ],
+    "alternativas": [
+      "I - conclusiva; II - concessiva; III - condicional; IV - adversativa",
+      "I - causal; II - adversativa; III - condicional; IV - conclusiva",
+      "I - condicional; II - concessiva; III - causal; IV - adversativa",
+      "I - conclusiva; II - adversativa; III - condicional; IV - concessiva",
+      "I - causal; II - concessiva; III - condicional; IV - adversativa"
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "I - oração coordenada conclusiva; II - oração subordinada concessiva; III - oração subordinada condicional; IV - oração coordenada adversativa."
+  },
+  {
+    "textos": [
+      "Leia o trecho:",
+      "“No meio do caminho tinha uma pedra / Tinha uma pedra no meio do caminho.”",
+      "Esse verso, de Carlos Drummond de Andrade, é frequentemente utilizado para simbolizar:"
+    ],
+    "alternativas": [
+      "A beleza da natureza brasileira.",
+      "O obstáculo e a dificuldade presentes na vida cotidiana.",
+      "A celebração da cultura popular.",
+      "A crítica à urbanização acelerada.",
+      "A valorização da infância."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O verso simboliza os obstáculos da vida, repetidos poeticamente para ressaltar a persistência dos problemas enfrentados ao longo do caminho."
+  },
+  {
+    "textos": [
+      "Leia a frase:",
+      "“O menino viu o homem com o telescópio.”",
+      "Essa frase apresenta ambiguidade porque:"
+    ],
+    "alternativas": [
+      "Não se sabe se o menino usou o telescópio para ver o homem ou se o homem possuía o telescópio.",
+      "O menino viu o homem, mas não se sabe qual homem.",
+      "O menino viu o telescópio, mas não o homem.",
+      "O menino viu o homem, que estava longe.",
+      "O menino não viu o homem nem o telescópio."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "A frase é ambígua porque não é possível determinar se o telescópio pertence ao menino (que o usou para ver) ou ao homem (que o possui)."
+  },
+  {
+    "textos": [
+      "Leia o texto abaixo:",
+      "“Uma pequena editora brasileira, a Urutau, acaba de lançar em Lisboa uma ‘antologia antirracista de poetas estrangeiros em Portugal’, com o título Volta para a tua terra. O livro denuncia as diversas formas de racismo a que os imigrantes estão sujeitos. Alguns dos poetas brasileiros antologiados queixam-se do desdém com que um grande número de portugueses acolhe o português brasileiro. É uma queixa frequente. ‘Aqui em Portugal eles dizem /– eles dizem – / que nosso português é errado, que nós não falamos português’, escreve a poetisa paulista Maria Giulia Pinheiro, para concluir: ‘Se a sua linguagem, a lusitana, / ainda conserva a palavra da opressão / ela não é a mais bonita do mundo./ Ela é uma das mais violentas’.” (Adaptado de AGUALUSA, J. E. Disponível em: oglobo.globo.com)",
+      "Com base no texto, infere-se que o preconceito linguístico relatado ocorre principalmente devido"
+    ],
+    "alternativas": [
+      "à dificuldade de consolidação da literatura brasileira em outros países.",
+      "aos diferentes graus de instrução formal entre os falantes de língua portuguesa.",
+      "à existência de uma língua ideal que alguns falantes lusitanos creem ser a falada em Portugal.",
+      "ao intercâmbio cultural entre povos de diferentes países de língua portuguesa.",
+      "à distância territorial entre os falantes do português que vivem em Portugal e no Brasil."
+    ],
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "O preconceito linguístico ocorre devido à crença de que o português de Portugal é a única forma correta da língua, o que gera a ideia de uma língua idealizada."
+  },
+  {
+    "textos": [
+      "Leia o trecho a seguir:",
+      "“— Admira-me —, disse uma senhora de sentimentos sinceramente abolicionistas —; faz-me até pasmar como se possa sentir, e expressar sentimentos escravocratas, no presente século, no século dezenove! A moral religiosa e a moral cívica aí se erguem, e falam bem alto esmagando a hidra que envenena a família no mais sagrado santuário seu, e desmoraliza, e avilta a nação inteira! [...] Por qualquer modo que encaremos a escravidão, ela é, e será sempre um grande mal. Dela a decadência do comércio; porque o comércio e a lavoura caminham de mãos dadas, e o escravo não pode fazer florescer a lavoura; porque o seu trabalho é forçado.” (REIS, M. F. Úrsula e outras obras. Brasília: Câmara dos Deputados, 2018.)",
+      "O texto, inscrito na estética romântica da literatura brasileira, descortina aspectos da realidade nacional no século XIX ao"
+    ],
+    "alternativas": [
+      "revelar a imposição de crenças religiosas a pessoas escravizadas.",
+      "apontar a hipocrisia do discurso conservador na defesa da escravidão.",
+      "sugerir práticas de violência física e moral em nome do progresso material.",
+      "relacionar o declínio da produção agrícola e comercial a questões raciais.",
+      "ironizar o comportamento dos proprietários de terra na exploração do trabalho."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O texto aponta a hipocrisia do discurso conservador que, embora condenasse a escravidão, argumentava a favor dela com base em interesses econômicos e sociais."
+  },
+  {
+    "textos": [
+      "Leia o trecho:",
+      "“Aqui em Portugal eles dizem /– eles dizem – / que nosso português é errado, que nós não falamos português.”",
+      "Sobre o fenômeno linguístico abordado no texto, assinale a alternativa correta:"
+    ],
+    "alternativas": [
+      "O texto denuncia o preconceito contra variedades regionais do português, evidenciando a ideia equivocada de uma única forma legítima da língua.",
+      "O texto celebra a pluralidade linguística, mostrando que todas as variantes são igualmente valorizadas em Portugal.",
+      "O texto discute apenas diferenças de vocabulário entre o português do Brasil e o de Portugal.",
+      "O texto trata da influência de línguas indígenas no português brasileiro.",
+      "O texto defende a adoção da norma-padrão portuguesa em todos os países lusófonos."
+    ],
+    "correta": 0,
+    "materia": "portugues",
+    "explicacao": "O texto denuncia o preconceito linguístico contra o português brasileiro, mostrando a ideia errônea de que existe uma forma única e correta de falar o português."
+  },
+  {
+    "textos": [
+      "Considere a seguinte situação hipotética, inspirada em questões do ENEM:",
+      "Um romance contemporâneo apresenta um protagonista que, ao visitar uma exposição de autorretratos modernos, reflete sobre sua própria identidade e o impacto das guerras do século XX na formação do sujeito moderno. O autor do romance utiliza referências à psicanálise e à arte moderna para construir o enredo.",
+      "Sobre a relação entre literatura e outras manifestações artísticas, é correto afirmar:"
+    ],
+    "alternativas": [
+      "O texto exemplifica a intertextualidade ao dialogar apenas com obras literárias do século XX.",
+      "A narrativa propõe uma reflexão crítica sobre a subjetividade moderna, articulando literatura, artes visuais e contexto histórico.",
+      "O romance restringe-se à análise de técnicas pictóricas, sem abordar questões sociais.",
+      "O texto rejeita qualquer influência da psicanálise no desenvolvimento da subjetividade.",
+      "O romance ignora os impactos das guerras mundiais na identidade do sujeito moderno."
+    ],
+    "correta": 1,
+    "materia": "portugues",
+    "explicacao": "O romance usa diversas manifestações artísticas, como a arte moderna e a psicanálise, para refletir sobre a formação da identidade moderna e os impactos históricos."
+  },
+  {
+    "textos": [
+      "Leia as frases:",
+      "I. Pretendo ingressar na Universidade, a fim de me qualificar para o trabalho.",
+      "II. Pretendo ingressar na Universidade, porque quero ser biólogo.",
+      "III. Ingresso na Universidade, ou viajo para o exterior.",
+      "IV. Frequentarei a Universidade, embora more bem distante daqui.",
+      "V. Ingressarei nesta Universidade, se passar no vestibular.",
+      "Assinale a alternativa que corresponde ao tipo de relação estabelecido, respectivamente, em cada frase:"
+    ],
+    "alternativas": [
+      "finalidade, causalidade, disjunção, oposição, condicionalidade",
+      "causalidade, oposição, finalidade, disjunção, condicionalidade",
+      "finalidade, causalidade, disjunção, oposição, condicionalidade",
+      "causalidade, finalidade, oposição, disjunção, condicionalidade",
+      "finalidade, causalidade, adição, oposição, condicionalidade"
+    ],
+    "correta": 2,
+    "materia": "portugues",
+    "explicacao": "A relação entre as frases é: I - finalidade; II - causalidade; III - disjunção; IV - oposição; V - condicionalidade."
+  }
+]

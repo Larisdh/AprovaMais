@@ -1,0 +1,452 @@
+[
+  {
+    "textos": ["Qual das seguintes transformações NÃO está diretamente associada ao processo de globalização no mundo do trabalho?"],
+    "alternativas": [
+      "Aumento da terceirização e flexibilização das relações de trabalho.",
+      "Crescimento do setor de serviços em detrimento do setor industrial.",
+      "Fortalecimento dos sindicatos em nível global.",
+      "Maior competitividade entre trabalhadores de diferentes países."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A globalização, em geral, enfraqueceu o poder dos sindicatos em nível nacional e global, devido à descentralização da produção e à maior mobilidade do capital."
+  },
+  {
+    "textos": ["O conceito de 'alienação' no trabalho, proposto por Karl Marx, refere-se principalmente à:"],
+    "alternativas": [
+      "Falta de reconhecimento social do trabalhador.",
+      "Exaustão física e mental causada pelo excesso de trabalho.",
+      "Separação do trabalhador do produto do seu trabalho, do processo de produção, de seus colegas e de sua própria potencialidade humana.",
+      "Baixa remuneração e más condições de trabalho."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A alienação, para Marx, é a perda de autonomia e controle do trabalhador sobre o seu trabalho e seus resultados, levando a um sentimento de estranhamento e desumanização."
+  },
+  {
+    "textos": ["Qual das seguintes características descreve melhor o modelo de produção fordista?"],
+    "alternativas": [
+      "Produção artesanal e personalizada.",
+      "Produção em massa, com linhas de montagem e padronização.",
+      "Produção flexível, adaptada às demandas do mercado.",
+      "Produção baseada no conhecimento e na inovação tecnológica."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "O fordismo é caracterizado pela produção em larga escala de bens padronizados, utilizando a linha de montagem para aumentar a eficiência e reduzir custos."
+  },
+  {
+    "textos": ["O que se entende por 'divisão social do trabalho'?"],
+    "alternativas": [
+      "A distribuição de tarefas e funções entre diferentes indivíduos e grupos na sociedade.",
+      "A separação entre trabalho manual e trabalho intelectual.",
+      "A desigualdade salarial entre homens e mulheres no mercado de trabalho.",
+      "A organização dos trabalhadores em sindicatos e associações de classe."
+    ],
+    "correta": 0,
+    "materia": "sociologia",
+    "explicacao": "A divisão social do trabalho é a forma como as diferentes atividades produtivas são distribuídas entre os membros de uma sociedade, gerando interdependência e especialização."
+  },
+  {
+    "textos": ["A precarização do trabalho no contexto contemporâneo é marcada por:"],
+    "alternativas": [
+      "Aumento da segurança no emprego e dos direitos trabalhistas.",
+      "Crescimento do trabalho formal e da proteção social.",
+      "Expansão de formas de trabalho instáveis, com baixos salários e poucos benefícios.",
+      "Fortalecimento da legislação trabalhista e da fiscalização."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A precarização se manifesta através da informalidade, da terceirização excessiva, dos contratos temporários e da perda de direitos trabalhistas, tornando o trabalho mais vulnerável."
+  },
+  {
+    "textos": ["Qual das seguintes afirmações sobre o conceito de cultura em sociologia é INCORRETA?"],
+    "alternativas": [
+      "Cultura abrange os conhecimentos, crenças, valores, normas e costumes de um grupo social.",
+      "Cultura é estática e imutável ao longo do tempo.",
+      "Diferentes grupos sociais podem ter culturas distintas.",
+      "A cultura influencia a forma como as pessoas pensam, agem e interagem."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A cultura é dinâmica e está em constante transformação, influenciada por diversos fatores como contato entre grupos, avanços tecnológicos e mudanças sociais."
+  },
+  {
+    "textos": ["O termo 'indústria cultural', cunhado por Theodor Adorno e Max Horkheimer, refere-se ao processo de:"],
+    "alternativas": [
+      "Valorização das manifestações artísticas populares.",
+      "Produção em massa de bens culturais com o objetivo de lucro e homogeneização do gosto.",
+      "Apoio governamental a artistas e produtores culturais independentes.",
+      "Criação de espaços para a livre expressão cultural e artística."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A indústria cultural, segundo Adorno e Horkheimer, transforma a cultura em mercadoria, padronizando produtos culturais e influenciando o pensamento e o comportamento das massas."
+  },
+  {
+    "textos": ["Um exemplo de produto da indústria cultural é:"],
+    "alternativas": [
+      "Uma peça de teatro experimental com público limitado.",
+      "Um livro de poesia de um autor desconhecido.",
+      "Um filme de super-heróis com grande investimento em marketing e distribuição.",
+      "Uma manifestação folclórica local transmitida oralmente."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "Filmes de grande sucesso, com ampla divulgação e distribuição, são típicos produtos da indústria cultural, visando o consumo em massa."
+  },
+  {
+    "textos": ["A crítica da indústria cultural à cultura de massa reside principalmente na:"],
+    "alternativas": [
+      "Sua incapacidade de gerar lucro para os produtores culturais.",
+      "Sua tendência a promover a diversidade de expressões artísticas.",
+      "Sua função de entretenimento e lazer para a população.",
+      "Sua capacidade de alienar e manipular o público, enfraquecendo o pensamento crítico."
+    ],
+    "correta": 3,
+    "materia": "sociologia",
+    "explicacao": "Os críticos da indústria cultural argumentam que ela simplifica e padroniza os produtos culturais, limitando a capacidade das pessoas de refletir criticamente sobre a realidade."
+  },
+  {
+    "textos": ["O conceito de 'hegemonia cultural', de Antonio Gramsci, descreve:"],
+    "alternativas": [
+      "A dominação de uma cultura sobre outras pela força militar.",
+      "O consenso e a aceitação das ideias e valores da classe dominante pela sociedade como um todo.",
+      "A resistência das culturas minoritárias à cultura dominante.",
+      "A coexistência pacífica de diversas culturas em uma mesma sociedade."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A hegemonia cultural ocorre quando a visão de mundo da classe dominante se torna a visão de mundo 'natural' e aceita pela maioria, mesmo que não sirva aos seus próprios interesses."
+  },
+  {
+    "textos": ["Qual dos seguintes fatores contribuiu significativamente para o surgimento da cultura de massas?"],
+    "alternativas": [
+      "O declínio da produção industrial e o crescimento do setor de serviços.",
+      "A expansão da educação formal e o aumento do acesso à cultura erudita.",
+      "O desenvolvimento dos meios de comunicação de massa, como o rádio e a televisão.",
+      "O fortalecimento das tradições locais e a valorização das manifestações culturais populares."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "Os meios de comunicação de massa permitiram a disseminação de informações e produtos culturais para um grande número de pessoas simultaneamente, moldando a cultura de massas."
+  },
+  {
+    "textos": ["A internet e as redes sociais representam uma transformação nos meios de comunicação, caracterizada por:"],
+    "alternativas": [
+      "Uma comunicação unidirecional, do emissor para o receptor.",
+      "Um controle centralizado da informação por grandes corporações midiáticas.",
+      "Uma maior interatividade e participação dos usuários na produção e disseminação de conteúdo.",
+      "Uma diminuição da influência da mídia tradicional."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A internet e as redes sociais democratizaram parcialmente a produção e o consumo de informação, permitindo que os usuários se tornem também produtores de conteúdo e interajam de forma mais direta."
+  },
+  {
+    "textos": ["O conceito de 'sociedade da informação' refere-se a uma sociedade em que:"],
+    "alternativas": [
+      "A produção agrícola é a principal atividade econômica.",
+      "O conhecimento e a informação são os principais recursos econômicos, sociais e culturais.",
+      "A indústria manufatureira é o setor mais importante da economia.",
+      "As relações sociais são baseadas principalmente na comunicação face a face."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "Na sociedade da informação, o acesso, o processamento e a disseminação da informação são cruciais para o desenvolvimento econômico e social."
+  },
+  {
+    "textos": ["Um dos desafios da cultura de massas mediada pela tecnologia é:"],
+    "alternativas": [
+      "A dificuldade de acesso à informação e ao entretenimento por grande parte da população.",
+      "A supervalorização da cultura local em detrimento da cultura global.",
+      "O risco de homogeneização cultural e a perda da diversidade.",
+      "O excesso de conteúdo educativo e a falta de opções de lazer."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A ampla disseminação de produtos culturais padronizados pode levar à perda de identidades culturais específicas e à uniformização de gostos e valores."
+  },
+  {
+    "textos": ["O fenômeno das 'fake news' (notícias falsas) está relacionado com:"],
+    "alternativas": [
+      "A crescente credibilidade das fontes de informação tradicionais.",
+      "A facilidade de produção e disseminação de informações não verificadas através das mídias digitais.",
+      "O aumento do interesse da população por notícias factuais e bem apuradas.",
+      "A diminuição do impacto das redes sociais na formação da opinião pública."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A velocidade e a falta de filtros nas mídias digitais facilitam a propagação de informações falsas, com potenciais impactos na opinião pública e nos processos democráticos."
+  },
+  {
+    "textos": ["Qual das seguintes características NÃO corresponde ao modelo de produção toyotista?"],
+    "alternativas": [
+      "Produção flexível e adaptada à demanda.",
+      "Estoque mínimo (\"just-in-time\").",
+      "Ênfase na produção em massa e na padronização.",
+      "Trabalho em equipe e multifuncionalidade dos trabalhadores."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "O toyotismo se diferencia do fordismo justamente por priorizar a flexibilidade e a produção sob demanda, em contraposição à produção em massa e aos grandes estoques."
+  },
+  {
+    "textos": ["O conceito de 'indústria do entretenimento' pode ser considerado um ramo da indústria cultural que se dedica principalmente a:"],
+    "alternativas": [
+      "Promover a reflexão crítica e a transformação social através da arte.",
+      "Produzir bens culturais com foco no lazer e no consumo imediato.",
+      "Preservar e divulgar as manifestações culturais tradicionais.",
+      "Apoiar artistas independentes e produções alternativas."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A indústria do entretenimento visa principalmente o divertimento e o consumo, muitas vezes com menor preocupação com o conteúdo crítico ou a profundidade cultural."
+  },
+  {
+    "textos": ["A 'cultura participativa' no ambiente digital se caracteriza por:"],
+    "alternativas": [
+      "Uma audiência passiva que apenas consome o conteúdo produzido por outros.",
+      "A possibilidade de os usuários criarem, compartilharem e interagirem com o conteúdo de forma ativa.",
+      "Um controle rígido das informações por grandes empresas de mídia.",
+      "Uma separação clara entre produtores e consumidores de conteúdo."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A cultura participativa é marcada pela descentralização da produção de conteúdo e pelo engajamento ativo dos usuários nas plataformas digitais."
+  },
+  {
+    "textos": ["Qual dos seguintes fatores NÃO contribui para a formação da cultura de massas?"],
+    "alternativas": [
+      "A concentração da propriedade dos meios de comunicação.",
+      "A padronização dos produtos culturais.",
+      "A valorização das particularidades culturais locais.",
+      "O uso intensivo de estratégias de marketing e publicidade."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A cultura de massas tende a homogeneizar gostos e valores, o que pode ir de encontro à valorização das particularidades culturais de cada local."
+  },
+  {
+    "textos": ["O conceito de 'alfabetização midiática' é importante na sociedade da informação porque visa desenvolver a capacidade de:"],
+    "alternativas": [
+      "Utilizar todas as ferramentas tecnológicas disponíveis.",
+      "Consumir passivamente todo o tipo de conteúdo midiático.",
+      "Analisar criticamente as mensagens veiculadas pelos diferentes meios de comunicação.",
+      "Produzir conteúdo para as diversas plataformas digitais."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A alfabetização midiática capacita os indivíduos a compreenderem a complexidade dos meios de comunicação e a avaliarem criticamente as informações que recebem."
+  },
+  {
+    "textos": ["No contexto do mundo do trabalho, o termo 'uberização' se refere a:"],
+    "alternativas": [
+      "Aumento da formalização dos contratos de trabalho.",
+      "Expansão do trabalho autônomo mediado por plataformas digitais.",
+      "Fortalecimento dos direitos trabalhistas em setores tecnológicos.",
+      "Diminuição da desigualdade salarial entre diferentes profissões."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A 'uberização' caracteriza-se pela intermediação digital entre trabalhadores e consumidores, muitas vezes com relações de trabalho flexíveis e sem os mesmos direitos do emprego tradicional."
+  },
+  {
+    "textos": ["Qual das seguintes alternativas NÃO representa uma característica da indústria cultural?"],
+    "alternativas": [
+      "Produção em série de bens simbólicos.",
+      "Busca pela inovação radical e pela experimentação artística.",
+      "Lógica do lucro como principal motor da produção.",
+      "Tentativa de alcançar o maior público possível."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A indústria cultural tende a evitar a experimentação radical que possa não ser facilmente assimilada pelo grande público, priorizando fórmulas de sucesso e produtos de fácil consumo."
+  },
+  {
+    "textos": ["A 'bolha de filtro' (filter bubble) nas redes sociais se refere a:"],
+    "alternativas": [
+      "Um espaço virtual onde todas as opiniões são igualmente consideradas.",
+      "A tendência de os algoritmos mostrarem aos usuários apenas informações que confirmam suas crenças e opiniões.",
+      "A dificuldade de encontrar informações relevantes em meio ao grande volume de dados.",
+      "Um ambiente online seguro e livre de notícias falsas."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A bolha de filtro pode limitar a exposição a diferentes perspectivas, reforçando vieses e dificultando o debate plural."
+  },
+  {
+    "textos": ["Um dos principais desafios da tecnologia no mundo do trabalho é:"],
+    "alternativas": [
+      "A falta de ferramentas digitais para otimizar a produção.",
+      "O aumento da demanda por trabalhadores com baixa qualificação.",
+      "O potencial para o aumento do desemprego devido à automação e à inteligência artificial.",
+      "A dificuldade de comunicação entre trabalhadores remotos."
+    ],
+    "correta": 2,
+    "materia": "sociologia",
+    "explicacao": "A automação de tarefas e a crescente capacidade da inteligência artificial levantam preocupações sobre a substituição de trabalhadores humanos em diversas áreas."
+  },
+  {
+    "textos": ["A relação entre cultura de massas e identidade cultural pode ser caracterizada por:"],
+    "alternativas": [
+      "Um fortalecimento automático das identidades locais frente à cultura global.",
+      "Uma influência da cultura de massas na construção de identidades, por meio de modelos e representações.",
+      "Uma completa separação entre os produtos da cultura de massas e as manifestações culturais identitárias.",
+      "Uma resistência homogênea das culturas locais aos produtos da mídia de massa."
+    ],
+    "correta": 1,
+    "materia": "sociologia",
+    "explicacao": "A cultura de massas, através de seus produtos e narrativas, oferece referências e modelos que podem influenciar a forma como os indivíduos e grupos constroem suas identidades."
+  },
+   {
+        "textos": [
+            "A divisão social do trabalho, segundo Émile Durkheim, contribui para:"
+        ],
+        "alternativas": [
+            "Aumentar o desemprego estrutural",
+            "Promover a solidariedade social",
+            "Eliminar as desigualdades sociais",
+            "Impedir o desenvolvimento tecnológico",
+            "Reduzir a coesão social"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Durkheim afirma que a divisão do trabalho é fundamental para a solidariedade e integração social nas sociedades modernas."
+    },
+    {
+        "textos": [
+            "O conceito de “alienação” no trabalho, segundo Karl Marx, refere-se:"
+        ],
+        "alternativas": [
+            "À satisfação plena do trabalhador",
+            "À autonomia total do indivíduo",
+            "À perda do sentido do trabalho pelo trabalhador",
+            "À igualdade nas relações de trabalho",
+            "Ao aumento do lazer"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "Para Marx, a alienação ocorre quando o trabalhador não reconhece mais o produto do seu trabalho como algo próprio."
+    },
+    {
+        "textos": [
+            "A precarização do trabalho na contemporaneidade está relacionada:"
+        ],
+        "alternativas": [
+            "Ao aumento dos direitos trabalhistas",
+            "À estabilidade no emprego",
+            "À flexibilização das leis e à informalidade",
+            "À diminuição da tecnologia",
+            "Ao crescimento do setor público"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "A precarização envolve contratos temporários, terceirização e falta de garantias, fenômenos comuns no mundo atual."
+    },
+    {
+        "textos": [
+            "Segundo Theodor Adorno e Max Horkheimer, a indústria cultural:"
+        ],
+        "alternativas": [
+            "Incentiva a autonomia crítica dos indivíduos",
+            "Promove a criatividade popular",
+            "Padroniza produtos culturais e manipula o consumo",
+            "Valoriza a diversidade cultural",
+            "É neutra em relação à sociedade"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "Para Adorno e Horkheimer, a indústria cultural transforma cultura em mercadoria, promovendo homogeneização e alienação."
+    },
+    {
+        "textos": [
+            "O conceito de “cultura de massa” está relacionado:"
+        ],
+        "alternativas": [
+            "À produção artesanal de bens culturais",
+            "À difusão de produtos culturais para grandes públicos",
+            "À exclusividade da cultura erudita",
+            "À rejeição das mídias",
+            "À ausência de influência social"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Cultura de massa refere-se à produção e consumo em larga escala, geralmente mediada pelos meios de comunicação."
+    },
+    {
+        "textos": [
+            "O termo “globalização cultural” refere-se:"
+        ],
+        "alternativas": [
+            "À preservação das culturas locais sem influências externas",
+            "À circulação mundial de valores, símbolos e produtos culturais",
+            "À eliminação de todas as tradições",
+            "Ao isolamento das sociedades",
+            "À rejeição da tecnologia"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "A globalização cultural é marcada pela troca e circulação de elementos culturais entre diferentes sociedades."
+    },
+    {
+        "textos": [
+            "A influência dos meios de comunicação de massa pode ser observada:"
+        ],
+        "alternativas": [
+            "Apenas na economia",
+            "Na formação de opiniões, comportamentos e valores sociais",
+            "Exclusivamente na política",
+            "Apenas na cultura erudita",
+            "Só em sociedades tradicionais"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Os meios de comunicação de massa moldam comportamentos, opiniões e valores em larga escala."
+    },
+    {
+        "textos": [
+            "O conceito de “aldeia global”, proposto por Marshall McLuhan, refere-se:"
+        ],
+        "alternativas": [
+            "Ao isolamento das comunidades",
+            "À interconexão mundial promovida pelos meios de comunicação",
+            "À rejeição da tecnologia",
+            "Ao fim da comunicação instantânea",
+            "À volta das sociedades tribais"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "McLuhan usou o termo para descrever como a tecnologia conecta pessoas globalmente, tornando o mundo mais integrado."
+    },
+    {
+        "textos": [
+            "A chamada “sociedade da informação” caracteriza-se por:"
+        ],
+        "alternativas": [
+            "Priorizar o trabalho manual",
+            "Valorizar o acesso e a produção de conhecimento e tecnologia",
+            "Rejeitar a comunicação digital",
+            "Depender apenas de recursos naturais",
+            "Manter as formas tradicionais de comunicação"
+        ],
+        "correta": 1,
+        "materia": "sociologia",
+        "explicacao": "Na sociedade da informação, o conhecimento e a tecnologia são centrais para a economia e as relações sociais."
+    },
+    {
+        "textos": [
+            "O trabalho informal é caracterizado por:"
+        ],
+        "alternativas": [
+            "Garantia de direitos trabalhistas",
+            "Registro em carteira",
+            "Ausência de proteção social e instabilidade",
+            "Estabilidade e benefícios",
+            "Exclusividade do setor público"
+        ],
+        "correta": 2,
+        "materia": "sociologia",
+        "explicacao": "O trabalho informal não oferece garantias legais nem estabilidade, sendo uma das marcas da precarização do trabalho."
+    }
+]

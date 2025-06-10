@@ -1,0 +1,317 @@
+/* 
+  src/pages/css/Home.css 
+  REFATORADO para usar a identidade visual do Quiz.css como base.
+*/
+
+/* 
+  :root - Variáveis Globais de Estilo
+  Inspirado no design do Quiz.css para consistência visual.
+*/
+:root {
+  /* Espaçamento */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  
+  /* Cores */
+  --color-background-page: #F4FCFF; /* Cinza-azulado muito claro, como no Quiz */
+  --color-background-element: #ffffff;
+  --color-primary: #0a518e;
+  --color-primary-dark: #084a7e;
+  --color-primary-light: #106bac;
+  --color-primary-xtra-light: #e9f5ff;
+  --color-primary-border: #cce7ff;
+  --color-text-primary: #333333;
+  --color-text-subtle: #555555;
+  --color-text-on-primary: #ffffff;
+  --color-border-light: #e7edf3;
+  
+  /* Bordas e Sombras */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 5px 10px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.1);
+  --shadow-focus-ring: 0 0 0 3px rgba(10, 81, 142, 0.3);
+}
+
+/* Layout principal */
+.home {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-background-page);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  font-size: 1.1rem; /* Aumenta a fonte do site */
+}
+
+main {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  align-items: center;
+}
+
+/* Header */
+.home__header {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.home__header-logo {
+  height: 50px;
+}
+
+.home__header-nav {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.home__header-link {
+  color: var(--color-text-on-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.home__header-link:hover {
+  color: var(--color-primary-light);
+}
+
+/* Responsividade do Header */
+@media (max-width: 768px) {
+  .home__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home__header-nav {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .home__header-logo {
+    height: 40px;
+    margin-bottom: var(--space-sm);
+  }
+}
+
+/* Título */
+.home__title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  letter-spacing: 1px;
+}
+
+/* Frase motivacional */
+.home__frase {
+  text-align: center;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-md); /* Adiciona espaço entre a frase e o header */
+  color: var(--color-background-page);
+  background-color: var(--color-primary-dark); /* Cor igual ao fundo dos botões */
+  padding: var(--space-sm) var(--space-md);
+  display: inline-block;
+  border-radius: var(--border-radius-md); /* Bordas arredondadas consistentes */
+  border: 2px solid var(--color-primary); /* Borda igual aos botões */
+  font-weight: 600;
+}
+
+/* Container principal (mantém a lógica de layout flex) */
+.home__container {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+/* Cards (agora com estilo do quiz-card) */
+.home__aside {
+  background-color: var(--color-background-element);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-light);
+  flex: 1 1 320px;
+  min-width: 280px;
+  margin-bottom: var(--space-md);
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.home__aside:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Subtítulo dentro dos cards */
+.home__subtitle {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Grid de botões de matérias */
+.home__buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* Botões de matéria (estilo do quiz-option-button) */
+.btn-materia {
+  background-color: var(--color-primary-xtra-light); /* Cor igual ao fundo da frase */
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-md);
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.btn-materia:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Seção do Desafio Geral */
+.home__desafio {
+  border-top: 1px solid var(--color-border-light);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+}
+.home__desafio h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  text-align: center;
+}
+
+/* Botão "Todas as Matérias" (estilo de botão primário) */
+.btn-desafio {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-desafio:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.02);
+}
+
+/* Quantidade de perguntas */
+.home__aside--quantidade ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.quantidade-item {
+  padding: 0.8rem;
+  background-color: var(--color-background-element);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.quantidade-item:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-xtra-light);
+}
+.quantidade-item.active {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-focus-ring);
+  transform: scale(1.05);
+}
+
+/* Informações e motivação */
+.home__aside--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.home__image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--border-radius-md);
+}
+.home__text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-subtle);
+}
+
+/* Botão perfil (estilo do botão de desafio) */
+.btn-perfil {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 1rem 1.7rem;
+  font-size: 1.08rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-perfil:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.03);
+}
+
+/* --- RESPONSIVIDADE (mantida para a estrutura da Home) --- */
+@media (max-width: 1100px) {
+  .home__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home__aside {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home__title {
+    font-size: 2rem;
+  }
+  .home__aside {
+    padding: var(--space-lg);
+  }
+}

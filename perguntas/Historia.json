@@ -1,0 +1,432 @@
+[
+    {
+        "textos": [
+            "(ENEM - 2015) Considerando os textos, a abolição da escravidão no Brasil representou:",
+            {
+                "id": "texto_1",
+                "conteudo": "Em todo o país, a Lei de 13 de maio de 1888 libertou poucos negros em relação à população de cor. A maioria dos negros já era livre, e a abolição foi, sobretudo, uma medida de ordem política."
+            },
+            {
+                "id": "texto_2",
+                "conteudo": "A abolição da escravidão, embora significativa, não alterou substancialmente a estrutura social do Brasil, pois os ex-escravos não tiveram acesso à terra nem à cidadania plena."
+            }
+        ],
+        "alternativas": [
+            "Uma transformação radical das relações sociais.",
+            "Uma mudança política com limitações sociais.",
+            "Uma reforma agrária imediata para os libertos.",
+            "A garantia de cidadania plena aos ex-escravos.",
+            "O fim das desigualdades raciais no país."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "Apesar de libertar legalmente os escravizados, a abolição não promoveu inclusão social nem econômica, mantendo a estrutura desigual da sociedade."
+    },
+    {
+        "textos": ["(ENEM - Adaptada) Sobre a Proclamação da República no Brasil, é correto afirmar que:"],
+        "alternativas": [
+            "Foi resultado de uma ampla mobilização popular.",
+            "Representou a ascensão das camadas populares ao poder.",
+            "Ocorreu sem participação popular e foi dirigida contra um governo constitucional.",
+            "Foi liderada por ex-escravos.",
+            "Deu início imediato ao voto feminino."
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "A Proclamação da República foi um golpe militar, sem participação popular e contra o governo constitucional da Monarquia."
+    },
+    {
+        "textos": ["(ENEM - Adaptada) A República Velha (1894-1930) foi caracterizada por:"],
+        "alternativas": [
+            "Paz completa em todo território nacional.",
+            "Alternância de poder entre partidos estaduais pelo sufrágio universal masculino.",
+            "Ascensão social dos libertos pela Lei de 13 de maio de 1888.",
+            "Dominação das elites agrárias estaduais, especialmente as de São Paulo e Minas Gerais.",
+            "Participação popular nas decisões políticas."
+        ],
+        "correta": 3,
+        "materia": "historia",
+        "explicacao": "A República Velha foi dominada pelas elites agrárias, especialmente dos estados de São Paulo e Minas Gerais, em um sistema político conhecido como 'coronelismo'."
+    },
+    {
+        "textos": [
+            "(ENEM - Adaptada) O início da República no Brasil é considerado um ‘golpe de Estado’ porque:",
+            {
+                "id": "texto_1",
+                "conteudo": "Ao fim de uma madrugada confusa, de 14 para 15 de novembro de 1889, vários grupos militares de oposição concentraram-se diante do Ministério do Exército do Rio de Janeiro (onde estava reunido o governo imperial) e seu protesto culminou com a proclamação da República pela mais importante figura militar do país, o marechal Deodoro da Fonseca."
+            }
+        ],
+        "alternativas": [
+            "Foi implantada por grupos apoiados por forças internacionais.",
+            "Não houve participação popular e foi dirigida contra um governo constitucional.",
+            "A intenção era apenas derrubar o gabinete do visconde de Ouro Preto.",
+            "Foi realizada durante a madrugada.",
+            "Houve consulta popular antes da mudança."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Proclamação da República ocorreu sem consulta popular e contra um governo constitucional, com a participação principal das forças militares."
+    },
+    {
+        "textos": ["(ENEM - Adaptada) As revoltas de Canudos e Contestado, durante a República Velha, apesar de acontecerem em pontos distantes, são semelhantes porque:"],
+        "alternativas": [
+            "Lutavam pela derrubada do regime republicano.",
+            "Foram causadas por pessoas que se sentiam excluídas da República e não notaram melhorias em suas condições de vida.",
+            "Eram levantes organizados por ex-escravos.",
+            "Foram lideradas por militares.",
+            "Tinham apoio das elites agrárias."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "Ambas as revoltas foram impulsionadas pela exclusão social das populações que não perceberam melhorias nas suas condições de vida após a Proclamação da República."
+    },
+    {
+        "textos": [
+            "(ENEM - Adaptada) A imigração, nesse período, foi marcada principalmente pela vinda de:",
+            {
+                "id": "texto_1",
+                "conteudo": "O Brasil entra no século XX com 17 milhões de habitantes, incluindo mais de 800 mil imigrantes europeus que ingressaram no país nas últimas décadas."
+            }
+        ],
+        "alternativas": [
+            "Italianos e alemães.",
+            "Espanhóis e irlandeses.",
+            "Norte-americanos e japoneses.",
+            "Italianos e franceses.",
+            "Ingleses e russos."
+        ],
+        "correta": 0,
+        "materia": "historia",
+        "explicacao": "A imigração para o Brasil no final do século XIX e início do século XX foi principalmente de italianos e alemães, em busca de melhores condições de vida."
+    },
+    {
+        "textos": ["Durante o Segundo Reinado, o Brasil viveu um período de estabilidade política e crescimento econômico, baseado principalmente na produção do café. Entretanto, a partir da década de 1870, a monarquia começou a perder apoio. Uma das causas desse desgaste foi:"],
+        "alternativas": [
+            "A expansão da indústria pesada no país.",
+            "O aumento da participação popular no governo.",
+            "A insatisfação dos militares e a pressão pelo fim da escravidão.",
+            "O fortalecimento da monarquia absoluta."
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "A partir da década de 1870, os militares começaram a se distanciar da monarquia devido à insatisfação com o governo e à pressão para a abolição da escravidão, o que resultou no enfraquecimento da monarquia."
+    },
+    {
+        "textos": ["A Lei Áurea, assinada em 1888, aboliu a escravidão no Brasil sem prever indenização aos proprietários de escravos. Essa medida:"],
+        "alternativas": [
+            "Fortaleceu a monarquia, que ganhou apoio dos fazendeiros.",
+            "Gerou insatisfação entre a elite agrária, que passou a apoiar a República.",
+            "Garantiu a inclusão imediata dos ex-escravos na vida política.",
+            "Foi apoiada unicamente pelos militares."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A abolição sem indenização gerou insatisfação entre os fazendeiros, que eram a base de apoio da monarquia, o que contribuiu para o apoio da elite agrária à República."
+    },
+    {
+        "textos": ["A Proclamação da República em 1889 foi um movimento liderado principalmente por:"],
+        "alternativas": [
+            "Trabalhadores urbanos e camponeses.",
+            "Militares descontentes e elites políticas republicanas.",
+            "Escravos libertos e abolicionistas.",
+            "Clero e monarquistas."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Proclamação da República foi liderada por militares insatisfeitos e elites republicanas, que viam a monarquia como um obstáculo ao progresso político e social do Brasil."
+    },
+    {
+        "textos": ["A Constituição de 1891, promulgada após a Proclamação da República, instituiu no Brasil:"],
+        "alternativas": [
+            "O voto censitário e o federalismo.",
+            "O poder moderador e o regime parlamentarista.",
+            "A monarquia constitucional.",
+            "O voto universal para todos os cidadãos."
+        ],
+        "correta": 0,
+        "materia": "historia",
+        "explicacao": "A Constituição de 1891 introduziu o federalismo no Brasil e o voto censitário, ou seja, o direito de voto era restrito aos homens alfabetizados e com uma renda mínima."
+    },
+    {
+        "textos": ["O período conhecido como República Velha (1889-1930) foi marcado por:"],
+        "alternativas": [
+            "Forte participação popular nas decisões políticas.",
+            "Dominação das oligarquias rurais e política do café com leite.",
+            "Industrialização acelerada e urbanização.",
+            "Extinção das revoltas populares."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A República Velha foi dominada pelas oligarquias rurais, com destaque para a política do café com leite, que consistia na alternância de poder entre os estados de São Paulo e Minas Gerais."
+    },
+    {
+        "textos": ["A Revolta da Armada (1893-1894) foi uma reação:"],
+        "alternativas": [
+            "Dos militares monarquistas contra a República.",
+            "Dos trabalhadores urbanos contra o governo.",
+            "Dos escravos contra a abolição tardia.",
+            "Dos republicanos contra a monarquia."
+        ],
+        "correta": 0,
+        "materia": "historia",
+        "explicacao": "A Revolta da Armada foi uma reação de militares que, insatisfeitos com o governo republicano e as mudanças políticas, se opuseram ao novo regime."
+    },
+    {
+        "textos": ["A Confederação do Equador (1824) foi um movimento que:"],
+        "alternativas": [
+            "Defendia a centralização do poder imperial.",
+            "Reivindicava maior autonomia das províncias e criticava o autoritarismo de Dom Pedro I.",
+            "Apoiava a escravidão.",
+            "Foi liderada por Dom Pedro II."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Confederação do Equador foi um movimento separatista que buscava maior autonomia para as províncias e criticava o autoritarismo do imperador Dom Pedro I."
+    },
+    {
+        "textos": ["Durante o Período Regencial (1831-1840), o Brasil enfrentou:"],
+        "alternativas": [
+            "Estabilidade política e crescimento econômico.",
+            "Diversas revoltas regionais e disputas políticas.",
+            "A Proclamação da República.",
+            "A abolição da escravidão."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O Período Regencial foi marcado por disputas políticas e várias revoltas regionais, como a Cabanagem, a Revolta dos Malês e a Revolta Farroupilha."
+    },
+    {
+        "textos": ["O poder moderador, previsto na Constituição de 1824, conferia ao imperador:"],
+        "alternativas": [
+            "Poder absoluto sobre os demais poderes.",
+            "Função de árbitro entre os poderes Executivo, Legislativo e Judiciário.",
+            "Controle exclusivo do Legislativo.",
+            "Poder de nomear o presidente da República."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O poder moderador, que foi instituído pela Constituição de 1824, dava ao imperador o papel de árbitro entre os poderes Executivo, Legislativo e Judiciário, podendo até dissolver a câmara dos deputados."
+    },
+    {
+        "textos": ["O positivismo influenciou a elite militar brasileira no final do século XIX, contribuindo para:"],
+        "alternativas": [
+            "A manutenção da monarquia.",
+            "A Proclamação da República e a defesa do federalismo.",
+            "O retorno ao absolutismo.",
+            "A abolição da escravidão."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O positivismo, uma corrente filosófica que influenciou os militares, foi uma das ideologias que ajudaram a fundamentar a Proclamação da República em 1889, além de defenderem um governo centralizado com base no federalismo."
+    },
+    {
+        "textos": ["A Guerra do Paraguai (1864-1870) teve impacto na política brasileira porque:"],
+        "alternativas": [
+            "Fortaleceu o prestígio do imperador e do exército.",
+            "Enfraqueceu o exército e a monarquia.",
+            "Foi um conflito exclusivamente entre Paraguai e Argentina.",
+            "Resultou na independência do Paraguai."
+        ],
+        "correta": 0,
+        "materia": "historia",
+        "explicacao": "A Guerra do Paraguai foi um marco para o Brasil, pois aumentou o prestígio do exército e do imperador, consolidando a posição política do governo imperial."
+    },
+    {
+        "textos": ["A Lei de Terras (1850) foi uma medida do Império que:"],
+        "alternativas": [
+            "Distribuiu terras para ex-escravos.",
+            "Regulamentou a posse da terra, dificultando o acesso dos pequenos agricultores e libertos.",
+            "Aboliu a escravidão.",
+            "Incentivou a imigração europeia para o campo."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Lei de Terras de 1850 regulamentou a posse de terras, restringindo o acesso à terra para os pequenos agricultores e libertos, e favorecendo a posse de grandes propriedades."
+    },
+    {
+        "textos": ["A política do café com leite durante a República Velha consistia em:"],
+        "alternativas": [
+            "Alternância do poder entre as oligarquias de São Paulo e Minas Gerais.",
+            "Incentivo à produção de café e leite para exportação.",
+            "Aliança entre trabalhadores rurais e industriais.",
+            "Reforma agrária para pequenos produtores."
+        ],
+        "correta": 0,
+        "materia": "historia",
+        "explicacao": "A política do café com leite foi a alternância de poder entre as oligarquias de São Paulo e Minas Gerais, sendo um pacto entre as elites agrárias dessas regiões durante a República Velha."
+    },
+    {
+        "textos": ["A Proclamação da República ocorreu sem consulta popular e foi um golpe porque:"],
+        "alternativas": [
+            "Contou com o apoio da maioria da população.",
+            "Foi liderada por um grupo restrito de militares e políticos.",
+            "Foi resultado de um plebiscito nacional.",
+            "Foi uma revolução popular."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Proclamação da República foi um movimento liderado por um pequeno grupo de militares e políticos, sem o apoio popular e sem consulta à população."
+    },
+    {
+        "textos": ["Durante o Segundo Reinado, a escravidão começou a ser questionada principalmente por:"],
+        "alternativas": [
+            "Fazendeiros do Norte.",
+            "Movimentos abolicionistas urbanos e setores liberais.",
+            "A Igreja Católica exclusivamente.",
+            "O exército exclusivamente."
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A escravidão foi questionada principalmente pelos movimentos abolicionistas urbanos e pelos setores liberais, que lutaram pela sua abolição."
+    },
+    {
+        "textos": [
+            "A Revolução Francesa foi um marco da Idade Contemporânea porque:"
+        ],
+        "alternativas": [
+            "Restaurou o absolutismo na França",
+            "Defendeu os privilégios do clero",
+            "Propagou ideias de liberdade, igualdade e fraternidade",
+            "Manteve a escravidão como base econômica",
+            "Fortaleceu o feudalismo europeu"
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "A Revolução Francesa difundiu ideais iluministas que influenciaram movimentos sociais e políticos em todo o mundo."
+    },
+    {
+        "textos": [
+            "Durante a Guerra Fria, um dos principais conflitos indiretos foi:"
+        ],
+        "alternativas": [
+            "Revolução Industrial",
+            "Guerra da Coreia",
+            "Revolução Francesa",
+            "Primeira Guerra Mundial",
+            "Conferência de Berlim"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A Guerra da Coreia foi um conflito entre o bloco capitalista e o socialista, representando a disputa indireta entre EUA e URSS."
+    },
+    {
+        "textos": [
+            "A Revolução Industrial alterou a sociedade europeia ao:"
+        ],
+        "alternativas": [
+            "Reduzir a urbanização",
+            "Eliminar a classe operária",
+            "Intensificar o trabalho fabril e a urbanização",
+            "Manter o trabalho artesanal como predominante",
+            "Impedir o surgimento de novas tecnologias"
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "O processo industrial promoveu o crescimento das cidades e o surgimento da classe operária."
+    },
+    {
+        "textos": [
+            "O neocolonialismo europeu no século XIX resultou em:"
+        ],
+        "alternativas": [
+            "Independência imediata das colônias",
+            "Exploração econômica e dominação política na África e Ásia",
+            "Fortalecimento das culturas locais",
+            "Fim da escravidão mundial",
+            "Redução das desigualdades sociais globais"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O neocolonialismo intensificou a exploração e a dependência das regiões colonizadas."
+    },
+    {
+        "textos": [
+            "A sociedade colonial brasileira era estruturada principalmente:"
+        ],
+        "alternativas": [
+            "Pela igualdade social",
+            "Pelo sistema escravocrata",
+            "Pela democracia direta",
+            "Pela ausência de hierarquia",
+            "Pela industrialização"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A escravidão foi fundamental para a economia e organização social do Brasil Colônia."
+    },
+    {
+        "textos": [
+            "O ciclo do açúcar no Brasil Colônia caracterizou-se por:"
+        ],
+        "alternativas": [
+            "Predomínio do trabalho livre",
+            "Exportação para o mercado europeu",
+            "Uso de mão de obra indígena assalariada",
+            "Industrialização das cidades",
+            "Comércio apenas interno"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O açúcar era produzido para exportação, principalmente para a Europa, com uso intensivo de mão de obra escrava."
+    },
+    {
+        "textos": [
+            "A influência indígena e africana na cultura brasileira pode ser vista:"
+        ],
+        "alternativas": [
+            "Apenas na arquitetura",
+            "Na alimentação, língua, religiosidade e festas populares",
+            "Exclusivamente na política",
+            "Só na economia",
+            "Apenas na literatura"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A cultura brasileira foi profundamente marcada por elementos indígenas e africanos em diversos aspectos."
+    },
+    {
+        "textos": [
+            "O pacto colonial estabelecia que:"
+        ],
+        "alternativas": [
+            "O Brasil podia comercializar livremente",
+            "Toda produção deveria ser vendida à metrópole",
+            "O Brasil era independente economicamente",
+            "Não havia restrições comerciais",
+            "O Brasil exportava apenas para a África"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "O pacto colonial restringia o comércio colonial à metrópole, mantendo a dependência econômica."
+    },
+    {
+        "textos": [
+            "No Segundo Reinado, a economia cafeeira e a resistência à escravidão contribuíram para:"
+        ],
+        "alternativas": [
+            "Fortalecer o absolutismo",
+            "Surgimento de movimentos abolicionistas e republicanos",
+            "Redução do trabalho livre",
+            "Manutenção da monarquia sem oposição",
+            "Fim da imigração europeia"
+        ],
+        "correta": 1,
+        "materia": "historia",
+        "explicacao": "A expansão do café e a luta contra a escravidão impulsionaram movimentos sociais e políticos que levaram ao fim da monarquia."
+    },
+    {
+        "textos": [
+            "A Proclamação da República, em 1889, ocorreu principalmente devido:"
+        ],
+        "alternativas": [
+            "Ao apoio popular à monarquia",
+            "À estabilidade política do Império",
+            "À insatisfação de militares, elites e abolicionistas com a monarquia",
+            "Ao fim da economia cafeeira",
+            "Ao apoio da Inglaterra à monarquia"
+        ],
+        "correta": 2,
+        "materia": "historia",
+        "explicacao": "Diversos grupos estavam insatisfeitos com a monarquia, o que levou à proclamação da República."
+    }
+]

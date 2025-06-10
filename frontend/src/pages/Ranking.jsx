@@ -1,108 +1,129 @@
-import React from "react";
+// src/pages/Ranking.jsx
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { fetchRanking } from "../services/quizService"; // Verifique o caminho do serviço
+import "./css/Ranking.css";
 
 function Ranking() {
-  const styles = {
-    body: {
-      backgroundColor: "#88b7d5",
-      fontFamily: "Sans-serif",
-      minHeight: "100vh",
-      width: "100vw",
-      display: "flex",
-      flexDirection: "column",
-    },
-    header: {
-      backgroundColor: "#0a518e",
-      color: "white",
-      padding: "1rem 2rem",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      borderBottomLeftRadius: "1rem",
-      borderBottomRightRadius: "1rem",
-      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    },
-    nav: {
-      display: "flex",
-      gap: "2rem",
-      alignItems: "center",
-      fontSize: "1rem",
-    },
-    logo: {
-      height: "3rem",
-    },
-    search: {
-      padding: "0.5rem",
-      borderRadius: "0.5rem",
-      border: "1px solid #ccc", // Adicionado borda
-      fontSize: "1rem",
-      backgroundColor: "white", // Fundo branco
-      color: "#333",
-    },
-    title: {
-      fontSize: "2rem",
-      fontWeight: "bold",
-      textDecoration: "underline",
-      color: "white",
-    },
-    main: {
-    flexGrow: 1, 
-    display: "flex",
-    padding: "2rem",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "2rem",
-    width: "100%",
-    },
-    side: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "1rem",
-    },
-    bar: {
-      backgroundColor: "#d5f3ff",
-      padding: "0.75rem 1rem",
-      borderRadius: "2rem",
-      minWidth: "15rem",
-      fontWeight: "bold",
-      color: "#003b6f",
-      textAlign: "left",
-    },
-    image: {
-      height: "16rem",
-    },
+  const [ranking, setRanking] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+  const [erro, setErro] = useState(null);
+
+  useEffect(() => {
+    const buscarDados = async () => {
+      try {
+        setCarregando(true);
+        setErro(null);
+        const rankingData = await fetchRanking();
+        setRanking(rankingData);
+      } catch (error) {
+        console.error("[Ranking.jsx] Erro ao buscar ranking:", error.message);
+        setErro(
+          error.message || "Erro ao carregar dados do ranking. Tente novamente."
+        );
+      } finally {
+        setCarregando(false);
+      }
+    };
+
+    buscarDados();
+  }, []);
+
+  const renderizarRanking = () => {
+    if (ranking.length === 0 && !carregando && !erro) {
+      return (
+        <div className="ranking-message ranking-empty">
+          <p>Nenhum dado de ranking disponível no momento. 🤔</p>
+          <p>Jogue alguns quizzes para aparecer aqui!</p>
+          <Link to="/home" className="button button--primary ranking-empty-button">
+            Escolher Matéria
+          </Link>
+        </div>
+      );
+    }
+
+    return ranking.map((aluno, index) => {
+      // Define classe para os top 3
+      let positionClass = "ranking-position-number";
+      if (index === 0) positionClass += " gold";
+      if (index === 1) positionClass += " silver";
+      if (index === 2) positionClass += " bronze";
+
+      return (
+        <div key={aluno.id || index} className="ranking-entry">
+          <div className="ranking-position">
+            <span className={positionClass}>{index + 1}º</span>
+          </div>
+          <div className="ranking-name" title={aluno.nome || "Usuário Anônimo"}>
+            {aluno.nome || "Usuário Anônimo"}
+          </div>
+          <div className="ranking-score">
+            {aluno.totalAcertos} pts
+          </div>
+          <div className="ranking-percentage">
+            ({aluno.totalPerguntas > 0 ? aluno.percentual.toFixed(0) : 0}%)
+          </div>
+        </div>
+      );
+    });
   };
 
   return (
-    <div style={styles.body}>
-      <header style={styles.header}>
-        <span style={styles.title}>Ranking</span>
-        <nav style={styles.nav}>
-          <Link to="/" style={{ color: "white", textDecoration: "none" }}>Página Inicial</Link>
-          <Link to="/perfil" style={{ color: "white", textDecoration: "none" }}>Perfil</Link>
-          <input type="text" placeholder="Buscar..." style={styles.search} />
-          <img src="/Logo.png" alt="Logo Aprova" style={styles.logo} />
-        </nav>
-      </header>
+    // Usando a estrutura .page-container
+    <div className="page-container ranking-page-container">
+      {/* Reutilizando o app-header global */}
+      <header className="app-header ranking-custom-header">
+  <Link to="/home" className="app-header-logo-link"> {/* Alterado para redirecionar à página Home */}
+    <img src="/Logo.png" alt="Logo Aprova+" className="app-logo" />
+  </Link>
+  <h1 className="app-header-page-title">Ranking Geral</h1>
+  <nav className="app-header-nav ranking-custom-nav">
+    <Link to="/home" className="app-header-nav-link">
+      Início
+    </Link>
+    <Link to="/ranking" className="app-header-nav-link active"> {/* Adiciona classe 'active' */}
+      Ranking
+    </Link>
+    <Link to="/perfil" className="app-header-nav-link">
+      Perfil
+    </Link>
+  </nav>
+</header>
 
-      <main style={styles.main}>
-        <div style={styles.side}>
-          <div style={styles.bar}>Matemática: 3/5</div>
-          <div style={styles.bar}>Português: 4/5</div>
-          <div style={styles.bar}>História: 5/5</div>
-          <div style={styles.bar}>Geografia: 2/5</div>
-          <div style={styles.bar}>Ciências: 3/5</div>
-        </div>
+      <main className="ranking-main-content">
+        <div className="ranking-card">
+          <h2 className="ranking-card-title">🏆 Melhores Pontuações 🏆</h2>
+          
+          {carregando && (
+            <div className="ranking-message ranking-loading">
+              <div className="quiz-spinner"></div> {/* Reutiliza o spinner */}
+              <p>Carregando ranking...</p>
+            </div>
+          )}
 
-        {/* Referência à imagem trofeu.png na pasta public */}
-        <img src="/trofeu.png" alt="Personagem com troféu" style={styles.image} />
+          {erro && (
+            <div className="ranking-message ranking-error">
+              <p>😕 Oops! Algo deu errado.</p>
+              <p>{erro}</p>
+              <button onClick={() => window.location.reload()} className="button button--secondary">
+                Tentar Novamente
+              </button>
+            </div>
+          )}
 
-        <div style={styles.side}>
-          <div style={styles.bar}>Aluno A</div>
-          <div style={styles.bar}>Aluno B</div>
-          <div style={styles.bar}>Aluno C</div>
-          <div style={styles.bar}>Aluno D</div>
-          <div style={styles.bar}>Aluno E</div>
+          {!carregando && !erro && (
+            <div className="ranking-list-wrapper">
+              <div className="ranking-list-header">
+                <span className="header-position">Pos.</span>
+                <span className="header-name">Nome</span>
+                <span className="header-score">Pontos</span>
+                <span className="header-percentage">% Acerto</span>
+              </div>
+              <div className="ranking-list-entries">
+                {renderizarRanking()}
+              </div>
+            </div>
+          )}
         </div>
       </main>
     </div>

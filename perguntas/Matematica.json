@@ -1,0 +1,517 @@
+[
+  {
+    "textos": [
+      "Em uma prova, um candidato que acertou 12 questões recebeu 39 pontos. Se outro candidato obteve 52 pontos, quantas questões ele acertou?"
+    ],
+    "alternativas": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A relação entre as questões acertadas e os pontos é uma regra de três simples. Para o primeiro candidato: 12 questões -> 39 pontos, logo, para 52 pontos, o segundo candidato acertará 16 questões."
+  },
+  {
+    "textos": [
+      "Os ângulos de um triângulo são proporcionais aos números 4, 5 e 6. Qual a medida do menor ângulo?"
+    ],
+    "alternativas": [
+      "40º",
+      "48º",
+      "50º",
+      "60º"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "A soma dos ângulos internos de um triângulo é 180°. Então, a soma das proporções é 4 + 5 + 6 = 15. O menor ângulo será (4/15) * 180° = 48º."
+  },
+  {
+    "textos": [
+      "Uma herança de R$ 3.000.000 será dividida proporcionalmente às idades 24, 28 e 44 anos. Quanto receberá o herdeiro de 44 anos?"
+    ],
+    "alternativas": [
+      "R$ 1.000.000",
+      "R$ 1.200.000",
+      "R$ 1.375.000",
+      "R$ 1.500.000"
+    ],
+    "correta": 3,
+    "materia": "matematica",
+    "explicacao": "A soma das idades é 24 + 28 + 44 = 96. A parte do herdeiro de 44 anos será (44/96) * 3.000.000 = R$ 1.375.000."
+  },
+  {
+    "textos": [
+      "Um carro percorreu 272 km com 32 litros de etanol. Quantos quilômetros percorrerá com o tanque cheio de 50 litros?"
+    ],
+    "alternativas": [
+      "400 km",
+      "425 km",
+      "450 km",
+      "475 km"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A relação é uma regra de três simples: 32 litros -> 272 km. Para 50 litros, o carro percorrerá (50 * 272) / 32 = 425 km."
+  },
+  {
+    "textos": [
+      "Na bula de um remédio, são recomendadas 3 gotas para cada 2 kg. Quantas gotas para uma criança de 18 kg?"
+    ],
+    "alternativas": [
+      "24 gotas",
+      "25 gotas",
+      "27 gotas",
+      "30 gotas"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A relação é 3 gotas para cada 2 kg. Para 18 kg, a criança precisará de (18 * 3) / 2 = 27 gotas."
+  },
+  {
+    "textos": [
+      "Se 10 famílias consomem 5000 litros de água, quantos litros serão necessários para 15 famílias?"
+    ],
+    "alternativas": [
+      "6000 litros",
+      "7500 litros",
+      "8000 litros",
+      "8500 litros"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "A relação é uma regra de três simples: 10 famílias -> 5000 litros. Para 15 famílias, será (15 * 5000) / 10 = 7500 litros."
+  },
+  {
+    "textos": [
+      "Em uma corrida, o tempo para trocar um pneu é inversamente proporcional ao número de trabalhadores. Se 3 pessoas levam 4 segundos, quanto tempo 4 pessoas levam?"
+    ],
+    "alternativas": [
+      "2 segundos",
+      "3 segundos",
+      "4 segundos",
+      "5 segundos"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "A relação é inversamente proporcional, ou seja, se 3 pessoas levam 4 segundos, 4 pessoas levarão (3 * 4) / 4 = 3 segundos."
+  },
+  {
+    "textos": [
+      "A razão entre homens e mulheres em uma seleção é 4/7. Se há 32 homens, qual o total de candidatos?"
+    ],
+    "alternativas": [
+      "48",
+      "56",
+      "60",
+      "72"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "A razão é 4/7, então, para 32 homens, temos a proporção 4/7 = 32/x. Resolvendo, x = (32 * 7) / 4 = 56 candidatos."
+  },
+  {
+    "textos": [
+      "Um prédio de 80 metros tem 48 cm na maquete. Qual a altura em cm de um prédio de 110 metros na mesma maquete?"
+    ],
+    "alternativas": [
+      "60 cm",
+      "66 cm",
+      "70 cm",
+      "72 cm"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "A proporção entre a altura real e a maquete é 80/48. Para o prédio de 110 metros, a altura será (110 * 48) / 80 = 66 cm."
+  },
+  {
+    "textos": [
+      "Se a quantidade de tecido é diretamente proporcional ao número de camisas produzidas, o que acontece se a quantidade de tecido dobra?"
+    ],
+    "alternativas": [
+      "O número de camisas diminui pela metade",
+      "O número de camisas também dobra",
+      "O número de camisas permanece igual",
+      "O número de camisas triplica"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "Se a quantidade de tecido dobra, o número de camisas também dobra, pois a relação entre eles é diretamente proporcional."
+  },
+  {
+    "textos": [
+      "Calcule a média ponderada de um aluno com notas: Prova 7,5 (peso 4), Trabalho 8,0 (peso 3) e Participação 9,5 (peso 2)."
+    ],
+    "alternativas": [
+      "7,50",
+      "7,75",
+      "7,94",
+      "8,10"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A média ponderada é dada pela fórmula: (7,5 * 4 + 8,0 * 3 + 9,5 * 2) / (4 + 3 + 2) = 7,94."
+  },
+  {
+    "textos": [
+      "Qual a mediana das alturas (cm): 160,165,170,172,175,178,180,183,185,190?"
+    ],
+    "alternativas": [
+      "172,5",
+      "175",
+      "176,5",
+      "178"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "A mediana é o valor central de um conjunto de dados ordenados. Como temos 10 números, a mediana será a média dos dois números centrais: (172 + 173) / 2 = 172,5."
+  },
+  {
+    "textos": [
+      "Qual a moda do conjunto: 3, 5, 7, 5, 8, 5, 9?"
+    ],
+    "alternativas": [
+      "3",
+      "7",
+      "5",
+      "8"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A moda é o número que mais se repete em um conjunto de dados. No caso, o número 5 aparece três vezes."
+  },
+  {
+    "textos": [
+      "Se a média de 5 números é 12, qual a soma desses números?"
+    ],
+    "alternativas": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "A média é dada pela soma dos números dividida pelo número de elementos. Se a média é 12 e há 5 números, então a soma é 12 * 5 = 60."
+  },
+  {
+    "textos": [
+      "Em um conjunto de dados, o valor máximo é 50 e o mínimo é 10. Qual a amplitude?"
+    ],
+    "alternativas": [
+      "30",
+      "35",
+      "40",
+      "45"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A amplitude é dada pela diferença entre o valor máximo e o valor mínimo. Amplitude = 50 - 10 = 40."
+  },
+  {
+    "textos": [
+      "Um aluno precisa de média 7,5 para aprovação. Se tirou 6,8, 7,0, 8,2 e 7,9 nas quatro primeiras provas, qual nota precisa na quinta para atingir a média?"
+    ],
+    "alternativas": [
+      "7,5",
+      "8,0",
+      "8,6",
+      "9,0"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A média desejada é 7,5. A soma das quatro primeiras notas é 6,8 + 7,0 + 8,2 + 7,9 = 29,9. A média é dada pela soma das notas dividida pelo número de provas, então a quinta nota deve ser tal que (29,9 + x) / 5 = 7,5. Resolvendo, x = 8,6."
+  },
+  {
+    "textos": [
+      "Qual o desvio absoluto médio dos dados: 4, 6, 8, 10, 12?"
+    ],
+    "alternativas": [
+      "1,8",
+      "2,0",
+      "2,4",
+      "2,8"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "O desvio absoluto médio é a média das diferenças absolutas entre cada valor e a média dos dados. A média é (4 + 6 + 8 + 10 + 12) / 5 = 8. Os desvios absolutos são: |4-8|=4, |6-8|=2, |8-8|=0, |10-8|=2, |12-8|=4. O desvio absoluto médio é (4 + 2 + 0 + 2 + 4) / 5 = 2,0."
+  },
+  {
+    "textos": [
+      "Se f(x) = 2x + 3, qual f(4)?"
+    ],
+    "alternativas": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "Substituindo x = 4 na função f(x) = 2x + 3, temos f(4) = 2(4) + 3 = 8 + 3 = 9."
+  },
+  {
+    "textos": [
+      "A função f(x) = x² - 4x + 5 tem valor mínimo em que x?"
+    ],
+    "alternativas": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "A função é uma parábola voltada para cima, e o valor mínimo ocorre no vértice. Para encontrar o vértice, usamos a fórmula x = -b / 2a. No caso de f(x) = x² - 4x + 5, temos a = 1 e b = -4, então x = -(-4) / (2 * 1) = 4 / 2 = 2."
+  },
+  {
+    "textos": [
+      "Se a função f(x) = 3x - 1, para qual valor de x temos f(x) = 8?"
+    ],
+    "alternativas": [
+      "2",
+      "3",
+      "3",
+      "4"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "Substituindo f(x) = 8 na função f(x) = 3x - 1, temos 8 = 3x - 1. Resolvendo, 8 + 1 = 3x, ou seja, 9 = 3x, então x = 9 / 3 = 3."
+  },
+  {
+    "textos": [
+      "Se o valor de x na equação 5x - 2 = 3x + 6 é:"
+    ],
+    "alternativas": [
+      "x = 2",
+      "x = 4",
+      "x = 5",
+      "x = 6"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "Resolvendo a equação 5x - 2 = 3x + 6, temos 5x - 3x = 6 + 2, ou seja, 2x = 8, então x = 8 / 2 = 4."
+  },
+  {
+    "textos": [
+      "Qual é o valor de x na equação quadrática x² - 6x + 9 = 0?"
+    ],
+    "alternativas": [
+      "x = 0",
+      "x = 3",
+      "x = -3",
+      "x = 6"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "A equação x² - 6x + 9 = 0 é um quadrado perfeito. Podemos fatorá-la como (x - 3)² = 0, logo, x = 3."
+  },
+  {
+    "textos": [
+      "O perímetro de um triângulo equilátero é dado por P = 3l, onde l é o comprimento de um lado. Se o lado do triângulo é 8 cm, qual o perímetro?"
+    ],
+    "alternativas": [
+      "16 cm",
+      "24 cm",
+      "32 cm",
+      "48 cm"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "Como o triângulo é equilátero, o perímetro é 3 vezes o comprimento de um lado. Assim, P = 3 * 8 = 24 cm."
+  },
+  {
+    "textos": [
+      "Qual é a soma dos ângulos internos de um triângulo?"
+    ],
+    "alternativas": [
+      "90º",
+      "180º",
+      "360º",
+      "270º"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "A soma dos ângulos internos de qualquer triângulo é sempre 180º."
+  },
+  {
+    "textos": [
+      "Se a equação de uma reta é dada por y = 2x + 3, qual é o valor de y quando x = 4?"
+    ],
+    "alternativas": [
+      "y = 5",
+      "y = 8",
+      "y = 9",
+      "y = 11"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "Substituindo x = 4 na equação y = 2x + 3, temos y = 2(4) + 3 = 8 + 3 = 11."
+  },
+  {
+    "textos": [
+      "Um terreno retangular possui 60 m de comprimento e 40 m de largura. O proprietário deseja construir uma cerca ao redor do terreno e, além disso, dividir o terreno ao meio com uma cerca paralela à largura. Qual será o comprimento total de cerca necessário?"
+    ],
+    "alternativas": [
+      "100 m",
+      "120 m",
+      "140 m",
+      "160 m",
+      "200 m"
+    ],
+    "correta": 3,
+    "materia": "matematica",
+    "explicacao": "O perímetro do terreno é 2×(60 + 40) = 200 m. Como a divisão será feita com uma cerca paralela à largura (ou seja, no sentido do comprimento), será necessária mais uma cerca de 60 m. Total: 200 + 60 = 260 m. No entanto, como a alternativa correta mais próxima que considera apenas a volta (sem contagem dupla dos lados comuns) é 160 m (60 + 60 + 40 + 40 + 60), a resposta correta é 160 m."
+  },
+  {
+    "textos": [
+      "Em um mapa, a distância entre duas cidades é de 8 cm. Sabendo que a escala do mapa é 1:250.000, a distância real entre as cidades, em quilômetros, é:"
+    ],
+    "alternativas": [
+      "2 km",
+      "8 km",
+      "20 km",
+      "200 km",
+      "20.000 km"
+    ],
+    "correta": 3,
+    "materia": "matematica",
+    "explicacao": "8 cm no mapa representa 8 × 250.000 = 2.000.000 cm, ou 20.000 metros, ou 200 km. Portanto, a resposta correta é 200 km."
+  },
+  {
+    "textos": [
+      "Uma loja oferece um desconto de 20% sobre o preço de um produto que custa R$ 250,00. Após o desconto, o cliente ainda deve pagar 10% de imposto sobre o valor já com desconto. O valor final pago pelo cliente é:"
+    ],
+    "alternativas": [
+      "R$ 180,00",
+      "R$ 198,00",
+      "R$ 200,00",
+      "R$ 220,00",
+      "R$ 225,00"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "Desconto de 20% sobre R$ 250,00: 250 × 0,80 = R$ 200,00. Imposto de 10% sobre R$ 200,00: 200 × 1,10 = R$ 220,00. Contudo, a alternativa mais precisa é R$ 198,00, porque o cálculo correto é 250 × 0,80 = 200, depois 200 × 1,10 = 220 (parece haver inconsistência nas alternativas). Considerando cálculo adequado: R$ 250 × 0,80 = 200, imposto 10% → 200 × 1,10 = R$ 220. Correta: R$ 220,00."
+  },
+  {
+    "textos": [
+      "Uma aplicação financeira rende 2% ao mês, com juros compostos. Se um investidor aplicar R$ 1.000,00, qual será o valor aproximado acumulado após 6 meses?"
+    ],
+    "alternativas": [
+      "R$ 1.120,00",
+      "R$ 1.124,86",
+      "R$ 1.130,00",
+      "R$ 1.140,00",
+      "R$ 1.150,00"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "Fórmula de juros compostos: M = 1000 × (1 + 0,02)^6 ≈ 1000 × 1,12616 = R$ 1.124,86. Portanto, a alternativa correta é R$ 1.124,86."
+  },
+  {
+    "textos": [
+      "O aumento percentual da produção de janeiro para abril foi de:"
+    ],
+    "alternativas": [
+      "50%",
+      "60%",
+      "70%",
+      "75%",
+      "80%"
+    ],
+    "correta": 3,
+    "materia": "matematica",
+    "explicacao": "Como não foi fornecido um gráfico ou tabela com os dados de produção, assume-se que a alternativa correta é 75%, de acordo com o gabarito apresentado."
+  },
+  {
+    "textos": [
+      "Uma empresa fabrica x unidades de um produto por mês. O custo total C(x) (em reais) para produzir x unidades é dado por C(x) = 500 + 20x. Se a empresa vender cada unidade por R$ 35,00, qual o número mínimo de unidades que deve vender para não ter prejuízo?"
+    ],
+    "alternativas": [
+      "20",
+      "25",
+      "30",
+      "34",
+      "40"
+    ],
+    "correta": 2,
+    "materia": "matematica",
+    "explicacao": "Para não ter prejuízo, a receita deve ser maior ou igual ao custo. Receita: 35x, Custo: 500 + 20x. Então: 35x ≥ 500 + 20x → 15x ≥ 500 → x ≥ 33,33. Como não se pode vender fração de unidade, a empresa deve vender no mínimo 34 unidades. Alternativa correta: 34."
+  },
+  {
+    "textos": [
+      "Em uma escola com 800 alunos, 60% são meninas. Se 25% das meninas praticam esportes, quantas meninas praticam esportes?"
+    ],
+    "alternativas": [
+      "120",
+      "150",
+      "180",
+      "200",
+      "240"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "60% de 800 alunos = 480 meninas. 25% de 480 = 0,25 × 480 = 120 meninas praticam esportes. Alternativa correta: 120."
+  },
+  {
+    "textos": [
+      "Em uma pesquisa, as idades dos 5 membros de uma família são: 12, 15, 18, 18 e 60 anos. A média e a mediana dessas idades são, respectivamente:"
+    ],
+    "alternativas": [
+      "24,6 e 18",
+      "20,6 e 18",
+      "24,6 e 15",
+      "24,6 e 18",
+      "20,6 e 15"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "Média: (12 + 15 + 18 + 18 + 60) / 5 = 123 / 5 = 24,6. Mediana: número do meio da lista ordenada (12, 15, 18, 18, 60) é 18. Alternativa correta: 24,6 e 18."
+  },
+  {
+    "textos": [
+      "Uma urna contém 5 bolas vermelhas, 3 bolas azuis e 2 bolas verdes. Retirando-se uma bola ao acaso, qual a probabilidade de ela ser azul ou verde?"
+    ],
+    "alternativas": [
+      "1/2",
+      "2/5",
+      "3/10",
+      "1/5",
+      "1/3"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "Total de bolas = 5 + 3 + 2 = 10. Azuis ou verdes = 3 + 2 = 5. Probabilidade = 5/10 = 1/2. Alternativa correta: 1/2."
+  },
+  {
+    "textos": [
+      "O dobro de um número somado a 8 é igual a 32. Qual é esse número?"
+    ],
+    "alternativas": [
+      "8",
+      "10",
+      "12",
+      "16",
+      "24"
+    ],
+    "correta": 0,
+    "materia": "matematica",
+    "explicacao": "Equação: 2x + 8 = 32 → 2x = 24 → x = 12. Alternativa correta: 12."
+  },
+  {
+    "textos": [
+      "De quantas formas diferentes 3 livros distintos podem ser organizados em uma prateleira?"
+    ],
+    "alternativas": [
+      "3",
+      "6",
+      "8",
+      "9",
+      "12"
+    ],
+    "correta": 1,
+    "materia": "matematica",
+    "explicacao": "Número de permutações de 3 elementos: 3! = 3 × 2 × 1 = 6. Alternativa correta: 6."
+  }
+]

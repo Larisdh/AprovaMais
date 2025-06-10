@@ -1,0 +1,452 @@
+[
+  {
+    "textos": ["Qual das seguintes características NÃO corresponde à agricultura de jardinagem (ou rizicultura intensiva)?"],
+    "alternativas": [
+      "Utilização intensiva de mão de obra.",
+      "Pequena propriedade familiar.",
+      "Monocultura de arroz.",
+      "Elevada mecanização das atividades."
+    ],
+    "correta": 3,
+    "materia": "geografia",
+    "explicacao": "A agricultura de jardinagem, típica de áreas densamente povoadas da Ásia, caracteriza-se pelo uso intensivo de mão de obra e técnicas manuais, com baixa mecanização."
+  },
+  {
+    "textos": ["O conceito de 'reforma agrária' refere-se principalmente à:"],
+    "alternativas": [
+      "Modernização das técnicas agrícolas.",
+      "Redistribuição de terras com o objetivo de promover maior equidade social e produtividade.",
+      "Expansão das áreas de monocultura para exportação.",
+      "Criação de grandes latifúndios voltados para a pecuária extensiva."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "A reforma agrária busca alterar a estrutura fundiária, democratizando o acesso à terra e promovendo o desenvolvimento social e econômico no meio rural."
+  },
+  {
+    "textos": ["Qual sistema agrícola é caracterizado pela produção em larga escala, voltada para a exportação, com uso intensivo de tecnologia e, frequentemente, monocultura?"],
+    "alternativas": [
+      "Agricultura familiar.",
+      "Agricultura orgânica.",
+      "Agribusiness (ou agronegócio).",
+      "Agricultura de subsistência."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "O agribusiness engloba toda a cadeia produtiva do agronegócio, desde a produção agrícola em larga escala até a industrialização e comercialização, com forte orientação para o mercado."
+  },
+  {
+    "textos": ["A agricultura itinerante (ou de corte e queima) é praticada principalmente em áreas de:"],
+    "alternativas": [
+      "Clima temperado com solos férteis.",
+      "Clima semiárido com escassez de água.",
+      "Florestas tropicais com solos relativamente pobres.",
+      "Planícies aluviais com alta fertilidade natural."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A agricultura itinerante é adaptada a áreas de floresta tropical, onde a fertilidade do solo é rapidamente esgotada, exigindo o deslocamento periódico das áreas de cultivo."
+  },
+  {
+    "textos": ["Qual das seguintes atividades NÃO faz parte do setor primário da economia?"],
+    "alternativas": [
+      "Pecuária.",
+      "Agricultura.",
+      "Indústria têxtil.",
+      "Extrativismo vegetal."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A indústria têxtil pertence ao setor secundário, que transforma matérias-primas em produtos manufaturados. O setor primário é voltado para a extração e produção de recursos naturais."
+  },
+  {
+    "textos": ["O efeito estufa é um fenômeno natural essencial para a vida na Terra, pois:"],
+    "alternativas": [
+      "Impede a entrada de raios ultravioleta prejudiciais.",
+      "Regula a temperatura global, mantendo o planeta aquecido.",
+      "Aumenta a concentração de oxigênio na atmosfera.",
+      "Neutraliza a poluição atmosférica."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "O efeito estufa retém parte da radiação solar refletida pela Terra, mantendo a temperatura média global em níveis adequados para a existência da vida."
+  },
+  {
+    "textos": ["Qual das seguintes atividades humanas é considerada a principal causa do aumento do efeito estufa e do aquecimento global?"],
+    "alternativas": [
+      "Prática de agricultura orgânica.",
+      "Utilização de energias renováveis, como a solar e a eólica.",
+      "Queima de combustíveis fósseis (petróleo, carvão e gás natural).",
+      "Implementação de programas de reflorestamento."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A queima de combustíveis fósseis libera grandes quantidades de gases de efeito estufa na atmosfera, intensificando o fenômeno natural e levando ao aumento da temperatura global."
+  },
+  {
+    "textos": ["A destruição da camada de ozônio na estratosfera tem como uma das principais consequências:"],
+    "alternativas": [
+      "O aumento da incidência de chuvas ácidas.",
+      "A intensificação do efeito estufa.",
+      "O aumento da radiação ultravioleta que atinge a superfície terrestre.",
+      "O aumento da poluição sonora nas grandes cidades."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A camada de ozônio filtra grande parte da radiação ultravioleta (UV) emitida pelo Sol. Sua destruição aumenta a exposição aos raios UV, que são prejudiciais à saúde humana e ao meio ambiente."
+  },
+  {
+    "textos": ["Qual dos seguintes problemas ambientais está diretamente relacionado ao desmatamento de grandes áreas florestais?"],
+    "alternativas": [
+      "Aumento da biodiversidade local.",
+      "Redução da erosão do solo e do assoreamento de rios.",
+      "Perda de habitat de espécies e aumento da emissão de gases de efeito estufa.",
+      "Diminuição da ocorrência de inundações."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "O desmatamento causa a perda de habitat para diversas espécies, contribuindo para a extinção, e libera o carbono armazenado nas árvores na forma de dióxido de carbono, um importante gás de efeito estufa."
+  },
+  {
+    "textos": ["O conceito de 'desenvolvimento sustentável' busca:"],
+    "alternativas": [
+      "Priorizar o crescimento econômico a qualquer custo.",
+      "Explorar os recursos naturais de forma ilimitada para atender às necessidades presentes.",
+      "Conciliar o desenvolvimento econômico e social com a preservação ambiental para as gerações futuras.",
+      "Interromper o desenvolvimento econômico para garantir a preservação total do meio ambiente."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "O desenvolvimento sustentável propõe um modelo de desenvolvimento que atenda às necessidades do presente sem comprometer a capacidade das futuras gerações de atenderem às suas próprias necessidades."
+  },
+   {
+    "textos": ["Qual das seguintes características NÃO é típica de uma economia globalizada?"],
+    "alternativas": [
+      "Aumento do fluxo de capitais entre os países.",
+      "Expansão do comércio internacional de bens e serviços.",
+      "Diminuição da importância das empresas multinacionais.",
+      "Maior interdependência econômica entre as nações."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "As empresas multinacionais desempenham um papel central na economia globalizada, atuando em diversos países e integrando cadeias produtivas em escala mundial."
+  },
+  {
+    "textos": ["O termo 'Neoliberalismo' se refere a um conjunto de políticas econômicas que defendem principalmente:"],
+    "alternativas": [
+      "A forte intervenção do Estado na economia.",
+      "O aumento dos gastos públicos em programas sociais.",
+      "A liberalização dos mercados, a privatização de empresas estatais e a redução do papel do Estado na economia.",
+      "A proteção da indústria nacional através de barreiras tarifárias."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "O neoliberalismo é uma doutrina econômica que enfatiza a liberdade de mercado, a mínima intervenção estatal e a abertura econômica como motores do crescimento."
+  },
+  {
+    "textos": ["Qual das seguintes organizações NÃO é um exemplo de bloco econômico regional?"],
+    "alternativas": [
+      "União Europeia (UE).",
+      "Mercado Comum do Sul (Mercosul).",
+      "Organização dos Países Exportadores de Petróleo (OPEP).",
+      "Acordo de Livre Comércio da América do Norte (NAFTA/USMCA)."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A OPEP é uma organização de países produtores de petróleo com o objetivo de coordenar políticas de produção e preços, não sendo um bloco econômico regional com foco na integração comercial abrangente."
+  },
+  {
+    "textos": ["O conceito de 'Divisão Internacional do Trabalho' (DIT) descreve:"],
+    "alternativas": [
+      "A distribuição de tarefas dentro de uma mesma empresa multinacional.",
+      "A especialização de diferentes países em determinadas atividades econômicas no contexto da economia global.",
+      "A migração de trabalhadores entre países em busca de melhores oportunidades.",
+      "A criação de sindicatos internacionais para defender os direitos dos trabalhadores."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "A DIT reflete a especialização produtiva de diferentes nações, onde alguns países se concentram na produção de matérias-primas, outros na industrialização e outros em serviços, dentro do sistema econômico global."
+  },
+  {
+    "textos": ["Qual dos seguintes indicadores é frequentemente utilizado para medir o nível de desenvolvimento econômico e social de um país?"],
+    "alternativas": [
+      "Taxa de natalidade.",
+      "Densidade demográfica.",
+      "Produto Interno Bruto (PIB) per capita e Índice de Desenvolvimento Humano (IDH).",
+      "Nível de urbanização."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "O PIB per capita mede a riqueza média por habitante e o IDH considera fatores como expectativa de vida, educação e renda, oferecendo uma visão mais abrangente do desenvolvimento."
+  },
+   {
+    "textos": ["A globalização financeira é caracterizada principalmente por:"],
+    "alternativas": [
+      "O aumento das barreiras alfandegárias entre os países.",
+      "A restrição da movimentação de capitais internacionais.",
+      "A intensa circulação de dinheiro e investimentos em escala mundial.",
+      "A diminuição da importância dos bancos e instituições financeiras."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A globalização financeira facilitou a movimentação de capitais, investimentos e transações financeiras entre diferentes países, integrando os mercados financeiros em nível global."
+  },
+  {
+    "textos": ["Qual dos seguintes fenômenos NÃO está diretamente relacionado ao processo de globalização cultural?"],
+    "alternativas": [
+      "A disseminação de hábitos alimentares e estilos de vestimenta globais.",
+      "O aumento da diversidade linguística em escala mundial.",
+      "A influência de filmes, músicas e séries de outros países.",
+      "A maior facilidade de acesso a informações e diferentes formas de expressão cultural."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "A globalização cultural pode, em alguns casos, levar à homogeneização cultural e ao enfraquecimento de línguas e tradições locais, embora também possa promover o intercâmbio cultural."
+  },
+  {
+    "textos": ["O protecionismo econômico é uma prática que consiste em:"],
+    "alternativas": [
+      "Estimular a livre entrada de produtos estrangeiros no mercado nacional.",
+      "Reduzir os impostos sobre as exportações.",
+      "Adotar medidas para proteger a indústria nacional da concorrência estrangeira, como tarifas e cotas de importação.",
+      "Promover a integração econômica com outros países através de acordos comerciais."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "O protecionismo visa proteger a produção nacional, tornando os produtos importados mais caros ou limitando sua entrada no mercado interno."
+  },
+  {
+    "textos": ["Qual das seguintes instituições internacionais tem como principal objetivo promover a estabilidade financeira global?"],
+    "alternativas": [
+      "Organização Mundial do Comércio (OMC).",
+      "Fundo Monetário Internacional (FMI).",
+      "Banco Mundial.",
+      "Organização das Nações Unidas (ONU)."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "O FMI atua na cooperação monetária internacional, oferecendo assistência financeira e aconselhamento a países com dificuldades econômicas, buscando a estabilidade do sistema financeiro global."
+  },
+  {
+    "textos": ["O conceito de 'cadeia global de valor' descreve:"],
+    "alternativas": [
+      "O processo de produção de um bem ou serviço realizado inteiramente em um único país.",
+      "A fragmentação da produção em diferentes etapas realizadas em diversos países, buscando maior eficiência e menores custos.",
+      "A concentração da produção industrial em grandes polos tecnológicos.",
+      "A produção artesanal e local de bens de consumo."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "As cadeias globais de valor são uma característica da economia globalizada, onde diferentes partes do processo produtivo são realizadas em locais estratégicos ao redor do mundo."
+  },
+  {
+    "textos": ["Qual dos seguintes problemas ambientais globais está mais diretamente associado ao aumento do nível do mar?"],
+    "alternativas": [
+      "Aumento da poluição atmosférica nas áreas urbanas.",
+      "Derretimento das calotas polares e geleiras.",
+      "Diminuição da biodiversidade em florestas tropicais.",
+      "Intensificação de fenômenos climáticos extremos como furacões e tornados."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "O aumento da temperatura global acelera o derretimento do gelo polar e das geleiras, contribuindo para a elevação do nível do mar e ameaçando áreas costeiras."
+  },
+  {
+    "textos": ["A agricultura familiar no Brasil se caracteriza principalmente por:"],
+    "alternativas": [
+      "Utilização de grandes extensões de terra e monocultura para exportação.",
+      "Produção diversificada, uso intensivo de mão de obra familiar e forte ligação com o mercado local.",
+      "Elevado grau de mecanização e uso de tecnologia de ponta.",
+      "Predomínio de arrendatários e parceria agrícola."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "A agricultura familiar é um modelo de produção que se baseia no trabalho da família, geralmente em pequenas e médias propriedades, com diversidade de culturas e foco no abastecimento do mercado interno."
+  },
+  {
+    "textos": ["Qual dos seguintes acordos internacionais visa reduzir as emissões de gases de efeito estufa pelos países signatários?"],
+    "alternativas": [
+      "Protocolo de Kyoto e Acordo de Paris.",
+      "Convenção de Ramsar sobre Zonas Úmidas.",
+      "Convenção sobre Diversidade Biológica.",
+      "Declaração do Rio sobre Meio Ambiente e Desenvolvimento."
+    ],
+    "correta": 0,
+    "materia": "geografia",
+    "explicacao": "O Protocolo de Kyoto e o Acordo de Paris são importantes instrumentos internacionais que estabelecem metas e compromissos para a redução das emissões de gases responsáveis pelo aquecimento global."
+  },
+  {
+    "textos": ["O conceito de 'soberania alimentar' se refere ao direito dos povos de:"],
+    "alternativas": [
+      "Importar alimentos de qualquer lugar do mundo sem restrições.",
+      "Produzir alimentos exclusivamente para exportação, visando o lucro máximo.",
+      "Definir suas próprias políticas agrícolas e alimentares, priorizando a produção local e o acesso a alimentos saudáveis e culturalmente apropriados.",
+      "Depender da ajuda alimentar internacional em situações de crise."
+    ],
+    "correta": 2,
+    "materia": "geografia",
+    "explicacao": "A soberania alimentar defende o controle dos sistemas alimentares pelas comunidades locais, garantindo o direito à alimentação adequada e a autonomia na produção."
+  },
+  {
+    "textos": ["Qual dos seguintes fatores contribuiu para a expansão da globalização econômica nas últimas décadas?"],
+    "alternativas": [
+      "O aumento das barreiras comerciais e a fragmentação dos mercados.",
+      "O desenvolvimento de novas tecnologias de comunicação e transporte.",
+      "A diminuição do fluxo de investimentos estrangeiros diretos.",
+      "O fortalecimento das políticas protecionistas em nível global."
+    ],
+    "correta": 1,
+    "materia": "geografia",
+    "explicacao": "Os avanços tecnológicos nas áreas de comunicação (internet, telefonia) e transporte (contêineres, aviões) facilitaram a integração dos mercados, a circulação de bens, serviços e informações em escala global."
+  },
+   {
+        "textos": [
+            "No Brasil, a reforma agrária tem como prioridade a distribuição de terras:"
+        ],
+        "alternativas": [
+            "Exclusivamente para grandes latifúndios produtivos",
+            "Para terras devolutas ocupadas ilegalmente e latifúndios improdutivos",
+            "Para áreas urbanas consolidadas",
+            "Para propriedades indígenas e quilombolas apenas",
+            "Para áreas de mineração"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A reforma agrária prioriza terras improdutivas ou ocupadas ilegalmente para cumprir a função social da terra e reduzir a concentração fundiária."
+    },
+    {
+        "textos": [
+            "O modelo agrícola predominante em 90% dos municípios brasileiros com até 20 mil habitantes é:"
+        ],
+        "alternativas": [
+            "Agricultura familiar, com pequena escala e uso restrito de capital",
+            "Agronegócio, com alta mecanização e capital intensivo",
+            "Agricultura orgânica, sem uso de agroquímicos",
+            "Agricultura patronal, baseada em mão de obra qualificada",
+            "Sistema agroflorestal, baseado no extrativismo"
+        ],
+        "correta": 0,
+        "materia": "geografia",
+        "explicacao": "A agricultura familiar é a base da economia rural em grande parte do Brasil, sendo responsável por grande parte da mão de obra no campo."
+    },
+    {
+        "textos": [
+            "A expansão da produção de soja no Brasil nas últimas décadas está associada a:"
+        ],
+        "alternativas": [
+            "Prioridade ao pequeno produtor rural",
+            "Avanços tecnológicos e manejo eficiente",
+            "Redução da mecanização",
+            "Restrição ao uso de agroquímicos",
+            "Crescimento da agricultura orgânica"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "O crescimento da soja se deve à mecanização, uso de agroquímicos e técnicas modernas de cultivo."
+    },
+    {
+        "textos": [
+            "Um dos principais impactos ambientais causados pela expansão da fronteira agrícola no Brasil é:"
+        ],
+        "alternativas": [
+            "Aumento da biodiversidade",
+            "Desmatamento e perda de áreas naturais",
+            "Recuperação de áreas degradadas",
+            "Redução da poluição do solo",
+            "Diminuição da emissão de gases do efeito estufa"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A expansão agrícola tem provocado desmatamento, principalmente na Amazônia, causando perda ambiental significativa."
+    },
+    {
+        "textos": [
+            "A “Revolução Verde” refere-se a:"
+        ],
+        "alternativas": [
+            "Um movimento ambientalista global",
+            "A modernização da agricultura com uso de tecnologias, fertilizantes e sementes melhoradas",
+            "O fim da agricultura tradicional",
+            "A substituição da agricultura pela indústria",
+            "A agricultura orgânica"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A Revolução Verde promoveu aumento da produtividade agrícola por meio de tecnologias e insumos químicos."
+    },
+    {
+        "textos": [
+            "A globalização econômica é caracterizada por:"
+        ],
+        "alternativas": [
+            "Isolamento dos países em suas economias nacionais",
+            "Integração dos mercados e circulação global de capitais, mercadorias e informações",
+            "Restrição do comércio internacional",
+            "Exclusão das economias emergentes",
+            "Aumento do protecionismo"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A globalização envolve a interdependência econômica entre países via comércio, investimentos e tecnologia."
+    },
+    {
+        "textos": [
+            "O agronegócio brasileiro é importante para a economia porque:"
+        ],
+        "alternativas": [
+            "Produz apenas para o mercado interno",
+            "É um dos maiores exportadores de commodities agrícolas do mundo",
+            "Não utiliza tecnologia em sua produção",
+            "Depende exclusivamente da agricultura familiar",
+            "Não gera emprego no campo"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "O Brasil é líder mundial na exportação de soja, milho, carne e outras commodities, graças ao agronegócio moderno."
+    },
+    {
+        "textos": [
+            "A função social da terra, prevista na Constituição Federal brasileira, implica que:"
+        ],
+        "alternativas": [
+            "A terra deve ser usada exclusivamente para produção agrícola intensiva",
+            "A terra deve cumprir um papel social, garantindo uso produtivo e acesso à população",
+            "A terra deve ser propriedade privada sem restrições",
+            "A terra deve ser destinada apenas à preservação ambiental",
+            "A terra deve ser usada para mineração"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A função social da terra busca evitar a concentração e o uso improdutivo, promovendo justiça social no campo."
+    },
+    {
+        "textos": [
+            "Um dos principais conflitos no meio rural brasileiro decorre de:"
+        ],
+        "alternativas": [
+            "Concentração fundiária e ausência de reforma agrária efetiva",
+            "Igualdade na distribuição de terras",
+            "Ausência de produção agrícola",
+            "Exclusão da agricultura familiar",
+            "Falta de tecnologia no campo"
+        ],
+        "correta": 0,
+        "materia": "geografia",
+        "explicacao": "A concentração de terras provoca desigualdade e conflitos entre grandes proprietários, posseiros e pequenos agricultores."
+    },
+    {
+        "textos": [
+            "O avanço da tecnologia na agricultura contribui para:"
+        ],
+        "alternativas": [
+            "Reduzir a produtividade",
+            "Aumentar a eficiência e a produção agrícola",
+            "Diminuir o uso de insumos agrícolas",
+            "Eliminar o agronegócio",
+            "Reduzir a exportação de alimentos"
+        ],
+        "correta": 1,
+        "materia": "geografia",
+        "explicacao": "A tecnologia, como mecanização e biotecnologia, eleva a produtividade e competitividade da agricultura."
+    }
+]
