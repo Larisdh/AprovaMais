@@ -40,78 +40,80 @@ export default function Home() {
           </Link>
         </nav>
       </header>
-      
-      {/* Wrapper para centralizar a frase motivacional */}
-      <div style={{ textAlign: "center" }}>
-        <span className="home__frase">
-          "A CADA QUIZ, UM PASSO MAIS PERTO DA APROVAÇÃO"
-        </span>
-      </div>
 
-      {/* Container principal que organiza as seções lado a lado */}
-      <main className="home__container">
-        
-        {/* Seção 1: Escolha de Matérias */}
-        <aside className="home__aside">
-          <h2 className="home__subtitle">Escolha uma Matéria:</h2>
-          <div className="home__buttons-grid">
-            {materiasDisponiveis.map((materia) => (
+      <div className="main">
+        {/* Wrapper para centralizar a frase motivacional */}
+        <div style={{ textAlign: "center" }}>
+          <span className="home__frase">
+            "A CADA QUIZ, UM PASSO MAIS PERTO DA APROVAÇÃO"
+          </span>
+        </div>
+
+        {/* Container principal que organiza as seções lado a lado */}
+        <main className="home__container">
+
+          {/* Seção 1: Escolha de Matérias */}
+          <aside className="home__aside">
+            <h2 className="home__subtitle">Escolha uma Matéria:</h2>
+            <div className="home__buttons-grid">
+              {materiasDisponiveis.map((materia) => (
+                <button
+                  key={materia}
+                  className="btn-materia"
+                  onClick={() => handleStartQuizBySubject(materia.toLowerCase())}
+                >
+                  {materia}
+                </button>
+              ))}
+            </div>
+            <div className="home__desafio">
+              <h3>Ou aceite o Desafio Geral:</h3>
               <button
-                key={materia}
-                className="btn-materia"
-                onClick={() => handleStartQuizBySubject(materia.toLowerCase())}
+                className="btn-desafio"
+                onClick={handleStartGeneralQuiz}
               >
-                {materia}
+                Todas as Matérias
               </button>
-            ))}
-          </div>
-          <div className="home__desafio">
-            <h3>Ou aceite o Desafio Geral:</h3>
-            <button
-              className="btn-desafio"
-              onClick={handleStartGeneralQuiz}
-            >
-              Todas as Matérias
-            </button>
-          </div>
-        </aside>
+            </div>
+          </aside>
 
-        {/* Seção 2: Quantidade de Perguntas */}
-        <aside className="home__aside home__aside--quantidade">
-          <h2 className="home__subtitle">Quantidade de Perguntas:</h2>
-          <ul>
-            {quantidadesPerguntas.map((value) => (
-              <li
-                key={value}
-                onClick={() => setQuestions(value)}
-                className={`quantidade-item ${
-                  questions === value ? "active" : ""
-                }`}
-              >
-                {value}
-              </li>
-            ))}
-          </ul>
-        </aside>
+          {/* Seção 2: Quantidade de Perguntas */}
+          <aside className="home__aside home__aside--quantidade">
+            <h2 className="home__subtitle">Quantidade de Perguntas:</h2>
+            <ul>
+              {quantidadesPerguntas.map((value) => (
+                <li
+                  key={value}
+                  onClick={() => setQuestions(value)}
+                  className={`quantidade-item ${questions === value ? "active" : ""
+                    }`}
+                >
+                  {value}
+                </li>
+              ))}
+            </ul>
+          </aside>
 
-        {/* Seção 3: Informações e Motivação */}
-        <aside className="home__aside home__aside--info">
-          <h2 className="home__subtitle">Seu novo aliado na preparação!</h2>
-          <img
-            src="/HomeAprova.png"
-            alt="Estudante comemorando aprovação"
-            className="home__image"
-          />
-          <p className="home__text">
-            Revise os principais conteúdos com nossos quizzes interativos.
-            Teste seus conhecimentos e sinta-se mais confiante para as provas.
-          </p>
-          <Link to="/perfil" className="btn-perfil">
-            Ver meu Desempenho
-          </Link>
-        </aside>
-        
-      </main>
+          {/* Seção 3: Informações e Motivação */}
+          <aside className="home__aside home__aside--info">
+            <h2 className="home__subtitle">Seu novo aliado na preparação!</h2>
+            <img
+              src="/HomeAprova.png"
+              alt="Estudante comemorando aprovação"
+              className="home__image"
+            />
+            <p className="home__text">
+              Revise os principais conteúdos com nossos quizzes interativos.
+              Teste seus conhecimentos e sinta-se mais confiante para as provas.
+            </p>
+            <Link to="/perfil" className="btn-perfil">
+              Ir para o Perfil
+            </Link>
+          </aside>
+
+        </main>
+
+      </div>
     </div>
   );
 }

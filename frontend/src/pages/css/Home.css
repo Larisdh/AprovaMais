@@ -41,10 +41,66 @@
 /* Layout principal */
 .home {
   font-family: 'Segoe UI', sans-serif;
-  padding: var(--space-lg) var(--space-md);
   background-color: var(--color-background-page);
   color: var(--color-text-primary);
   min-height: 100vh;
+  font-size: 1.1rem; /* Aumenta a fonte do site */
+}
+
+main {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  align-items: center;
+}
+
+/* Header */
+.home__header {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.home__header-logo {
+  height: 50px;
+}
+
+.home__header-nav {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.home__header-link {
+  color: var(--color-text-on-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.home__header-link:hover {
+  color: var(--color-primary-light);
+}
+
+/* Responsividade do Header */
+@media (max-width: 768px) {
+  .home__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home__header-nav {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .home__header-logo {
+    height: 40px;
+    margin-bottom: var(--space-sm);
+  }
 }
 
 /* Título */
@@ -55,21 +111,21 @@
   margin-top: 0;
   margin-bottom: var(--space-md);
   letter-spacing: 1px;
-  color: var(--color-primary-dark);
 }
 
 /* Frase motivacional */
 .home__frase {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
   margin-bottom: var(--space-lg);
-  color: var(--color-primary-dark);
-  background-color: var(--color-primary-xtra-light);
+  margin-top: var(--space-md); /* Adiciona espaço entre a frase e o header */
+  color: var(--color-background-page);
+  background-color: var(--color-primary-dark); /* Cor igual ao fundo dos botões */
   padding: var(--space-sm) var(--space-md);
   display: inline-block;
-  border-radius: var(--border-radius-sm);
-  border: 1px solid var(--color-primary-border);
-  font-weight: 500;
+  border-radius: var(--border-radius-md); /* Bordas arredondadas consistentes */
+  border: 2px solid var(--color-primary); /* Borda igual aos botões */
+  font-weight: 600;
 }
 
 /* Container principal (mantém a lógica de layout flex) */
@@ -117,9 +173,9 @@
 
 /* Botões de matéria (estilo do quiz-option-button) */
 .btn-materia {
-  background-color: var(--color-background-element);
-  color: var(--color-text-primary);
-  border: 2px solid var(--color-border-light);
+  background-color: var(--color-primary-xtra-light); /* Cor igual ao fundo da frase */
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary);
   border-radius: var(--border-radius-md);
   padding: 0.8rem;
   font-weight: 600;
@@ -129,9 +185,9 @@
   width: 100%;
 }
 .btn-materia:hover {
-  background-color: var(--color-primary-xtra-light);
-  color: var(--color-primary-dark);
-  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-color: var(--color-primary-dark);
   transform: translateY(-3px);
   box-shadow: var(--shadow-sm);
 }
@@ -252,9 +308,6 @@
 }
 
 @media (max-width: 768px) {
-  .home {
-    padding: var(--space-lg) var(--space-sm);
-  }
   .home__title {
     font-size: 2rem;
   }
