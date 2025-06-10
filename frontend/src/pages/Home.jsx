@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// Importando o CSS específico para a página Home
+import "./css/Home.css";
+// O arquivo CSS a ser importado agora é o novo 'Home.css'
+// import './Home.css'; 
 
 export default function Home() {
   const [questions, setQuestions] = useState(10);
@@ -10,33 +14,23 @@ export default function Home() {
   };
 
   const handleStartGeneralQuiz = () => {
-    navigate(`/quiz?questions=${questions}`); // Navega sem o parâmetro 'materia'
+    navigate(`/quiz?questions=${questions}`);
   };
 
   const materiasDisponiveis = [
-    "historia",
-    "filosofia",
-    "sociologia",
-    "geografia",
-    "matematica",
-    "fisica",
-    "quimica",
-    "biologia",
-    "portugues",
-    "ingles",
-    "espanhol",
+    "Historia", "Filosofia", "Sociologia", "Geografia", "Matemática",
+    "Física", "Química", "Biologia", "Português", "Inglês", "Espanhol",
   ];
 
   const quantidadesPerguntas = [5, 10, 15, 20, 25];
 
   return (
-    <div className="page-container home-container">
+    // Estrutura principal com a classe 'home'
+    <div className="home">
+      {/* O cabeçalho foi mantido para navegação, mas o H1 usa a nova classe */}
       <header className="app-header">
         <img src="/Logo.png" alt="Logo Aprova" className="app-logo" />
-
-        <h1 className="app-header-page-title home-header-custom-title">
-          BEM-VINDOS!
-        </h1>
+        <h1 className="home__title">BEM-VINDOS!</h1>
         <nav className="app-header-nav">
           <Link to="/ranking" className="app-header-nav-link">
             Ranking
@@ -46,84 +40,77 @@ export default function Home() {
           </Link>
         </nav>
       </header>
-
-      <div className="home-subtitle">
-        "A CADA QUIZ, UM PASSO MAIS PERTO DA APROVAÇÃO"
+      
+      {/* Wrapper para centralizar a frase motivacional */}
+      <div style={{ textAlign: "center" }}>
+        <span className="home__frase">
+          "A CADA QUIZ, UM PASSO MAIS PERTO DA APROVAÇÃO"
+        </span>
       </div>
 
-      <main className="home-main">
-        <div className="home-layout">
-          {/* Seções alinhadas lado a lado */}
-          <div className="home-aside-materias">
-            <h3 className="home-aside__title">Escolha uma Matéria:</h3>
-            <ul className="home-aside__subject-list">
-              {materiasDisponiveis.map((materia) => (
-                <li key={materia}>
-                  <button
-                    className="home-aside__subject-button"
-                    onClick={() => handleStartQuizBySubject(materia)}
-                  >
-                    {materia.charAt(0).toUpperCase() + materia.slice(1)}
-                  </button>
-                </li>
-              ))}
-            </ul>
-            <div className="home-aside__general-challenge">
-              <h3 className="home-aside__title">Desafio Geral:</h3>{" "}
-              {/* Título opcional */}
+      {/* Container principal que organiza as seções lado a lado */}
+      <main className="home__container">
+        
+        {/* Seção 1: Escolha de Matérias */}
+        <aside className="home__aside">
+          <h2 className="home__subtitle">Escolha uma Matéria:</h2>
+          <div className="home__buttons-grid">
+            {materiasDisponiveis.map((materia) => (
               <button
-                className="home-aside__general-button button button--primary" // Usando classes genéricas de botão e uma específica
-                onClick={handleStartGeneralQuiz}
+                key={materia}
+                className="btn-materia"
+                onClick={() => handleStartQuizBySubject(materia.toLowerCase())}
               >
-                Todas as Matérias
+                {materia}
               </button>
-            </div>
+            ))}
           </div>
-
-          <div className="home-aside-quantidade">
-            <h3 className="home-aside__title">Quantidade de Perguntas:</h3>
-            <div className="home-aside-numero">
-              {quantidadesPerguntas.map((value) => (
-                <button
-                  key={value}
-                  onClick={() => setQuestions(value)}
-                  className={`home-aside__quantity-button ${
-                    questions === value ? "active" : ""
-                  }`}
-                >
-                  {value}
-                </button>
-              ))}
-            </div>
+          <div className="home__desafio">
+            <h3>Ou aceite o Desafio Geral:</h3>
+            <button
+              className="btn-desafio"
+              onClick={handleStartGeneralQuiz}
+            >
+              Todas as Matérias
+            </button>
           </div>
+        </aside>
 
-          <section className="home-info-section">
-            <div className="home-info-section__image-container">
-              <img
-                src="/HomeAprova.png"
-                alt="Estudante comemorando aprovação"
-                className="home-info-section__image"
-              />
-            </div>
-            <div className="home-info-section__description">
-              <h2>Seu novo aliado na preparação para o vestibular!</h2>
-              <p>
-                Revise os principais conteúdos com nossos quizzes interativos.
-                Teste seus conhecimentos, descubra onde precisa melhorar e
-                sinta-se mais confiante para as provas.
-              </p>
-              <p>
-                Comece agora e torne seu estudo mais inteligente e divertido!
-              </p>
-              <Link
-                to="/perfil"
-                className="button button--primary home-info-section__action-button"
+        {/* Seção 2: Quantidade de Perguntas */}
+        <aside className="home__aside home__aside--quantidade">
+          <h2 className="home__subtitle">Quantidade de Perguntas:</h2>
+          <ul>
+            {quantidadesPerguntas.map((value) => (
+              <li
+                key={value}
+                onClick={() => setQuestions(value)}
+                className={`quantidade-item ${
+                  questions === value ? "active" : ""
+                }`}
               >
-                Ir para o Perfil
-              </Link>
-            </div>
-          </section>
-        </div>
+                {value}
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Seção 3: Informações e Motivação */}
+        <aside className="home__aside home__aside--info">
+          <h2 className="home__subtitle">Seu novo aliado na preparação!</h2>
+          <img
+            src="/HomeAprova.png"
+            alt="Estudante comemorando aprovação"
+            className="home__image"
+          />
+          <p className="home__text">
+            Revise os principais conteúdos com nossos quizzes interativos.
+            Teste seus conhecimentos e sinta-se mais confiante para as provas.
+          </p>
+          <Link to="/perfil" className="btn-perfil">
+            Ver meu Desempenho
+          </Link>
+        </aside>
+        
       </main>
     </div>
   );

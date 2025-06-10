@@ -1,435 +1,264 @@
-/* src/pages/css/Home.css - ESTILOS ESPECÍFICOS DA PÁGINA HOME */
-
-/* Animação para elementos da Home */
-@keyframes fadeInUpSlight {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* O .home-container já usa o .page-container global para estilização base.
-   Se a Home precisar de ajustes específicos no nível superior, adicione-os a .home-container.
-   Por exemplo, se a div raiz de Home.jsx for <div className="page-container home-container">
+/* 
+  src/pages/css/Home.css 
+  REFATORADO para usar a identidade visual do Quiz.css como base.
 */
-.home-container {
-  /* Quaisquer modificações ou adições específicas da home para .page-container */
+
+/* 
+  :root - Variáveis Globais de Estilo
+  Inspirado no design do Quiz.css para consistência visual.
+*/
+:root {
+  /* Espaçamento */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  
+  /* Cores */
+  --color-background-page: #F4FCFF; /* Cinza-azulado muito claro, como no Quiz */
+  --color-background-element: #ffffff;
+  --color-primary: #0a518e;
+  --color-primary-dark: #084a7e;
+  --color-primary-light: #106bac;
+  --color-primary-xtra-light: #e9f5ff;
+  --color-primary-border: #cce7ff;
+  --color-text-primary: #333333;
+  --color-text-subtle: #555555;
+  --color-text-on-primary: #ffffff;
+  --color-border-light: #e7edf3;
+  
+  /* Bordas e Sombras */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 5px 10px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.1);
+  --shadow-focus-ring: 0 0 0 3px rgba(10, 81, 142, 0.3);
 }
 
-/* Sobrescrita para o título do cabeçalho da aplicação SOMENTE na página home */
-.home-container .app-header-page-title.home-header-custom-title {
-  font-size: clamp(2rem, 5vw, 2.7rem);
-  font-weight: 700;
-  /* O original era 900, 700 geralmente é negrito o suficiente */
-  letter-spacing: 0.04em;
-  text-shadow: 1px 1px 3px rgba(var(--color-black-rgb), 0.1);
-  /* Sombra mais suave */
-}
-
-.home-subtitle {
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
-  color: var(--color-text-on-primary);
-  text-align: center;
-  padding: var(--space-sm) var(--space-lg);
-  font-size: clamp(1.5rem, 2.5vw, 1.7rem);
-  font-weight: 500;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  margin: var(--space-lg) auto;
-  width: fit-content;
-  max-width: 90%;
-  letter-spacing: 0.5px;
-  flex-shrink: 0;
-  animation: fadeInUpSlight 0.5s 0.2s var(--transition-smooth) forwards;
-  opacity: 0;
-  transition: transform var(--transition-default), box-shadow var(--transition-default);
-}
-
-.home-subtitle:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Estilos para o elemento <main> dentro de Home.jsx */
-.home-main {
+/* Layout principal */
+.home {
+  font-family: 'Segoe UI', sans-serif;
   padding: var(--space-lg) var(--space-md);
-  /* Padding padrão */
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  /* Centraliza o conteúdo principal */
-  display: flex;
-  flex-direction: column;
-  /* Ou row, dependendo das necessidades de .home-layout */
-  flex-grow: 1;
-  box-sizing: border-box;
-  /* Garante que o padding não expanda além do max-width */
+  background-color: var(--color-background-page);
+  color: var(--color-text-primary);
+  min-height: 100vh;
 }
 
-/* Layout específico para a área de conteúdo principal da página Home */
-.home-layout {
-  display: flex;
-  /* Usando flex para o layout principal */
-  flex-direction: column;
-  /* Empilha aside e div 'teste' verticalmente no mobile */
-  gap: var(--space-lg);
-  width: 100%;
-  flex-grow: 1;
-}
-
-.teste {
-  /* Esta div envolve home-aside--quantidade e home-info-section */
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-  width: 100%;
-  /* Ocupa largura total no fluxo da coluna */
-}
-
-
-/* Estilo base para seções aside na página Home */
-.home-aside {
-  background-color: var(--color-background-element);
-  color: var(--color-primary);
-  /* Cor de texto padrão para conteúdo do aside */
-  padding: var(--space-lg);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border-light);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  /* Espaçamento interno para filhos do aside */
-  animation: fadeInUpSlight 0.6s 0.4s var(--transition-smooth) forwards;
-  opacity: 0;
-  transition: transform var(--transition-default), box-shadow var(--transition-default);
-}
-
-.home-aside:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
-}
-
-/* Específicos para o aside de matérias */
-.home-aside--materias {
-  /* quaisquer estilos específicos se necessário, caso contrário, cobertos por .home-aside */
-}
-
-/* Específicos para o aside de quantidade */
-.home-aside--quantidade {
-  /* quaisquer estilos específicos se necessário */
-}
-
-.home-aside__title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 3vw, 2.1rem);
+/* Título */
+.home__title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  letter-spacing: 1px;
   color: var(--color-primary-dark);
+}
+
+/* Frase motivacional */
+.home__frase {
   text-align: center;
-  font-weight: 600;
-  margin-bottom: var(--space-xs);
-}
-
-.home-aside__subject-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  /* minmax ajustado */
-  gap: var(--space-sm);
-  /* Gap menor para mais botões */
-}
-
-.home-aside__subject-button,
-.home-aside__quantity-button {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-dark);
   background-color: var(--color-primary-xtra-light);
-  color: var(--color-primary);
+  padding: var(--space-sm) var(--space-md);
+  display: inline-block;
+  border-radius: var(--border-radius-sm);
   border: 1px solid var(--color-primary-border);
-  padding: var(--space-sm);
-  /* Padding uniforme */
-  border-radius: var(--border-radius-md);
-  font-size: clamp(1.3rem, 2vw, 1.4rem);
-  /* Levemente menor para mais densidade */
-  font-weight: 600;
-  transition: all var(--transition-fast);
-  width: 100%;
-  text-align: center;
-  line-height: 1.3;
-  /* Altura da linha ajustada */
-  box-shadow: var(--shadow-sm);
+  font-weight: 500;
 }
 
-.home-aside__subject-button:hover,
-.home-aside__quantity-button:hover {
-  background-color: var(--color-primary-light);
-  border-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: var(--shadow-md);
-}
-
-.home-aside__subject-button:active,
-.home-aside__quantity-button:active:not(.active) {
-  /* Evita conflito com estilo .active */
-  transform: translateY(-1px) scale(0.98);
-  background-color: var(--color-primary-dark);
-  box-shadow: var(--shadow-button-active-inset);
-}
-
-.home-aside__subject-button:focus-visible,
-.home-aside__quantity-button:focus-visible {
-  outline: none;
-  box-shadow: var(--shadow-focus-ring);
-}
-
-.home-aside__general-challenge {
-  padding-top: var(--space-md);
-  /* Padding superior reduzido */
-  margin-top: var(--space-md);
-  /* Margem superior reduzida */
-  border-top: 1px solid var(--color-border-light);
+/* Container principal (mantém a lógica de layout flex) */
+.home__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
-  /* Gap reduzido */
-}
-
-/* Botão para "Todas as Matérias" - usa .button e .button--primary globais por padrão */
-/* Adicione sobrescritas específicas aqui se necessário, ex: se precisar de uma cor diferente */
-.home-aside__general-button {
-  width: 100%;
-  max-width: 280px;
-  /* Ou ajuste conforme necessário */
-  /* Já possui .button e .button--primary do JSX */
-  /* Exemplo de sobrescrita: background-color: var(--color-accent); */
-  /* Exemplo de sobrescrita: color: var(--color-text-on-accent); */
-}
-
-.home-aside__question-buttons {
-  display: flex;
-  gap: var(--space-sm);
   justify-content: center;
+  gap: var(--space-lg);
   flex-wrap: wrap;
 }
 
-.home-aside__quantity-button {
-  padding: var(--space-xs) var(--space-sm);
-  /* Padding mais equilibrado */
-  min-width: 48px;
+/* Cards (agora com estilo do quiz-card) */
+.home__aside {
+  background-color: var(--color-background-element);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-light);
+  flex: 1 1 320px;
+  min-width: 280px;
+  margin-bottom: var(--space-md);
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.home__aside:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
-.home-aside__quantity-button.active {
-  background-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-  border-color: var(--color-primary-dark);
-  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.4), var(--shadow-md);
-  font-weight: 700;
-  transform: scale(1.05);
+/* Subtítulo dentro dos cards */
+.home__subtitle {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  text-align: center;
 }
 
-.home-info-section {
+/* Grid de botões de matérias */
+.home__buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* Botões de matéria (estilo do quiz-option-button) */
+.btn-materia {
   background-color: var(--color-background-element);
   color: var(--color-text-primary);
-  /* Cor de texto primária para a seção de info */
-  padding: var(--space-lg);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border-light);
-  display: flex;
-  flex-direction: column;
-  /* Imagem acima do texto no mobile */
-  align-items: center;
-  gap: var(--space-lg);
-  animation: fadeInUpSlight 0.6s 0.55s var(--transition-smooth) forwards;
-  opacity: 0;
-  transition: transform var(--transition-default), box-shadow var(--transition-default);
-}
-
-.home-info-section:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
-}
-
-.home-info-section__image-container {
-  width: 100%;
-  max-width: 300px;
-  /* Largura máxima para mobile */
+  border: 2px solid var(--color-border-light);
   border-radius: var(--border-radius-md);
-  overflow: hidden;
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.btn-materia:hover {
+  background-color: var(--color-primary-xtra-light);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-sm);
 }
 
-.home-info-section__image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  /* Evita espaço extra abaixo da imagem */
-  transition: transform var(--transition-smooth);
+/* Seção do Desafio Geral */
+.home__desafio {
+  border-top: 1px solid var(--color-border-light);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
 }
-
-.home-info-section:hover .home-info-section__image {
-  transform: scale(1.06);
-}
-
-.home-info-section__description {
+.home__desafio h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--color-text-subtle);
   text-align: center;
-  /* Centraliza texto no mobile */
+}
+
+/* Botão "Todas as Matérias" (estilo de botão primário) */
+.btn-desafio {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-desafio:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.02);
+}
+
+/* Quantidade de perguntas */
+.home__aside--quantidade ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
+}
+.quantidade-item {
+  padding: 0.8rem;
+  background-color: var(--color-background-element);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.quantidade-item:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-xtra-light);
+}
+.quantidade-item.active {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-focus-ring);
+  transform: scale(1.05);
 }
 
-.home-info-section__description h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(2.1rem, 3.5vw, 2.5rem);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.3;
+/* Informações e motivação */
+.home__aside--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.home__image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--border-radius-md);
+}
+.home__text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-subtle);
 }
 
-.home-info-section__description p {
-  font-size: clamp(1.5rem, 2.2vw, 1.7rem);
-  line-height: 1.75;
+/* Botão perfil (estilo do botão de desafio) */
+.btn-perfil {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 1rem 1.7rem;
+  font-size: 1.08rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-perfil:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.03);
 }
 
-/* Botão de ação dentro da seção de info usa estilos de botão globais */
-.home-info-section__action-button.button--primary {
-  margin-top: var(--space-md);
-  padding: var(--space-md) var(--space-xl);
-  font-size: clamp(1.6rem, 2.6vw, 1.7rem);
-}
-
-
-/* ======== RESPONSIVIDADE DA PÁGINA HOME ======== */
-@media (min-width: 768px) {
-
-  /* Tablet e desktops pequenos */
-  .home-main {
-    padding: var(--space-xl) var(--space-lg);
-    /* Mais padding em telas maiores */
-  }
-
-  .home-layout {
-    flex-direction: row;
-    /* Layout lado a lado */
-    align-items: flex-start;
-    /* Alinha itens ao topo se tiverem alturas diferentes */
-    gap: var(--space-xl);
-    /* Gap maior para layout em linha */
-  }
-
-  .home-aside--materias {
-    flex: 0 0 300px;
-    /* Largura fixa para o aside de matérias */
-    max-width: 300px;
-  }
-
-  .teste {
-    /* Esta div envolve home-aside--quantidade e home-info-section */
-    flex: 1;
-    /* Ocupa o espaço restante */
-    display: flex;
+/* --- RESPONSIVIDADE (mantida para a estrutura da Home) --- */
+@media (max-width: 1100px) {
+  .home__container {
     flex-direction: column;
-    /* Mantém a pilha vertical de quantidade e info */
-    gap: var(--space-lg);
+    align-items: center;
   }
-
-  /* .home-aside--quantidade e .home-info-section continuarão empilhados dentro de .teste.
-     Se você quiser que .home-aside--quantidade e .home-info-section fiquem lado a lado DENTRO de .teste:
-    .teste {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-    .home-aside--quantidade {
-      flex: 0 0 200px; // Largura de exemplo
-    }
-    .home-info-section {
-      flex: 1;
-    }
-  */
-
-  .home-aside__subject-list {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  }
-
-  .home-info-section {
-    flex-direction: row;
-    /* Imagem ao lado do texto */
-    text-align: left;
-    /* Alinha texto à esquerda */
-    padding: var(--space-xl);
-  }
-
-  .home-info-section__image-container {
-    flex: 0 0 clamp(250px, 40%, 350px);
-    /* Largura da imagem flexível */
-    max-width: 350px;
-  }
-
-  .home-info-section__description {
-    flex: 1;
-    text-align: left;
-  }
-
-  .home-info-section__description p {
-    font-size: 1.7rem;
-    /* Tamanho de fonte estático um pouco maior para desktop */
-    color: var(--color-text-primary);
-    /* Texto um pouco mais escuro para melhor leitura */
+  .home__aside {
+    width: 100%;
+    max-width: 600px;
   }
 }
 
-@media (min-width: 992px) {
-
-  /* Desktops médios */
-  .home-aside--materias {
-    flex: 0 0 320px;
-    /* Aside de matérias um pouco mais largo */
-    max-width: 320px;
+@media (max-width: 768px) {
+  .home {
+    padding: var(--space-lg) var(--space-sm);
   }
-
-  .home-aside__title {
-    font-size: 2.2rem;
+  .home__title {
+    font-size: 2rem;
   }
-
-  .home-info-section__description h2 {
-    font-size: 2.6rem;
+  .home__aside {
+    padding: var(--space-lg);
   }
-}
-
-@media (min-width: 1200px) {
-
-  /* Desktops grandes */
-  .home-aside--materias {
-    flex: 0 0 350px;
-    /* Ainda mais largo */
-    max-width: 350px;
-  }
-
-  /* Se você quiser um layout de 3 colunas em telas muito grandes para
-     home-aside--materias, home-aside--quantidade, e home-info-section: */
-  /*
-  .home-layout {
-    display: grid;
-    grid-template-columns: 350px auto 1fr; // Exemplo de configuração de colunas
-    gap: var(--space-xl);
-  }
-  .home-aside--materias { // Agora um item do grid
-    max-width: none; // Reseta max-width se for um item do grid
-  }
-  .teste { // Este wrapper pode não ser necessário, ou seus filhos se tornam itens do grid
-    display: contents; // Ou ajuste .teste para ser um item do grid
-  }
-  .home-aside--quantidade {
-    // estilos para esta coluna
-  }
-  .home-info-section {
-    // estilos para esta coluna
-  }
-  */
 }
