@@ -53,6 +53,9 @@ export default function Quiz() {
 
   useEffect(() => {
     const buscarPerguntas = async () => {
+
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
       if (!quantidade || quantidade <= 0) {
         setErro("Quantidade de perguntas inválida.");
         setCarregando(false);
@@ -63,7 +66,7 @@ export default function Quiz() {
         setCarregando(true);
         setErro(null);
         
-        let apiUrl = `http://localhost:3000/api/perguntas?quantidade=${quantidade}`;
+        let apiUrl = `${API_BASE_URL}/perguntas?quantidade=${quantidade}`;
         if (materiaParam) {
           apiUrl += `&materia=${materiaParam}`;
         }
@@ -105,7 +108,7 @@ export default function Quiz() {
         try {
           const user = auth.currentUser;
           if (user) {
-            const response = await fetch("http://localhost:3000/api/resultados", {
+            const response = await fetch(`${API_BASE_URL}/resultados`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
