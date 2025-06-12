@@ -12,10 +12,6 @@ import PrivateRoute from "./pages/PrivateRoute";
 
 import "./App.css";
 
-import PrivateRoute from "./pages/PrivateRoute";
-
-import "./App.css";
-
 function App() {
   return (
     <Router>
