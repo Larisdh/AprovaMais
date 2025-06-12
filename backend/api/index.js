@@ -1,3 +1,5 @@
+// C:\AprovaMais-1\backend\api\index.js - VERSÃO FINAL E CORRIGIDA
+
 const express = require("express");
 const cors = require("cors");
 const admin = require("firebase-admin");
