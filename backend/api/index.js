@@ -9,12 +9,15 @@ const admin = require("firebase-admin");
 // Inicialização do Express App
 // -----------------------------------------------------------------------------
 const app = express();
-app.use(cors({origin: process.env.FRONTEND_URL_DEPLOYED || "*"})); // Habilita CORS para todas as rotas
+app.use(cors({ origin: process.env.FRONTEND_URL_DEPLOYED || "*" })); // Habilita CORS para todas as rotas
 app.use(express.json()); // Middleware para parsear JSON no corpo das requisições
 
 // -----------------------------------------------------------------------------
 // Inicialização do Firebase Admin SDK
 // -----------------------------------------------------------------------------
+let db; // Declara db fora do bloco try para que seja acessível globalmente
+let adminInitialized = false; // Flag para controlar se o Firebase Admin SDK foi inicializado
+
 try {
   // Parse a variável de ambiente que contém o JSON da chave de serviço
   const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
@@ -22,13 +25,26 @@ try {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
   });
+  db = admin.firestore(); // Atribui a instância do Firestore após a inicialização
+  adminInitialized = true; // Marca como inicializado com sucesso
   console.log("✔️ Firebase Admin SDK inicializado com sucesso.");
 } catch (error) {
   console.error("❌ Erro ao inicializar Firebase Admin SDK. Verifique a variável de ambiente FIREBASE_SERVICE_ACCOUNT_KEY.", error);
-  process.exit(1);
+  // Não chame process.exit(1) aqui.
+  // Em vez disso, a flag `adminInitialized` será `false`,
+  // e as rotas verificarão essa flag.
 }
 
-const db = admin.firestore(); // Instância do Firestore
+// -----------------------------------------------------------------------------
+// Middleware para verificar a inicialização do Firebase
+// -----------------------------------------------------------------------------
+const checkFirebaseInitialized = (req, res, next) => {
+  if (!adminInitialized || !db) {
+    console.error(`[${req.method} ${req.path}] Firebase Admin SDK não inicializado. Não é possível processar a requisição.`);
+    return res.status(500).json({ error: "Erro interno no servidor: Serviço de banco de dados não configurado." });
+  }
+  next();
+};
 
 // -----------------------------------------------------------------------------
 // Rotas da API
@@ -37,10 +53,10 @@ const db = admin.firestore(); // Instância do Firestore
 /**
  * Rota para obter perguntas filtradas por matéria e quantidade.
  * Query Params:
- *  - materia (string, opcional): Filtra perguntas pela matéria especificada.
- *  - quantidade (number, opcional): Limita o número de perguntas retornadas (e as embaralha).
+ * - materia (string, opcional): Filtra perguntas pela matéria especificada.
+ * - quantidade (number, opcional): Limita o número de perguntas retornadas (e as embaralha).
  */
-app.get("/api/perguntas", async (req, res) => {
+app.get("/api/perguntas", checkFirebaseInitialized, async (req, res) => {
   console.log(`[GET /api/perguntas] Recebida requisição com query:`, req.query);
   try {
     const { materia, quantidade } = req.query;
@@ -87,12 +103,12 @@ app.get("/api/perguntas", async (req, res) => {
 /**
  * Rota para salvar o resultado de um quiz e atualizar estatísticas do usuário.
  * Corpo da Requisição (JSON):
- *  - userId (string, obrigatório): ID do usuário do Firebase Auth.
- *  - acertos (number, obrigatório): Número de acertos no quiz.
- *  - total (number, obrigatório): Número total de perguntas no quiz.
- *  - materia (string, opcional): Matéria do quiz (default: "Geral").
+ * - userId (string, obrigatório): ID do usuário do Firebase Auth.
+ * - acertos (number, obrigatório): Número de acertos no quiz.
+ * - total (number, obrigatório): Número total de perguntas no quiz.
+ * - materia (string, opcional): Matéria do quiz (default: "Geral").
  */
-app.post("/api/resultados", async (req, res) => {
+app.post("/api/resultados", checkFirebaseInitialized, async (req, res) => {
   console.log(`[POST /api/resultados] Recebida requisição com corpo:`, req.body);
   try {
     const { userId, acertos, total, materia } = req.body;
@@ -176,7 +192,7 @@ app.post("/api/resultados", async (req, res) => {
  * Busca dados da coleção 'estatisticas'.
  * Retorna os top 10 usuários por total de acertos.
  */
-app.get("/api/ranking", async (req, res) => {
+app.get("/api/ranking", checkFirebaseInitialized, async (req, res) => {
   console.log(`[GET /api/ranking] Recebida requisição.`);
   try {
     const snapshot = await db.collection("estatisticas")
@@ -211,16 +227,19 @@ app.get("/api/ranking", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json({ status: "Servidor rodando e pronto para receber requisições!" });
+  res.json({ status: "Servidor rodando e pronto para receber requisições!", firebaseInitialized: adminInitialized });
 });
 
-
 // -----------------------------------------------------------------------------
-// Inicialização do Servidor
+// Exportar o app para a Vercel
 // -----------------------------------------------------------------------------
+// As linhas abaixo são comentadas porque a Vercel espera que você exporte o app
+// diretamente como um módulo, e ela gerencia a inicialização do servidor.
 // const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => {
 //   console.log(`🚀 Servidor rodando na porta ${PORT}!`);
 //   console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
 //   console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
 // });
+
+module.exports = app;
