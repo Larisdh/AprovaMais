@@ -1,11 +1,10 @@
-// src/pages/Quiz.jsx
+// C:\AprovaMais-1\frontend\src\pages\Quiz.jsx - NENHUMA ALTERAÇÃO NECESSÁRIA
 
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import "./css/Quiz.css";
 
-// Mapeamento dos nomes das matérias para exibição formatada
 const nomesMateriasFormatados = {
   historia: "História",
   filosofia: "Filosofia",
@@ -18,10 +17,8 @@ const nomesMateriasFormatados = {
   portugues: "Português",
   ingles: "Inglês",
   espanhol: "Espanhol",
-  // Adicione mais matérias aqui conforme necessário
 };
 
-// Função para obter o nome formatado da matéria
 const getNomeMateriaFormatado = (materiaKey) => {
   if (!materiaKey) return "Geral";
   return nomesMateriasFormatados[materiaKey.toLowerCase()] || 
@@ -54,7 +51,7 @@ export default function Quiz() {
   useEffect(() => {
     const buscarPerguntas = async () => {
 
-      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
       if (!quantidade || quantidade <= 0) {
         setErro("Quantidade de perguntas inválida.");
@@ -66,7 +63,7 @@ export default function Quiz() {
         setCarregando(true);
         setErro(null);
         
-        let apiUrl = `${API_BASE_URL}/perguntas?quantidade=${quantidade}`;
+        let apiUrl = `${API_BASE_URL}/api/perguntas?quantidade=${quantidade}`;
         if (materiaParam) {
           apiUrl += `&materia=${materiaParam}`;
         }
@@ -81,8 +78,6 @@ export default function Quiz() {
         }
         const data = await response.json();
         if (data.length === 0) {
-          // Usar getNomeMateriaFormatado diretamente aqui para a mensagem de erro,
-          // já que nomeMateriaExibicao não está mais na dependência deste useEffect.
           const materiaNomeErro = getNomeMateriaFormatado(materiaParam);
           setErro(`Nenhuma pergunta encontrada para "${materiaNomeErro}". Tente outra configuração.`);
         } else {
@@ -97,18 +92,16 @@ export default function Quiz() {
     };
 
     buscarPerguntas();
-  // *** MUDANÇA AQUI: Removido nomeMateriaExibicao do array de dependências ***
   }, [materiaParam, quantidade]); 
-
-  // ... (resto do código permanece o mesmo) ...
 
   useEffect(() => {
     const salvarResultadoNoBackend = async () => {
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
       if (quizFinalizado && resultadoFinal !== null && perguntas.length > 0) {
         try {
           const user = auth.currentUser;
           if (user) {
-            const response = await fetch(`${API_BASE_URL}/resultados`, {
+            const response = await fetch(`${API_BASE_URL}/api/resultados`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -180,7 +173,7 @@ export default function Quiz() {
   };
 
   const HeaderQuiz = ({ titleOverride }) => {
-    const quizTitle = `Quiz - ${nomeMateriaExibicao}`; // nomeMateriaExibicao é calculado fora do useEffect, está ok
+    const quizTitle = `Quiz - ${nomeMateriaExibicao}`;
     return (
       <header className="app-header quiz-custom-header">
         <Link to="/home" className="app-header-logo-link">
@@ -279,11 +272,10 @@ export default function Quiz() {
       <HeaderQuiz />
       <main className="quiz-main-content">
         <div 
-            key={perguntaAtual.key} // A key aqui deve ser estável por pergunta, não aleatória a cada render. A key adicionada no map de `data` já faz isso.
+            key={perguntaAtual.key}
             className={`quiz-card ${applyCardAnimation ? 'animate-card-enter' : ''}`}
         >
           <div className="quiz-question-text">
-            {/* Adiciona uma verificação para garantir que perguntaAtual.textos existe e é um array */}
             {perguntaAtual && perguntaAtual.textos && Array.isArray(perguntaAtual.textos) ? (
               perguntaAtual.textos.map((textoItem, idx) => (
                 <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
@@ -291,12 +283,11 @@ export default function Quiz() {
                 </p>
               ))
             ) : (
-              <p className="quiz-question-main-text">Carregando texto da pergunta...</p> // Ou alguma mensagem de erro/placeholder
+              <p className="quiz-question-main-text">Carregando texto da pergunta...</p>
             )}
           </div>
 
           <div className="quiz-options">
-            {/* Adiciona uma verificação para garantir que perguntaAtual.alternativas existe e é um array */}
             {perguntaAtual && perguntaAtual.alternativas && Array.isArray(perguntaAtual.alternativas) ? (
               perguntaAtual.alternativas.map((alt, i) => {
                 let buttonClass = "quiz-option-button";
@@ -323,7 +314,7 @@ export default function Quiz() {
                 );
               })
             ) : (
-              <p>Carregando alternativas...</p> // Ou alguma mensagem de erro/placeholder
+              <p>Carregando alternativas...</p>
             )}
           </div>
 

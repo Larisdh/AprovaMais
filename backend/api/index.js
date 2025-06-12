@@ -1,3 +1,5 @@
+// C:\AprovaMais-1\backend\api\index.js - VERSÃO CORRIGIDA
+
 // -----------------------------------------------------------------------------
 // Imports e Configurações Iniciais
 // -----------------------------------------------------------------------------
@@ -9,30 +11,25 @@ const admin = require("firebase-admin");
 // Inicialização do Express App
 // -----------------------------------------------------------------------------
 const app = express();
-app.use(cors({ origin: process.env.FRONTEND_URL_DEPLOYED || "*" })); // Habilita CORS para todas as rotas
-app.use(express.json()); // Middleware para parsear JSON no corpo das requisições
+app.use(cors({ origin: process.env.FRONTEND_URL_DEPLOYED || "*" }));
+app.use(express.json());
 
 // -----------------------------------------------------------------------------
 // Inicialização do Firebase Admin SDK
 // -----------------------------------------------------------------------------
-let db; // Declara db fora do bloco try para que seja acessível globalmente
-let adminInitialized = false; // Flag para controlar se o Firebase Admin SDK foi inicializado
+let db;
+let adminInitialized = false;
 
 try {
-  // Parse a variável de ambiente que contém o JSON da chave de serviço
   const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
-
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
   });
-  db = admin.firestore(); // Atribui a instância do Firestore após a inicialização
-  adminInitialized = true; // Marca como inicializado com sucesso
+  db = admin.firestore();
+  adminInitialized = true;
   console.log("✔️ Firebase Admin SDK inicializado com sucesso.");
 } catch (error) {
   console.error("❌ Erro ao inicializar Firebase Admin SDK. Verifique a variável de ambiente FIREBASE_SERVICE_ACCOUNT_KEY.", error);
-  // Não chame process.exit(1) aqui.
-  // Em vez disso, a flag `adminInitialized` será `false`,
-  // e as rotas verificarão essa flag.
 }
 
 // -----------------------------------------------------------------------------
@@ -50,27 +47,26 @@ const checkFirebaseInitialized = (req, res, next) => {
 // Rotas da API
 // -----------------------------------------------------------------------------
 
-/**
- * Rota para obter perguntas filtradas por matéria e quantidade.
- * Query Params:
- * - materia (string, opcional): Filtra perguntas pela matéria especificada.
- * - quantidade (number, opcional): Limita o número de perguntas retornadas (e as embaralha).
- */
 app.get("/api/perguntas", checkFirebaseInitialized, async (req, res) => {
   console.log(`[GET /api/perguntas] Recebida requisição com query:`, req.query);
   try {
-    const { materia, quantidade } = req.query;
+    // Usamos 'let' para poder modificar a variável 'materia'
+    let { materia, quantidade } = req.query;
 
     let query = db.collection("perguntas");
     if (materia) {
-      console.log(`[GET /api/perguntas] Filtrando por matéria: ${materia}`);
+      // <<< CORREÇÃO AQUI >>>
+      // Decodifica o parâmetro para lidar com acentos (ex: "Matem%C3%A1tica" vira "Matemática")
+      materia = decodeURIComponent(materia);
+      
+      console.log(`[GET /api/perguntas] Filtrando por matéria (decodificada): ${materia}`);
       query = query.where("materia", "==", materia);
     }
 
     const snapshot = await query.get();
     if (snapshot.empty) {
       console.log(`[GET /api/perguntas] Nenhuma pergunta encontrada para os critérios.`);
-      return res.json([]); // Retorna array vazio se não encontrar nada
+      return res.json([]);
     }
 
     let perguntas = snapshot.docs.map((doc) => {
@@ -100,14 +96,6 @@ app.get("/api/perguntas", checkFirebaseInitialized, async (req, res) => {
   }
 });
 
-/**
- * Rota para salvar o resultado de um quiz e atualizar estatísticas do usuário.
- * Corpo da Requisição (JSON):
- * - userId (string, obrigatório): ID do usuário do Firebase Auth.
- * - acertos (number, obrigatório): Número de acertos no quiz.
- * - total (number, obrigatório): Número total de perguntas no quiz.
- * - materia (string, opcional): Matéria do quiz (default: "Geral").
- */
 app.post("/api/resultados", checkFirebaseInitialized, async (req, res) => {
   console.log(`[POST /api/resultados] Recebida requisição com corpo:`, req.body);
   try {
@@ -133,7 +121,7 @@ app.post("/api/resultados", checkFirebaseInitialized, async (req, res) => {
       userId,
       acertos,
       total,
-      percentual: parseFloat(percentual.toFixed(2)), // Armazena com 2 casas decimais
+      percentual: parseFloat(percentual.toFixed(2)),
       materia: materiaQuiz,
       dataHora: admin.firestore.FieldValue.serverTimestamp(),
     };
@@ -141,7 +129,6 @@ app.post("/api/resultados", checkFirebaseInitialized, async (req, res) => {
     const resultadoRef = await db.collection("resultados").add(resultado);
     console.log(`[POST /api/resultados] Resultado salvo na coleção 'resultados' com ID: ${resultadoRef.id}`);
 
-    // Atualizar ou criar estatísticas na coleção 'estatisticas'
     const userStatsRef = db.collection("estatisticas").doc(userId);
     const userStatsDoc = await userStatsRef.get();
     const nomeUsuario = userSnapshot.displayName || userSnapshot.email || "Usuário Anônimo";
@@ -159,8 +146,8 @@ app.post("/api/resultados", checkFirebaseInitialized, async (req, res) => {
         totalAcertos: (dadosAtuais.totalAcertos || 0) + acertos,
         totalPerguntas: (dadosAtuais.totalPerguntas || 0) + total,
         ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
-        nome: dadosAtuais.nome || nomeUsuario, // Atualiza nome se não existir
-        email: dadosAtuais.email || userSnapshot.email, // Atualiza email se não existir
+        nome: dadosAtuais.nome || nomeUsuario,
+        email: dadosAtuais.email || userSnapshot.email,
       };
       await userStatsRef.update(novasEstatisticas);
       console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} atualizadas.`);
@@ -187,11 +174,6 @@ app.post("/api/resultados", checkFirebaseInitialized, async (req, res) => {
   }
 });
 
-/**
- * Rota para obter o ranking geral dos usuários.
- * Busca dados da coleção 'estatisticas'.
- * Retorna os top 10 usuários por total de acertos.
- */
 app.get("/api/ranking", checkFirebaseInitialized, async (req, res) => {
   console.log(`[GET /api/ranking] Recebida requisição.`);
   try {
@@ -211,7 +193,7 @@ app.get("/api/ranking", checkFirebaseInitialized, async (req, res) => {
         ? parseFloat(((data.totalAcertos / data.totalPerguntas) * 100).toFixed(2))
         : 0;
       return {
-        id: doc.id, // ID do documento de estatística (que é o userId)
+        id: doc.id,
         nome: data.nome || "Usuário Anônimo",
         totalAcertos: data.totalAcertos || 0,
         totalPerguntas: data.totalPerguntas || 0,
