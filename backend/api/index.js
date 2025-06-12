@@ -230,16 +230,4 @@ app.get("/", (req, res) => {
   res.json({ status: "Servidor rodando e pronto para receber requisições!", firebaseInitialized: adminInitialized });
 });
 
-// -----------------------------------------------------------------------------
-// Exportar o app para a Vercel
-// -----------------------------------------------------------------------------
-// As linhas abaixo são comentadas porque a Vercel espera que você exporte o app
-// diretamente como um módulo, e ela gerencia a inicialização do servidor.
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`🚀 Servidor rodando na porta ${PORT}!`);
-//   console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
-//   console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
-// });
-
 module.exports = app;
