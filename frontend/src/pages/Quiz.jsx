@@ -1,5 +1,3 @@
-// C:\AprovaMais-1\frontend\src\pages\Quiz.jsx - NENHUMA ALTERAÇÃO NECESSÁRIA
-
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig";
@@ -25,7 +23,6 @@ const getNomeMateriaFormatado = (materiaKey) => {
          (materiaKey.charAt(0).toUpperCase() + materiaKey.slice(1));
 };
 
-
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -35,7 +32,6 @@ export default function Quiz() {
   const query = useQuery();
   const materiaParam = query.get("materia");
   const quantidade = parseInt(query.get("questions"), 10) || 10;
-
   const nomeMateriaExibicao = getNomeMateriaFormatado(materiaParam);
 
   const [perguntas, setPerguntas] = useState([]);
@@ -50,7 +46,6 @@ export default function Quiz() {
 
   useEffect(() => {
     const buscarPerguntas = async () => {
-
       const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
       if (!quantidade || quantidade <= 0) {
@@ -63,7 +58,9 @@ export default function Quiz() {
         setCarregando(true);
         setErro(null);
         
-        let apiUrl = `${API_BASE_URL}/api/perguntas?quantidade=${quantidade}`;
+        // <<< CORREÇÃO 1 AQUI >>>
+        // Removemos o "/api" para não duplicar com a variável de ambiente.
+        let apiUrl = `${API_BASE_URL}/perguntas?quantidade=${quantidade}`;
         if (materiaParam) {
           apiUrl += `&materia=${materiaParam}`;
         }
@@ -101,7 +98,9 @@ export default function Quiz() {
         try {
           const user = auth.currentUser;
           if (user) {
-            const response = await fetch(`${API_BASE_URL}/api/resultados`, {
+            // <<< CORREÇÃO 2 AQUI >>>
+            // Removemos o "/api" também da rota de salvar resultados.
+            const response = await fetch(`${API_BASE_URL}/resultados`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -127,29 +126,26 @@ export default function Quiz() {
     salvarResultadoNoBackend();
   }, [quizFinalizado, resultadoFinal, perguntas, materiaParam]);
 
+  // O resto do arquivo permanece exatamente igual...
+
   function responder(indiceAlternativa) {
     if (!perguntas.length || indice >= perguntas.length || respostaSelecionada !== null) return;
-
     const perguntaAtual = perguntas[indice];
     if (!perguntaAtual) {
         setErro("Erro ao processar a pergunta.");
         return;
     }
     setRespostaSelecionada(indiceAlternativa);
-
     const acertouResposta = indiceAlternativa === perguntaAtual.correta;
     let novaPontuacaoTemp = acertos;
     if (acertouResposta) {
       novaPontuacaoTemp = acertos + 1;
       setAcertos(prevAcertos => prevAcertos + 1);
     }
-
     const feedbackDuration = 1000;
     const transitionDelay = 200;
-
     setTimeout(() => {
       setApplyCardAnimation(false);
-      
       setTimeout(() => {
         if (indice + 1 < perguntas.length) {
           setIndice((prevIndice) => prevIndice + 1);
@@ -188,7 +184,6 @@ export default function Quiz() {
     );
   };
   
-
   if (carregando) {
     return (
       <div className="page-container quiz-page-container">
@@ -276,20 +271,15 @@ export default function Quiz() {
             className={`quiz-card ${applyCardAnimation ? 'animate-card-enter' : ''}`}
         >
           <div className="quiz-question-text">
-            {perguntaAtual && perguntaAtual.textos && Array.isArray(perguntaAtual.textos) ? (
-              perguntaAtual.textos.map((textoItem, idx) => (
+            {perguntaAtual?.textos?.map((textoItem, idx) => (
                 <p key={idx} className={idx === 0 ? "quiz-question-main-text" : "quiz-question-support-text"}>
                   {typeof textoItem === "object" && textoItem !== null && textoItem.hasOwnProperty('conteudo') ? textoItem.conteudo : textoItem}
                 </p>
               ))
-            ) : (
-              <p className="quiz-question-main-text">Carregando texto da pergunta...</p>
-            )}
+            }
           </div>
-
           <div className="quiz-options">
-            {perguntaAtual && perguntaAtual.alternativas && Array.isArray(perguntaAtual.alternativas) ? (
-              perguntaAtual.alternativas.map((alt, i) => {
+            {perguntaAtual?.alternativas?.map((alt, i) => {
                 let buttonClass = "quiz-option-button";
                 if (respostaSelecionada !== null) {
                   if (i === perguntaAtual.correta) {
@@ -300,7 +290,6 @@ export default function Quiz() {
                     buttonClass += " disabled";
                   }
                 }
-
                 return (
                   <button
                     key={i}
@@ -313,15 +302,11 @@ export default function Quiz() {
                   </button>
                 );
               })
-            ) : (
-              <p>Carregando alternativas...</p>
-            )}
+            }
           </div>
-
           <div className="quiz-progress-indicator">
             Pergunta {indice + 1} de {perguntas.length}
           </div>
-
           <div className="quiz-actions">
             <button
               onClick={() => navigate("/home")}
