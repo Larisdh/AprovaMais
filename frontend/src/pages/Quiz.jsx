@@ -8,7 +8,7 @@ const nomesMateriasFormatados = {
   filosofia: "Filosofia",
   sociologia: "Sociologia",
   geografia: "Geografia",
-  matematica: "Matemática",
+  matematica: "Matematica",
   fisica: "Física",
   quimica: "Química",
   biologia: "Biologia",
@@ -31,6 +31,7 @@ export default function Quiz() {
   const navigate = useNavigate();
   const query = useQuery();
   const materiaParam = query.get("materia");
+  
   const quantidade = parseInt(query.get("questions"), 10) || 10;
   const nomeMateriaExibicao = getNomeMateriaFormatado(materiaParam);
 
@@ -62,7 +63,9 @@ export default function Quiz() {
         // Removemos o "/api" para não duplicar com a variável de ambiente.
         let apiUrl = `${API_BASE_URL}/perguntas?quantidade=${quantidade}`;
         if (materiaParam) {
+         
           apiUrl += `&materia=${materiaParam}`;
+          console.log(apiUrl);
         }
 
         const response = await fetch(apiUrl);
