@@ -8,7 +8,7 @@ const nomesMateriasFormatados = {
   filosofia: "Filosofia",
   sociologia: "Sociologia",
   geografia: "Geografia",
-  matematica: "Matemática",
+  "matem%C3%A1tica": "Matemática",
   fisica: "Física",
   quimica: "Química",
   biologia: "Biologia",
