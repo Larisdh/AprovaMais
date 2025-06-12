@@ -1,5 +1,5 @@
 // src/services/quizService.js
-const API_URL = "http://localhost:3000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
 /**
  * Salva a pontuação do usuário no servidor (OBS: Esta função se torna redundante
@@ -10,7 +10,7 @@ const API_URL = "http://localhost:3000/api";
  */
 export const saveScore = async (user, pontos) => {
   try {
-    const response = await fetch(`${API_URL}/scores`, { // Esta rota foi removida do server.js refatorado
+    const response = await fetch(`${API_BASE_URL}/scores`, { // Esta rota foi removida do server.js refatorado
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export const saveScore = async (user, pontos) => {
 export const fetchRanking = async () => {
   try {
     console.log("[quizService] Solicitando /api/ranking...");
-    const response = await fetch(`${API_URL}/ranking`); // ✅ ALTERADO PARA /api/ranking
+    const response = await fetch(`${API_BASE_URL}/ranking`); // ✅ ALTERADO PARA /api/ranking
     
     if (!response.ok) {
       const errorBody = await response.text(); // Pegar o corpo do erro como texto
