@@ -9,7 +9,7 @@ const admin = require("firebase-admin");
 // Inicialização do Express App
 // -----------------------------------------------------------------------------
 const app = express();
-app.use(cors()); // Habilita CORS para todas as rotas
+app.use(cors({origin: process.env.FRONTEND_URL_DEPLOYED || "*"})); // Habilita CORS para todas as rotas
 app.use(express.json()); // Middleware para parsear JSON no corpo das requisições
 
 // -----------------------------------------------------------------------------
@@ -209,6 +209,11 @@ app.get("/api/ranking", async (req, res) => {
     res.status(500).json({ error: "Erro interno no servidor ao buscar ranking." });
   }
 });
+
+app.get("/", (req, res) => {
+  res.json({ status: "Servidor rodando e pronto para receber requisições!" });
+});
+
 
 // -----------------------------------------------------------------------------
 // Inicialização do Servidor
