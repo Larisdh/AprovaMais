@@ -54,22 +54,22 @@ app.get("/api", (req, res) => {
 });
 
 // --- Rota de Perguntas ---
-app.get("/api/perguntas", async (req, res) => {
+app.get("/perguntas", async (req, res) => {
   if (!db) return res.status(500).json({ error: "Erro interno: BD não configurado." });
-  console.log(`[GET /api/perguntas] Query recebida:`, req.query);
+  console.log(`[GET /perguntas] Query recebida:`, req.query);
   try {
     let { materia, quantidade } = req.query;
     let query = db.collection("perguntas");
 
     if (materia) {
       const materiaParaBusca = decodeURIComponent(materia).toLowerCase();
-      console.log(`[GET /api/perguntas] Filtrando por matéria (padronizada): ${materiaParaBusca}`);
+      console.log(`[GET /perguntas] Filtrando por matéria (padronizada): ${materiaParaBusca}`);
       query = query.where("materia", "==", materiaParaBusca);
     }
 
     const snapshot = await query.get();
     if (snapshot.empty) {
-      console.log(`[GET /api/perguntas] Nenhuma pergunta encontrada.`);
+      console.log(`[GET /perguntas] Nenhuma pergunta encontrada.`);
       return res.json([]);
     }
 
@@ -81,7 +81,7 @@ app.get("/api/perguntas", async (req, res) => {
     }
     res.json(perguntas);
   } catch (error) {
-    console.error("[GET /api/perguntas] Erro ao buscar perguntas:", error);
+    console.error("[GET /perguntas] Erro ao buscar perguntas:", error);
     res.status(500).json({ error: "Erro interno ao buscar perguntas." });
   }
 });
@@ -89,9 +89,9 @@ app.get("/api/perguntas", async (req, res) => {
 
 // --- Rota para Salvar Resultados ---
 // Lógica copiada do seu server.js anterior
-app.post("/api/resultados", async (req, res) => {
+app.post("/resultados", async (req, res) => {
   if (!db) return res.status(500).json({ error: "Erro interno: BD não configurado." });
-  console.log(`[POST /api/resultados] Recebida requisição com corpo:`, req.body);
+  console.log(`[POST /resultados] Recebida requisição com corpo:`, req.body);
   try {
     const { userId, acertos, total, materia } = req.body;
     if (!userId || acertos === undefined || total === undefined || total <= 0) {
@@ -126,7 +126,7 @@ app.post("/api/resultados", async (req, res) => {
 
     res.status(201).json({ message: "Resultado salvo com sucesso!" });
   } catch (error) {
-    console.error("[POST /api/resultados] Erro ao salvar resultado:", error);
+    console.error("[POST /resultados] Erro ao salvar resultado:", error);
     if(error.code === 'auth/user-not-found') {
         return res.status(404).json({ error: "Usuário não encontrado." });
     }
@@ -137,9 +137,9 @@ app.post("/api/resultados", async (req, res) => {
 
 // --- Rota do Ranking ---
 // Lógica copiada do seu server.js anterior
-app.get("/api/ranking", async (req, res) => {
+app.get("/ranking", async (req, res) => {
   if (!db) return res.status(500).json({ error: "Erro interno: BD não configurado." });
-  console.log(`[GET /api/ranking] Recebida requisição.`);
+  console.log(`[GET /ranking] Recebida requisição.`);
   try {
     const snapshot = await db.collection("estatisticas")
       .orderBy("totalAcertos", "desc")
@@ -163,7 +163,7 @@ app.get("/api/ranking", async (req, res) => {
     });
     res.json(ranking);
   } catch (error) {
-    console.error("[GET /api/ranking] Erro ao buscar ranking:", error);
+    console.error("[GET /ranking] Erro ao buscar ranking:", error);
     res.status(500).json({ error: "Erro interno ao buscar ranking." });
   }
 });
