@@ -4,16 +4,16 @@ import { auth } from "../firebaseConfig";
 import "./css/Quiz.css";
 
 const nomesMateriasFormatados = {
-  historia: "História",
+  historia: "Historia",
   filosofia: "Filosofia",
   sociologia: "Sociologia",
   geografia: "Geografia",
   matematica: "Matematica",
-  fisica: "Física",
-  quimica: "Química",
+  fisica: "Fisica",
+  quimica: "Quimica",
   biologia: "Biologia",
-  portugues: "Português",
-  ingles: "Inglês",
+  portugues: "Portugues",
+  ingles: "Ingles",
   espanhol: "Espanhol",
 };
 
