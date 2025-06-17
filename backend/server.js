@@ -220,9 +220,9 @@ app.get("/api/ranking", async (req, res) => {
 // -----------------------------------------------------------------------------
 // Inicialização do Servidor
 // -----------------------------------------------------------------------------
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`🚀 Servidor rodando na porta ${PORT}!`);
-//   console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
-//   console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
-// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT}!`);
+  console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
+  console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
+});
