@@ -1,41 +1,73 @@
 // src/services/quizService.js
 
-// Esta variável deve conter APENAS a base da URL, sem /api.
-// Exemplo correto na Vercel: https://aprova-mais-backend.vercel.app
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api";
+// ❗ IMPORTANTE: Sua variável de ambiente VITE_API_BASE_URL no projeto frontend (na Vercel e no .env.local)
+// deve ser apenas a URL base do backend, sem barras no final.
+// Exemplo: VITE_API_BASE_URL=https://aprova-mais-backend.vercel.app
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-export const saveScore = async (user, pontos) => {
+/**
+ * Busca uma lista de perguntas com base na matéria e quantidade.
+ * @param {string | null} materia - A matéria para filtrar as perguntas.
+ * @param {number} quantidade - O número de perguntas a serem retornadas.
+ * @returns {Promise<Array>}
+ */
+export const fetchPerguntas = async (materia, quantidade) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/scores`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ user, pontos }),
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ message: "Falha ao salvar pontuação"}));
-      console.error("Erro ao salvar pontuação:", response.status, errorData);
-      throw new Error(errorData.error || errorData.message || `Falha ao salvar pontuação (status: ${response.status})`);
+    // ✅ CORREÇÃO: Construímos a URL com o prefixo /api/ obrigatório.
+    let url = `${API_BASE_URL}/api/perguntas?quantidade=${quantidade}`;
+    if (materia) {
+      url += `&materia=${encodeURIComponent(materia)}`;
     }
 
-    return await response.json();
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.error || `Falha ao buscar perguntas (status: ${response.status})`);
+    }
+    return response.json();
   } catch (error) {
-    console.error("Erro em saveScore:", error);
-    throw error;
+    console.error("Erro em fetchPerguntas:", error);
+    throw error; // Re-lança o erro para ser tratado no componente.
   }
 };
 
 /**
- * Busca o ranking dos melhores jogadores.
- * @returns {Promise<Array>} - Promise com a lista de ranking
+ * Salva o resultado de um quiz para um usuário.
+ * @param {object} resultadoData - Objeto com { userId, acertos, total, materia }.
+ * @returns {Promise<object>}
+ */
+export const saveResultado = async (resultadoData) => {
+  try {
+    // ✅ CORREÇÃO: Rota corrigida para /api/resultados.
+    const response = await fetch(`${API_BASE_URL}/api/resultados`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(resultadoData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.error || `Falha ao salvar resultado (status: ${response.status})`);
+    }
+    return response.json();
+  } catch (error) {
+    console.error("Erro em saveResultado:", error);
+    throw error;
+  }
+};
+
+
+/**
+ * Busca o ranking geral dos melhores jogadores.
+ * @returns {Promise<Array>}
  */
 export const fetchRanking = async () => {
   try {
-    console.log("[quizService] Solicitando ranking...");
-    // CORREÇÃO: Adicionado /api/ para construir a URL correta e evitar a duplicação.
-    const response = await fetch(`${API_BASE_URL}/ranking`); // <-- CORREÇÃO PRINCIPAL
+    // ✅ CORREÇÃO: Rota corrigida para /api/ranking.
+    const response = await fetch(`${API_BASE_URL}/api/ranking`);
     
     if (!response.ok) {
       const errorBody = await response.text();
@@ -43,17 +75,14 @@ export const fetchRanking = async () => {
       try {
         errorJson = JSON.parse(errorBody);
       } catch (e) {
-        console.error("Erro na API de Ranking (não JSON):", response.status, errorBody);
         throw new Error(`Falha ao buscar ranking (status: ${response.status}) - ${errorBody.substring(0, 100)}`);
       }
-      console.error("Erro na resposta da API de Ranking:", response.status, errorJson);
       throw new Error(errorJson.error || `Falha ao buscar ranking (status: ${response.status})`);
     }
     const data = await response.json();
-    console.log("[quizService] Ranking recebido:", data);
     return data;
   } catch (error) {
     console.error("Erro em fetchRanking:", error.message);
-    throw error; // Re-lança o erro para ser pego pelo componente Ranking.jsx
+    throw error; 
   }
 };

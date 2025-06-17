@@ -1,8 +1,14 @@
+// src/pages/Quiz.jsx
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import "./css/Quiz.css";
 
+// ✅ CORREÇÃO: Importamos os serviços centralizados.
+import { fetchPerguntas, saveResultado } from "../services/quizService";
+
+// ... (funções getNomeMateriaFormatado e useQuery permanecem iguais)
 const nomesMateriasFormatados = {
   historia: "História",
   filosofia: "Filosofia",
@@ -46,37 +52,19 @@ export default function Quiz() {
   const [applyCardAnimation, setApplyCardAnimation] = useState(false);
 
   useEffect(() => {
-    const buscarPerguntas = async () => {
-      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
-
+    const buscar = async () => {
       if (!quantidade || quantidade <= 0) {
         setErro("Quantidade de perguntas inválida.");
         setCarregando(false);
         return;
       }
-
       try {
         setCarregando(true);
         setErro(null);
         
-        // <<< CORREÇÃO 1 AQUI >>>
-        // Removemos o "/api" para não duplicar com a variável de ambiente.
-        let apiUrl = `${API_BASE_URL}/perguntas?quantidade=${quantidade}`;
-        if (materiaParam) {
-         
-          apiUrl += `&materia=${materiaParam}`;
-          console.log(apiUrl);
-        }
+        // ✅ CORREÇÃO: Usamos a função do serviço para buscar perguntas.
+        const data = await fetchPerguntas(materiaParam, quantidade);
 
-        const response = await fetch(apiUrl);
-
-        if (!response.ok) {
-          const errorBody = await response.text();
-          let errorJson = {};
-          try { errorJson = JSON.parse(errorBody); } catch (e) { /* ignore */ }
-          throw new Error(errorJson.error || `Falha ao buscar perguntas (status: ${response.status})`);
-        }
-        const data = await response.json();
         if (data.length === 0) {
           const materiaNomeErro = getNomeMateriaFormatado(materiaParam);
           setErro(`Nenhuma pergunta encontrada para "${materiaNomeErro}". Tente outra configuração.`);
@@ -90,46 +78,34 @@ export default function Quiz() {
         setCarregando(false);
       }
     };
-
-    buscarPerguntas();
+    buscar();
   }, [materiaParam, quantidade]); 
 
   useEffect(() => {
-    const salvarResultadoNoBackend = async () => {
-      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+    const salvar = async () => {
       if (quizFinalizado && resultadoFinal !== null && perguntas.length > 0) {
-        try {
-          const user = auth.currentUser;
-          if (user) {
-            // <<< CORREÇÃO 2 AQUI >>>
-            // Removemos o "/api" também da rota de salvar resultados.
-            const response = await fetch(`${API_BASE_URL}/resultados`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                userId: user.uid,
-                acertos: resultadoFinal,
-                total: perguntas.length,
-                materia: materiaParam || "Geral",
-              }),
+        const user = auth.currentUser;
+        if (user) {
+          try {
+            // ✅ CORREÇÃO: Usamos a função do serviço para salvar o resultado.
+            const data = await saveResultado({
+              userId: user.uid,
+              acertos: resultadoFinal,
+              total: perguntas.length,
+              materia: materiaParam || "Geral",
             });
-            if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                console.error("Erro ao salvar resultado:", response.status, errorData);
-            } else {
-                const successData = await response.json();
-                console.log("Resultado salvo:", successData);
-            }
+            console.log("Resultado salvo:", data.message);
+          } catch (error) {
+            console.error("Erro de rede ao salvar resultado:", error.message);
           }
-        } catch (error) {
-          console.error("Erro de rede ao salvar resultado:", error);
         }
       }
     };
-    salvarResultadoNoBackend();
+    salvar();
   }, [quizFinalizado, resultadoFinal, perguntas, materiaParam]);
 
-  // O resto do arquivo permanece exatamente igual...
+  // ... (O resto do arquivo, com as funções responder, reiniciarQuiz, e toda a parte de renderização, permanece EXATAMENTE IGUAL)
+  // ... (Cole o resto do seu código de Quiz.jsx aqui, pois ele já está correto)
 
   function responder(indiceAlternativa) {
     if (!perguntas.length || indice >= perguntas.length || respostaSelecionada !== null) return;
