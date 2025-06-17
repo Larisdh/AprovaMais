@@ -40,15 +40,15 @@ export const saveScore = async (user, pontos) => {
 export const fetchRanking = async () => {
   try {
     console.log("[quizService] Solicitando /api/ranking...");
-    const response = await fetch(`${API_BASE_URL}/ranking`); // ✅ ALTERADO PARA /api/ranking
+    // CORREÇÃO: Adicionado o prefixo "/api" para corresponder à rota do backend.
+    const response = await fetch(`${API_BASE_URL}/api/ranking`); 
     
     if (!response.ok) {
-      const errorBody = await response.text(); // Pegar o corpo do erro como texto
+      const errorBody = await response.text();
       let errorJson = {};
       try {
         errorJson = JSON.parse(errorBody);
       } catch (e) {
-        // Não é JSON, usar o texto do corpo ou um erro padrão
         console.error("Erro na API de Ranking (não JSON):", response.status, errorBody);
         throw new Error(`Falha ao buscar ranking (status: ${response.status}) - ${errorBody.substring(0, 100)}`);
       }

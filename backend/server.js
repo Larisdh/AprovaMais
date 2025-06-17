@@ -10,14 +10,39 @@ require("dotenv").config(); // Para carregar variáveis de ambiente (ex: PORT)
 // Inicialização do Express App
 // -----------------------------------------------------------------------------
 const app = express();
-app.use(cors()); // Habilita CORS para todas as rotas
+
+// CORREÇÃO E MELHORIA: Configuração de CORS mais segura
+// Define as origens que podem fazer requisições para esta API
+const allowedOrigins = [
+  'https://aprova-mais.vercel.app', // URL de produção do seu frontend
+  'http://localhost:5173',          // URL de desenvolvimento (ajuste se sua porta for outra, ex: 3000)
+  'http://localhost:3000'
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Permite requisições sem 'origin' (como Postman) ou se a origem está na lista permitida
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Acesso não permitido pela política de CORS'));
+    }
+  },
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions)); // Habilita CORS com as opções específicas
 app.use(express.json()); // Middleware para parsear JSON no corpo das requisições
 
 // -----------------------------------------------------------------------------
 // Inicialização do Firebase Admin SDK
 // -----------------------------------------------------------------------------
 try {
-  const serviceAccount = require("./firebase-key.json"); // ATENÇÃO: Mantenha este arquivo seguro!
+  // Para Vercel, é mais seguro usar variáveis de ambiente do que um arquivo .json
+  const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
+    ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
+    : require("./firebase-key.json");
+
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
   });
@@ -35,9 +60,6 @@ const db = admin.firestore(); // Instância do Firestore
 
 /**
  * Rota para obter perguntas filtradas por matéria e quantidade.
- * Query Params:
- *  - materia (string, opcional): Filtra perguntas pela matéria especificada.
- *  - quantidade (number, opcional): Limita o número de perguntas retornadas (e as embaralha).
  */
 app.get("/api/perguntas", async (req, res) => {
   console.log(`[GET /api/perguntas] Recebida requisição com query:`, req.query);
@@ -53,20 +75,13 @@ app.get("/api/perguntas", async (req, res) => {
     const snapshot = await query.get();
     if (snapshot.empty) {
       console.log(`[GET /api/perguntas] Nenhuma pergunta encontrada para os critérios.`);
-      return res.json([]); // Retorna array vazio se não encontrar nada
+      return res.json([]);
     }
 
-    let perguntas = snapshot.docs.map((doc) => {
-      const data = doc.data();
-      return {
-        id: doc.id,
-        textos: data.textos || [],
-        alternativas: data.alternativas || [],
-        correta: data.correta,
-        materia: data.materia || "",
-        explicacao: data.explicacao || "",
-      };
-    });
+    let perguntas = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
 
     console.log(`[GET /api/perguntas] ${perguntas.length} perguntas encontradas antes de limitar/embaralhar.`);
 
@@ -76,6 +91,7 @@ app.get("/api/perguntas", async (req, res) => {
       console.log(`[GET /api/perguntas] Retornando ${perguntas.length} perguntas após limitar para ${numQuantidade}.`);
     }
 
+// ... continuação do código anterior ...
     res.json(perguntas);
   } catch (error) {
     console.error("[GET /api/perguntas] Erro ao buscar perguntas:", error);
@@ -85,11 +101,6 @@ app.get("/api/perguntas", async (req, res) => {
 
 /**
  * Rota para salvar o resultado de um quiz e atualizar estatísticas do usuário.
- * Corpo da Requisição (JSON):
- *  - userId (string, obrigatório): ID do usuário do Firebase Auth.
- *  - acertos (number, obrigatório): Número de acertos no quiz.
- *  - total (number, obrigatório): Número total de perguntas no quiz.
- *  - materia (string, opcional): Matéria do quiz (default: "Geral").
  */
 app.post("/api/resultados", async (req, res) => {
   console.log(`[POST /api/resultados] Recebida requisição com corpo:`, req.body);
@@ -116,7 +127,7 @@ app.post("/api/resultados", async (req, res) => {
       userId,
       acertos,
       total,
-      percentual: parseFloat(percentual.toFixed(2)), // Armazena com 2 casas decimais
+      percentual: parseFloat(percentual.toFixed(2)),
       materia: materiaQuiz,
       dataHora: admin.firestore.FieldValue.serverTimestamp(),
     };
@@ -124,31 +135,29 @@ app.post("/api/resultados", async (req, res) => {
     const resultadoRef = await db.collection("resultados").add(resultado);
     console.log(`[POST /api/resultados] Resultado salvo na coleção 'resultados' com ID: ${resultadoRef.id}`);
 
-    // Atualizar ou criar estatísticas na coleção 'estatisticas'
     const userStatsRef = db.collection("estatisticas").doc(userId);
     const userStatsDoc = await userStatsRef.get();
     const nomeUsuario = userSnapshot.displayName || userSnapshot.email || "Usuário Anônimo";
 
     if (userStatsDoc.exists) {
       const dadosAtuais = userStatsDoc.data();
-      const novasEstatisticas = {
-        materias: {
-          ...(dadosAtuais.materias || {}),
+      await userStatsRef.update({
+        'materias': {
+          ...dadosAtuais.materias,
           [materiaQuiz]: {
-            acertos: ((dadosAtuais.materias?.[materiaQuiz]?.acertos) || 0) + acertos,
-            total: ((dadosAtuais.materias?.[materiaQuiz]?.total) || 0) + total,
+            acertos: (dadosAtuais.materias?.[materiaQuiz]?.acertos || 0) + acertos,
+            total: (dadosAtuais.materias?.[materiaQuiz]?.total || 0) + total,
           },
         },
-        totalAcertos: (dadosAtuais.totalAcertos || 0) + acertos,
-        totalPerguntas: (dadosAtuais.totalPerguntas || 0) + total,
-        ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
-        nome: dadosAtuais.nome || nomeUsuario, // Atualiza nome se não existir
-        email: dadosAtuais.email || userSnapshot.email, // Atualiza email se não existir
-      };
-      await userStatsRef.update(novasEstatisticas);
+        'totalAcertos': admin.firestore.FieldValue.increment(acertos),
+        'totalPerguntas': admin.firestore.FieldValue.increment(total),
+        'ultimaAtualizacao': admin.firestore.FieldValue.serverTimestamp(),
+        'nome': dadosAtuais.nome || nomeUsuario,
+        'email': dadosAtuais.email || userSnapshot.email,
+      });
       console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} atualizadas.`);
     } else {
-      const novasEstatisticas = {
+      await userStatsRef.set({
         userId,
         nome: nomeUsuario,
         email: userSnapshot.email,
@@ -158,8 +167,7 @@ app.post("/api/resultados", async (req, res) => {
           [materiaQuiz]: { acertos, total },
         },
         ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
-      };
-      await userStatsRef.set(novasEstatisticas);
+      });
       console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} criadas.`);
     }
 
@@ -194,7 +202,7 @@ app.get("/api/ranking", async (req, res) => {
         ? parseFloat(((data.totalAcertos / data.totalPerguntas) * 100).toFixed(2))
         : 0;
       return {
-        id: doc.id, // ID do documento de estatística (que é o userId)
+        id: doc.id,
         nome: data.nome || "Usuário Anônimo",
         totalAcertos: data.totalAcertos || 0,
         totalPerguntas: data.totalPerguntas || 0,
@@ -212,9 +220,9 @@ app.get("/api/ranking", async (req, res) => {
 // -----------------------------------------------------------------------------
 // Inicialização do Servidor
 // -----------------------------------------------------------------------------
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando na porta ${PORT}!`);
-  console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
-  console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
-});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`🚀 Servidor rodando na porta ${PORT}!`);
+//   console.log(`🔗 API de Perguntas disponível em: http://localhost:${PORT}/api/perguntas`);
+//   console.log(`🔗 API de Ranking disponível em: http://localhost:${PORT}/api/ranking`);
+// });
