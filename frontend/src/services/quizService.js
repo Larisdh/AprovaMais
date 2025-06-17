@@ -1,16 +1,18 @@
 // src/services/quizService.js
+
+// Esta variável deve conter APENAS a base da URL, sem /api.
+// Exemplo correto na Vercel: https://aprova-mais-backend.vercel.app
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
 /**
- * Salva a pontuação do usuário no servidor (OBS: Esta função se torna redundante
- * se o POST para /api/resultados já está sendo feito diretamente no Quiz.jsx
- * e é a forma principal de registrar o resultado e atualizar estatísticas)
- *
- * Se você remover a chamada a esta função no Quiz.jsx, pode remover esta função daqui também.
+ * Salva a pontuação do usuário no servidor.
+ * NOTA: Esta rota também foi corrigida para incluir /api/ para consistência.
+ * Se a sua rota no backend for diferente, ajuste aqui.
  */
 export const saveScore = async (user, pontos) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/scores`, { // Esta rota foi removida do server.js refatorado
+    // CORREÇÃO: Adicionado /api/ para padronizar as chamadas.
+    const response = await fetch(`${API_BASE_URL}/api/scores`, { // <-- CORREÇÃO
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,29 +21,27 @@ export const saveScore = async (user, pontos) => {
     });
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ message: "Falha ao salvar pontuação (opcional)"}));
-      console.error("Erro ao salvar pontuação (opcional):", response.status, errorData);
-      throw new Error(errorData.error || errorData.message || `Falha ao salvar pontuação (opcional) (status: ${response.status})`);
+      const errorData = await response.json().catch(() => ({ message: "Falha ao salvar pontuação"}));
+      console.error("Erro ao salvar pontuação:", response.status, errorData);
+      throw new Error(errorData.error || errorData.message || `Falha ao salvar pontuação (status: ${response.status})`);
     }
 
     return await response.json();
   } catch (error) {
-    console.error("Erro em saveScore (opcional):", error);
-    // Não re-lançar se for opcional e o outro salvamento for o principal
-    // throw error; 
-    return { message: "Tentativa de salvamento opcional falhou ou não necessária." };
+    console.error("Erro em saveScore:", error);
+    throw error;
   }
 };
 
 /**
- * Busca o ranking dos melhores jogadores da coleção 'estatisticas'
+ * Busca o ranking dos melhores jogadores.
  * @returns {Promise<Array>} - Promise com a lista de ranking
  */
 export const fetchRanking = async () => {
   try {
-    console.log("[quizService] Solicitando /api/ranking...");
-    // CORREÇÃO: Adicionado o prefixo "/api" para corresponder à rota do backend.
-    const response = await fetch(`${API_BASE_URL}/api/ranking`); 
+    console.log("[quizService] Solicitando ranking...");
+    // CORREÇÃO: Adicionado /api/ para construir a URL correta e evitar a duplicação.
+    const response = await fetch(`${API_BASE_URL}/api/ranking`); // <-- CORREÇÃO PRINCIPAL
     
     if (!response.ok) {
       const errorBody = await response.text();
@@ -56,7 +56,7 @@ export const fetchRanking = async () => {
       throw new Error(errorJson.error || `Falha ao buscar ranking (status: ${response.status})`);
     }
     const data = await response.json();
-    console.log("[quizService] Ranking recebido de /api/ranking:", data);
+    console.log("[quizService] Ranking recebido:", data);
     return data;
   } catch (error) {
     console.error("Erro em fetchRanking:", error.message);
