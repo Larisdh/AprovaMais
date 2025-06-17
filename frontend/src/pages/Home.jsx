@@ -18,8 +18,8 @@ export default function Home() {
   };
 
   const materiasDisponiveis = [
-    "Historia", "Filosofia", "Sociologia", "Geografia", "Matemática",
-    "Física", "Química", "Biologia", "Português", "Inglês", "Espanhol",
+    "Historia", "Filosofia", "Sociologia", "Geografia", "Matematica",
+    "Fisica", "Quimica", "Biologia", "Portugues", "Ingles", "Espanhol",
   ];
 
   const quantidadesPerguntas = [5, 10, 15, 20, 25];
