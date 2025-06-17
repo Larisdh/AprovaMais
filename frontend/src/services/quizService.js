@@ -2,17 +2,11 @@
 
 // Esta variável deve conter APENAS a base da URL, sem /api.
 // Exemplo correto na Vercel: https://aprova-mais-backend.vercel.app
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api";
 
-/**
- * Salva a pontuação do usuário no servidor.
- * NOTA: Esta rota também foi corrigida para incluir /api/ para consistência.
- * Se a sua rota no backend for diferente, ajuste aqui.
- */
 export const saveScore = async (user, pontos) => {
   try {
-    // CORREÇÃO: Adicionado /api/ para padronizar as chamadas.
-    const response = await fetch(`${API_BASE_URL}/api/scores`, { // <-- CORREÇÃO
+    const response = await fetch(`${API_BASE_URL}/scores`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +35,7 @@ export const fetchRanking = async () => {
   try {
     console.log("[quizService] Solicitando ranking...");
     // CORREÇÃO: Adicionado /api/ para construir a URL correta e evitar a duplicação.
-    const response = await fetch(`${API_BASE_URL}/api/ranking`); // <-- CORREÇÃO PRINCIPAL
+    const response = await fetch(`${API_BASE_URL}/ranking`); // <-- CORREÇÃO PRINCIPAL
     
     if (!response.ok) {
       const errorBody = await response.text();
