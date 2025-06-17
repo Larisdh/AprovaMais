@@ -14,7 +14,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const fetchPerguntas = async (materia, quantidade) => {
   try {
     // ✅ CORREÇÃO: Construímos a URL com o prefixo /api/ obrigatório.
-    let url = `${API_BASE_URL}/perguntas?quantidade=${quantidade}`;
+    let url = `${API_BASE_URL}/api/perguntas?quantidade=${quantidade}`;
     if (materia) {
       url += `&materia=${encodeURIComponent(materia)}`;
     }
