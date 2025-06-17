@@ -61,20 +61,20 @@ const db = admin.firestore(); // Instância do Firestore
 /**
  * Rota para obter perguntas filtradas por matéria e quantidade.
  */
-app.get("/api/perguntas", async (req, res) => {
-  console.log(`[GET /api/perguntas] Recebida requisição com query:`, req.query);
+app.get("/perguntas", async (req, res) => {
+  console.log(`[GET /perguntas] Recebida requisição com query:`, req.query);
   try {
     const { materia, quantidade } = req.query;
 
     let query = db.collection("perguntas");
     if (materia) {
-      console.log(`[GET /api/perguntas] Filtrando por matéria: ${materia}`);
+      console.log(`[GET /perguntas] Filtrando por matéria: ${materia}`);
       query = query.where("materia", "==", materia);
     }
 
     const snapshot = await query.get();
     if (snapshot.empty) {
-      console.log(`[GET /api/perguntas] Nenhuma pergunta encontrada para os critérios.`);
+      console.log(`[GET /perguntas] Nenhuma pergunta encontrada para os critérios.`);
       return res.json([]);
     }
 
@@ -83,18 +83,18 @@ app.get("/api/perguntas", async (req, res) => {
       ...doc.data(),
     }));
 
-    console.log(`[GET /api/perguntas] ${perguntas.length} perguntas encontradas antes de limitar/embaralhar.`);
+    console.log(`[GET /perguntas] ${perguntas.length} perguntas encontradas antes de limitar/embaralhar.`);
 
     if (quantidade && parseInt(quantidade) > 0) {
       const numQuantidade = parseInt(quantidade);
       perguntas = perguntas.sort(() => Math.random() - 0.5).slice(0, numQuantidade);
-      console.log(`[GET /api/perguntas] Retornando ${perguntas.length} perguntas após limitar para ${numQuantidade}.`);
+      console.log(`[GET /perguntas] Retornando ${perguntas.length} perguntas após limitar para ${numQuantidade}.`);
     }
 
 // ... continuação do código anterior ...
     res.json(perguntas);
   } catch (error) {
-    console.error("[GET /api/perguntas] Erro ao buscar perguntas:", error);
+    console.error("[GET /perguntas] Erro ao buscar perguntas:", error);
     res.status(500).json({ error: "Erro interno no servidor ao buscar perguntas." });
   }
 });
@@ -102,13 +102,13 @@ app.get("/api/perguntas", async (req, res) => {
 /**
  * Rota para salvar o resultado de um quiz e atualizar estatísticas do usuário.
  */
-app.post("/api/resultados", async (req, res) => {
-  console.log(`[POST /api/resultados] Recebida requisição com corpo:`, req.body);
+app.post("/resultados", async (req, res) => {
+  console.log(`[POST /resultados] Recebida requisição com corpo:`, req.body);
   try {
     const { userId, acertos, total, materia } = req.body;
 
     if (!userId || acertos === undefined || total === undefined || total <= 0) {
-      console.warn("[POST /api/resultados] Dados incompletos ou inválidos:", req.body);
+      console.warn("[POST /resultados] Dados incompletos ou inválidos:", req.body);
       return res.status(400).json({ error: "Dados incompletos ou inválidos. userId, acertos e total (maior que 0) são obrigatórios." });
     }
 
@@ -116,7 +116,7 @@ app.post("/api/resultados", async (req, res) => {
     try {
       userSnapshot = await admin.auth().getUser(userId);
     } catch (authError) {
-      console.warn(`[POST /api/resultados] Usuário não encontrado no Firebase Auth: ${userId}`, authError.message);
+      console.warn(`[POST /resultados] Usuário não encontrado no Firebase Auth: ${userId}`, authError.message);
       return res.status(404).json({ error: "Usuário não encontrado." });
     }
 
@@ -133,7 +133,7 @@ app.post("/api/resultados", async (req, res) => {
     };
 
     const resultadoRef = await db.collection("resultados").add(resultado);
-    console.log(`[POST /api/resultados] Resultado salvo na coleção 'resultados' com ID: ${resultadoRef.id}`);
+    console.log(`[POST /resultados] Resultado salvo na coleção 'resultados' com ID: ${resultadoRef.id}`);
 
     const userStatsRef = db.collection("estatisticas").doc(userId);
     const userStatsDoc = await userStatsRef.get();
@@ -155,7 +155,7 @@ app.post("/api/resultados", async (req, res) => {
         'nome': dadosAtuais.nome || nomeUsuario,
         'email': dadosAtuais.email || userSnapshot.email,
       });
-      console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} atualizadas.`);
+      console.log(`[POST /resultados] Estatísticas do usuário ${userId} atualizadas.`);
     } else {
       await userStatsRef.set({
         userId,
@@ -168,12 +168,12 @@ app.post("/api/resultados", async (req, res) => {
         },
         ultimaAtualizacao: admin.firestore.FieldValue.serverTimestamp(),
       });
-      console.log(`[POST /api/resultados] Estatísticas do usuário ${userId} criadas.`);
+      console.log(`[POST /resultados] Estatísticas do usuário ${userId} criadas.`);
     }
 
     res.status(201).json({ message: "Resultado salvo com sucesso!", resultadoId: resultadoRef.id });
   } catch (error) {
-    console.error("[POST /api/resultados] Erro ao salvar resultado:", error);
+    console.error("[POST /resultados] Erro ao salvar resultado:", error);
     res.status(500).json({ error: "Erro interno no servidor ao salvar resultado." });
   }
 });
@@ -183,8 +183,8 @@ app.post("/api/resultados", async (req, res) => {
  * Busca dados da coleção 'estatisticas'.
  * Retorna os top 10 usuários por total de acertos.
  */
-app.get("/api/ranking", async (req, res) => {
-  console.log(`[GET /api/ranking] Recebida requisição.`);
+app.get("/ranking", async (req, res) => {
+  console.log(`[GET /ranking] Recebida requisição.`);
   try {
     const snapshot = await db.collection("estatisticas")
       .orderBy("totalAcertos", "desc")
@@ -192,7 +192,7 @@ app.get("/api/ranking", async (req, res) => {
       .get();
 
     if (snapshot.empty) {
-      console.log(`[GET /api/ranking] Nenhuma estatística encontrada para o ranking.`);
+      console.log(`[GET /ranking] Nenhuma estatística encontrada para o ranking.`);
       return res.json([]);
     }
 
@@ -209,10 +209,10 @@ app.get("/api/ranking", async (req, res) => {
         percentual,
       };
     });
-    console.log(`[GET /api/ranking] Ranking com ${ranking.length} usuários retornado.`);
+    console.log(`[GET /ranking] Ranking com ${ranking.length} usuários retornado.`);
     res.json(ranking);
   } catch (error) {
-    console.error("[GET /api/ranking] Erro ao buscar ranking:", error);
+    console.error("[GET /ranking] Erro ao buscar ranking:", error);
     res.status(500).json({ error: "Erro interno no servidor ao buscar ranking." });
   }
 });
