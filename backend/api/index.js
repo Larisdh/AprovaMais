@@ -89,7 +89,7 @@ app.get("/api/perguntas", async (req, res) => {
 
 // --- Rota para Salvar Resultados ---
 // Lógica copiada do seu server.js anterior
-app.post("api/resultados", async (req, res) => {
+app.post("/api/resultados", async (req, res) => {
   if (!db) return res.status(500).json({ error: "Erro interno: BD não configurado." });
   console.log(`[POST /resultados] Recebida requisição com corpo:`, req.body);
   try {
