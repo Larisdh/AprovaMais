@@ -46,7 +46,7 @@ db = admin.firestore();
 // --- Rotas da API ---
 
 // Rota de teste para verificar o status do servidor
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({ 
     status: "Servidor rodando", 
     firebaseInitialized: !!admin.apps.length 
