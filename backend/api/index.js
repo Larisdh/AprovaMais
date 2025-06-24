@@ -46,7 +46,7 @@ db = admin.firestore();
 // --- Rotas da API ---
 
 // Rota de teste para verificar o status do servidor
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ 
     status: "Servidor rodando", 
     firebaseInitialized: !!admin.apps.length 
@@ -54,7 +54,7 @@ app.get("/api", (req, res) => {
 });
 
 // --- Rota de Perguntas ---
-app.get("/perguntas", async (req, res) => {
+app.get("/api/perguntas", async (req, res) => {
   if (!db) return res.status(500).json({ error: "Erro interno: BD não configurado." });
   console.log(`[GET /perguntas] Query recebida:`, req.query);
   try {
@@ -137,7 +137,7 @@ app.post("/resultados", async (req, res) => {
 
 // --- Rota do Ranking ---
 // Lógica copiada do seu server.js anterior
-app.get("/ranking", async (req, res) => {
+app.get("/api/ranking", async (req, res) => {
   if (!db) return res.status(500).json({ error: "Erro interno: BD não configurado." });
   console.log(`[GET /ranking] Recebida requisição.`);
   try {
